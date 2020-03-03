@@ -1,14 +1,15 @@
 
 import React from 'react';
-import { Alert,Image, Button, ImageBackground,TextInput, Text,View, StyleSheet } from 'react-native';
+import { Alert,Image, Button, ImageBackground,TextInput, Text,View, StyleSheet, TouchableOpacity } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
+import Logo from './logo';
 
 
 export default class App extends React.Component {
 
   constructor(props) {
     super(props);
-    alert("test");
+ 
     this.state = {
       username: '',
       password: '',
@@ -24,21 +25,18 @@ export default class App extends React.Component {
   }
 
   render() {
-    let pic = {
-      uri: 'https://www.allfluidsystems.eu/wp-content/uploads/2019/04/logo-okcomply.png'
-    };
-    let title = 'OkComply'
-    return (
-     
-      
+    
+    return ( 
       <View style={styles.container}>
     
-    <Image source={pic} style={{width: 400, height: 100, bottom:120}}/>
+    <View style={styles.logoContainer}>
+                <Logo/>
+            </View>
 
         <TextInput
           value={this.state.username}
           onChangeText={(username) => this.setState({ username })}
-          placeholder={'Username'}
+          placeholder={'Email'}
           style={styles.input}
         />
          
@@ -55,9 +53,9 @@ export default class App extends React.Component {
             title="Login"
             onPress={ this.onLogin}
           />
-    <View></View>
+    
+    
     <Button
-      
             title="SignUp"
             onPress={this.onSignUp}
           />
@@ -80,23 +78,45 @@ const styles = StyleSheet.create({
 
   input: {
     width: 350,
-    height: 55,
+    height: 60,
     backgroundColor: '#42A5F5',
     margin: 10,
     padding: 8,
     color: 'white',
     borderRadius: 14,
     fontSize: 18,
-    fontWeight: '500'
+    fontWeight: '500',
+    bottom: 180,
+
    
   },
   fixToText: {
     flexDirection: 'row',
+    margin: 10,
+    bottom: 150  ,
+    height: 45,
+  
 
-    margin: 5
-
+  },    
+  signUpbtn: {
+    margin: 10,
+    bottom: 150  ,
+    height: 45,
   },
+  logoContainer:{
+    flex:1,
+    alignItems: 'center',
+    justifyContent:'center'
+},
   red: {
     color: 'red',
-  }
+
+},
+buttonText:{
+  textAlign:'center',
+  color:'#fff',
+  fontWeight:'bold',
+  fontSize:20
+},
+
 });
