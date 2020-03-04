@@ -1,21 +1,4 @@
 PODS:
-  - A0Auth0 (2.3.0):
-    - React
-  - AFNetworking (3.2.1):
-    - AFNetworking/NSURLSession (= 3.2.1)
-    - AFNetworking/Reachability (= 3.2.1)
-    - AFNetworking/Security (= 3.2.1)
-    - AFNetworking/Serialization (= 3.2.1)
-    - AFNetworking/UIKit (= 3.2.1)
-  - AFNetworking/NSURLSession (3.2.1):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.2.1)
-  - AFNetworking/Security (3.2.1)
-  - AFNetworking/Serialization (3.2.1)
-  - AFNetworking/UIKit (3.2.1):
-    - AFNetworking/NSURLSession
   - boost-for-react-native (1.63.0)
   - BVLinearGradient (2.5.6):
     - React
@@ -38,30 +21,6 @@ PODS:
     - DoubleConversion
     - glog
   - glog (0.3.5)
-  - Lock (1.29.2):
-    - Lock/Core (= 1.29.2)
-    - Lock/UI (= 1.29.2)
-    - Lock/WebView (= 1.29.2)
-  - Lock/Core (1.29.2):
-    - AFNetworking (~> 3.0)
-  - Lock/CoreUI (1.29.2):
-    - Lock/Core
-    - Masonry (~> 0.6)
-  - Lock/Email (1.29.2):
-    - Lock/UI
-  - Lock/Safari (1.29.2):
-    - Lock/CoreUI
-  - Lock/SMS (1.29.2):
-    - Lock/UI
-  - Lock/TouchID (1.29.2):
-    - Lock/UI
-    - SimpleKeychain (~> 0.2)
-    - TouchIDAuth (~> 0.1)
-  - Lock/UI (1.29.2):
-    - Lock/CoreUI
-  - Lock/WebView (1.29.2):
-    - Lock/CoreUI
-  - Masonry (0.6.4)
   - RCTRequired (0.61.5)
   - RCTTypeSafety (0.61.5):
     - FBLazyVector (= 0.61.5)
@@ -229,10 +188,6 @@ PODS:
     - React
   - react-native-safe-area-context (0.7.3):
     - React
-  - react-native-splash-screen (3.2.0):
-    - React
-  - react-native-webview (8.1.2):
-    - React
   - React-RCTActionSheet (0.61.5):
     - React-Core/RCTActionSheetHeaders (= 0.61.5)
   - React-RCTAnimation (0.61.5):
@@ -285,24 +240,15 @@ PODS:
     - React
   - RNVectorIcons (6.6.0):
     - React
-  - SimpleKeychain (0.11.1)
-  - TouchIDAuth (0.2.0):
-    - SimpleKeychain (~> 0.3)
   - Yoga (1.14.0)
 
 DEPENDENCIES:
-  - A0Auth0 (from `../node_modules/react-native-auth0/ios`)
   - BVLinearGradient (from `../node_modules/react-native-linear-gradient`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/Libraries/FBReactNativeSpec`)
   - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
-  - Lock (~> 1.29)
-  - Lock/Email
-  - Lock/Safari
-  - Lock/SMS
-  - Lock/TouchID
   - RCTRequired (from `../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../node_modules/react-native/Libraries/TypeSafety`)
   - React (from `../node_modules/react-native/`)
@@ -316,8 +262,6 @@ DEPENDENCIES:
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - react-native-date-picker (from `../node_modules/react-native-date-picker`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
-  - react-native-splash-screen (from `../node_modules/react-native-splash-screen`)
-  - react-native-webview (from `../node_modules/react-native-webview`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
   - React-RCTBlob (from `../node_modules/react-native/Libraries/Blob`)
@@ -340,16 +284,9 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - AFNetworking
     - boost-for-react-native
-    - Lock
-    - Masonry
-    - SimpleKeychain
-    - TouchIDAuth
 
 EXTERNAL SOURCES:
-  A0Auth0:
-    :path: "../node_modules/react-native-auth0/ios"
   BVLinearGradient:
     :path: "../node_modules/react-native-linear-gradient"
   DoubleConversion:
@@ -384,10 +321,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-date-picker"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
-  react-native-splash-screen:
-    :path: "../node_modules/react-native-splash-screen"
-  react-native-webview:
-    :path: "../node_modules/react-native-webview"
   React-RCTActionSheet:
     :path: "../node_modules/react-native/Libraries/ActionSheetIOS"
   React-RCTAnimation:
@@ -426,8 +359,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  A0Auth0: 802f5f5add8ac5265cfeea125caa2720dafccfa6
-  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   BVLinearGradient: e3aad03778a456d77928f594a649e96995f1c872
   DoubleConversion: 5805e889d232975c086db112ece9ed034df7a0b2
@@ -435,8 +366,6 @@ SPEC CHECKSUMS:
   FBReactNativeSpec: 118d0d177724c2d67f08a59136eb29ef5943ec75
   Folly: 30e7936e1c45c08d884aa59369ed951a8e68cf51
   glog: 1f3da668190260b06b429bb211bfbee5cd790c28
-  Lock: 3414fed031b4044509697dd9b9da9208bc68ad26
-  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   RCTRequired: b153add4da6e7dbc44aebf93f3cf4fcae392ddf1
   RCTTypeSafety: 9aa1b91d7f9310fc6eadc3cf95126ffe818af320
   React: b6a59ef847b2b40bb6e0180a97d0ca716969ac78
@@ -448,8 +377,6 @@ SPEC CHECKSUMS:
   React-jsinspector: fa0ecc501688c3c4c34f28834a76302233e29dc0
   react-native-date-picker: 142a75882184791d3afa3a7a3c3085e1d70496c9
   react-native-safe-area-context: 8260e5157617df4b72865f44006797f895b2ada7
-  react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
-  react-native-webview: 055c7110f17c2f19c971f655064ee480638db668
   React-RCTActionSheet: 600b4d10e3aea0913b5a92256d2719c0cdd26d76
   React-RCTAnimation: 791a87558389c80908ed06cc5dfc5e7920dfa360
   React-RCTBlob: d89293cc0236d9cb0933d85e430b0bbe81ad1d72
@@ -467,10 +394,8 @@ SPEC CHECKSUMS:
   RNScreens: c596b54c3ab63b0390aa3cb081edd438147d40ae
   RNSound: c980916b596cc15c8dcd2f6ecd3b13c4881dbe20
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
-  SimpleKeychain: 0c657949c7afff92337d2ff64052d5eb5c53823e
-  TouchIDAuth: 0cf861f58a2cacfc1c12cb02de4850729d943c81
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
 
-PODFILE CHECKSUM: 83a7cae5c49e9a6df3ddb9ea19b384bbe9fafdc7
+PODFILE CHECKSUM: 60a862e42041f59fd9d7780f76883af6893e7467
 
 COCOAPODS: 1.8.4
