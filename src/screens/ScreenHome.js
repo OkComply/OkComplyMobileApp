@@ -1,8 +1,10 @@
 
 import React from 'react';
-import { Alert, Image, Button, ImageBackground, TextInput, Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { Alert, Image,  ImageBackground, TextInput, Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import Logo from './logo';
+import { Button } from 'react-native-elements'
 import Auth0 from 'react-native-auth0';
+import {WebView} from 'react-native-webview';
 const auth0 = new Auth0({ domain: 'okapi-prod.eu.auth0.com', clientId: 'Z977z6OWUxi58x41rndANbZIy49o3iKR' });
 
 /**
@@ -63,12 +65,16 @@ export default class App extends React.Component {
 
     return (
       <View style={styles.container}>
+        {/* <WebView
+        source={{uri: 'https://github.com/facebook/react-native'}}
+        style={{marginTop: 20}}
+      /> */}
 
         <View style={styles.logoContainer}>
           <Logo />
         </View>
 
-        <TextInput
+        {/* <TextInput
           value={this.state.username}
           onChangeText={(username) => this.setState({ username })}
           placeholder={'Email'}
@@ -81,30 +87,35 @@ export default class App extends React.Component {
           placeholder={'Password'}
           secureTextEntry={true}
           style={styles.input}
-        />
+        /> */}
 
-        <View style={styles.fixToText}>
+        <View style={styles.input}>
           <TouchableOpacity>
-            <Button style={{ marginRight: 50 }}
-              title="Login"
-              onPress={this.onLogin}
-            />
+ 
+          <Button
+                    large
+                   icon={{name: 'refresh'}}
+                   onPress= {this.onLogin}
+                   title='Log In ' 
+                  />
+                  
           </TouchableOpacity>
 
-          <View>
-            <View></View>
-            <TouchableOpacity>
-              <Button
-                title="SignUp"
-                onPress={this.onSignUp}
-              />
-            </TouchableOpacity>
-
-
-          </View>
+        
+          
         </View>
 
+<View style={styles.input} >
+<TouchableOpacity> 
+            <Button
+                    large
+                   icon={{name: 'person'}}
+                   onPress= {this.onSignUp}
+                   title='Sign Up ' 
+                  />
+            </TouchableOpacity>
 
+</View>
       </View>
 
     );
@@ -132,7 +143,7 @@ const styles = StyleSheet.create({
     bottom: 180,
     borderColor: "gray",
     borderStyle: "solid",
-    borderWidth: 2
+    //borderWidth: 2
 
   },
   fixToText: {

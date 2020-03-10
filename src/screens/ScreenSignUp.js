@@ -1,16 +1,13 @@
 import React from 'react'
+import Auth0 from 'react-native-auth0';
 /**
  * @author Raeef Ibrahim
  */
-import {
-  View,
-  Button,
-  TextInput,
-  StyleSheet,
-  Image
-} from 'react-native'
+import {  Image, StyleSheet, TextInput, View } from 'react-native'
+import { Button } from 'react-native-elements'
 
 export default class SignUp extends React.Component {
+  
   state = {
     username: '', password: '', email: '', phone_number: ''
   }
@@ -27,7 +24,36 @@ export default class SignUp extends React.Component {
       this.props.navigation.navigate('SignIn');
     }
   }
+//   createUser(username, password) {
+//     const auth0 = new Auth0({ domain: 'okapi-prod.eu.auth0.com', clientId: 'Z977z6OWUxi58x41rndANbZIy49o3iKR' });
+//     auth0.auth
+//         .createUser({
+//             email: username,
+//             password: password,
+//             connection: 'Username-Password-Authentication',
+//         })
+//         .then(success => {
+//             console.log(success)
+//             this.alert('Success', 'New user created')
+//         })
+//         .catch(error => { 
+//             this.alert('Error', error.json.description) 
+//         });
+// }
  
+// webAuth(connection) {
+//   const auth0 = new Auth0({ domain: 'okapi-prod.eu.auth0.com', clientId: 'Z977z6OWUxi58x41rndANbZIy49o3iKR' });
+//   auth0.webAuth
+//       .authorize({
+//           scope: 'openid profile email',
+//           connection: connection,
+//           audience: 'https://' + auth0.credentials + '/userinfo'
+//       })
+//       .then(credentials => {
+//           this.onSuccess(credentials);
+//       })
+//       .catch(error => this.alert('Error', error.error_description));
+// };
   render() {
     let pic = {
         uri: 'https://www.nlvi.nl/nlvi-new-images-okcomply.png'
@@ -65,9 +91,11 @@ export default class SignUp extends React.Component {
          
           onChangeText={val => this.onChangeText('phone_number', val)}
         />
-        <Button
+        <Button style= {styles.input}
+        large
           title='Sign Up'
           onPress={this.signUp}
+          
         />
       </View>
     )
