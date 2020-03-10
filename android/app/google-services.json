@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "433230543800",
+    "firebase_url": "https://okcomply-c0a84.firebaseio.com",
+    "project_id": "okcomply-c0a84",
+    "storage_bucket": "okcomply-c0a84.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433230543800:android:d16fffd8cfe676b5e46d4d",
+        "android_client_info": {
+          "package_name": "com.wakestream"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "433230543800-ufqo2mn7helpct1f3a0bhnggm5ak261m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wakestream",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "433230543800-gctt8neto8sd88v8fdi5q7ai53in35tf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGXcyX47e2iY3zp6-LKJ_qaNhV3JDNvYY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "433230543800-gctt8neto8sd88v8fdi5q7ai53in35tf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
