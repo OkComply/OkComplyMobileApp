@@ -1,4 +1,6 @@
-
+/**
+ * @author Raeef Ibrahim
+ */
 import React, { Component } from 'react';
 import { View, Text, StyleSheet,Image } from 'react-native';
 
@@ -6,7 +8,7 @@ import { View, Text, StyleSheet,Image } from 'react-native';
 // create a component
 const Logo = () => {
     let pic = {
-        uri: 'https://www.allfluidsystems.eu/wp-content/uploads/2019/04/logo-okcomply.png'
+        uri: 'https://www.nlvi.nl/nlvi-new-images-okcomply.png'
       };
     return (
         <View>
