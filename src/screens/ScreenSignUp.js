@@ -1,4 +1,7 @@
 import React from 'react'
+/**
+ * @author Raeef Ibrahim
+ */
 import {
   View,
   Button,
@@ -27,7 +30,7 @@ export default class SignUp extends React.Component {
  
   render() {
     let pic = {
-        uri: 'https://www.allfluidsystems.eu/wp-content/uploads/2019/04/logo-okcomply.png'
+        uri: 'https://www.nlvi.nl/nlvi-new-images-okcomply.png'
       };
     return (
         
@@ -37,7 +40,7 @@ export default class SignUp extends React.Component {
           style={styles.input}
           placeholder='Username'
           autoCapitalize="none"
-          placeholderTextColor='white'
+        
           onChangeText={val => this.onChangeText('username', val)}
         />
         <TextInput
@@ -45,21 +48,21 @@ export default class SignUp extends React.Component {
           placeholder='Password'
           secureTextEntry={true}
           autoCapitalize="none"
-          placeholderTextColor='white'
+         
           onChangeText={val => this.onChangeText('password', val)}
         />
         <TextInput
           style={styles.input}
           placeholder='Email'
           autoCapitalize="none"
-          placeholderTextColor='white'
+         
           onChangeText={val => this.onChangeText('email', val)}
         />
         <TextInput
           style={styles.input}
           placeholder='Phone Number'
           autoCapitalize="none"
-          placeholderTextColor='white'
+         
           onChangeText={val => this.onChangeText('phone_number', val)}
         />
         <Button
@@ -75,13 +78,16 @@ const styles = StyleSheet.create({
   input: {
     width: 350,
     height: 55,
-    backgroundColor: '#42A5F5',
+    backgroundColor: 'white',
+    color: 'gray',
     margin: 10,
     padding: 8,
-    color: 'white',
     borderRadius: 14,
-    fontSize: 18,
-    fontWeight: '500',
+    borderColor : "gray",
+    borderStyle: "solid",
+    borderWidth: 2,
+    
+    
   },
   container: {
     flex: 1,

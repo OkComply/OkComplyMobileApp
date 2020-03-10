@@ -1,44 +1,72 @@
 
 import React from 'react';
-import { Alert,Image, Button, ImageBackground,TextInput, Text,View, StyleSheet, TouchableOpacity } from 'react-native';
+import { Alert, Image, Button, ImageBackground, TextInput, Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import Logo from './logo';
 import Auth0 from 'react-native-auth0';
 const auth0 = new Auth0({ domain: 'okapi-prod.eu.auth0.com', clientId: 'Z977z6OWUxi58x41rndANbZIy49o3iKR' });
 
-import firebase from 'firebase'
+/**
+ * @author Raeef Ibrahim
+ * 
+ */
 export default class App extends React.Component {
-  
+
 
   constructor(props) {
     super(props);
-    state={
-      loggedIn:null
+    state = {
+      loggedIn: null
     }
-  
+
     this.state = {
       username: '',
       password: '',
     };
   }
-  onSignUp =() => {
+  onSignUp = () => {
     this.props.navigation.navigate('SignUp');
 
   }
-  onLogin =()=> {
-if (this.state.username == "okComply.com" && this.state.password =="123456") {
-  alert("You are logged in")
-} else {
-alert("Email or password is invaild, try again")  }
+
+  onLogOut =() => {
+    auth0.webAuth
+    .clearSession({})
+    .then(success => {
+        Alert.alert(
+            'Logged out!'
+        );
+        this.setState({ accessToken: null });
+    })
+    .catch(error => {
+        console.log('Log out cancelled');
+    });
+  }
+  onLogin = () => {
+    auth0
+    .webAuth
+    .authorize({scope: 'openid profile email'})
+    .then(credentials =>
+      // Successfully authenticated
+      // Store the accessToken
+      this.setState({ accessToken: credentials.accessToken })
+    )
+    .catch(error => console.log(error));
+
+    // if (this.state.username == "okComply.com" && this.state.password == "123456") {
+    //   alert("You are logged in")
+    // } else {
+    //   alert("Email or password is invaild, try again")
+    // }
   }
 
   render() {
-    
-    return ( 
+
+    return (
       <View style={styles.container}>
-    
-    <View style={styles.logoContainer}>
-                <Logo/>
-            </View>
+
+        <View style={styles.logoContainer}>
+          <Logo />
+        </View>
 
         <TextInput
           value={this.state.username}
@@ -46,7 +74,7 @@ alert("Email or password is invaild, try again")  }
           placeholder={'Email'}
           style={styles.input}
         />
-         
+
         <TextInput
           value={this.state.password}
           onChangeText={(password) => this.setState({ password })}
@@ -54,23 +82,31 @@ alert("Email or password is invaild, try again")  }
           secureTextEntry={true}
           style={styles.input}
         />
-      
+
         <View style={styles.fixToText}>
-          <Button style={{marginRight:25}}
-            title="Login"
-            onPress={ this.onLogin}
-          />
-    
-    
-    <Button
-            title="SignUp"
-            onPress={this.onSignUp}
-          />
+          <TouchableOpacity>
+            <Button style={{ marginRight: 50 }}
+              title="Login"
+              onPress={this.onLogin}
+            />
+          </TouchableOpacity>
+
+          <View>
+            <View></View>
+            <TouchableOpacity>
+              <Button
+                title="SignUp"
+                onPress={this.onSignUp}
+              />
+            </TouchableOpacity>
+
+
+          </View>
         </View>
-    
-     
+
+
       </View>
-      
+
     );
   }
 
@@ -81,12 +117,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'white',
-  }, 
+  },
 
   input: {
     width: 350,
     height: 60,
-    backgroundColor: '#42A5F5',
+    backgroundColor: 'white',
     margin: 10,
     padding: 8,
     color: 'white',
@@ -94,35 +130,50 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '500',
     bottom: 180,
-   
+    borderColor: "gray",
+    borderStyle: "solid",
+    borderWidth: 2
+
   },
   fixToText: {
     flexDirection: 'row',
-    margin: 10,
-    bottom: 150  ,
+    margin: 2,
+    bottom: 150,
     height: 45,
-  
 
-  },    
+
+  },
   signUpbtn: {
     margin: 10,
-    bottom: 150  ,
+    bottom: 150,
     height: 45,
   },
-  logoContainer:{
-    flex:1,
+  logoContainer: {
+    flex: 1,
     alignItems: 'center',
-    justifyContent:'center'
-},
+    justifyContent: 'center'
+  },
   red: {
     color: 'red',
 
-},
-buttonText:{
-  textAlign:'center',
-  color:'#fff',
-  fontWeight:'bold',
-  fontSize:20
-},
+  },
+  button: {
+    backgroundColor: '#f8f8f8',
+    borderColor: 'white',
+    borderWidth: 1,
+    borderRadius: 5,
+    color: 'white',
+    fontSize: 24,
+    fontWeight: 'bold',
+    overflow: 'hidden',
+    padding: 8,
+    textAlign: 'center',
+  },
+  buttonText: {
+    textAlign: 'center',
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: 20
+  },
 
 });
