@@ -10,6 +10,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import AppState from './src/state/AppState';
 import ScreenSignUp from './src/screens/ScreenSignUp'
+import Notification from './src/screens/Notification'
 
 
 
@@ -22,8 +23,8 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="SignIn" component={ScreenHome} />
-        <Stack.Screen name="SignUp" component={ScreenSignUp} />
+              <Stack.Screen name="SignIn" component={ScreenHome} />
+              <Stack.Screen name="SignUp" component={Notification} />
       </Stack.Navigator>
     </NavigationContainer>
   );
