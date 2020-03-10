@@ -25,7 +25,7 @@ export default class App extends React.Component {
 
   }
   onLogin =()=> {
-if (this.state.username == "okcomplydemo@okComply.com" && this.state.password =="123456") {
+if (this.state.username == "okComply.com" && this.state.password =="123456") {
   alert("You are logged in")
 } else {
 alert("Email or password is invaild, try again")  }
