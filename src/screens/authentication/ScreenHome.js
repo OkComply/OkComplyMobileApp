@@ -1,15 +1,20 @@
 
 import React from 'react';
 import { Alert,Image, Button, ImageBackground,TextInput, Text,View, StyleSheet, TouchableOpacity } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import Logo from '../logos/logo';
+import Logo from './logo';
+import Auth0 from 'react-native-auth0';
+const auth0 = new Auth0({ domain: 'okapi-prod.eu.auth0.com', clientId: 'Z977z6OWUxi58x41rndANbZIy49o3iKR' });
 
-
+import firebase from 'firebase'
 export default class App extends React.Component {
+  
 
   constructor(props) {
     super(props);
- 
+    state={
+      loggedIn:null
+    }
+  
     this.state = {
       username: '',
       password: '',
@@ -20,10 +25,10 @@ export default class App extends React.Component {
 
   }
   onLogin =()=> {
-    const { username, password } = this.state;
-    Alert.alert('Credentials', `${username} + ${password}`);
-    this.props.navigation.navigate('myTab');
-
+if (this.state.username == "okcomply" && this.state.password =="123456") {
+  alert("You are logged in")
+} else {
+alert("Email or password is invaild, try again")  }
   }
 
   render() {
@@ -68,8 +73,8 @@ export default class App extends React.Component {
       
     );
   }
-}
 
+}
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -89,7 +94,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '500',
     bottom: 180,
-
    
   },
   fixToText: {
