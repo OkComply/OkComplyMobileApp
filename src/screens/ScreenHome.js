@@ -1,10 +1,11 @@
 
 import React from 'react';
-import { Alert, Image,  ImageBackground, TextInput, Text, View, StyleSheet, TouchableOpacity } from 'react-native';
+import { Alert,TextInput, Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import Logo from './logo';
-import { Button } from 'react-native-elements'
+import { Button, Icon } from 'react-native-elements'
 import Auth0 from 'react-native-auth0';
-import {WebView} from 'react-native-webview';
+
+
 const auth0 = new Auth0({ domain: 'okapi-prod.eu.auth0.com', clientId: 'Z977z6OWUxi58x41rndANbZIy49o3iKR' });
 
 /**
@@ -12,110 +13,74 @@ const auth0 = new Auth0({ domain: 'okapi-prod.eu.auth0.com', clientId: 'Z977z6OW
  * 
  */
 export default class App extends React.Component {
-
-
   constructor(props) {
     super(props);
     state = {
       loggedIn: null
     }
-
-    this.state = {
-      username: '',
-      password: '',
-    };
   }
   onSignUp = () => {
     this.props.navigation.navigate('SignUp');
 
   }
 
-  onLogOut =() => {
+  onLogOut = () => {
     auth0.webAuth
-    .clearSession({})
-    .then(success => {
+      .clearSession({})
+      .then(success => {
         Alert.alert(
-            'Logged out!'
+          'Logged out!'
         );
         this.setState({ accessToken: null });
-    })
-    .catch(error => {
+      })
+      .catch(error => {
         console.log('Log out cancelled');
-    });
+      });
   }
   onLogin = () => {
     auth0
-    .webAuth
-    .authorize({scope: 'openid profile email'})
-    .then(credentials =>
-      // Successfully authenticated
-      // Store the accessToken
-      this.setState({ accessToken: credentials.accessToken })
-    )
-    .catch(error => console.log(error));
-
-    // if (this.state.username == "okComply.com" && this.state.password == "123456") {
-    //   alert("You are logged in")
-    // } else {
-    //   alert("Email or password is invaild, try again")
-    // }
+      .webAuth
+      .authorize({ scope: 'openid profile email' })
+      .then(credentials =>
+        // Successfully authenticated
+        // Store the accessToken
+        this.setState({ accessToken: credentials.accessToken })
+      )
+      .catch(error => console.log(error));
   }
 
   render() {
 
     return (
       <View style={styles.container}>
-        {/* <WebView
-        source={{uri: 'https://github.com/facebook/react-native'}}
-        style={{marginTop: 20}}
-      /> */}
+
 
         <View style={styles.logoContainer}>
           <Logo />
-        </View>
+        </View >
 
-        {/* <TextInput
-          value={this.state.username}
-          onChangeText={(username) => this.setState({ username })}
-          placeholder={'Email'}
-          style={styles.input}
-        />
-
-        <TextInput
-          value={this.state.password}
-          onChangeText={(password) => this.setState({ password })}
-          placeholder={'Password'}
-          secureTextEntry={true}
-          style={styles.input}
-        /> */}
-
+        <View>
+  <Text style={styles.title}>
+    Welkom in OkComply Mobile App</Text>
+  
+</View>
         <View style={styles.input}>
           <TouchableOpacity>
- 
-          <Button
-                    large
-                   icon={{name: 'refresh'}}
-                   onPress= {this.onLogin}
-                   title='Log In ' 
-                  />
-                  
+            <Button icon={
+              <Icon
+                name="done"
+                size={50}
+                color="white"
+              />
+            }
+              iconRight
+              title="Log In"
+              titleStyle='center'
+              onPress={this.onLogin}
+            />
+
           </TouchableOpacity>
-
-        
-          
         </View>
-
-<View style={styles.input} >
-<TouchableOpacity> 
-            <Button
-                    large
-                   icon={{name: 'person'}}
-                   onPress= {this.onSignUp}
-                   title='Sign Up ' 
-                  />
-            </TouchableOpacity>
-
-</View>
       </View>
 
     );
@@ -131,33 +96,25 @@ const styles = StyleSheet.create({
   },
 
   input: {
+    width: 420,
+    height: 100,
+    margin: 8,
+    padding: 1,
+    fontSize: 50,
+    fontWeight: '500',
+    bottom: 120,
+     color: '#3a99d8',
+     borderColor:'#3a99d8',
+     
+
+  },
+
+  signInbtn: {
+    bottom: 180,
+    height: 45,
     width: 350,
     height: 60,
-    backgroundColor: 'white',
-    margin: 10,
-    padding: 8,
-    color: 'white',
-    borderRadius: 14,
-    fontSize: 18,
-    fontWeight: '500',
-    bottom: 180,
-    borderColor: "gray",
-    borderStyle: "solid",
-    //borderWidth: 2
-
-  },
-  fixToText: {
-    flexDirection: 'row',
-    margin: 2,
-    bottom: 150,
-    height: 45,
-
-
-  },
-  signUpbtn: {
-    margin: 10,
-    bottom: 150,
-    height: 45,
+    color: 'black'
   },
   logoContainer: {
     flex: 1,
@@ -168,9 +125,17 @@ const styles = StyleSheet.create({
     color: 'red',
 
   },
+  title: {
+    bottom: 180,
+    fontSize: 20,
+    fontWeight: 'bold',
+    color:'#006280'
+  },
+
+   
   button: {
-    backgroundColor: '#f8f8f8',
-    borderColor: 'white',
+    backgroundColor: '#3a99d8',
+    borderColor: '#3a99d8',
     borderWidth: 1,
     borderRadius: 5,
     color: 'white',
