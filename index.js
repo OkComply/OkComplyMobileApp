@@ -22,14 +22,11 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="SignIn" options={{
-          title: 'OKCOMPLY ',
-          headerStyle: {
-         backgroundColor: 'white',
-         borderColor: " blue"
-          },
-          headerTintColor: 'white',
+          title: 'OkComplyApp ',
           headerTitleStyle: {
-            fontWeight: 'bold',
+            alignContent:'center'
+          , color: '#006280'
+          ,
           },
         }} component={ScreenHome} />
         <Stack.Screen name="SignUp" component={ScreenSignUp} />
