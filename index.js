@@ -18,6 +18,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
+
 const Stack = createStackNavigator();
 AppState.load();
 
@@ -60,6 +61,7 @@ function MyTabs() {
 }
 
 export default function App() {
+<<<<<<< HEAD
 	return (
 		<NavigationContainer>
 			<Stack.Navigator initialRouteName="Home">
@@ -80,6 +82,27 @@ export default function App() {
 
 		
 	);
+=======
+
+  return (
+    
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="SignIn" options={{
+          title: 'OkComplyApp ',
+          headerTitleStyle: {
+            alignContent:'center'
+          , color: '#006280'
+          ,
+          },
+        }} component={ScreenHome} />
+        <Stack.Screen name="SignUp" component={ScreenSignUp} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+
+  
+>>>>>>> c5a5a48b08fd7c79194ad369dc6ce9071ca847b0
 }
 
 
