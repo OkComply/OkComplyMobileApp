@@ -1,15 +1,9 @@
 
 import React from 'react';
-<<<<<<< HEAD:src/screens/authentication/ScreenHome.js
-import { Alert,Image, Button, ImageBackground,TextInput, Text,View, StyleSheet, TouchableOpacity } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import Logo from '../logos/logo';
-=======
 import { Alert,TextInput, Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import Logo from './logo';
 import { Button, Icon } from 'react-native-elements'
 import Auth0 from 'react-native-auth0';
->>>>>>> c5a5a48b08fd7c79194ad369dc6ce9071ca847b0:src/screens/ScreenHome.js
 
 
 const auth0 = new Auth0({ domain: 'okapi-prod.eu.auth0.com', clientId: 'Z977z6OWUxi58x41rndANbZIy49o3iKR' });
@@ -25,22 +19,16 @@ export default class App extends React.Component {
       loggedIn: null
     }
   }
-  onSignUp = () => {
-    this.props.navigation.navigate('SignUp');
-
-  }
-<<<<<<< HEAD:src/screens/authentication/ScreenHome.js
-  onLogin =()=> {
-    const { username, password } = this.state;
-    Alert.alert('Credentials', `${username} + ${password}`);
+  navigatToTask = () => {
     this.props.navigation.navigate('myTab');
 
-=======
+  }
 
   onLogOut = () => {
     auth0.webAuth
       .clearSession({})
       .then(success => {
+    
         Alert.alert(
           'Logged out!'
         );
@@ -55,12 +43,15 @@ export default class App extends React.Component {
       .webAuth
       .authorize({ scope: 'openid profile email' })
       .then(credentials =>
+        
         // Successfully authenticated
         // Store the accessToken
         this.setState({ accessToken: credentials.accessToken })
+       
       )
       .catch(error => console.log(error));
->>>>>>> c5a5a48b08fd7c79194ad369dc6ce9071ca847b0:src/screens/ScreenHome.js
+
+      this.navigatToTask()
   }
 
   render() {
