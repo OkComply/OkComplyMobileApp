@@ -16,6 +16,7 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* wakestreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* wakestreamTests.m */; };
+		52EA2A3B2417ABAC00EFB2D6 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 52EA2A3A2417ABAC00EFB2D6 /* Fonts */; };
 		83CEEA913E5CD35871F011D7 /* libPods-wakestream.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 398FDD1196705D0F3985D465 /* libPods-wakestream.a */; };
 		8A706C7F4B2A6CE42D3E403A /* libPods-wakestreamTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C331BB4EABF0BAB64E61EFE /* libPods-wakestreamTests.a */; };
 		9C11D861056D99C47BFB5440 /* libPods-wakestream-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4EFADC22388B78E4726ECC1 /* libPods-wakestream-tvOSTests.a */; };
@@ -56,6 +57,7 @@
 		2D02E47B1E0B4A5D006451C7 /* wakestream-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wakestream-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* wakestream-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "wakestream-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		398FDD1196705D0F3985D465 /* libPods-wakestream.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wakestream.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52EA2A3A2417ABAC00EFB2D6 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		5C331BB4EABF0BAB64E61EFE /* libPods-wakestreamTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wakestreamTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6312AEBD69BAF4C484138E70 /* Pods-wakestreamTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakestreamTests.debug.xcconfig"; path = "Target Support Files/Pods-wakestreamTests/Pods-wakestreamTests.debug.xcconfig"; sourceTree = "<group>"; };
 		78F1D186842432B3CD00443E /* Pods-wakestreamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakestreamTests.release.xcconfig"; path = "Target Support Files/Pods-wakestreamTests/Pods-wakestreamTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				52EA2A3A2417ABAC00EFB2D6 /* Fonts */,
 				13B07FAE1A68108700A75B9A /* wakestream */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* wakestreamTests */,
@@ -194,7 +197,6 @@
 				6312AEBD69BAF4C484138E70 /* Pods-wakestreamTests.debug.xcconfig */,
 				78F1D186842432B3CD00443E /* Pods-wakestreamTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -309,6 +311,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -337,6 +340,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52EA2A3B2417ABAC00EFB2D6 /* Fonts in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
@@ -372,7 +376,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 		059FFD9A1C0BAA598D0127C8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -677,6 +681,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = wakestream/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -696,6 +701,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 26Z7H48958;
 				INFOPLIST_FILE = wakestream/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (

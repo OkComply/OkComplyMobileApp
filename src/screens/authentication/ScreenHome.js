@@ -2,7 +2,7 @@
 import React from 'react';
 import { Alert,Image, Button, ImageBackground,TextInput, Text,View, StyleSheet, TouchableOpacity } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import Logo from './logo';
+import Logo from '../logos/logo';
 
 
 export default class App extends React.Component {
@@ -22,6 +22,8 @@ export default class App extends React.Component {
   onLogin =()=> {
     const { username, password } = this.state;
     Alert.alert('Credentials', `${username} + ${password}`);
+    this.props.navigation.navigate('myTab');
+
   }
 
   render() {
