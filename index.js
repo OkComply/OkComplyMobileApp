@@ -58,11 +58,15 @@ export default function App() {
 	return (
 		<NavigationContainer>
 			<Stack.Navigator initialRouteName="Home">
-				<Stack.Screen name="SignIn" component={ScreenHome} />
+				<Stack.Screen name="Sign In"
+				options={{ title:'OkComply'  }
+			
+			}
+				 component={ScreenHome} />
 				<Stack.Screen
 					name="myTab"
 					component={MyTabs}
-					options={{ headerTitle: (props) => <LogoHeader {...props} /> }}
+					options={{ headerTitle: (props) => <LogoHeader {...props}  /> }}
 				/>
 				<Stack.Screen name="SignUp" component={ScreenSignUp} />
 				<Stack.Screen
