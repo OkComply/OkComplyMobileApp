@@ -2,65 +2,46 @@
 import React from 'react';
 import { Alert, TextInput, Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import Logo from './logo';
-import Auth0 from 'react-native-auth0';
 import { RNSlidingButton, SlideDirection } from 'rn-sliding-button';
 // Auth() domain and clientId info
-const auth0 = new Auth0({ domain: 'okapi-prod.eu.auth0.com', clientId: 'Z977z6OWUxi58x41rndANbZIy49o3iKR' });
+
+import AuthService from './AuthService';
 
 /**
  * @author Raeef Ibrahim
  * 
  */
-export default class App extends React.Component {
+export default class ScreenHome extends React.Component {
   constructor(props) {
     super(props);
     state = {
       loggedIn: null
     }
+
   }
+
   // Navigate to the Task page 
   navigatToTask = () => {
-    this.props.navigation.navigate('myTab');
-
+    try {
+      if (this.state.accessToken = "") {
+        this.props.navigation.navigate('Sign In');
+      }
+    } catch {
+      this.props.navigation.navigate('myTab');
+    }
   }
   //perform Action on slide success
   onSlideRight = () => {
-    this.onLogin()
+    setTimeout(() => {
+      this.refs.child.onLogin()
+    }, 100);
+
+    this.navigatToTask()
+
+    // this.refs.child.onLogOut()
     // this.onLogOut()
   };
 
-  // Log out from Auth()
-  onLogOut = () => {
-    auth0.webAuth
-      .clearSession({})
-      .then(success => {
-
-        Alert.alert(
-          'Logged out!'
-        );
-        this.setState({ accessToken: null });
-      })
-      .catch(error => {
-        console.log('Log out cancelled');
-      });
-  }
-  // Log In function with WebAuth
-  onLogin = () => {
-    auth0
-      .webAuth
-      .authorize({ scope: 'openid profile email' })
-      .then(credentials =>
-
-        // Successfully authenticated
-        // Store the accessToken
-        this.setState({ accessToken: credentials.accessToken })
-
-      )
-      .catch(error => console.log(error));
-
-    // Navigate to to task page after user is logged in 
-    this.navigatToTask()
-  }
 
   render() {
 
@@ -69,7 +50,8 @@ export default class App extends React.Component {
         <View style={styles.logoContainer}>
           <Logo />
         </View >
-
+        <AuthService ref="child">
+        </AuthService>
         <View>
           <Text style={styles.title}>
             Welkom in OkComply Mobile App</Text>
@@ -101,7 +83,6 @@ export default class App extends React.Component {
 
     );
   }
-
 }
 const styles = StyleSheet.create({
   container: {
