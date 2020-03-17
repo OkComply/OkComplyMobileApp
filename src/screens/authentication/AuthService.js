@@ -1,7 +1,7 @@
-
 import { Alert, View } from 'react-native';
 import Auth0 from 'react-native-auth0';
 import React from 'react';
+// Auth0 concection info
 const auth0 = new Auth0({ domain: 'okapi-prod.eu.auth0.com', clientId: 'Z977z6OWUxi58x41rndANbZIy49o3iKR' });
 //const auth0 = new Auth0({ domain: 'dev-n2a87se5.auth0.com', clientId: 'Zp0MW76DZXSRMF1bwtq83HiLjA2bnsqQ' });
 
@@ -16,7 +16,6 @@ export default class AuthService extends React.Component {
       token: null
     }
   }
-
   // Navigate to the Task page 
   navigatToTask = () => {
     try {

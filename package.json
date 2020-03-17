@@ -19,6 +19,7 @@
     "axios": "^0.19.2",
     "deepmerge": "^4.2.2",
     "firebase": "^7.10.0",
+    "galio-framework": "^0.6.3",
     "playlist-parser": "0.0.12",
     "react": "16.9.0",
     "react-devtools": "^3.6.3",

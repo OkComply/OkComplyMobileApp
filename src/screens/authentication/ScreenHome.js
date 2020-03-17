@@ -3,8 +3,6 @@ import React from 'react';
 import { Alert, TextInput, Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 import Logo from './logo';
 import { RNSlidingButton, SlideDirection } from 'rn-sliding-button';
-// Auth() domain and clientId info
-
 import AuthService from './AuthService';
 
 /**
@@ -63,7 +61,7 @@ export default class ScreenHome extends React.Component {
               height: 500,
               justifyContent: 'center',
               backgroundColor: '#3A99D8',
-              bottom: 200
+              bottom: 100
             }}
 
             height={100}
