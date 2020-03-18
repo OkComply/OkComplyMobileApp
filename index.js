@@ -17,6 +17,7 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import Icon from 'react-native-vector-icons/FontAwesome';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import Profile from './src/screens/profile/Profile'
 
 
 const Stack = createStackNavigator();
@@ -30,9 +31,9 @@ function MyTabs() {
 			initialRouteName="Task"
 			activeColor="white"
 			labelStyle={{ fontSize: 25 }}
-		
 			
 		>
+			
 			<Tab.Screen
 				name="Task"
 				component={Task}
@@ -48,6 +49,14 @@ function MyTabs() {
 				options={{
 					tabBarLabel: 'Mijn Meldingen',
 					tabBarIcon: ({ color }) => <MaterialIcon name="notifications" size={25} color="#FFFF" />
+				}}
+			/>
+			<Tab.Screen
+				name="Profile"
+				component={Profile}
+				options={{
+					tabBarLabel: 'Mijn Profile',
+					tabBarIcon: ({ color }) => <MaterialIcon name="menu" size={25} color="#FFFF" />
 				}}
 			/>
 		</Tab.Navigator>
