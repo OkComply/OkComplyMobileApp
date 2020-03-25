@@ -18,12 +18,14 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Profile from './src/screens/profile/Profile'
-
+import SplashScreen from './src/screens/splashScreen/SplashScreen'
 
 const Stack = createStackNavigator();
 AppState.load();
 
 const Tab = createMaterialBottomTabNavigator();
+
+
 function MyTabs() {
 	
 	return (
@@ -56,7 +58,7 @@ function MyTabs() {
 				component={Profile}
 				options={{
 					tabBarLabel: 'Mijn Profile',
-					tabBarIcon: ({ color }) => <MaterialIcon name="menu" size={25} color="#FFFF" />
+					tabBarIcon: ({ color }) => <MaterialIcon name="person" size={25} color="#FFFF" />
 				}}
 			/>
 		</Tab.Navigator>
@@ -64,20 +66,28 @@ function MyTabs() {
 }
 
 export default function App() {
+
+		// if (AppState.load()) {
+		// 	// We haven't finished checking for the token y
+		// 		return <SplashScreen />
+			
+		//   }
+	
+  
 	return (
 		<NavigationContainer>
 			<Stack.Navigator initialRouteName="Home">
 				<Stack.Screen name="Sign In"
-				options={{ title:'OkComply'  }
+				options={{ headerShown: false }
 			
 			}
-				 component={ScreenHome} />
+				 component={SplashScreen} />
 				<Stack.Screen
 					name="myTab"
 					component={MyTabs}
 					options={{ headerTitle: (props) => <LogoHeader {...props}  /> }}
 				/>
-				<Stack.Screen name="SignUp" component={ScreenSignUp} />
+				<Stack.Screen name="SignIn" options={{ headerShown: false }} component={ScreenHome} />
 				<Stack.Screen
 					name="Task"
 					component={Task}
@@ -91,9 +101,5 @@ export default function App() {
 }
 
 
-const styles = StyleSheet.create({
-	
-	
-})
 
 AppRegistry.registerComponent(appName, () => App);

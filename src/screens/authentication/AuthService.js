@@ -15,7 +15,7 @@ export default class AuthService extends React.Component {
       loggedIn: false,
       token: null
     }
-  }
+  } 
   // Navigate to the Task page 
   navigatToTask = () => {
     try {
@@ -38,7 +38,7 @@ export default class AuthService extends React.Component {
         this.setState({ accessToken: null });
       })
       .catch(error => {
-        console.log('Log out cancelled');
+        console.log('Log out c ancelled');
 
       });
   }

@@ -6,7 +6,7 @@ export default class Notification extends Component {
 	render() {
 		return (
 			<View >
-					<Text>Mijn Taken</Text>
+					<Text>Mijn Medlingen</Text>
 	
 			</View>
 		);
