@@ -6,10 +6,9 @@ import { Card } from 'react-native-elements'
 export default class Notification extends Component {
 
 
-    // Navigate to the Task page 
-    navigatToTask = () => {
-
-        this.props.navigation.navigate('Sign In');
+    // Navigate to the Home page 
+    navigatToHome = () => {
+        this.props.navigation.navigate('SignIn');
 
     }
 
@@ -19,11 +18,11 @@ export default class Notification extends Component {
             this.refs.child.onLogOut()
         }, 100);
 
-        this.navigatToTask()
+        this.navigatToHome()
     };
     render() {
         let pic = {
-            uri: 'https://www.pngitem.com/pimgs/m/146-1468479_my-profile-icon-blank-profile-picture-circle-hd.png'
+            uri: 'https://cdn.onlinewebfonts.com/svg/img_364496.png'
         };
         return (
             <View style={styles.container}>
@@ -34,7 +33,7 @@ export default class Notification extends Component {
                         title='Mijn Profile'
                     >
 
-                        <Image source={pic} style={{ width: 155, height: 140, left: 110, right: 1, bottom: 10 }} />
+                        <Image source={pic} style={{ width: 127, height: 130, left: 135, right: 1, bottom: 10 }} />
                         <Text style={{ marginBottom: 10, fontSize: 20, fontStyle: 'italic' }}>
                             Voornaam: Raeef
   </Text>
