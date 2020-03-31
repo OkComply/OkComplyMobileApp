@@ -28,7 +28,7 @@ export default class Notification extends Component {
             <View style={styles.container}>
                 <View style={styles.title}>
 
-                    <Card
+                    <Card 
 
                         title='Mijn Profile'
                     >
@@ -94,6 +94,7 @@ const styles = StyleSheet.create({
     title: {
         bottom: 200,
         width: 450
+   
 
     },
     titleText: {
