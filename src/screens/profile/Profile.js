@@ -15,7 +15,9 @@ export default class Notification extends Component {
     //perform Action on slide success
     onSlideRight = () => {
         setTimeout(() => {
+            //this.refs.child.onLogOut()
             this.refs.child.onLogOut()
+            
         }, 100);
 
         this.navigatToHome()
@@ -48,7 +50,7 @@ export default class Notification extends Component {
                     </Card>
                 </View>
                 <AuthService ref="child">
-                </AuthService>
+        </AuthService>
                 <RNSlidingButton
                     style={{
                         width: 700,

@@ -11,9 +11,9 @@ const auth0 = new Auth0({ domain: 'okapi-prod.eu.auth0.com', clientId: 'Z977z6OW
 export default class AuthService extends React.Component {
   constructor(props) {
     super(props);
-    state = {
+    this.state = {
       loggedIn: false,
-      token: null
+      accessToken: null
     }
   } 
   // Navigate to the Task page 
@@ -50,7 +50,7 @@ export default class AuthService extends React.Component {
       .then(credentials =>
         // Successfully authenticated
         // Store the accessToken
-        this.setState({ accessToken: credentials.accessToken }),
+        this.setState({ accessToken: credentials.accessToken },()=>{console.log(this.state.accessToken)}),
         console.log(this.state.accessToken)
       )
       .catch(error => console.log(error));
