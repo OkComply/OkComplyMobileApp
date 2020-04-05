@@ -20,13 +20,14 @@ export default class ScreenHome extends React.Component {
 
   // Navigate to the Task page 
   navigatToTask = () => {
-    try {
-      if (this.state.accessToken = "") {
+
+      if (this.refs.child.loggedIn = true) {
+        this.props.navigation.navigate('myTab');
+      } else {
         this.props.navigation.navigate('Sign In');
       }
-    } catch {
-      this.props.navigation.navigate('myTab');
-    }
+      
+    
   }
   //perform Action on slide success
   onSlideRight = () => {
@@ -36,8 +37,7 @@ export default class ScreenHome extends React.Component {
 
     this.navigatToTask()
 
-    // this.refs.child.onLogOut()
-    // this.onLogOut()
+  
   };
 
 

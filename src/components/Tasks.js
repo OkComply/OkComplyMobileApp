@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { Text, RecyclerViewBackedScrollView, View, StyleSheet } from 'react-native';
 import { FlatList, ScrollView } from 'react-native-gesture-handler';
-import TaskListItem from './components/TaskListItem';
+import TaskListItem from '../components/TaskListItem';
 import { Button } from 'react-native-paper';
 
 export default class Task extends Component {

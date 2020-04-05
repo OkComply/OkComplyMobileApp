@@ -4,21 +4,21 @@
 import * as React from 'react';
 import 'react-native-gesture-handler';
 import { AppRegistry, StyleSheet } from 'react-native';
-import ScreenHome from './src/screens/authentication/ScreenHome';
+import ScreenHome from './src/authentication/ScreenHome';
 import { name as appName } from './app.json';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import AppState from './src/state/AppState';
-import ScreenSignUp from './src/screens/authentication/ScreenSignUp';
-import Task from './src/screens/task/Tasks';
-import Notification from './src/screens/notification/Notification';
-import LogoHeader from './src/screens/logos/LogoHeader';
+import ScreenSignUp from './src/authentication/ScreenSignUp';
+import Task from './src/components/Tasks';
+import Notification from './src/components/Notification';
+import LogoHeader from './src/logos/LogoHeader';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import Profile from './src/screens/profile/Profile'
-import SplashScreen from './src/screens/splashScreen/SplashScreen'
+import Profile from './src/components/Profile'
+import SplashScreen from './src/components/SplashScreen'
 
 const Stack = createStackNavigator();
 AppState.load();

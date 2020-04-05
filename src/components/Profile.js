@@ -14,6 +14,7 @@ export default class Notification extends Component {
 
     //perform Action on slide success
     onSlideRight = () => {
+
         this.refs.child.onLogOut()
         this.navigatToHome()
     };
