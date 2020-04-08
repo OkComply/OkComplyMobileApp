@@ -1,42 +1,56 @@
 
 import React from 'react';
-import {  Text, View, StyleSheet } from 'react-native';
+import {  Text, View, StyleSheet, AppState } from 'react-native';
 import Logo from './logo';
 import { RNSlidingButton, SlideDirection } from 'rn-sliding-button';
 import AuthService from './AuthService';
+
 
 /**
  * @author Raeef Ibrahim
  * 
  */
+let appState= 'unset'
 export default class ScreenHome extends React.Component {
   constructor(props) {
     super(props);
     state = {
-      loggedIn: null
+      loggedIn: null,
+     
     }
-
+    appState= AppState.currentState;
+    AppState.addEventListener("change", this.handleAppState);
   }
+  handleAppState = (nextAppState) => {
+    if (appState.match(/inactive|background/) && nextAppState === "active"  ) {
+      
+      //alert("App has come to the foreground!");
+      if (this.props.accsesToken !== '') {
+         this.props.navigation.navigate('myTab');
+      } else {
+        this.props.navigation.navigate('SignIn');
+      }
+     }
+    appState= nextAppState;
+};
 
-  // Navigate to the Task page 
+  //Navigate to the Task page 
   navigatToTask = () => {
 
       if (this.refs.child.loggedIn = true) {
         this.props.navigation.navigate('myTab');
       } else {
-        this.props.navigation.navigate('Sign In');
+        this.props.navigation.navigate('SignIn');
       }
-      
-    
+  
+
   }
   //perform Action on slide success
   onSlideRight = () => {
     setTimeout(() => {
       this.refs.child.onLogin()
     }, 100);
-
-    this.navigatToTask()
-
+    //this.navigatToTask()
   
   };
 
