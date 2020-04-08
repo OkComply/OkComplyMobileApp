@@ -17,6 +17,8 @@ export default class AuthService extends React.Component {
       accessToken: null
     }
   } 
+
+
  navigateToTab=() => {
    this.props.navigation.navigate('myTab');
  }
@@ -36,9 +38,9 @@ export default class AuthService extends React.Component {
       });
   }
   checkLoggedIn = () => {
-    if (this.state.accessToken = '') {
-    this.setState({loggedIn: false})
-    } else {
+    if (this.state.accessToken === '') {
+      this.setState({loggedIn: false})
+    }else {
       this.setState({loggedIn: true})
     }
   }

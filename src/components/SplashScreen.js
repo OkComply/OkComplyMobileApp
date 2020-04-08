@@ -21,7 +21,6 @@ class SplashScreen extends React.Component {
       this.props.navigation.navigate('SignIn');
     }
   }
-
   render() {
     return (
       <View style={styles.viewStyles}>
