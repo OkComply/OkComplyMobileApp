@@ -19,8 +19,8 @@ export default class AuthService extends React.Component {
   } 
 
 
- navigateToTab=() => {
-   this.props.navigation.navigate('myTab');
+ navigateToHome=() => {
+   this.props.navigation.navigate('SignIn');
  }
   // Log out from AuthO
   onLogOut = () => {
@@ -60,7 +60,9 @@ export default class AuthService extends React.Component {
         console.log(this.state.accessToken),
       
       )
-      .catch(error => console.log(error));
+      .catch(error => console.log(error),
+      );
+     
   }
 
   render() {

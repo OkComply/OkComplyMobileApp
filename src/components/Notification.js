@@ -1,40 +1,51 @@
 import React, { Component } from 'react';
 
-import { Text,View, StyleSheet } from 'react-native';
+import { Text,View, StyleSheet, Alert, } from 'react-native';
 import { Button } from 'react-native-paper';
-import { FlatList, ScrollView } from 'react-native-gesture-handler';
+import { FlatList, ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { ListItem, Card } from 'react-native-elements';
+import NotificationListItem from './NotificationListItem'
 export default class Notification extends Component {
 
+
 	state = {
-		tasks: [
-			{ name: 'Taak1', daysToExpire: 12 },
-			{ name: 'Taak2', daysToExpire: 5 },
-			{ name: 'Taak3', daysToExpire: 16 },
-			{ name: 'Taak4', daysToExpire: 200 },
-			{ name: 'Taak5', daysToExpire: 120},
-			{ name: 'Taak6', daysToExpire: 120},
-			{ name: 'Taak7', daysToExpire: 120},
-			{ name: 'Taak8', daysToExpire: 120},
-			{ name: 'Taak9', daysToExpire: 120}
+		notification: [
+			{ name: 'melding 1', geconstateerdOp: '12-03-2020', meldingBetreft: 'Hek', meldingNummer: 1 ,gemeldDoor:'raeef.ibrahim@hva.nl'},
+			{ name: 'melding 2', geconstateerdOp: '12-03-2020', meldingBetreft: 'Hek', meldingNummer: 2,gemeldDoor:'ilias.delawar@hva.nl' },
+			{ name: 'melding 3', geconstateerdOp: '12-03-2020', meldingBetreft: 'Hek', meldingNummer: 3,gemeldDoor:'ilias.delawar@hva.nl' },
+			{ name: 'melding 4', geconstateerdOp: '12-03-2020', meldingBetreft: 'Hek', meldingNummer: 4,gemeldDoor:'ilias.delawar@hva.nl' },
+			{ name: 'melding 5', geconstateerdOp: '12-03-2020', meldingBetreft: 'Hek', meldingNummer: 5,gemeldDoor:'raeef.ibrahim@hva.nl'},
+			{ name: 'melding 6', geconstateerdOp: '12-03-2020', meldingBetreft: 'Hek', meldingNummer: 6,gemeldDoor:'ilias.delawar@hva.nl'},
+			{ name: 'melding 7', geconstateerdOp: '12-03-2020', meldingBetreft: 'Hek', meldingNummer: 7,gemeldDoor:'raeef.ibrahim@hva.nl'},
+			{ name: 'melding 8', geconstateerdOp: '12-03-2020', meldingBetreft: 'Hek', meldingNummer: 8,gemeldDoor:'raeef.ibrahim@hva.nl'},
+	
 		]
 	};
+
+
+	onAddNotification =() => {
+Alert.alert('Medlding is togegevoegd')
+	}
 	render() {
 		return (
-			<View style={styles.taskPage}>
-			<View >
-					<View style={styles.header}>
-					<Text style={styles.title}>Mijn Meldingen</Text>
-					<Button style={styles.filterButton}>
-				    <Text style={{color:'#fff'}}>Filter</Text>
-					</Button>
 			
+			<View style={styles.taskPage}>
+		
+			<View >
+			<View style={styles.header}>
+		    <Text style={styles.title}>Mijn Meldingen</Text>
+		    <Button style={styles.filterButton}>
+		 <Text style={{color:'#fff'}}>Filter</Text>
+			</Button>
 				</View>
 				<View>
-				<Button style={styles.addButton}>
+				<Button style={styles.addButton}
+				onPress={this.onAddNotification}>
 				    <Text style={{color:'#fff'}}>+ Melding toevoegen</Text>
+					
 					</Button>
 				</View>
+
 				<View
 					style={{
 						borderTopWidth: 1,
@@ -42,66 +53,35 @@ export default class Notification extends Component {
 						borderBottomWidth: 1,
 						width: '93%',
 						alignSelf: 'center',
-						top: 20
+						top: 8
 					}}
 				/>
-					<View style= {{flex:1, alignItems:'center', width: '100%'}}>
-	
-					{/* <FlatList contentContainerStyle={{alignItems:'center'}}
-						style={styles.flatListTasks}
-						renderItem={({ item }) => (
-							<ListItem 
-							title={item.name} 
-							subtitle={item.daysToExpire}
-							/>
-						)}
-					/> */}
-				                  
+					<View>
+						
+					<View >
+					
+					<FlatList 
+						//style={styles.flatListTasks}
+						data={this.state.notification}
+						renderItem={(info) => <NotificationListItem notName={info.item.name} 
+						geconstateerdOp= {info.item.geconstateerdOp}
+						meldingBetreft={info.item.meldingBetreft}
+						meldingNummer={info.item.meldingNummer}
+						gemeldDoor={info.item.gemeldDoor}
+						key={Math.random().toString()}
+						
+						/>}
+					/>
+					   
+					</View>
+				              
 					</View>
 	
 			</View>
-			<View>
-			<Card style= {{backgroundColor:'green', color:'red'}}
-
-title='Te Laat'
-backgroundColor='#ff0000'
->
-
-<Text style={{ marginBottom: 10, fontSize: 20, fontStyle: 'italic' }}>
-	4
-</Text>
-
-</Card>
+			
+			
 			</View>
-			<View>
-			<Card style= {{backgroundColor:'green', color:'red'}}
-
-title='Gepland'
-titleStyle='white'
-
-backgroundColor='#e9a944'
->
-
-<Text style={{ marginBottom: 10, fontSize: 20, fontStyle: 'italic' }}>
-	3
-</Text>
-
-</Card> 
-			</View>
-			<View>
-			<Card style= {{backgroundColor:'green', color:'red'}}
-
-title='Nieuw'
-backgroundColor='#3172d7'
->
-
-<Text style={{ marginBottom: 10, fontSize: 20, fontStyle: 'italic' }}>
-	5
-</Text>
-
-</Card>
-			</View>
-			</View>
+			
 		);
 	}
 }
@@ -138,6 +118,8 @@ const styles = StyleSheet.create({
 		
 	},
 	addButton: {
-		backgroundColor: 'green',
+		backgroundColor: '#33de8e',
+		width:'93%',
+		left: '4%'
 	}
 });
