@@ -12,15 +12,16 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		25C8326D11B006AD88D88E38 /* libPods-wakestreamTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12F82A6B667642759F87D8F3 /* libPods-wakestreamTests.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* wakestreamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* wakestreamTests.m */; };
+		3542EC333947F1E98315D629 /* libPods-wakestream.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DB198B7D22B4BF8C1153195 /* libPods-wakestream.a */; };
 		52EA2A3B2417ABAC00EFB2D6 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 52EA2A3A2417ABAC00EFB2D6 /* Fonts */; };
-		83CEEA913E5CD35871F011D7 /* libPods-wakestream.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 398FDD1196705D0F3985D465 /* libPods-wakestream.a */; };
-		8A706C7F4B2A6CE42D3E403A /* libPods-wakestreamTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C331BB4EABF0BAB64E61EFE /* libPods-wakestreamTests.a */; };
-		9C11D861056D99C47BFB5440 /* libPods-wakestream-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4EFADC22388B78E4726ECC1 /* libPods-wakestream-tvOSTests.a */; };
-		A6EFCB1A00228F437C4825A9 /* libPods-wakestream-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D6CC6742B3B044784CAA668 /* libPods-wakestream-tvOS.a */; };
+		BE58C3B439C91E32C86D8A58 /* libPods-wakestream-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 862EFC522F838A895B6BF99C /* libPods-wakestream-tvOS.a */; };
+		F74DD2C17CDD4CD2F8523B16 /* libPods-wakestream-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D265A767367E8F48A6454F30 /* libPods-wakestream-tvOSTests.a */; };
+		F9C9F670AF2E4EF681655F49 /* libA0RNLock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 966F097C7B6D4956A03FBD0F /* libA0RNLock.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,13 @@
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
 			remoteInfo = "wakestream-tvOS";
 		};
+		52C6EB7F243DE3B6005271CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A7E5E2DB30D443181B60DC1 /* A0RNLock.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5F0499EE1CAE9F4A006F6C05;
+			remoteInfo = A0RNLock;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +53,8 @@
 		00E356EE1AD99517003FC87E /* wakestreamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wakestreamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* wakestreamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wakestreamTests.m; sourceTree = "<group>"; };
-		0D6CC6742B3B044784CAA668 /* libPods-wakestream-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wakestream-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A7E5E2DB30D443181B60DC1 /* A0RNLock.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = A0RNLock.xcodeproj; path = "../node_modules/react-native-lock/ios/A0RNLock.xcodeproj"; sourceTree = "<group>"; };
+		12F82A6B667642759F87D8F3 /* libPods-wakestreamTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wakestreamTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* wakestream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wakestream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = wakestream/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = wakestream/AppDelegate.m; sourceTree = "<group>"; };
@@ -53,22 +62,23 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = wakestream/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = wakestream/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = wakestream/main.m; sourceTree = "<group>"; };
-		271F3CDAD75546DF02C6F92C /* Pods-wakestream-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakestream-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-wakestream-tvOSTests/Pods-wakestream-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		25CDF3627AEC5FF77BD129A0 /* Pods-wakestreamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakestreamTests.release.xcconfig"; path = "Target Support Files/Pods-wakestreamTests/Pods-wakestreamTests.release.xcconfig"; sourceTree = "<group>"; };
+		2B514462E880DC78B00079B3 /* Pods-wakestream-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakestream-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-wakestream-tvOSTests/Pods-wakestream-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* wakestream-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wakestream-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* wakestream-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "wakestream-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		398FDD1196705D0F3985D465 /* libPods-wakestream.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wakestream.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DB198B7D22B4BF8C1153195 /* libPods-wakestream.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wakestream.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E7AED9AD1B401FEEF7E1627 /* Pods-wakestream-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakestream-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-wakestream-tvOS/Pods-wakestream-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		52EA2A3A2417ABAC00EFB2D6 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
-		5C331BB4EABF0BAB64E61EFE /* libPods-wakestreamTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wakestreamTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6312AEBD69BAF4C484138E70 /* Pods-wakestreamTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakestreamTests.debug.xcconfig"; path = "Target Support Files/Pods-wakestreamTests/Pods-wakestreamTests.debug.xcconfig"; sourceTree = "<group>"; };
-		78F1D186842432B3CD00443E /* Pods-wakestreamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakestreamTests.release.xcconfig"; path = "Target Support Files/Pods-wakestreamTests/Pods-wakestreamTests.release.xcconfig"; sourceTree = "<group>"; };
-		86F0BD5BFA01A10EFB169D57 /* Pods-wakestream-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakestream-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-wakestream-tvOSTests/Pods-wakestream-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		91AAAF2F107A80A4CE4C95B9 /* Pods-wakestream-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakestream-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-wakestream-tvOS/Pods-wakestream-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		A4EFADC22388B78E4726ECC1 /* libPods-wakestream-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wakestream-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3633D342BF62C8FCDDAE72B /* Pods-wakestream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakestream.release.xcconfig"; path = "Target Support Files/Pods-wakestream/Pods-wakestream.release.xcconfig"; sourceTree = "<group>"; };
-		DCF9144FA20DA306505FD469 /* Pods-wakestream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakestream.debug.xcconfig"; path = "Target Support Files/Pods-wakestream/Pods-wakestream.debug.xcconfig"; sourceTree = "<group>"; };
-		E39BA583969BAEA74D94502C /* Pods-wakestream-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakestream-tvOS.release.xcconfig"; path = "Target Support Files/Pods-wakestream-tvOS/Pods-wakestream-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		6AF4F58828E87B9F0452F830 /* Pods-wakestreamTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakestreamTests.debug.xcconfig"; path = "Target Support Files/Pods-wakestreamTests/Pods-wakestreamTests.debug.xcconfig"; sourceTree = "<group>"; };
+		862EFC522F838A895B6BF99C /* libPods-wakestream-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wakestream-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		966F097C7B6D4956A03FBD0F /* libA0RNLock.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libA0RNLock.a; sourceTree = "<group>"; };
+		9E05774672222DCADB17BBBE /* Pods-wakestream-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakestream-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-wakestream-tvOSTests/Pods-wakestream-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		B0F5BC1ED5C1CC787866934E /* Pods-wakestream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakestream.release.xcconfig"; path = "Target Support Files/Pods-wakestream/Pods-wakestream.release.xcconfig"; sourceTree = "<group>"; };
+		D265A767367E8F48A6454F30 /* libPods-wakestream-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-wakestream-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E658CA2BA15F1383A281CF2C /* Pods-wakestream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakestream.debug.xcconfig"; path = "Target Support Files/Pods-wakestream/Pods-wakestream.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		FCEA9404082A11ED4FCBA997 /* Pods-wakestream-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wakestream-tvOS.release.xcconfig"; path = "Target Support Files/Pods-wakestream-tvOS/Pods-wakestream-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A706C7F4B2A6CE42D3E403A /* libPods-wakestreamTests.a in Frameworks */,
+				25C8326D11B006AD88D88E38 /* libPods-wakestreamTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +94,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83CEEA913E5CD35871F011D7 /* libPods-wakestream.a in Frameworks */,
+				F9C9F670AF2E4EF681655F49 /* libA0RNLock.a in Frameworks */,
+				3542EC333947F1E98315D629 /* libPods-wakestream.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,7 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6EFCB1A00228F437C4825A9 /* libPods-wakestream-tvOS.a in Frameworks */,
+				BE58C3B439C91E32C86D8A58 /* libPods-wakestream-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C11D861056D99C47BFB5440 /* libPods-wakestream-tvOSTests.a in Frameworks */,
+				F74DD2C17CDD4CD2F8523B16 /* libPods-wakestream-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,17 +154,34 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				398FDD1196705D0F3985D465 /* libPods-wakestream.a */,
-				0D6CC6742B3B044784CAA668 /* libPods-wakestream-tvOS.a */,
-				A4EFADC22388B78E4726ECC1 /* libPods-wakestream-tvOSTests.a */,
-				5C331BB4EABF0BAB64E61EFE /* libPods-wakestreamTests.a */,
+				4DB198B7D22B4BF8C1153195 /* libPods-wakestream.a */,
+				862EFC522F838A895B6BF99C /* libPods-wakestream-tvOS.a */,
+				D265A767367E8F48A6454F30 /* libPods-wakestream-tvOSTests.a */,
+				12F82A6B667642759F87D8F3 /* libPods-wakestreamTests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		52C6EB7B243DE3B5005271CB /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				966F097C7B6D4956A03FBD0F /* libA0RNLock.a */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		52C6EB7C243DE3B6005271CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52C6EB80243DE3B6005271CB /* libA0RNLock.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				0A7E5E2DB30D443181B60DC1 /* A0RNLock.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -168,6 +196,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				D25033D6C7112F0259D1FCD9 /* Pods */,
+				52C6EB7B243DE3B5005271CB /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -188,14 +217,14 @@
 		D25033D6C7112F0259D1FCD9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DCF9144FA20DA306505FD469 /* Pods-wakestream.debug.xcconfig */,
-				D3633D342BF62C8FCDDAE72B /* Pods-wakestream.release.xcconfig */,
-				91AAAF2F107A80A4CE4C95B9 /* Pods-wakestream-tvOS.debug.xcconfig */,
-				E39BA583969BAEA74D94502C /* Pods-wakestream-tvOS.release.xcconfig */,
-				86F0BD5BFA01A10EFB169D57 /* Pods-wakestream-tvOSTests.debug.xcconfig */,
-				271F3CDAD75546DF02C6F92C /* Pods-wakestream-tvOSTests.release.xcconfig */,
-				6312AEBD69BAF4C484138E70 /* Pods-wakestreamTests.debug.xcconfig */,
-				78F1D186842432B3CD00443E /* Pods-wakestreamTests.release.xcconfig */,
+				E658CA2BA15F1383A281CF2C /* Pods-wakestream.debug.xcconfig */,
+				B0F5BC1ED5C1CC787866934E /* Pods-wakestream.release.xcconfig */,
+				4E7AED9AD1B401FEEF7E1627 /* Pods-wakestream-tvOS.debug.xcconfig */,
+				FCEA9404082A11ED4FCBA997 /* Pods-wakestream-tvOS.release.xcconfig */,
+				2B514462E880DC78B00079B3 /* Pods-wakestream-tvOSTests.debug.xcconfig */,
+				9E05774672222DCADB17BBBE /* Pods-wakestream-tvOSTests.release.xcconfig */,
+				6AF4F58828E87B9F0452F830 /* Pods-wakestreamTests.debug.xcconfig */,
+				25CDF3627AEC5FF77BD129A0 /* Pods-wakestreamTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -207,7 +236,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "wakestreamTests" */;
 			buildPhases = (
-				553D7273F0449F6CC707F689 /* [CP] Check Pods Manifest.lock */,
+				1BF0894876AFAD44528D5A36 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
@@ -226,13 +255,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "wakestream" */;
 			buildPhases = (
-				196C880EF40BC97021D7038D /* [CP] Check Pods Manifest.lock */,
+				649477B55E154AD95ECB3A81 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				EC870CB4D342582BD48C540F /* [CP] Copy Pods Resources */,
+				F7EC85EA9468F8EE4ED91FFF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -247,7 +276,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "wakestream-tvOS" */;
 			buildPhases = (
-				98C8245F3D422CE2F5697244 /* [CP] Check Pods Manifest.lock */,
+				C6E634E13D79570A0923A61B /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -267,7 +296,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "wakestream-tvOSTests" */;
 			buildPhases = (
-				059FFD9A1C0BAA598D0127C8 /* [CP] Check Pods Manifest.lock */,
+				F3D719746BEC660CB9810702 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -288,19 +317,25 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 26Z7H48958;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
+					};
+					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = 26Z7H48958;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 26Z7H48958;
 						ProvisioningStyle = Automatic;
 					};
 					2D02E48F1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 26Z7H48958;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 2D02E47A1E0B4A5D006451C7;
 					};
@@ -318,6 +353,12 @@
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 52C6EB7C243DE3B6005271CB /* Products */;
+					ProjectRef = 0A7E5E2DB30D443181B60DC1 /* A0RNLock.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* wakestream */,
@@ -327,6 +368,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		52C6EB80243DE3B6005271CB /* libA0RNLock.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libA0RNLock.a;
+			remoteRef = 52C6EB7F243DE3B6005271CB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		00E356EC1AD99517003FC87E /* Resources */ = {
@@ -378,65 +429,7 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		059FFD9A1C0BAA598D0127C8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-wakestream-tvOSTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		196C880EF40BC97021D7038D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-wakestream-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Bundle React Native Code And Images";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
-		};
-		553D7273F0449F6CC707F689 /* [CP] Check Pods Manifest.lock */ = {
+		1BF0894876AFAD44528D5A36 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -458,7 +451,43 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		98C8245F3D422CE2F5697244 /* [CP] Check Pods Manifest.lock */ = {
+		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native Code And Images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		649477B55E154AD95ECB3A81 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-wakestream-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6E634E13D79570A0923A61B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -480,13 +509,36 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EC870CB4D342582BD48C540F /* [CP] Copy Pods Resources */ = {
+		F3D719746BEC660CB9810702 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-wakestream-tvOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7EC85EA9468F8EE4ED91FFF /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-wakestream/Pods-wakestream-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/Lock/Auth0.bundle",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
 				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
@@ -506,6 +558,7 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Auth0.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
@@ -633,16 +686,25 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6312AEBD69BAF4C484138E70 /* Pods-wakestreamTests.debug.xcconfig */;
+			baseConfigurationReference = 6AF4F58828E87B9F0452F830 /* Pods-wakestreamTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 26Z7H48958;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-lock/ios/A0RNLock/**",
+				);
 				INFOPLIST_FILE = wakestreamTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -656,13 +718,22 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78F1D186842432B3CD00443E /* Pods-wakestreamTests.release.xcconfig */;
+			baseConfigurationReference = 25CDF3627AEC5FF77BD129A0 /* Pods-wakestreamTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 26Z7H48958;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-lock/ios/A0RNLock/**",
+				);
 				INFOPLIST_FILE = wakestreamTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -676,12 +747,16 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DCF9144FA20DA306505FD469 /* Pods-wakestream.debug.xcconfig */;
+			baseConfigurationReference = E658CA2BA15F1383A281CF2C /* Pods-wakestream.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 26Z7H48958;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-lock/ios/A0RNLock/**",
+				);
 				INFOPLIST_FILE = wakestream/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -697,11 +772,15 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D3633D342BF62C8FCDDAE72B /* Pods-wakestream.release.xcconfig */;
+			baseConfigurationReference = B0F5BC1ED5C1CC787866934E /* Pods-wakestream.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 26Z7H48958;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-lock/ios/A0RNLock/**",
+				);
 				INFOPLIST_FILE = wakestream/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -717,7 +796,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 91AAAF2F107A80A4CE4C95B9 /* Pods-wakestream-tvOS.debug.xcconfig */;
+			baseConfigurationReference = 4E7AED9AD1B401FEEF7E1627 /* Pods-wakestream-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -726,10 +805,19 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 26Z7H48958;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-lock/ios/A0RNLock/**",
+				);
 				INFOPLIST_FILE = "wakestream-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -745,7 +833,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E39BA583969BAEA74D94502C /* Pods-wakestream-tvOS.release.xcconfig */;
+			baseConfigurationReference = FCEA9404082A11ED4FCBA997 /* Pods-wakestream-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -755,9 +843,18 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 26Z7H48958;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-lock/ios/A0RNLock/**",
+				);
 				INFOPLIST_FILE = "wakestream-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -773,7 +870,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86F0BD5BFA01A10EFB169D57 /* Pods-wakestream-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 2B514462E880DC78B00079B3 /* Pods-wakestream-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -781,10 +878,19 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 26Z7H48958;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-lock/ios/A0RNLock/**",
+				);
 				INFOPLIST_FILE = "wakestream-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -800,7 +906,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 271F3CDAD75546DF02C6F92C /* Pods-wakestream-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 9E05774672222DCADB17BBBE /* Pods-wakestream-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -809,9 +915,18 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 26Z7H48958;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-lock/ios/A0RNLock/**",
+				);
 				INFOPLIST_FILE = "wakestream-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

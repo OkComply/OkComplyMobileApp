@@ -6,11 +6,11 @@ import 'react-native-gesture-handler';
 import { AppRegistry, StyleSheet } from 'react-native';
 import ScreenHome from './src/authentication/ScreenHome';
 import { name as appName } from './app.json';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import AppState from './src/state/AppState';
 import ScreenSignUp from './src/authentication/ScreenSignUp';
-import Task from './src/components/Tasks';
+import Task from './src/components/task/Tasks';
 import Notification from './src/components/Notification';
 import LogoHeader from './src/logos/LogoHeader';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
@@ -19,7 +19,15 @@ import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Profile from './src/components/Profile'
 import SplashScreen from './src/components/SplashScreen'
+import TaskDetail from './src/components/task/taskDetail';
+import TaskFilter from './src/components/task/taskFilter';
 
+/**
+ * @author Ilias Delawar
+ *
+ * @author Raeef Ibrahim
+ *
+ */
 const Stack = createStackNavigator();
 AppState.load();
 
@@ -65,6 +73,7 @@ function MyTabs() {
 	);
 }
 
+
 export default function App() {
 
 		// if (AppState.load()) {
@@ -92,6 +101,22 @@ export default function App() {
 					name="Task"
 					component={Task}
 					options={{ headerTitle: (props) => <LogoHeader {...props} /> }}
+				/>
+				<Stack.Screen
+					name="TaskDetail"
+					component={TaskDetail}
+					options={{ headerTitle: (props) => <LogoHeader {...props} /> }}
+				/>
+					<Stack.Screen
+					name="TaskFilter"
+					component={TaskFilter}
+					options={
+						{...TransitionPresets.ModalSlideFromBottomIOS,
+						}
+					}
+
+
+
 				/>
 			</Stack.Navigator>
 		</NavigationContainer>
