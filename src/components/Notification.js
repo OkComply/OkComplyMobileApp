@@ -30,7 +30,8 @@ Alert.alert('Melding is togegevoegd')
 		return (
 			
 			<View style={styles.taskPage}>
-		<View></View>
+		
+	
 			<View >
 			<View style={styles.header}>
 		    <Text style={styles.title}>Mijn Meldingen</Text>
