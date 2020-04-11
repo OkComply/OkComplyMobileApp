@@ -24,7 +24,7 @@ export default class Notification extends Component {
 
 
 	onAddNotification =() => {
-Alert.alert('Melding is togegevoegd')
+Alert.alert('Melding is toegevoegd')
 	}
 	render() {
 		return (
