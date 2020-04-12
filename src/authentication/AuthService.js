@@ -8,6 +8,7 @@ const auth0 = new Auth0({ domain: 'okapi-prod.eu.auth0.com', clientId: 'Z977z6OW
 
 /**
  * @author Raeef Ibrahim
+ s
  */
 export default class AuthService extends React.Component {
   constructor(props) {
