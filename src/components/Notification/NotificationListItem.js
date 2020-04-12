@@ -11,12 +11,7 @@ export default class NotificationListItem extends Component {
             items:[]
         }
     }
-    _renderItem = ( {Item,index}) => {
-        
-        // return(
-        
-        // )
-            }
+
 
 	render() {
 		return (
@@ -26,17 +21,30 @@ export default class NotificationListItem extends Component {
 			<View>
 			
 			<TouchableOpacity>
+			
 			<Card style= {{backgroundColor:'green', color:'red'}}
 
-       title={this.props.notName}
-         backgroundColor='#white'
->
-		
+       title= {this.props.meldingBetreft}
+         backgroundColor='white'
+>          
 			<Text>Melding voor {this.props.meldingBetreft}</Text>
 			<Text>Meldingsnummer:   {this.props.meldingNummer}</Text>
 			<Text>Geconstateerd op:   {this.props.geconstateerdOp}</Text>
 			<Text>Gemeld door:   {this.props.gemeldDoor}</Text>
-
+			<Text>Eind verantwoordelijk: {this.props.eindverantwoordelijk}</Text>
+			<View
+					style={{
+						borderTopWidth: 1,
+						borderBottomColor: 'grey',
+						borderBottomWidth: 1,
+						width: '100%',
+						alignSelf: 'center',
+						top: 6
+					}}
+				/>
+					<View>
+						</View>
+			{/* <Text style={styles.text}> {this.props.status}</Text> */}
 </Card>
 </TouchableOpacity>
 
@@ -58,8 +66,24 @@ justifyContent:'center'
 		flex: 1
 		
 	},
+	text: {
+	
+		fontSize: 25,
+		fontFamily:'italic',
+		justifyContent:'center',
+		alignContent:'center'
+		
+	},
+	gepland: {
+		color:'#e9a944',
+		fontSize: 25,
+		fontFamily:'italic'
+	},
+	nieuw: {
 
-	header: {
+	}
+
+	,header: {
 		alignSelf: 'center',
 		flexDirection:'row',
 	},
