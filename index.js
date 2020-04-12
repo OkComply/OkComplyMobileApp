@@ -11,7 +11,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import AppState from './src/state/AppState';
 import ScreenSignUp from './src/authentication/ScreenSignUp';
 import Task from './src/components/task/Tasks';
-import Notification from './src/components/Notification';
+import Notification from './src/components/Notification/Notification';
 import LogoHeader from './src/logos/LogoHeader';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -21,7 +21,8 @@ import Profile from './src/components/Profile'
 import SplashScreen from './src/components/SplashScreen'
 import TaskDetail from './src/components/task/taskDetail';
 import TaskFilter from './src/components/task/taskFilter';
-
+import NotificationDetail from './src/components/Notification/NotificationDetail';
+import AddNotification from './src/components/Notification/AddNotification'
 /**
  * @author Ilias Delawar
  *
@@ -115,9 +116,19 @@ export default function App() {
 						}
 					}
 
-
-
 				/>
+					<Stack.Screen
+					name="notifactionDetail"
+					component={NotificationDetail}
+					options={{ headerTitle: (props) => <LogoHeader {...props} /> }}
+				/>
+						<Stack.Screen
+					name="AddNotification"
+					component={AddNotification}
+					options={{ headerTitle: (props) => <LogoHeader {...props} /> }}
+				/>
+
+				
 			</Stack.Navigator>
 		</NavigationContainer>
 
