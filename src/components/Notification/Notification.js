@@ -44,11 +44,8 @@ export default class Notification extends Component {
 				<Button style={styles.addButton}
 				onPress={this.onAddNotification}>
 				    <Text style={{color:'#fff'}}>+ Melding toevoegen</Text>
-					
 					</Button>
-				</View>
-
-				
+				</View>				
 					<View>
 						
 					<View >
