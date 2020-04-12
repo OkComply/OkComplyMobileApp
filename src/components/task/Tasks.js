@@ -4,7 +4,8 @@ import { Text, RecyclerViewBackedScrollView, View, StyleSheet } from 'react-nati
 import { FlatList, ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { Button } from 'react-native-paper';
 import TaskDetail from './taskDetail';
-import { createStackNavigator } from '@react-navigation/stack';
+import { ListItem, Card } from 'react-native-elements';
+
 
 /**
  * @author Ilias Delawar
@@ -73,22 +74,16 @@ export default class Task extends Component {
 						keyExtractor={(item) => item.id}
 						renderItem={({ item }) => (
 							<TouchableOpacity
-								style={styles.item}
 								onPress={() => this.props.navigation.navigate('TaskDetail')}
 							>
-								<Text style={{ fontSize: 17, marginBottom: 5 }}>{item.name}</Text>
-								<View
-									style={{
-										borderTopWidth: 1,
-										borderBottomColor: 'grey',
-										borderBottomWidth: 1,
-										width: '93%',
-										alignSelf: 'center',
-										marginTop: 1,
-										marginBottom:5
-									}}
-								/>
-								<Text>{item.daysToExpire} dagen over</Text>
+							
+							<Card 
+							style={{ backgroundColor: 'white', color: 'red' }}
+							title={item.name}
+							backgroundColor="#white"
+						>
+							<Text>{item.daysToExpire} dagen over</Text>
+						</Card>
 							</TouchableOpacity>
 						)}
 					/>
