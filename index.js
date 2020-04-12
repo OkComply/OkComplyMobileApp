@@ -77,12 +77,7 @@ function MyTabs() {
 
 export default function App() {
 
-		// if (AppState.load()) {
-		// 	// We haven't finished checking for the token y
-		// 		return <SplashScreen />
-			
-		//   }
-	
+
   
 	return (
 		<NavigationContainer>
