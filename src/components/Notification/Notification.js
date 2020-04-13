@@ -14,9 +14,9 @@ export default class Notification extends Component {
 			{ name: 'melding 1', geconstateerdOp: '12-03-2020', meldingBetreft: 'Hek', meldingNummer: 1 ,gemeldDoor:'raeef.ibrahim@hva.nl',eindverantwoordelijk:'ilias.delawar@hva.nl',status:'Te Laat'},
 			{ name: 'melding 2', geconstateerdOp: '12-03-2020', meldingBetreft: 'Licht', meldingNummer: 2,gemeldDoor:'ilias.delawar@hva.nl',eindverantwoordelijk:'ilias.delawar@hva.nl',status:'Gepland' },
 			{ name: 'melding 3', geconstateerdOp: '12-03-2020', meldingBetreft: 'brandblusser ', meldingNummer: 3,gemeldDoor:'ilias.delawar@hva.nl' ,eindverantwoordelijk:'raeef.ibrahim@hva.nl',status:'Nieuw'},
-			{ name: 'melding 4', geconstateerdOp: '12-03-2020', meldingBetreft: 'Hek', meldingNummer: 4,gemeldDoor:'ilias.delawar@hva.nl' ,eindverantwoordelijk:'raeef.ibrahim@hva.nl',status:'Te Laat'},
-			{ name: 'melding 5', geconstateerdOp: '12-03-2020', meldingBetreft: 'Hek', meldingNummer: 5,gemeldDoor:'raeef.ibrahim@hva.nl',eindverantwoordelijk:'raeef.ibrahim@hva.nl',status:'Gepland'},
-			{ name: 'melding 6', geconstateerdOp: '12-03-2020', meldingBetreft: 'Hek', meldingNummer: 6,gemeldDoor:'ilias.delawar@hva.nl',eindverantwoordelijk:'raeef.ibrahim@hva.nl',status:'Te Laat'},
+			{ name: 'melding 4', geconstateerdOp: '12-03-2020', meldingBetreft: 'Hek om de garage zetten', meldingNummer: 4,gemeldDoor:'ilias.delawar@hva.nl' ,eindverantwoordelijk:'raeef.ibrahim@hva.nl',status:'Te Laat'},
+			{ name: 'melding 5', geconstateerdOp: '12-03-2020', meldingBetreft: 'Veiligheid verbeteren', meldingNummer: 5,gemeldDoor:'raeef.ibrahim@hva.nl',eindverantwoordelijk:'raeef.ibrahim@hva.nl',status:'Gepland'},
+			{ name: 'melding 6', geconstateerdOp: '12-03-2020', meldingBetreft: 'Deur vervangen', meldingNummer: 6,gemeldDoor:'ilias.delawar@hva.nl',eindverantwoordelijk:'raeef.ibrahim@hva.nl',status:'Te Laat'},
 			{ name: 'melding 7', geconstateerdOp: '12-03-2020', meldingBetreft: 'Hek', meldingNummer: 7,gemeldDoor:'raeef.ibrahim@hva.nl',eindverantwoordelijk:'raeef.ibrahim@hva.nl',status:'Gepland'},
 			{ name: 'melding 8', geconstateerdOp: '12-03-2020', meldingBetreft: 'Hek', meldingNummer: 8,gemeldDoor:'raeef.ibrahim@hva.nl',eindverantwoordelijk:'raeef.ibrahim@hva.nl',status:'Te Laat'},
 	
