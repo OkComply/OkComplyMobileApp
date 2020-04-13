@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     title: {
-        bottom: 200,
+        bottom: 352,
         width: 450
    
 

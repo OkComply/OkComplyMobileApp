@@ -42,6 +42,9 @@ function MyTabs() {
 			initialRouteName="Task"
 			activeColor="white"
 			labelStyle={{ fontSize: 25 }}
+			tabBarOptions = {{			}}	
+			barStyle={{ backgroundColor:'#3BB9FF' , height: 70  }}
+		
 			
 		>
 			
@@ -50,7 +53,7 @@ function MyTabs() {
 				component={Task}
 				options={{
 					tabBarLabel: 'Mijn Taken',
-					tabBarIcon: ({ color }) => <AntDesign name="check" size={25} color="#FFFF"  />
+					tabBarIcon: ({ color }) => <AntDesign name="check" size={25} color="#FFFF"/>,
 				}}
 			/>
 

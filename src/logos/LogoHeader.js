@@ -10,7 +10,7 @@ const LogoHeader = () => {
       };
     return (
         <View>
-            <Image source={pic} style={{width: 170, height: 50, left: 40,bottom:5}} />
+            <Image source={pic} style={{width: 170, height: 50, left:(Platform.OS === 'ios') ? 12 : 55,bottom:5}} />
         </View>
     );
 };
