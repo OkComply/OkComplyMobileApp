@@ -67,7 +67,6 @@ export default class Task extends Component {
 						marginTop: 5
 					}}
 				/>
-
 				<View>
 					<FlatList
 					style={{marginBottom:59}}
