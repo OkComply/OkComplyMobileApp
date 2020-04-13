@@ -70,19 +70,23 @@ export default class Task extends Component {
 
 				<View>
 					<FlatList
+					style={{marginBottom:59}}
 						data={this.state.tasks}
 						keyExtractor={(item) => item.id}
 						renderItem={({ item }) => (
-							<TouchableOpacity
+							<TouchableOpacity 
 								onPress={() => this.props.navigation.navigate('TaskDetail')}
 							>
 							
 							<Card 
-							style={{ backgroundColor: 'white', color: 'red' }}
+							style={{  }}
 							title={item.name}
-							backgroundColor="#white"
+							backgroundColor="white"
+							containerStyle = {{borderRadius: 15, borderColor: 'black'}}
 						>
+							<View style= {styles.item}>
 							<Text>{item.daysToExpire} dagen over</Text>
+							</View>
 						</Card>
 							</TouchableOpacity>
 						)}
@@ -109,15 +113,8 @@ const styles = StyleSheet.create({
 	item: {
 		flex: 1,
 		display: 'flex',
-		marginHorizontal: 40,
-		marginTop: 24,
-		padding: 12,
-		backgroundColor: 'white',
-		fontSize: 15,
-		height: 100,
 		alignItems: 'center',
-		borderWidth: 3,
-		borderRadius: 20
+		
 	},
 	filterButton: {
 		marginTop: 3,
