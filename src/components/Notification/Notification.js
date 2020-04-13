@@ -26,13 +26,14 @@ export default class Notification extends Component {
 
 	onAddNotification =() => {
 		this.props.navigation.navigate('AddNotification')
+		this.state.notification.concat({ name: 'melding 8', geconstateerdOp: '12-03-2020', meldingBetreft: 'Hkewjfkefjklwejfek', meldingNummer: 8,gemeldDoor:'raeef.ibraklfrwfnmklwkerfmkewfewhim@hva.nl',eindverantwoordelijk:'raeef.ibrahim@hva.nl',status:'Te Laat'})
 	}
 	render() {
 		return (
 			
 			<View style={styles.taskPage}>
 		
-
+<ScrollView>
 			<View >
 			<View style={styles.header}>
 		    <Text style={styles.title}>Mijn Meldingen</Text>
@@ -52,7 +53,7 @@ export default class Notification extends Component {
 					<TouchableOpacity
 					onPress={() => this.props.navigation.navigate('notifactionDetail')}>
 					<FlatList 
-						//style={styles.flatListTasks}
+					
 						data={this.state.notification}
 						keyExtractor={(item) => item.id}
 						renderItem={(info) => <NotificationListItem  notName={info.item.name} 
@@ -76,7 +77,7 @@ export default class Notification extends Component {
 	
 			</View>
 			
-			
+			</ScrollView>
 			</View>
 			
 		);

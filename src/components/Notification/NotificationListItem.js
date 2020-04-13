@@ -25,23 +25,17 @@ export default class NotificationListItem extends Component {
 			<Card style= {{backgroundColor:'green', color:'red'}}
 
        title= {this.props.meldingBetreft}
-         backgroundColor='white'
->          
+		 backgroundColor='white'
+		 
+>      
+          
 			<Text>Melding voor {this.props.meldingBetreft}</Text>
 			<Text>Meldingsnummer:   {this.props.meldingNummer}</Text>
 			<Text>Geconstateerd op:   {this.props.geconstateerdOp}</Text>
 			<Text>Gemeld door:   {this.props.gemeldDoor}</Text>
 			<Text>Eind verantwoordelijk: {this.props.eindverantwoordelijk}</Text>
-			<View
-					style={{
-						borderTopWidth: 1,
-						borderBottomColor: 'grey',
-						borderBottomWidth: 1,
-						width: '100%',
-						alignSelf: 'center',
-						top: 6
-					}}
-				/>
+			<Card><Text  style={styles.gepland}>{this.props.status}</Text></Card>
+		
 					<View>
 						</View>
 			{/* <Text style={styles.text}> {this.props.status}</Text> */}
@@ -75,8 +69,9 @@ justifyContent:'center'
 		
 	},
 	gepland: {
-		color:'#e9a944',
-		fontSize: 25,
+		// color:'#e9a944',
+		
+		fontSize: 20,
 		fontFamily:'italic'
 	},
 	nieuw: {
