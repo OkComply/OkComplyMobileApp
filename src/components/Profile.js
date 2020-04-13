@@ -30,8 +30,7 @@ export default class Notification extends Component {
 
                         title='Mijn Profile'
                     >
-
-                        <Image source={pic} style={{ width: 127, height: 130, left: 135, right: 1, bottom: 10 }} />
+                        <Image source={pic} style={{ width: '40%', height: '46%',bottom:'3%',left:'30%' }} />
                         <Text style={{ marginBottom: 10, fontSize: 20, fontStyle: 'italic' }}>
                             Voornaam: Raeef
   </Text>
@@ -90,8 +89,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     title: {
-        bottom: 352,
-        width: 450
+        bottom: '5%',
+        width: '100%'
    
 
     },
