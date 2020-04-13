@@ -24,12 +24,11 @@ export default class ScreenHome extends React.Component {
   handleAppState = (nextAppState) => {
     if (appState.match(/inactive|background/) && nextAppState === "active"  ) {
       
-      //alert("App has come to the foreground!");
-      if (this.refs.child.loggedIn = true) {
-         this.props.navigation.navigate('myTab');
-      } else {
+       if (this.props.loggedIn = true) {
+          this.props.navigation.navigate('myTab');
+       } else {
         this.props.navigation.navigate('SignIn');
-      }
+       }
      }
     appState= nextAppState;
 };

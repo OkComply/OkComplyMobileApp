@@ -28,7 +28,7 @@ export default class AuthService extends React.Component {
       .clearSession({})
       .then(success => {
         Alert.alert(
-          'Logged out!'
+          'U bent uitgelogd'
         );
         this.setState({ accessToken: null });
       })

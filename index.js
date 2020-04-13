@@ -125,6 +125,10 @@ export default function App() {
 					component={AddNotification}
 					options={{ headerTitle: (props) => <LogoHeader {...props} /> }}
 				/>
+							<Stack.Screen
+					name="SplashScreen"
+					component={SplashScreen}
+				/>
 
 				
 			</Stack.Navigator>
