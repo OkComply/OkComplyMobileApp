@@ -24,11 +24,9 @@ onSave  =() => {
 
 <ScrollView>
 <View>
-	
 <Text style={styles.textStyle} >    Selecteer item binnen organisatie</Text>
 	<Card>
-		
-		<RNPickerSelect 
+		<RNPickerSelect style={styles.selecterStyle}
 						onValueChange={(value) => console.log(value)}
 						
 						placeholder={{
@@ -160,6 +158,10 @@ textStyle: {
 	fontFamily:'italic',
 	height:50
 
+},
+selecterStyle: {
+width: 200,
+height:20
 },
 btn: {
 		
