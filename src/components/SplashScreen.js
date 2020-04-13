@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { View, Text,Animated } from 'react-native';
 import Logo from '../authentication/logo'
 
@@ -24,13 +24,49 @@ class SplashScreen extends React.Component {
   render() {
     return (
       <View style={styles.viewStyles}>
-        
-         <Logo></Logo>
+           <View >
+      <FadeInView >
+        <Logo></Logo>
+      </FadeInView>
+    </View>
+         
         </View>
       
     );
   }
 }
+const FadeInView = (props) => {
+  const fadeAnim = useRef(new Animated.Value(0)).current  // Initial value for opacity: 0
+
+  React.useEffect(() => {
+    Animated.timing(
+      fadeAnim,
+      {
+        toValue: 1,
+        duration: 1000,
+        
+      }
+      
+    ).start();
+    
+  }, 
+  
+   [])
+
+  return (
+    
+    <Animated.View                 // Special animatable View
+      style={{
+        ...props.style,
+        opacity: fadeAnim,         // Bind opacity to animated value
+      }}
+    >
+      {props.children}
+    </Animated.View>
+  );
+}
+
+
 
 const styles = {
   viewStyles: {

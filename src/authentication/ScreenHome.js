@@ -1,6 +1,6 @@
 
-import React from 'react';
-import {  Text, View, StyleSheet, AppState } from 'react-native';
+import React, { useRef, useEffect } from 'react';
+import {  Text, View, StyleSheet, AppState,Animated } from 'react-native';
 import Logo from './logo';
 import { RNSlidingButton, SlideDirection } from 'rn-sliding-button';
 import AuthService from './AuthService';
@@ -65,8 +65,13 @@ export default class ScreenHome extends React.Component {
         <AuthService ref="child">
         </AuthService>
         <View>
-          <Text style={styles.title}>
+        <View >
+      <FadeInView >
+      <Text style={styles.title}>
             Welkom in OkComply Mobile App</Text>
+      </FadeInView>
+    </View>
+          
         </View>
         <View>
           <RNSlidingButton
@@ -95,6 +100,36 @@ export default class ScreenHome extends React.Component {
 
     );
   }
+}
+const FadeInView = (props) => {
+  const fadeAnim = useRef(new Animated.Value(0)).current  // Initial value for opacity: 0
+
+  React.useEffect(() => {
+    Animated.timing(
+      fadeAnim,
+      {
+        toValue: 1,
+        duration: 1000,
+        
+      }
+      
+    ).start();
+    
+  }, 
+  
+   [])
+
+  return (
+    
+    <Animated.View                 // Special animatable View
+      style={{
+        ...props.style,
+        opacity: fadeAnim,         // Bind opacity to animated value
+      }}
+    >
+      {props.children}
+    </Animated.View>
+  );
 }
 const styles = StyleSheet.create({
   container: {
