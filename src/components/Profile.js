@@ -8,7 +8,7 @@ export default class Notification extends Component {
 
     // Navigate to the Home page 
     navigatToHome = () => {
-        this.props.navigation.navigate('SignIn');
+        this.props.navigation.navigate('SplashScreen');
 
     }
 
