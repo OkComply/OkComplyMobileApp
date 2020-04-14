@@ -4,8 +4,6 @@ import {  Text, View, StyleSheet, AppState,Animated } from 'react-native';
 import Logo from './logo';
 import { RNSlidingButton, SlideDirection } from 'rn-sliding-button';
 import AuthService from './AuthService';
-
-
 /**
  * @author Raeef Ibrahim
  * 
@@ -29,6 +27,7 @@ export default class ScreenHome extends React.Component {
        } else {
         this.props.navigation.navigate('SignIn');
        }
+    
      }
     appState= nextAppState;
 };
