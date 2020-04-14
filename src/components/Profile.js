@@ -5,7 +5,10 @@ import AuthService from '../authentication/AuthService';
 import { Card } from 'react-native-elements'
 export default class Notification extends Component {
 
-
+    /**
+     * @author Raeef Ibrahim
+     * 
+     */
     // Navigate to the Home page 
     navigatToHome = () => {
         this.props.navigation.navigate('SplashScreen');
@@ -16,6 +19,9 @@ export default class Notification extends Component {
     onSlideRight = () => {
 
         this.refs.child.onLogOut()
+        setTimeout(() => {
+            this.navigatToHome()
+        }, 100);
         this.navigatToHome()
     };
     render() {
@@ -26,11 +32,11 @@ export default class Notification extends Component {
             <View style={styles.container}>
                 <View style={styles.title}>
 
-                    <Card 
+                    <Card
 
                         title='Mijn Profile'
                     >
-                        <Image source={pic} style={{ width: '40%', height: '46%',bottom:'3%',left:'30%' }} />
+                        <Image source={pic} style={{ width: '40%', height: '46%', bottom: '3%', left: '30%' }} />
                         <Text style={{ marginBottom: 10, fontSize: 20, fontStyle: 'italic' }}>
                             Voornaam: Raeef
   </Text>
@@ -45,7 +51,7 @@ export default class Notification extends Component {
                     </Card>
                 </View>
                 <AuthService ref="child">
-        </AuthService>
+                </AuthService>
                 <RNSlidingButton
                     style={{
                         width: 700,
@@ -91,7 +97,7 @@ const styles = StyleSheet.create({
     title: {
         bottom: '5%',
         width: '100%'
-   
+
 
     },
     titleText: {

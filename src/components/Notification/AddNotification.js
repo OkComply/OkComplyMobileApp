@@ -5,38 +5,50 @@ import { Text, View, StyleSheet, Alert, TextInput } from 'react-native';
 import DatePicker from 'react-native-datepicker';
 import RNPickerSelect from 'react-native-picker-select';
 import { FlatList, ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
+
+/**
+ * @author Raeef Ibrahim
+ *
+ */
 export default class AddNotification extends Component {
 	constructor(props) {
-		super(props);
+		super(props)
 		this.state = {
 			label: ''
-		};
+
+		}
 	}
 	onSave = () => {
-		this.props.navigation.navigate('myTab');
-	};
+		this.props.navigation.navigate('myTab')
+	}
 	render() {
 		return (
+
 			<View style={styles.taskPage}>
+
+
 				<ScrollView>
 					<View>
-						<Text style={styles.textStyle}> Selecteer item binnen organisatie</Text>
+						<Text style={styles.textStyle} >    Selecteer item binnen organisatie</Text>
 						<Card>
-							<RNPickerSelect
-								style={styles.selecterStyle}
+							<RNPickerSelect style={styles.selecterStyle}
 								onValueChange={(value) => console.log(value)}
+
 								placeholder={{
-									label: 'Selecteer item'
+									label: 'Selecteer item',
+
 								}}
 								items={[
 									{ label: 'HvA', value: 'football' },
 									{ label: 'Test', value: 'baseball' },
 									{ label: 'HvAOkComply', value: 'hockey' }
 								]}
+
 							/>
 						</Card>
 						<View>
-							<Text style={styles.textStyle}> Waar gaat deze melding over?</Text>
+
+							<Text style={styles.textStyle} >    Waar gaat deze melding over?</Text>
 
 							<Card>
 								<TextInput
@@ -52,7 +64,7 @@ export default class AddNotification extends Component {
 						</View>
 					</View>
 					<View>
-						<Text style={styles.textStyle}> Geconstateerd op</Text>
+						<Text style={styles.textStyle} >    Geconstateerd op</Text>
 						<Card>
 							<DatePicker
 								style={{ width: 350, left: 11 }}
@@ -64,22 +76,27 @@ export default class AddNotification extends Component {
 							/>
 						</Card>
 					</View>
-					<Text style={styles.textStyle}> Selecteer de eindverantwoordelijke </Text>
+					<Text style={styles.textStyle} >    Selecteer de eindverantwoordelijke </Text>
 					<Card>
+
 						<RNPickerSelect
 							onValueChange={(value) => console.log(value)}
+
 							placeholder={{
-								label: 'Selecteer item'
+								label: 'Selecteer item',
+
 							}}
 							items={[
 								{ label: 'Raeef.ibrahim@hva.nl', value: 'football' },
 								{ label: 'ilias.delawar@hva.nl', value: 'baseball' },
 								{ label: 'ralfdxib@hotmail.com', value: 'hockey' }
 							]}
+
 						/>
 					</Card>
 					<View>
-						<Text style={styles.textStyle}> Beschrijf waar deze melding over gaat</Text>
+
+						<Text style={styles.textStyle} >   Beschrijf waar deze melding over gaat</Text>
 
 						<Card>
 							<TextInput
@@ -94,7 +111,8 @@ export default class AddNotification extends Component {
 						</Card>
 					</View>
 					<View>
-						<Text style={styles.textStyle}> Welke actie is er inmiddels ondernomen?</Text>
+
+						<Text style={styles.textStyle} >    Welke actie is er inmiddels ondernomen?</Text>
 
 						<Card>
 							<TextInput
@@ -109,7 +127,8 @@ export default class AddNotification extends Component {
 						</Card>
 					</View>
 					<View>
-						<Text style={styles.textStyle}> Zijn er ideeën voor verbetering?</Text>
+
+						<Text style={styles.textStyle} >    Zijn er ideeën voor verbetering?</Text>
 
 						<Card>
 							<TextInput
@@ -123,15 +142,18 @@ export default class AddNotification extends Component {
 							/>
 						</Card>
 					</View>
-					<View>
-						<Text style={styles.textStyle}> Bestanden toevoegen</Text>
+					<View><Text style={styles.textStyle} >   Bestanden toevoegen</Text>
 					</View>
-					<Card />
-					<Button onPress={this.onSave} style={styles.btn}>
+					<Card></Card>
+					<Button onPress={this.onSave} style={styles.btn}
+					>
 						<Text style={{ color: '#fff', fontSize: 20 }}>Opslaan</Text>
 					</Button>
 				</ScrollView>
+
 			</View>
+
+
 		);
 	}
 }

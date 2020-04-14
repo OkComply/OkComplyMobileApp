@@ -1,23 +1,32 @@
 import React, { Component } from 'react';
-import { Text, RecyclerViewBackedScrollView, View, StyleSheet, TextInput } from 'react-native';
+import { Text, View, StyleSheet, TextInput } from 'react-native';
 import { Button } from 'react-native-paper';
+import RNPickerSelect from 'react-native-picker-select';
+import { ListItem, Card } from 'react-native-elements';
+export default class NotificationFilter extends Component {
 
-/**
- * @author Ilias Delawar
- * 
- */
-
-export default class TaskFilter extends Component {
-	onClick =() => {
+    onClick =() => {
         this.props.navigation.navigate('myTab')
     }
 	render() {
 		return (
-			<View style={styles.taskFilter}>
-				<View style={styles.filterUitvoerders}>
-					<Text style={{ marginTop: 5, marginBottom: 5, color: 'white', fontSize: 18 }}>
-						Filter op Uitvoerders
-					</Text>
+			<View style={styles.NotificationFilter}>
+                
+                <RNPickerSelect style={styles.filterUitvoerders}
+								onValueChange={(value) => console.log(value)}
+
+								placeholder={{
+									label: 'Filter op status',
+								}}
+								items={[
+									{ label: 'Te laat', value: 'football' },
+									{ label: 'Gepland', value: 'baseball' },
+									{ label: 'Nieuw', value: 'hockey' }
+								]}
+
+							/>
+						<View style={styles.filterUitvoerders}>
+					<Text style={{ marginTop: 5, marginBottom: 5, color: 'white', fontSize: 18 }}>Filter op naam</Text>
 					<TextInput
 						style={{
 							height: 35,
@@ -29,6 +38,7 @@ export default class TaskFilter extends Component {
 					/>
 				</View>
 				<View style={styles.filterUitvoerders}>
+                    
 					<Text style={{ marginTop: 5, marginBottom: 5, color: 'white', fontSize: 18 }}>
 						Filter op eindverantwoordelijke
 					</Text>
@@ -42,30 +52,8 @@ export default class TaskFilter extends Component {
 						}}
 					/>
 				</View>
-				<View style={styles.filterUitvoerders}>
-					<Text style={{ marginTop: 5, marginBottom: 5, color: 'white', fontSize: 18 }}>Filter op naam</Text>
-					<TextInput
-						style={{
-							height: 35,
-							borderColor: 'gray',
-							borderWidth: 1,
-							backgroundColor: 'white',
-							width: '60%'
-						}}
-					/>
-				</View>
-				<View style={styles.filterUitvoerders}>
-					<Text style={{ marginTop: 5, marginBottom: 5, color: 'white', fontSize: 18 }}>Filter op label</Text>
-					<TextInput
-						style={{
-							height: 35,
-							borderColor: 'gray',
-							borderWidth: 1,
-							backgroundColor: 'white',
-							width: '60%'
-						}}
-					/>
-				</View>
+			
+			
 				<View
 					style={{
 						borderTopWidth: 1,
@@ -90,7 +78,7 @@ export default class TaskFilter extends Component {
 						<Text style={{ fontSize: 12 }}>Filters legen</Text>
 					</Button>
 					<Button
-					 onPress= {this.onClick}
+                    onPress= {this.onClick}
 						style={{
 							marginTop: 3,
 							marginLeft: '10%',
@@ -109,7 +97,7 @@ export default class TaskFilter extends Component {
 }
 
 const styles = StyleSheet.create({
-	taskFilter: {
+	NotificationFilter: {
 		display: 'flex',
 		flex: 1,
 		alignItems: 'center',

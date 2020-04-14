@@ -23,6 +23,7 @@ import TaskDetail from './src/components/task/taskDetail';
 import TaskFilter from './src/components/task/taskFilter';
 import NotificationDetail from './src/components/Notification/NotificationDetail';
 import AddNotification from './src/components/Notification/AddNotification'
+import NotificationFilter from './src/components/Notification/NotificationFilter';
 /**
  * @author Ilias Delawar
  *
@@ -33,7 +34,7 @@ const Stack = createStackNavigator();
 AppState.load();
 
 const Tab = createMaterialBottomTabNavigator();
-
+console.disableYellowBox = true
 
 function MyTabs() {
 	
@@ -129,7 +130,10 @@ export default function App() {
 					name="SplashScreen"
 					component={SplashScreen}
 				/>
-
+				<Stack.Screen
+				name="NotificationFilter"
+					component={NotificationFilter}
+				/>
 				
 			</Stack.Navigator>
 		</NavigationContainer>
