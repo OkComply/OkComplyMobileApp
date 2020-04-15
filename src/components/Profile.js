@@ -1,15 +1,16 @@
-import React, { Component } from 'react';
-import { RNSlidingButton, SlideDirection } from 'rn-sliding-button';
-import { Image, Text, View, StyleSheet } from 'react-native';
+import React, {Component} from 'react';
+import {RNSlidingButton, SlideDirection} from 'rn-sliding-button';
+import {Image, Text, View, StyleSheet} from 'react-native';
 import AuthService from '../authentication/AuthService';
-import { Card } from 'react-native-elements'
+import {Card} from 'react-native-elements'
+
 export default class Notification extends Component {
 
     /**
      * @author Raeef Ibrahim
-     * 
+     *
      */
-    // Navigate to the Home page 
+        // Navigate to the Home page
     navigatToHome = () => {
         this.props.navigation.navigate('SplashScreen');
 
@@ -24,6 +25,7 @@ export default class Notification extends Component {
         }, 100);
         this.navigatToHome()
     };
+
     render() {
         let pic = {
             uri: 'https://cdn.onlinewebfonts.com/svg/img_364496.png'
@@ -36,18 +38,18 @@ export default class Notification extends Component {
 
                         title='Mijn Profile'
                     >
-                        <Image source={pic} style={{ width: '40%', height: '46%', bottom: '3%', left: '30%' }} />
-                        <Text style={{ marginBottom: 10, fontSize: 20, fontStyle: 'italic' }}>
+                        <Image source={pic} style={{width: '40%', height: '46%', bottom: '3%', left: '30%'}}/>
+                        <Text style={{marginBottom: 10, fontSize: 20, fontStyle: 'italic'}}>
                             Voornaam: Raeef
-  </Text>
+                        </Text>
 
-                        <Text style={{ marginBottom: 10, fontSize: 20, fontStyle: 'italic' }}>
+                        <Text style={{marginBottom: 10, fontSize: 20, fontStyle: 'italic'}}>
                             Achternaam: Ibrahim
-  </Text>
-                        <Text style={{ marginBottom: 10, fontSize: 20, fontStyle: 'italic' }}>
+                        </Text>
+                        <Text style={{marginBottom: 10, fontSize: 20, fontStyle: 'italic'}}>
                             Email: Raeef.ibrahim@hva.nl
 
-  </Text>
+                        </Text>
                     </Card>
                 </View>
                 <AuthService ref="child">
@@ -67,8 +69,8 @@ export default class Notification extends Component {
                     slideDirection={SlideDirection.RIGHT}>
                     <View>
                         <Text numberOfLines={1} style={styles.titleText}>
-                            Swipe rechts om uit te loggen  >>>
-    </Text>
+                            Swipe rechts om uit te loggen >>>
+                        </Text>
 
                     </View>
                 </RNSlidingButton>

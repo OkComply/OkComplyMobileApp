@@ -85,9 +85,9 @@ const styles = StyleSheet.create({
 	},
 	nieuw: {},
 
-	}
 
-	, header: {
+
+	 header: {
 		alignSelf: 'center',
 		flexDirection: 'row',
 	},

@@ -12,7 +12,7 @@ let appState= 'unset'
 export default class ScreenHome extends React.Component {
   constructor(props) {
     super(props);
-    state = {
+    this.state = {
       loggedIn: null,
      
     }

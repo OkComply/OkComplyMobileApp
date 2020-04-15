@@ -27,7 +27,7 @@ export default class Notification extends Component {
 	onAddNotification = () => {
 		this.props.navigation.navigate('AddNotification')
 
-	}
+	};
 	OnFilter = () => {
 		this.props.navigation.navigate('NotificationFilter')
 	}
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
 	filterButton: {
 		marginTop: 10,
 		marginLeft: '10%',
-		backgroundColor: '#85C1E9',
+		backgroundColor:'#3BB9FF',
 		height: '70%',
 		width: '22%',
 		right: 20

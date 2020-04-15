@@ -37,18 +37,18 @@ const Tab = createMaterialBottomTabNavigator();
 console.disableYellowBox = true
 
 function MyTabs() {
-	
+
 	return (
-		<Tab.Navigator 
+		<Tab.Navigator
 			initialRouteName="Task"
 			activeColor="white"
 			labelStyle={{ fontSize: 25 }}
-			tabBarOptions = {{			}}	
+			tabBarOptions = {{			}}
 			barStyle={{ backgroundColor:'#3BB9FF' , height: 70  }}
-		
-			
+
+
 		>
-			
+
 			<Tab.Screen
 				name="Task"
 				component={Task}
@@ -82,13 +82,14 @@ function MyTabs() {
 export default function App() {
 
 
-  
+
 	return (
 		<NavigationContainer>
 			<Stack.Navigator initialRouteName="Home">
 				<Stack.Screen name="Sign In"
 				options={{ headerShown: false }
-			
+
+
 			}
 				 component={SplashScreen} />
 				<Stack.Screen
@@ -134,11 +135,12 @@ export default function App() {
 				name="NotificationFilter"
 					component={NotificationFilter}
 				/>
-				
+
+
 			</Stack.Navigator>
 		</NavigationContainer>
 
-		
+
 	);
 }
 
