@@ -49,6 +49,7 @@ export default class ScreenHome extends React.Component {
       this.refs.child.onLogin()
     }, 100);
     //this.navigatToTask()
+    
   
   };
 
@@ -60,7 +61,7 @@ export default class ScreenHome extends React.Component {
         <View style={styles.logoContainer}>
           <Logo />
         </View >
-        <AuthService ref="child">
+        <AuthService ref="child" navigation={this.props.navigation}>
         </AuthService>
         <View>
         <View >

@@ -10,67 +10,67 @@ const auth0 = new Auth0({ domain: 'okapi-prod.eu.auth0.com', clientId: 'Z977z6OW
  * @author Raeef Ibrahim
  */
 export default class AuthService extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      loggedIn: false,
-      accessToken: null
-    }
-  } 
+	constructor(props) {
+		super(props);
+		this.state = {
+			loggedIn: false,
+			accessToken: null
+		};
+	}
 
-
- navigateToHome=() => {
-     this.props.navigation.navigate('SignIn');
- }
-  // Log out from AuthO
-  onLogOut = () => {
-    auth0.webAuth
-      .clearSession({})
-      .then(success => {
-        Alert.alert(
-          'U bent uitgelogd'
-        );
-        this.setState({ accessToken: null });
+	// navigateToHome = () => {
+	// 	this.props.navigation.navigate('SignIn');
+	// };
+	// Log out from AuthO
+	onLogOut = () => {
+		auth0.webAuth
+			.clearSession({})
+			.then((success) => {
+				Alert.alert('U bent uitgelogd');
+				this.setState({ accessToken: null });
+			})
+			.catch((error) => {
+				console.log('Log out cancelled');
+			});
+	};
+	checkLoggedIn = () => {
+		if (this.state.accessToken === '') {
+			this.setState({ loggedIn: false });
+		} else {
+      this.setState({ loggedIn: true });
+      this.props.navigation.reset({
+        index: 0,
+        routes: [
+          {
+            name: 'myTab'
+          }
+        ]
       })
-      .catch(error => {
-        console.log('Log out cancelled');
-
-      });
-  }
-  checkLoggedIn = () => {
-    if (this.state.accessToken === '') {
-      this.setState({loggedIn: false})
-    }else {
-      this.setState({loggedIn: true})
-    }
-  }
-  // Log in AuthO
-  onLogin = () => {
-    auth0
-      .webAuth
-      .authorize({ scope: 'openid profile email' })
      
-      .then(credentials =>
-        // Successfully authenticated
-        // Store the accessToken
+		}
+	};
+	// Log in AuthO
+	onLogin = () => {
+		auth0.webAuth
+			.authorize({ scope: 'openid profile email' })
+			.then(
+				(credentials) =>
+					// Successfully authenticated
+					// Store the accessToken
+
+          
+					this.setState({ accessToken: credentials.accessToken }, () => {
+						console.log(this.state.accessToken);
+					}),
+				this.checkLoggedIn(),
+      
        
-        this.setState({ accessToken: credentials.accessToken },()=>{console.log(this.state.accessToken)}),
-        this.checkLoggedIn(),
-      
-        console.log(this.state.accessToken),
-      
-      )
-      .catch(error => console.log(error));
-  }
+				console.log(this.state.accessToken)
+			)
+			.catch((error) => console.log(error));
+	};
 
-  render() {
-
-    return (
-      <View>
-      
-      </View>
-
-    );
-  }
-
+	render() {
+		return <View />;
+	}
 }

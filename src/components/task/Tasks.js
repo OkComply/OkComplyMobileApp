@@ -1,202 +1,154 @@
-import React, {Component, useState} from 'react';
+import React, { Component, useState } from 'react';
 
-import {Text, RecyclerViewBackedScrollView, View, StyleSheet, Modal, Dimensions} from 'react-native';
-import {FlatList, ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
-import {Button} from 'react-native-paper';
+import { Text, RecyclerViewBackedScrollView, View, StyleSheet, Modal, Dimensions } from 'react-native';
+import { FlatList, ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
+import { Button } from 'react-native-paper';
 import TaskDetail from './taskDetail';
-import {ListItem, Card} from 'react-native-elements';
-import MaterialIcon from "react-native-vector-icons/MaterialIcons";
-
-
+import { ListItem, Card } from 'react-native-elements';
+import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
+import TaskItemModal from './taskItemModal';
+import  taskData from '../../assets/tasks.json'
 /**
  * @author Ilias Delawar
  *
  */
 
 export default class Task extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            tasks: [
-                // max 55 karakters voor titel taak
-                {name: 'Hek om de garage zetten', daysToExpire: 12, id: 1},
-                {name: 'Deur vervangen', daysToExpire: 5, id: 2},
-                {name: 'Veiligheid verbeteren', daysToExpire: 16, id: 3},
-                {name: 'Auto schoonmaken', daysToExpire: 200, id: 4},
-                {name: 'Eten maken', daysToExpire: 120, id: 5},
-                {name: 'Naar huis gaan', daysToExpire: 120, id: 6},
-                {name: 'Wat kan nog meer', daysToExpire: 120, id: 7},
-                {name: 'Blavlalbalb', daysToExpire: 120, id: 8},
-                {name: 'Se 9de taak', daysToExpire: 120, id: 9}
-            ],
+	constructor(props) {
+		super(props);
+		this.state = {
+			tasks:taskData,
             modalOpen: false,
+            item: null
         };
-    }
+        
+	}
 
-    openModal = () => {
-        this.setState({
-            modalOpen: true
-        })
-
-    };
+	openModal = async item=> {
+		this.setState({
+            modalOpen: true,
+            item: item
+        });
+        
+	};
 
 	closeModal = () => {
-		this.setState({
-			modalOpen: false
-		})
-
-	};
-
-    commentPressedHandler = () => {
-        this.props.navigation.navigate('TaskFilter');
-    };
-
-    closeModalAndGoToAddNotification = () => {
-		this.setState({
+		return this.setState({
 			modalOpen: false
 		});
+	};
 
-		this.props.navigation.navigate('AddNotification');
-    };
+	closeModalAndAddNotification = () => {
+        this.props.navigation.navigate('AddNotification');
+        this.closeModal()
+	};
 
 	closeModalAndGoToTaskDetail = () => {
-		this.setState({
-			modalOpen: false
-		});
-
-		this.props.navigation.navigate('TaskDetail');
+        this.props.navigation.navigate('TaskDetail', {item: this.state.item});
+        this.closeModal();
+        
+        console.log("svsndosdin" + this.state.item.label)
 	};
 
+	commentPressedHandler = () => {
+		this.props.navigation.navigate('TaskFilter');
+	};
 
+	// state = {
+	// 	tasks: [
+	// 		{ name: 'Taak1', daysToExpire: 12, id: 1 },
+	// 		{ name: 'Taak2', daysToExpire: 5, id: 2 },
+	// 		{ name: 'Taak3', daysToExpire: 16, id: 3 },
+	// 		{ name: 'Taak4', daysToExpire: 200, id: 4 },
+	// 		{ name: 'Taak5', daysToExpire: 120, id: 5 },
+	// 		{ name: 'Taak6', daysToExpire: 120, id: 6 },
+	// 		{ name: 'Taak7', daysToExpire: 120, id: 7 },
+	// 		{ name: 'Taak8', daysToExpire: 120, id: 8 },
+	// 		{ name: 'Taak9', daysToExpire: 120, id: 9 }
+	// 	]
+	// };
+	render() {
+		return (
+			<View style={styles.taskPage}>
+				<Modal transparent={true} visible={this.state.modalOpen} animationType={'slide'}>
+					<TaskItemModal
+						closeModal={this.closeModal}
+                        closeModalAndGoToTaskDetail={this.closeModalAndGoToTaskDetail}
+                        closeModalAndAddNotification = {this.closeModalAndAddNotification}
+                        closeByOverlayClick = {this.closeModal}
+					/>
+				</Modal>
 
-
-    // state = {
-    // 	tasks: [
-    // 		{ name: 'Taak1', daysToExpire: 12, id: 1 },
-    // 		{ name: 'Taak2', daysToExpire: 5, id: 2 },
-    // 		{ name: 'Taak3', daysToExpire: 16, id: 3 },
-    // 		{ name: 'Taak4', daysToExpire: 200, id: 4 },
-    // 		{ name: 'Taak5', daysToExpire: 120, id: 5 },
-    // 		{ name: 'Taak6', daysToExpire: 120, id: 6 },
-    // 		{ name: 'Taak7', daysToExpire: 120, id: 7 },
-    // 		{ name: 'Taak8', daysToExpire: 120, id: 8 },
-    // 		{ name: 'Taak9', daysToExpire: 120, id: 9 }
-    // 	]
-    // };
-    render() {
-
-
-        return (
-            <View style={styles.taskPage}>
-                <Modal transparent={true} visible={this.state.modalOpen} animationType={'slide'}>
-                    <View style={{height: '100%', width: '100%', display: 'flex', justifyContent: 'flex-end'}}>
-                        <View style={{height: '30%', width: '100%', backgroundColor: '#282828', display: 'flex'}}>
-
-							<Button style={styles.modalButtons} onPress={this.closeModalAndGoToAddNotification}><MaterialIcon name="add" size={15} color="#FFFF" /><Text style={{color:'white'}}>Melding maken</Text></Button>
-							<Button style={styles.modalButtons} onPress={this.closeModalAndGoToTaskDetail}><MaterialIcon name="visibility" size={15} color="#FFFF" /><Text style={{color:'white'}}>Bekijk taak</Text></Button>
-							<Button style={styles.modalButtons} onPress={this.commentPressedHandler}><MaterialIcon name="done" size={15} color="#FFFF" /><Text style={{color:'white'}}>Taak afhandelen</Text></Button>
-
-							<View
-								style={{
-									borderTopWidth: 1,
-									borderBottomColor: 'grey',
-									borderBottomWidth: 1,
-									width: '93%',
-									alignSelf: 'center',
-									marginTop: 5
-								}}
-							/>
-							<Button style={styles.modalButtons} onPress={this.closeModal}><MaterialIcon name="close" size={15} color="#FFFF" /><Text style={{color:'white'}}>Annuleren</Text></Button>
-
-						</View>
-
-                    </View>
-
-
-                </Modal>
-
-                <View style={styles.title}>
-                    <Text style={{fontSize: 25, marginLeft: 120}}>Taken</Text>
-                    <Button style={styles.filterButton} onPress={this.commentPressedHandler}>
-                        <Text style={{color: '#fff'}}>Filter</Text>
-                    </Button>
-                </View>
-                <View
-                    style={{
-                        borderTopWidth: 1,
-                        borderBottomColor: 'grey',
-                        borderBottomWidth: 1,
-                        width: '93%',
-                        alignSelf: 'center',
-                        marginTop: 5
-                    }}
-                />
-                <View>
-                    <FlatList
-                        style={{marginBottom: 59}}
-                        data={this.state.tasks}
-                        keyExtractor={(item) => item.id}
-                        renderItem={({item}) => (
-                            <TouchableOpacity
-                                onPress={() => this.props.navigation.navigate('TaskDetail')}
-                                onLongPress={this.openModal}
-
-                            >
-
-
-                                <Card
+				<View style={styles.title}>
+					<Text style={{ fontSize: 25, marginLeft: 120 }}>Taken</Text>
+					<Button style={styles.filterButton} onPress={this.commentPressedHandler}>
+						<Text style={{ color: '#fff' }}>Filter</Text>
+					</Button>
+				</View>
+				<View
+					style={{
+						borderTopWidth: 1,
+						borderBottomColor: 'grey',
+						borderBottomWidth: 1,
+						width: '93%',
+						alignSelf: 'center',
+						marginTop: 5
+					}}
+				/>
+				<View>
+					<FlatList
+						style={{ marginBottom: 59 }}
+						data={this.state.tasks.data.tasks}
+						keyExtractor={(item) => item.id}
+						renderItem={({ item }) => (
+							<TouchableOpacity
+								onPress={() => this.openModal(item)}
+								// onLongPress={this.openModal}
+							>
+								<Card
                                     style={{}}
-                                    title={item.name}
-                                    backgroundColor="white"
-                                    containerStyle={{borderRadius: 15, borderColor: 'black'}}
-                                >
-                                    <View style={styles.item}>
-                                        <Text>{item.daysToExpire} dagen over</Text>
-                                    </View>
-                                </Card>
-                            </TouchableOpacity>
-                        )}
-
-                    />
-
-                </View>
-
-            </View>
-
-        );
-    }
+                                    title={item.label}
+									backgroundColor="#fff"
+									containerStyle={{ borderRadius: 15, borderColor: 'black' }}
+								>
+									<View style={styles.item}>
+										<Text >{item.deadline}</Text>
+									</View>
+								</Card>
+							</TouchableOpacity>
+						)}
+					/>
+				</View>
+			</View>
+		);
+	}
 }
 
 const styles = StyleSheet.create({
-    taskPage: {
-        display: 'flex',
-        flex: 1
-    },
-
-    title: {
-        display: 'flex',
-        marginTop: 10,
-        flexDirection: 'row',
-        justifyContent: 'center'
-    },
-
-    item: {
+	taskPage: {
+		display: 'flex',
         flex: 1,
-        display: 'flex',
+	},
+
+	title: {
+		display: 'flex',
+		marginTop: 10,
+		flexDirection: 'row',
+		justifyContent: 'center'
+	},
+
+	item: {
+		flex: 1,
+		display: 'flex',
         alignItems: 'center',
-
-    },
-    filterButton: {
-        marginTop: 3,
-        marginLeft: '10%',
-        backgroundColor: '#3BB9FF',
-        height: '85%',
-        width: '22%',
-        right: 20
-    },
-   modalButtons:{
-    	width: '50%',
-
-
-   }
+        
+	},
+	filterButton: {
+		marginTop: 3,
+		marginLeft: '10%',
+		backgroundColor: '#3BB9FF',
+		height: '85%',
+		width: '22%',
+		right: 20
+	}
 });
