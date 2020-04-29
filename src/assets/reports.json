@@ -1,0 +1,2457 @@
+{
+  "data": {
+    "reports": [
+      {
+        "id": "5d1f3767cb3932d0912ed11e",
+        "label": "Lekkage silo",
+        "resolveTime": 4,
+        "identifiedOn": "2019-07-05T00:00:00.000Z",
+        "situation": "Ik zie een plas",
+        "takenAction": "melding gemaakt en water opgeruimd",
+        "ideaToImprove": "",
+        "sequenceNumber": 1,
+        "reportNumber": "6",
+        "reportedAt": "2019-07-05T11:41:27.931Z",
+        "resolvedAt": null,
+        "node": {
+          "id": "5cd983d863b016dbfcc881ae",
+          "label": "Werkplaats",
+          "path": [
+            "5cc9b72681ea6a41aea8a601",
+            "5cd97c4863b0166c48c8818f",
+            "5cd9837863b0160fb7c881a4"
+          ],
+          "__typename": "NodeType"
+        },
+        "reporter": {
+          "id": "5cc7fe483fc228e752882ec6",
+          "email": "jeroen@okcomply.com",
+          "name": "Jeroen",
+          "surname": "Mol",
+          "__typename": "UserAccount"
+        },
+        "owners": [
+          {
+            "id": "5cc7fe483fc228e752882ec6",
+            "email": "jeroen@okcomply.com",
+            "name": "Jeroen",
+            "surname": "Mol",
+            "__typename": "UserAccount"
+          }
+        ],
+        "files": [],
+        "tasks": [
+          {
+            "id": "5d1f37c9cb39327ffc2ed120",
+            "label": "Lekkage stoppen",
+            "deadline": "2019-07-05T00:00:00.000Z",
+            "completed": null,
+            "sequenceNumber": 0,
+            "checklist": null,
+            "executor": {
+              "id": "5cc7116555b88f7311af332e",
+              "email": "berend@okcomply.com",
+              "name": "Berend",
+              "surname": "van de Graaf",
+              "__typename": "UserAccount"
+            },
+            "owners": [
+              {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              }
+            ],
+            "files": [],
+            "taskable": {
+              "__typename": "ReportType",
+              "id": "5d1f3767cb3932d0912ed11e",
+              "label": "Lekkage silo",
+              "resolvedAt": null,
+              "node": {
+                "id": "5cd983d863b016dbfcc881ae",
+                "label": "Werkplaats",
+                "path": [
+                  "5cc9b72681ea6a41aea8a601",
+                  "5cd97c4863b0166c48c8818f",
+                  "5cd9837863b0160fb7c881a4"
+                ],
+                "__typename": "NodeType"
+              },
+              "reporter": {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              },
+              "reportedAt": "2019-07-05T11:41:27.931Z",
+              "resolveTime": 4
+            },
+            "reportStatus": null,
+            "__typename": "TaskType"
+          },
+          {
+            "id": "5d1f37c9cb393245122ed122",
+            "label": "Contract / garantie bekijken",
+            "deadline": "2019-07-04T00:00:00.000Z",
+            "completed": "2020-03-10T16:30:57.228Z",
+            "sequenceNumber": 6,
+            "checklist": null,
+            "executor": {
+              "id": "5cc7fe483fc228e752882ec6",
+              "email": "jeroen@okcomply.com",
+              "name": "Jeroen",
+              "surname": "Mol",
+              "__typename": "UserAccount"
+            },
+            "owners": [
+              {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              }
+            ],
+            "files": [
+              {
+                "filename": "734c86d3-179a-53b3-800c-3596d87d5bf3",
+                "originalFilename": "target-audience-1080x675.jpg",
+                "fileType": "image/jpeg",
+                "latest": {
+                  "version": "42DyXm..EjtTY7nu7ECNthCObXE6cfEd",
+                  "eTag": "\"ea354a2feb827c38e7483811d5485379\"",
+                  "uploadedBy": {
+                    "id": "5cc7fe483fc228e752882ec6",
+                    "email": "jeroen@okcomply.com",
+                    "name": "Jeroen",
+                    "surname": "Mol",
+                    "__typename": "UserAccount"
+                  },
+                  "uploadedAt": "2019-06-12T07:51:10.000Z",
+                  "__typename": "FileVersionType"
+                },
+                "__typename": "FileType"
+              },
+              {
+                "filename": "95540e3c-a76e-59cc-a4d3-ee5cf149e76c",
+                "originalFilename": "9F50C15F-E1FD-44B0-8D63-89A5A40613F6.jpeg",
+                "fileType": "image/jpeg",
+                "latest": {
+                  "version": "JRj0jH31mZ3Dnih86lQDup3NKadtcIoG",
+                  "eTag": "\"c390aedc48a343d0be3908200cef0c30\"",
+                  "uploadedBy": {
+                    "id": "5cc7fe483fc228e752882ec6",
+                    "email": "jeroen@okcomply.com",
+                    "name": "Jeroen",
+                    "surname": "Mol",
+                    "__typename": "UserAccount"
+                  },
+                  "uploadedAt": "2020-03-10T16:30:34.000Z",
+                  "__typename": "FileVersionType"
+                },
+                "__typename": "FileType"
+              },
+              {
+                "filename": "f0a754a5-bf6e-5cd4-8ad2-e7e3d55cdb83",
+                "originalFilename": "99602323-154A-4BFB-B61E-4AF019F792F4.jpeg",
+                "fileType": "image/jpeg",
+                "latest": {
+                  "version": "kNlmR.QnOMXP8vuMoQ3FS5pw661R7yCm",
+                  "eTag": "\"e2e3869a2c4501f4eb38f52833388985\"",
+                  "uploadedBy": {
+                    "id": "5cc7fe483fc228e752882ec6",
+                    "email": "jeroen@okcomply.com",
+                    "name": "Jeroen",
+                    "surname": "Mol",
+                    "__typename": "UserAccount"
+                  },
+                  "uploadedAt": "2020-03-10T16:30:21.000Z",
+                  "__typename": "FileVersionType"
+                },
+                "__typename": "FileType"
+              },
+              {
+                "filename": "f7d695de-0041-57df-958b-3baa851b12ef",
+                "originalFilename": "729C79E1-3EFC-4AC5-98CE-D8DB761F532B.jpeg",
+                "fileType": "image/jpeg",
+                "latest": {
+                  "version": "qgB6PsEdiX6EQSLts3kBwgevbW7k8Q9c",
+                  "eTag": "\"6ce04a8b921379f1dde355fabe7ab30a\"",
+                  "uploadedBy": {
+                    "id": "5cc7fe483fc228e752882ec6",
+                    "email": "jeroen@okcomply.com",
+                    "name": "Jeroen",
+                    "surname": "Mol",
+                    "__typename": "UserAccount"
+                  },
+                  "uploadedAt": "2020-03-10T16:30:11.000Z",
+                  "__typename": "FileVersionType"
+                },
+                "__typename": "FileType"
+              }
+            ],
+            "taskable": {
+              "__typename": "ReportType",
+              "id": "5d1f3767cb3932d0912ed11e",
+              "label": "Lekkage silo",
+              "resolvedAt": null,
+              "node": {
+                "id": "5cd983d863b016dbfcc881ae",
+                "label": "Werkplaats",
+                "path": [
+                  "5cc9b72681ea6a41aea8a601",
+                  "5cd97c4863b0166c48c8818f",
+                  "5cd9837863b0160fb7c881a4"
+                ],
+                "__typename": "NodeType"
+              },
+              "reporter": {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              },
+              "reportedAt": "2019-07-05T11:41:27.931Z",
+              "resolveTime": 4
+            },
+            "reportStatus": {
+              "id": "5d302487cb393222b42ed187",
+              "label": "Nog niet alles binnen",
+              "resolveTime": 5,
+              "reportedAt": null,
+              "resolvedAt": "2019-07-18T14:05:18.771Z",
+              "__typename": "ReportStatusType"
+            },
+            "__typename": "TaskType"
+          }
+        ],
+        "__typename": "ReportType"
+      },
+      {
+        "id": "5d302295cb3932575d2ed17f",
+        "label": "Tegen de stelling aangereden",
+        "resolveTime": 4,
+        "identifiedOn": "2019-07-18T00:00:00.000Z",
+        "situation": "Heftruck is tegen de stelling aangereden en de stelling is kapot",
+        "takenAction": "geen",
+        "ideaToImprove": "paaltjes",
+        "sequenceNumber": 1,
+        "reportNumber": "7",
+        "reportedAt": "2019-07-18T07:41:09.509Z",
+        "resolvedAt": null,
+        "node": {
+          "id": "5cd983c663b01679abc881ab",
+          "label": "Magazijn",
+          "path": [
+            "5cc9b72681ea6a41aea8a601",
+            "5cd97c4863b0166c48c8818f",
+            "5cd9837863b0160fb7c881a4"
+          ],
+          "__typename": "NodeType"
+        },
+        "reporter": {
+          "id": "5cc7fe483fc228e752882ec6",
+          "email": "jeroen@okcomply.com",
+          "name": "Jeroen",
+          "surname": "Mol",
+          "__typename": "UserAccount"
+        },
+        "owners": [
+          {
+            "id": "5cc7fe483fc228e752882ec6",
+            "email": "jeroen@okcomply.com",
+            "name": "Jeroen",
+            "surname": "Mol",
+            "__typename": "UserAccount"
+          }
+        ],
+        "files": [],
+        "tasks": [
+          {
+            "id": "5d3022dfcb3932c1442ed181",
+            "label": "stelling controleren",
+            "deadline": "2019-07-18T00:00:00.000Z",
+            "completed": null,
+            "sequenceNumber": 0,
+            "checklist": null,
+            "executor": {
+              "id": "5cc7116555b88f7311af332e",
+              "email": "berend@okcomply.com",
+              "name": "Berend",
+              "surname": "van de Graaf",
+              "__typename": "UserAccount"
+            },
+            "owners": [
+              {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              }
+            ],
+            "files": [],
+            "taskable": {
+              "__typename": "ReportType",
+              "id": "5d302295cb3932575d2ed17f",
+              "label": "Tegen de stelling aangereden",
+              "resolvedAt": null,
+              "node": {
+                "id": "5cd983c663b01679abc881ab",
+                "label": "Magazijn",
+                "path": [
+                  "5cc9b72681ea6a41aea8a601",
+                  "5cd97c4863b0166c48c8818f",
+                  "5cd9837863b0160fb7c881a4"
+                ],
+                "__typename": "NodeType"
+              },
+              "reporter": {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              },
+              "reportedAt": "2019-07-18T07:41:09.509Z",
+              "resolveTime": 4
+            },
+            "reportStatus": null,
+            "__typename": "TaskType"
+          },
+          {
+            "id": "5d3022dfcb39321ff22ed183",
+            "label": "Paaltjes bestellen voor magazijn",
+            "deadline": "2019-07-18T00:00:00.000Z",
+            "completed": "2019-07-18T07:50:06.220Z",
+            "sequenceNumber": 1,
+            "checklist": null,
+            "executor": {
+              "id": "5cc7fe483fc228e752882ec6",
+              "email": "jeroen@okcomply.com",
+              "name": "Jeroen",
+              "surname": "Mol",
+              "__typename": "UserAccount"
+            },
+            "owners": [
+              {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              }
+            ],
+            "files": [],
+            "taskable": {
+              "__typename": "ReportType",
+              "id": "5d302295cb3932575d2ed17f",
+              "label": "Tegen de stelling aangereden",
+              "resolvedAt": null,
+              "node": {
+                "id": "5cd983c663b01679abc881ab",
+                "label": "Magazijn",
+                "path": [
+                  "5cc9b72681ea6a41aea8a601",
+                  "5cd97c4863b0166c48c8818f",
+                  "5cd9837863b0160fb7c881a4"
+                ],
+                "__typename": "NodeType"
+              },
+              "reporter": {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              },
+              "reportedAt": "2019-07-18T07:41:09.509Z",
+              "resolveTime": 4
+            },
+            "reportStatus": null,
+            "__typename": "TaskType"
+          }
+        ],
+        "__typename": "ReportType"
+      },
+      {
+        "id": "5d5cf45eccf4f349f590b98f",
+        "label": "Veiligheidschoenen verdwenen",
+        "resolveTime": 4,
+        "identifiedOn": "2019-08-21T00:00:00.000Z",
+        "situation": "asdasd",
+        "takenAction": "asdasd",
+        "ideaToImprove": "asdasd",
+        "sequenceNumber": 1,
+        "reportNumber": "11",
+        "reportedAt": "2019-08-21T07:35:58.338Z",
+        "resolvedAt": null,
+        "node": {
+          "id": "5d1235300731becd2e76b06e",
+          "label": "Amstelveen",
+          "path": [
+            "5cc9b72681ea6a41aea8a601",
+            "5cd97c6463b0168c6fc88191"
+          ],
+          "__typename": "NodeType"
+        },
+        "reporter": {
+          "id": "5cc7fe483fc228e752882ec6",
+          "email": "jeroen@okcomply.com",
+          "name": "Jeroen",
+          "surname": "Mol",
+          "__typename": "UserAccount"
+        },
+        "owners": [
+          {
+            "id": "5cc7fe483fc228e752882ec6",
+            "email": "jeroen@okcomply.com",
+            "name": "Jeroen",
+            "surname": "Mol",
+            "__typename": "UserAccount"
+          }
+        ],
+        "files": [],
+        "tasks": [
+          {
+            "id": "5d5cf54dccf4f3231590b991",
+            "label": "Schoenen kopen",
+            "deadline": "2019-08-26T00:00:00.000Z",
+            "completed": null,
+            "sequenceNumber": 0,
+            "checklist": null,
+            "executor": {
+              "id": "5cc7116555b88f7311af332e",
+              "email": "berend@okcomply.com",
+              "name": "Berend",
+              "surname": "van de Graaf",
+              "__typename": "UserAccount"
+            },
+            "owners": [
+              {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              }
+            ],
+            "files": [],
+            "taskable": {
+              "__typename": "ReportType",
+              "id": "5d5cf45eccf4f349f590b98f",
+              "label": "Veiligheidschoenen verdwenen",
+              "resolvedAt": null,
+              "node": {
+                "id": "5d1235300731becd2e76b06e",
+                "label": "Amstelveen",
+                "path": [
+                  "5cc9b72681ea6a41aea8a601",
+                  "5cd97c6463b0168c6fc88191"
+                ],
+                "__typename": "NodeType"
+              },
+              "reporter": {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              },
+              "reportedAt": "2019-08-21T07:35:58.338Z",
+              "resolveTime": 4
+            },
+            "reportStatus": null,
+            "__typename": "TaskType"
+          },
+          {
+            "id": "5d5cf54dccf4f3fd1f90b993",
+            "label": "camera beelden bekijken.",
+            "deadline": "2019-08-21T00:00:00.000Z",
+            "completed": null,
+            "sequenceNumber": 0,
+            "checklist": null,
+            "executor": {
+              "id": "5cc7fe483fc228e752882ec6",
+              "email": "jeroen@okcomply.com",
+              "name": "Jeroen",
+              "surname": "Mol",
+              "__typename": "UserAccount"
+            },
+            "owners": [
+              {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              }
+            ],
+            "files": [],
+            "taskable": {
+              "__typename": "ReportType",
+              "id": "5d5cf45eccf4f349f590b98f",
+              "label": "Veiligheidschoenen verdwenen",
+              "resolvedAt": null,
+              "node": {
+                "id": "5d1235300731becd2e76b06e",
+                "label": "Amstelveen",
+                "path": [
+                  "5cc9b72681ea6a41aea8a601",
+                  "5cd97c6463b0168c6fc88191"
+                ],
+                "__typename": "NodeType"
+              },
+              "reporter": {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              },
+              "reportedAt": "2019-08-21T07:35:58.338Z",
+              "resolveTime": 4
+            },
+            "reportStatus": null,
+            "__typename": "TaskType"
+          }
+        ],
+        "__typename": "ReportType"
+      },
+      {
+        "id": "5d5cf941ccf4f3673690b9a0",
+        "label": "Heb je de volgende persoonlijke beschermingsmiddelen om de taak uit te kunnen voeren?",
+        "resolveTime": 2,
+        "identifiedOn": "2019-08-21T00:00:00.000Z",
+        "situation": "Helm",
+        "takenAction": "",
+        "ideaToImprove": "",
+        "sequenceNumber": 1,
+        "reportNumber": "12",
+        "reportedAt": "2019-08-21T07:56:49.606Z",
+        "resolvedAt": null,
+        "node": {
+          "id": "5d5cf7b8ccf4f3fed590b997",
+          "label": "VCA",
+          "path": [
+            "5cc9b72681ea6a41aea8a601",
+            "5cd97c4863b0166c48c8818f",
+            "5cd9837863b0160fb7c881a4",
+            "5cd983b663b016b6b4c881aa"
+          ],
+          "__typename": "NodeType"
+        },
+        "reporter": {
+          "id": "5cc7fe483fc228e752882ec6",
+          "email": "jeroen@okcomply.com",
+          "name": "Jeroen",
+          "surname": "Mol",
+          "__typename": "UserAccount"
+        },
+        "owners": [
+          {
+            "id": "5cc7fe483fc228e752882ec6",
+            "email": "jeroen@okcomply.com",
+            "name": "Jeroen",
+            "surname": "Mol",
+            "__typename": "UserAccount"
+          }
+        ],
+        "files": [],
+        "tasks": [
+          {
+            "id": "5d5cf95fccf4f3bc5390b9a3",
+            "label": "helm leveren aan Jeroen",
+            "deadline": "2019-08-21T00:00:00.000Z",
+            "completed": null,
+            "sequenceNumber": 0,
+            "checklist": null,
+            "executor": {
+              "id": "5cc7116555b88f7311af332e",
+              "email": "berend@okcomply.com",
+              "name": "Berend",
+              "surname": "van de Graaf",
+              "__typename": "UserAccount"
+            },
+            "owners": [
+              {
+                "id": "5cc7116555b88f7311af332e",
+                "email": "berend@okcomply.com",
+                "name": "Berend",
+                "surname": "van de Graaf",
+                "__typename": "UserAccount"
+              }
+            ],
+            "files": [],
+            "taskable": {
+              "__typename": "ReportType",
+              "id": "5d5cf941ccf4f3673690b9a0",
+              "label": "Heb je de volgende persoonlijke beschermingsmiddelen om de taak uit te kunnen voeren?",
+              "resolvedAt": null,
+              "node": {
+                "id": "5d5cf7b8ccf4f3fed590b997",
+                "label": "VCA",
+                "path": [
+                  "5cc9b72681ea6a41aea8a601",
+                  "5cd97c4863b0166c48c8818f",
+                  "5cd9837863b0160fb7c881a4",
+                  "5cd983b663b016b6b4c881aa"
+                ],
+                "__typename": "NodeType"
+              },
+              "reporter": {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              },
+              "reportedAt": "2019-08-21T07:56:49.606Z",
+              "resolveTime": 2
+            },
+            "reportStatus": null,
+            "__typename": "TaskType"
+          }
+        ],
+        "__typename": "ReportType"
+      },
+      {
+        "id": "5d6e3224ccf4f307d490b9d9",
+        "label": "Tegen de stelling aangereden",
+        "resolveTime": 3,
+        "identifiedOn": "2019-09-03T00:00:00.000Z",
+        "situation": "asad",
+        "takenAction": "",
+        "ideaToImprove": "",
+        "sequenceNumber": 1,
+        "reportNumber": "14",
+        "reportedAt": "2019-09-03T09:28:04.978Z",
+        "resolvedAt": null,
+        "node": {
+          "id": "5cd983c663b01679abc881ab",
+          "label": "Magazijn",
+          "path": [
+            "5cc9b72681ea6a41aea8a601",
+            "5cd97c4863b0166c48c8818f",
+            "5cd9837863b0160fb7c881a4"
+          ],
+          "__typename": "NodeType"
+        },
+        "reporter": {
+          "id": "5cc7fe483fc228e752882ec6",
+          "email": "jeroen@okcomply.com",
+          "name": "Jeroen",
+          "surname": "Mol",
+          "__typename": "UserAccount"
+        },
+        "owners": [
+          {
+            "id": "5cc7fe483fc228e752882ec6",
+            "email": "jeroen@okcomply.com",
+            "name": "Jeroen",
+            "surname": "Mol",
+            "__typename": "UserAccount"
+          }
+        ],
+        "files": [],
+        "tasks": [
+          {
+            "id": "5d6e326cccf4f3da0790b9db",
+            "label": "Spullen uit de stelling",
+            "deadline": "2019-09-03T00:00:00.000Z",
+            "completed": null,
+            "sequenceNumber": 0,
+            "checklist": null,
+            "executor": {
+              "id": "5cc7116555b88f7311af332e",
+              "email": "berend@okcomply.com",
+              "name": "Berend",
+              "surname": "van de Graaf",
+              "__typename": "UserAccount"
+            },
+            "owners": [
+              {
+                "id": "5cc7116555b88f7311af332e",
+                "email": "berend@okcomply.com",
+                "name": "Berend",
+                "surname": "van de Graaf",
+                "__typename": "UserAccount"
+              }
+            ],
+            "files": [],
+            "taskable": {
+              "__typename": "ReportType",
+              "id": "5d6e3224ccf4f307d490b9d9",
+              "label": "Tegen de stelling aangereden",
+              "resolvedAt": null,
+              "node": {
+                "id": "5cd983c663b01679abc881ab",
+                "label": "Magazijn",
+                "path": [
+                  "5cc9b72681ea6a41aea8a601",
+                  "5cd97c4863b0166c48c8818f",
+                  "5cd9837863b0160fb7c881a4"
+                ],
+                "__typename": "NodeType"
+              },
+              "reporter": {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              },
+              "reportedAt": "2019-09-03T09:28:04.978Z",
+              "resolveTime": 3
+            },
+            "reportStatus": null,
+            "__typename": "TaskType"
+          },
+          {
+            "id": "5d6e326cccf4f3577f90b9dd",
+            "label": "Stelling vervangen",
+            "deadline": "2019-09-03T00:00:00.000Z",
+            "completed": "2019-09-13T13:45:43.300Z",
+            "sequenceNumber": 1,
+            "checklist": null,
+            "executor": {
+              "id": "5cc7fe483fc228e752882ec6",
+              "email": "jeroen@okcomply.com",
+              "name": "Jeroen",
+              "surname": "Mol",
+              "__typename": "UserAccount"
+            },
+            "owners": [
+              {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              }
+            ],
+            "files": [],
+            "taskable": {
+              "__typename": "ReportType",
+              "id": "5d6e3224ccf4f307d490b9d9",
+              "label": "Tegen de stelling aangereden",
+              "resolvedAt": null,
+              "node": {
+                "id": "5cd983c663b01679abc881ab",
+                "label": "Magazijn",
+                "path": [
+                  "5cc9b72681ea6a41aea8a601",
+                  "5cd97c4863b0166c48c8818f",
+                  "5cd9837863b0160fb7c881a4"
+                ],
+                "__typename": "NodeType"
+              },
+              "reporter": {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              },
+              "reportedAt": "2019-09-03T09:28:04.978Z",
+              "resolveTime": 3
+            },
+            "reportStatus": null,
+            "__typename": "TaskType"
+          },
+          {
+            "id": "5d6e326cccf4f3908190b9df",
+            "label": "Stelling keuren",
+            "deadline": "2019-09-03T00:00:00.000Z",
+            "completed": "2019-09-13T13:45:43.332Z",
+            "sequenceNumber": 1,
+            "checklist": null,
+            "executor": {
+              "id": "5d1f36c5cb393241312ed11c",
+              "email": "adriaan@dongenadvies.nl",
+              "name": "Adriaan",
+              "surname": "Dongen, van",
+              "__typename": "UserAccount"
+            },
+            "owners": [
+              {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              }
+            ],
+            "files": [],
+            "taskable": {
+              "__typename": "ReportType",
+              "id": "5d6e3224ccf4f307d490b9d9",
+              "label": "Tegen de stelling aangereden",
+              "resolvedAt": null,
+              "node": {
+                "id": "5cd983c663b01679abc881ab",
+                "label": "Magazijn",
+                "path": [
+                  "5cc9b72681ea6a41aea8a601",
+                  "5cd97c4863b0166c48c8818f",
+                  "5cd9837863b0160fb7c881a4"
+                ],
+                "__typename": "NodeType"
+              },
+              "reporter": {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              },
+              "reportedAt": "2019-09-03T09:28:04.978Z",
+              "resolveTime": 3
+            },
+            "reportStatus": null,
+            "__typename": "TaskType"
+          }
+        ],
+        "__typename": "ReportType"
+      },
+      {
+        "id": "5d6e32a4ccf4f3dac590b9e2",
+        "label": "Vloer staat vol met spullen",
+        "resolveTime": 4,
+        "identifiedOn": "2019-09-03T00:00:00.000Z",
+        "situation": "kan de vloer niet schoonmaken",
+        "takenAction": "",
+        "ideaToImprove": "",
+        "sequenceNumber": 1,
+        "reportNumber": "15",
+        "reportedAt": "2019-09-03T09:30:12.199Z",
+        "resolvedAt": null,
+        "node": {
+          "id": "5cd983c663b01679abc881ab",
+          "label": "Magazijn",
+          "path": [
+            "5cc9b72681ea6a41aea8a601",
+            "5cd97c4863b0166c48c8818f",
+            "5cd9837863b0160fb7c881a4"
+          ],
+          "__typename": "NodeType"
+        },
+        "reporter": {
+          "id": "5cc7fe483fc228e752882ec6",
+          "email": "jeroen@okcomply.com",
+          "name": "Jeroen",
+          "surname": "Mol",
+          "__typename": "UserAccount"
+        },
+        "owners": [
+          {
+            "id": "5cc7fe483fc228e752882ec6",
+            "email": "jeroen@okcomply.com",
+            "name": "Jeroen",
+            "surname": "Mol",
+            "__typename": "UserAccount"
+          }
+        ],
+        "files": [],
+        "tasks": [
+          {
+            "id": "5da043a4943a3362463fe1b1",
+            "label": "Vloer leegmaken",
+            "deadline": "2019-10-11T00:00:00.000Z",
+            "completed": null,
+            "sequenceNumber": 0,
+            "checklist": null,
+            "executor": {
+              "id": "5cc7116555b88f7311af332e",
+              "email": "berend@okcomply.com",
+              "name": "Berend",
+              "surname": "van de Graaf",
+              "__typename": "UserAccount"
+            },
+            "owners": [
+              {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              }
+            ],
+            "files": [],
+            "taskable": {
+              "__typename": "ReportType",
+              "id": "5d6e32a4ccf4f3dac590b9e2",
+              "label": "Vloer staat vol met spullen",
+              "resolvedAt": null,
+              "node": {
+                "id": "5cd983c663b01679abc881ab",
+                "label": "Magazijn",
+                "path": [
+                  "5cc9b72681ea6a41aea8a601",
+                  "5cd97c4863b0166c48c8818f",
+                  "5cd9837863b0160fb7c881a4"
+                ],
+                "__typename": "NodeType"
+              },
+              "reporter": {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              },
+              "reportedAt": "2019-09-03T09:30:12.199Z",
+              "resolveTime": 4
+            },
+            "reportStatus": null,
+            "__typename": "TaskType"
+          }
+        ],
+        "__typename": "ReportType"
+      },
+      {
+        "id": "5d6fb177ccf4f3db3490ba02",
+        "label": "koffie is op",
+        "resolveTime": 3,
+        "identifiedOn": "2019-09-04T00:00:00.000Z",
+        "situation": "Koffie op.",
+        "takenAction": "",
+        "ideaToImprove": "",
+        "sequenceNumber": 1,
+        "reportNumber": "16",
+        "reportedAt": "2019-09-04T12:43:35.509Z",
+        "resolvedAt": null,
+        "node": {
+          "id": "5d12352b0731bee62276b06d",
+          "label": "Amsterdam",
+          "path": [
+            "5cc9b72681ea6a41aea8a601",
+            "5cd97c6463b0168c6fc88191"
+          ],
+          "__typename": "NodeType"
+        },
+        "reporter": {
+          "id": "5cc7fe483fc228e752882ec6",
+          "email": "jeroen@okcomply.com",
+          "name": "Jeroen",
+          "surname": "Mol",
+          "__typename": "UserAccount"
+        },
+        "owners": [
+          {
+            "id": "5cc7fe483fc228e752882ec6",
+            "email": "jeroen@okcomply.com",
+            "name": "Jeroen",
+            "surname": "Mol",
+            "__typename": "UserAccount"
+          }
+        ],
+        "files": [],
+        "tasks": [
+          {
+            "id": "5d6fb1d4ccf4f30d2190ba04",
+            "label": "bestellen van koffie",
+            "deadline": "2019-09-04T00:00:00.000Z",
+            "completed": "2019-09-05T11:24:09.940Z",
+            "sequenceNumber": 1,
+            "checklist": null,
+            "executor": {
+              "id": "5cc7116555b88f7311af332e",
+              "email": "berend@okcomply.com",
+              "name": "Berend",
+              "surname": "van de Graaf",
+              "__typename": "UserAccount"
+            },
+            "owners": [
+              {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              }
+            ],
+            "files": [],
+            "taskable": {
+              "__typename": "ReportType",
+              "id": "5d6fb177ccf4f3db3490ba02",
+              "label": "koffie is op",
+              "resolvedAt": null,
+              "node": {
+                "id": "5d12352b0731bee62276b06d",
+                "label": "Amsterdam",
+                "path": [
+                  "5cc9b72681ea6a41aea8a601",
+                  "5cd97c6463b0168c6fc88191"
+                ],
+                "__typename": "NodeType"
+              },
+              "reporter": {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              },
+              "reportedAt": "2019-09-04T12:43:35.509Z",
+              "resolveTime": 3
+            },
+            "reportStatus": null,
+            "__typename": "TaskType"
+          }
+        ],
+        "__typename": "ReportType"
+      },
+      {
+        "id": "5d8b4caee85b0c5a92f6057b",
+        "label": "Graszaad is op",
+        "resolveTime": 3,
+        "identifiedOn": "2019-09-25T00:00:00.000Z",
+        "situation": "Graag inkopen graszaad",
+        "takenAction": "",
+        "ideaToImprove": "",
+        "sequenceNumber": 1,
+        "reportNumber": "19",
+        "reportedAt": "2019-09-25T11:17:02.296Z",
+        "resolvedAt": null,
+        "node": {
+          "id": "5d1235300731becd2e76b06e",
+          "label": "Amstelveen",
+          "path": [
+            "5cc9b72681ea6a41aea8a601",
+            "5cd97c6463b0168c6fc88191"
+          ],
+          "__typename": "NodeType"
+        },
+        "reporter": {
+          "id": "5cc7fe483fc228e752882ec6",
+          "email": "jeroen@okcomply.com",
+          "name": "Jeroen",
+          "surname": "Mol",
+          "__typename": "UserAccount"
+        },
+        "owners": [
+          {
+            "id": "5cc7116555b88f7311af332e",
+            "email": "berend@okcomply.com",
+            "name": "Berend",
+            "surname": "van de Graaf",
+            "__typename": "UserAccount"
+          }
+        ],
+        "files": [],
+        "tasks": [
+          {
+            "id": "5db81b4d9120bb3b72686f06",
+            "label": "test",
+            "deadline": "2019-10-29T00:00:00.000Z",
+            "completed": null,
+            "sequenceNumber": 0,
+            "checklist": null,
+            "executor": {
+              "id": "5cc7116555b88f7311af332e",
+              "email": "berend@okcomply.com",
+              "name": "Berend",
+              "surname": "van de Graaf",
+              "__typename": "UserAccount"
+            },
+            "owners": [
+              {
+                "id": "5cc7116555b88f7311af332e",
+                "email": "berend@okcomply.com",
+                "name": "Berend",
+                "surname": "van de Graaf",
+                "__typename": "UserAccount"
+              }
+            ],
+            "files": [],
+            "taskable": {
+              "__typename": "ReportType",
+              "id": "5d8b4caee85b0c5a92f6057b",
+              "label": "Graszaad is op",
+              "resolvedAt": null,
+              "node": {
+                "id": "5d1235300731becd2e76b06e",
+                "label": "Amstelveen",
+                "path": [
+                  "5cc9b72681ea6a41aea8a601",
+                  "5cd97c6463b0168c6fc88191"
+                ],
+                "__typename": "NodeType"
+              },
+              "reporter": {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              },
+              "reportedAt": "2019-09-25T11:17:02.296Z",
+              "resolveTime": 3
+            },
+            "reportStatus": null,
+            "__typename": "TaskType"
+          }
+        ],
+        "__typename": "ReportType"
+      },
+      {
+        "id": "5d9da4f1cbc6768a858b1433",
+        "label": "Persoonlijke beschermingsmiddelen",
+        "resolveTime": 4,
+        "identifiedOn": "2019-10-09T00:00:00.000Z",
+        "situation": "Bril is afwezig",
+        "takenAction": "",
+        "ideaToImprove": "",
+        "sequenceNumber": 3,
+        "reportNumber": "20",
+        "reportedAt": "2019-10-09T09:14:25.167Z",
+        "resolvedAt": null,
+        "node": {
+          "id": "5d9da2ebcbc676930c8b1426",
+          "label": "Tankplaats",
+          "path": [
+            "5cc9b72681ea6a41aea8a601",
+            "5d9da224cbc676bd768b1424",
+            "5d9da22bcbc67624a48b1425"
+          ],
+          "__typename": "NodeType"
+        },
+        "reporter": {
+          "id": "5cc7fe483fc228e752882ec6",
+          "email": "jeroen@okcomply.com",
+          "name": "Jeroen",
+          "surname": "Mol",
+          "__typename": "UserAccount"
+        },
+        "owners": [
+          {
+            "id": "5cc7fe483fc228e752882ec6",
+            "email": "jeroen@okcomply.com",
+            "name": "Jeroen",
+            "surname": "Mol",
+            "__typename": "UserAccount"
+          }
+        ],
+        "files": [],
+        "tasks": [
+          {
+            "id": "5d9da515cbc676097e8b1436",
+            "label": "Brillen aanschaffen",
+            "deadline": "2019-10-09T00:00:00.000Z",
+            "completed": null,
+            "sequenceNumber": 0,
+            "checklist": null,
+            "executor": {
+              "id": "5cc7fe483fc228e752882ec6",
+              "email": "jeroen@okcomply.com",
+              "name": "Jeroen",
+              "surname": "Mol",
+              "__typename": "UserAccount"
+            },
+            "owners": [
+              {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              }
+            ],
+            "files": [],
+            "taskable": {
+              "__typename": "ReportType",
+              "id": "5d9da4f1cbc6768a858b1433",
+              "label": "Persoonlijke beschermingsmiddelen",
+              "resolvedAt": null,
+              "node": {
+                "id": "5d9da2ebcbc676930c8b1426",
+                "label": "Tankplaats",
+                "path": [
+                  "5cc9b72681ea6a41aea8a601",
+                  "5d9da224cbc676bd768b1424",
+                  "5d9da22bcbc67624a48b1425"
+                ],
+                "__typename": "NodeType"
+              },
+              "reporter": {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              },
+              "reportedAt": "2019-10-09T09:14:25.167Z",
+              "resolveTime": 4
+            },
+            "reportStatus": null,
+            "__typename": "TaskType"
+          }
+        ],
+        "__typename": "ReportType"
+      },
+      {
+        "id": "5dde82f04f599a97846fc426",
+        "label": "Dakveiligheid",
+        "resolveTime": 45,
+        "identifiedOn": "2019-11-27T00:00:00.000Z",
+        "situation": "Helm",
+        "takenAction": "",
+        "ideaToImprove": "",
+        "sequenceNumber": 1,
+        "reportNumber": "25",
+        "reportedAt": "2019-11-27T14:06:40.805Z",
+        "resolvedAt": null,
+        "node": {
+          "id": "5dde80bc4f599af8256fc421",
+          "label": "Platdak",
+          "path": [
+            "5cc9b72681ea6a41aea8a601",
+            "5cd97c4863b0166c48c8818f",
+            "5cd9837d63b0164be2c881a5"
+          ],
+          "__typename": "NodeType"
+        },
+        "reporter": {
+          "id": "5cc7fe483fc228e752882ec6",
+          "email": "jeroen@okcomply.com",
+          "name": "Jeroen",
+          "surname": "Mol",
+          "__typename": "UserAccount"
+        },
+        "owners": [
+          {
+            "id": "5cc7fe483fc228e752882ec6",
+            "email": "jeroen@okcomply.com",
+            "name": "Jeroen",
+            "surname": "Mol",
+            "__typename": "UserAccount"
+          }
+        ],
+        "files": [],
+        "tasks": [
+          {
+            "id": "5e21702f4c4f161fa52146a6",
+            "label": "Oplossen door ...",
+            "deadline": "2020-01-17T00:00:00.000Z",
+            "completed": null,
+            "sequenceNumber": 0,
+            "checklist": null,
+            "executor": {
+              "id": "5cc7116555b88f7311af332e",
+              "email": "berend@okcomply.com",
+              "name": "Berend",
+              "surname": "van de Graaf",
+              "__typename": "UserAccount"
+            },
+            "owners": [
+              {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              }
+            ],
+            "files": [],
+            "taskable": {
+              "__typename": "ReportType",
+              "id": "5dde82f04f599a97846fc426",
+              "label": "Dakveiligheid",
+              "resolvedAt": null,
+              "node": {
+                "id": "5dde80bc4f599af8256fc421",
+                "label": "Platdak",
+                "path": [
+                  "5cc9b72681ea6a41aea8a601",
+                  "5cd97c4863b0166c48c8818f",
+                  "5cd9837d63b0164be2c881a5"
+                ],
+                "__typename": "NodeType"
+              },
+              "reporter": {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              },
+              "reportedAt": "2019-11-27T14:06:40.805Z",
+              "resolveTime": 45
+            },
+            "reportStatus": null,
+            "__typename": "TaskType"
+          }
+        ],
+        "__typename": "ReportType"
+      },
+      {
+        "id": "5dde82fb4f599af3576fc429",
+        "label": "Dakveiligheid",
+        "resolveTime": 3,
+        "identifiedOn": "2019-11-27T00:00:00.000Z",
+        "situation": "Helm",
+        "takenAction": "",
+        "ideaToImprove": "",
+        "sequenceNumber": 1,
+        "reportNumber": "26",
+        "reportedAt": "2019-11-27T14:06:51.532Z",
+        "resolvedAt": null,
+        "node": {
+          "id": "5dde80bc4f599af8256fc421",
+          "label": "Platdak",
+          "path": [
+            "5cc9b72681ea6a41aea8a601",
+            "5cd97c4863b0166c48c8818f",
+            "5cd9837d63b0164be2c881a5"
+          ],
+          "__typename": "NodeType"
+        },
+        "reporter": {
+          "id": "5cc7fe483fc228e752882ec6",
+          "email": "jeroen@okcomply.com",
+          "name": "Jeroen",
+          "surname": "Mol",
+          "__typename": "UserAccount"
+        },
+        "owners": [
+          {
+            "id": "5cc7fe483fc228e752882ec6",
+            "email": "jeroen@okcomply.com",
+            "name": "Jeroen",
+            "surname": "Mol",
+            "__typename": "UserAccount"
+          }
+        ],
+        "files": [],
+        "tasks": [
+          {
+            "id": "5e411b4327cb248cb399f64f",
+            "label": "test",
+            "deadline": "2020-02-10T00:00:00.000Z",
+            "completed": null,
+            "sequenceNumber": 0,
+            "checklist": null,
+            "executor": {
+              "id": "5cc7fe483fc228e752882ec6",
+              "email": "jeroen@okcomply.com",
+              "name": "Jeroen",
+              "surname": "Mol",
+              "__typename": "UserAccount"
+            },
+            "owners": [
+              {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              }
+            ],
+            "files": [],
+            "taskable": {
+              "__typename": "ReportType",
+              "id": "5dde82fb4f599af3576fc429",
+              "label": "Dakveiligheid",
+              "resolvedAt": null,
+              "node": {
+                "id": "5dde80bc4f599af8256fc421",
+                "label": "Platdak",
+                "path": [
+                  "5cc9b72681ea6a41aea8a601",
+                  "5cd97c4863b0166c48c8818f",
+                  "5cd9837d63b0164be2c881a5"
+                ],
+                "__typename": "NodeType"
+              },
+              "reporter": {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              },
+              "reportedAt": "2019-11-27T14:06:51.532Z",
+              "resolveTime": 3
+            },
+            "reportStatus": null,
+            "__typename": "TaskType"
+          }
+        ],
+        "__typename": "ReportType"
+      },
+      {
+        "id": "5dde82fd4f599ac6636fc42d",
+        "label": "Dakveiligheid",
+        "resolveTime": 4,
+        "identifiedOn": "2019-11-27T00:00:00.000Z",
+        "situation": "Helm",
+        "takenAction": "",
+        "ideaToImprove": "",
+        "sequenceNumber": 1,
+        "reportNumber": "27",
+        "reportedAt": "2019-11-27T14:06:53.587Z",
+        "resolvedAt": null,
+        "node": {
+          "id": "5dde80bc4f599af8256fc421",
+          "label": "Platdak",
+          "path": [
+            "5cc9b72681ea6a41aea8a601",
+            "5cd97c4863b0166c48c8818f",
+            "5cd9837d63b0164be2c881a5"
+          ],
+          "__typename": "NodeType"
+        },
+        "reporter": {
+          "id": "5cc7fe483fc228e752882ec6",
+          "email": "jeroen@okcomply.com",
+          "name": "Jeroen",
+          "surname": "Mol",
+          "__typename": "UserAccount"
+        },
+        "owners": [
+          {
+            "id": "5cc7fe483fc228e752882ec6",
+            "email": "jeroen@okcomply.com",
+            "name": "Jeroen",
+            "surname": "Mol",
+            "__typename": "UserAccount"
+          }
+        ],
+        "files": [],
+        "tasks": [
+          {
+            "id": "5e416f3827cb243a5d99f659",
+            "label": "zorgen dat er genoeg materiaal is",
+            "deadline": "2020-02-10T00:00:00.000Z",
+            "completed": null,
+            "sequenceNumber": 0,
+            "checklist": null,
+            "executor": {
+              "id": "5e1dcb0e4c4f1601642146a4",
+              "email": "dirk@okcomply.com",
+              "name": "",
+              "surname": "",
+              "__typename": "UserAccount"
+            },
+            "owners": [
+              {
+                "id": "5e1dcb0e4c4f1601642146a4",
+                "email": "dirk@okcomply.com",
+                "name": "",
+                "surname": "",
+                "__typename": "UserAccount"
+              }
+            ],
+            "files": [],
+            "taskable": {
+              "__typename": "ReportType",
+              "id": "5dde82fd4f599ac6636fc42d",
+              "label": "Dakveiligheid",
+              "resolvedAt": null,
+              "node": {
+                "id": "5dde80bc4f599af8256fc421",
+                "label": "Platdak",
+                "path": [
+                  "5cc9b72681ea6a41aea8a601",
+                  "5cd97c4863b0166c48c8818f",
+                  "5cd9837d63b0164be2c881a5"
+                ],
+                "__typename": "NodeType"
+              },
+              "reporter": {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              },
+              "reportedAt": "2019-11-27T14:06:53.587Z",
+              "resolveTime": 4
+            },
+            "reportStatus": null,
+            "__typename": "TaskType"
+          }
+        ],
+        "__typename": "ReportType"
+      },
+      {
+        "id": "5dde82fd4f599ad7f26fc42c",
+        "label": "Dakveiligheid",
+        "resolveTime": 3,
+        "identifiedOn": "2019-11-27T00:00:00.000Z",
+        "situation": "Helm",
+        "takenAction": "",
+        "ideaToImprove": "",
+        "sequenceNumber": 1,
+        "reportNumber": "27",
+        "reportedAt": "2019-11-27T14:06:53.580Z",
+        "resolvedAt": null,
+        "node": {
+          "id": "5dde80bc4f599af8256fc421",
+          "label": "Platdak",
+          "path": [
+            "5cc9b72681ea6a41aea8a601",
+            "5cd97c4863b0166c48c8818f",
+            "5cd9837d63b0164be2c881a5"
+          ],
+          "__typename": "NodeType"
+        },
+        "reporter": {
+          "id": "5cc7fe483fc228e752882ec6",
+          "email": "jeroen@okcomply.com",
+          "name": "Jeroen",
+          "surname": "Mol",
+          "__typename": "UserAccount"
+        },
+        "owners": [
+          {
+            "id": "5cc7fe483fc228e752882ec6",
+            "email": "jeroen@okcomply.com",
+            "name": "Jeroen",
+            "surname": "Mol",
+            "__typename": "UserAccount"
+          }
+        ],
+        "files": [],
+        "tasks": [
+          {
+            "id": "5e4bc5b727cb24e89f99f6d2",
+            "label": "Testing meldingen",
+            "deadline": "2020-02-18T00:00:00.000Z",
+            "completed": null,
+            "sequenceNumber": 0,
+            "checklist": null,
+            "executor": {
+              "id": "5cc7fe483fc228e752882ec6",
+              "email": "jeroen@okcomply.com",
+              "name": "Jeroen",
+              "surname": "Mol",
+              "__typename": "UserAccount"
+            },
+            "owners": [
+              {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              }
+            ],
+            "files": [],
+            "taskable": {
+              "__typename": "ReportType",
+              "id": "5dde82fd4f599ad7f26fc42c",
+              "label": "Dakveiligheid",
+              "resolvedAt": null,
+              "node": {
+                "id": "5dde80bc4f599af8256fc421",
+                "label": "Platdak",
+                "path": [
+                  "5cc9b72681ea6a41aea8a601",
+                  "5cd97c4863b0166c48c8818f",
+                  "5cd9837d63b0164be2c881a5"
+                ],
+                "__typename": "NodeType"
+              },
+              "reporter": {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              },
+              "reportedAt": "2019-11-27T14:06:53.580Z",
+              "resolveTime": 3
+            },
+            "reportStatus": null,
+            "__typename": "TaskType"
+          }
+        ],
+        "__typename": "ReportType"
+      },
+      {
+        "id": "5dde82fd4f599ad5436fc42e",
+        "label": "Dakveiligheid",
+        "resolveTime": -1,
+        "identifiedOn": "2019-11-27T00:00:00.000Z",
+        "situation": "Helm",
+        "takenAction": "",
+        "ideaToImprove": "",
+        "sequenceNumber": 2,
+        "reportNumber": "28",
+        "reportedAt": "2019-11-27T14:06:53.671Z",
+        "resolvedAt": null,
+        "node": {
+          "id": "5dde80bc4f599af8256fc421",
+          "label": "Platdak",
+          "path": [
+            "5cc9b72681ea6a41aea8a601",
+            "5cd97c4863b0166c48c8818f",
+            "5cd9837d63b0164be2c881a5"
+          ],
+          "__typename": "NodeType"
+        },
+        "reporter": {
+          "id": "5cc7fe483fc228e752882ec6",
+          "email": "jeroen@okcomply.com",
+          "name": "Jeroen",
+          "surname": "Mol",
+          "__typename": "UserAccount"
+        },
+        "owners": [
+          {
+            "id": "5cc7fe483fc228e752882ec6",
+            "email": "jeroen@okcomply.com",
+            "name": "Jeroen",
+            "surname": "Mol",
+            "__typename": "UserAccount"
+          }
+        ],
+        "files": [],
+        "tasks": [
+          {
+            "id": "5e997017e4f7e74f39f69281",
+            "label": "feffefewf",
+            "deadline": "2020-04-17T00:00:00.000Z",
+            "completed": null,
+            "sequenceNumber": 0,
+            "checklist": null,
+            "executor": {
+              "id": "5cc7feb83fc228c136882eca",
+              "email": "demo02@okcomply.com",
+              "name": "",
+              "surname": "",
+              "__typename": "UserAccount"
+            },
+            "owners": [
+              {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              }
+            ],
+            "files": [],
+            "taskable": {
+              "__typename": "ReportType",
+              "id": "5dde82fd4f599ad5436fc42e",
+              "label": "Dakveiligheid",
+              "resolvedAt": null,
+              "node": {
+                "id": "5dde80bc4f599af8256fc421",
+                "label": "Platdak",
+                "path": [
+                  "5cc9b72681ea6a41aea8a601",
+                  "5cd97c4863b0166c48c8818f",
+                  "5cd9837d63b0164be2c881a5"
+                ],
+                "__typename": "NodeType"
+              },
+              "reporter": {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              },
+              "reportedAt": "2019-11-27T14:06:53.671Z",
+              "resolveTime": -1
+            },
+            "reportStatus": null,
+            "__typename": "TaskType"
+          }
+        ],
+        "__typename": "ReportType"
+      },
+      {
+        "id": "5dde82fd4f599ad7966fc42f",
+        "label": "Dakveiligheid",
+        "resolveTime": 200,
+        "identifiedOn": "2019-11-27T00:00:00.000Z",
+        "situation": "Helm",
+        "takenAction": "",
+        "ideaToImprove": "",
+        "sequenceNumber": 2,
+        "reportNumber": "29",
+        "reportedAt": "2019-11-27T14:06:53.676Z",
+        "resolvedAt": null,
+        "node": {
+          "id": "5dde80bc4f599af8256fc421",
+          "label": "Platdak",
+          "path": [
+            "5cc9b72681ea6a41aea8a601",
+            "5cd97c4863b0166c48c8818f",
+            "5cd9837d63b0164be2c881a5"
+          ],
+          "__typename": "NodeType"
+        },
+        "reporter": {
+          "id": "5cc7fe483fc228e752882ec6",
+          "email": "jeroen@okcomply.com",
+          "name": "Jeroen",
+          "surname": "Mol",
+          "__typename": "UserAccount"
+        },
+        "owners": [
+          {
+            "id": "5cc7fe483fc228e752882ec6",
+            "email": "jeroen@okcomply.com",
+            "name": "Jeroen",
+            "surname": "Mol",
+            "__typename": "UserAccount"
+          }
+        ],
+        "files": [],
+        "tasks": [
+          {
+            "id": "5ea7fb3e2bfb48ff6c9c999a",
+            "label": "Alles regelen",
+            "deadline": "2020-04-28T00:00:00.000Z",
+            "completed": null,
+            "sequenceNumber": 0,
+            "checklist": null,
+            "executor": {
+              "id": "5e1dcb0e4c4f1601642146a4",
+              "email": "dirk@okcomply.com",
+              "name": "",
+              "surname": "",
+              "__typename": "UserAccount"
+            },
+            "owners": [
+              {
+                "id": "5e1dcb0e4c4f1601642146a4",
+                "email": "dirk@okcomply.com",
+                "name": "",
+                "surname": "",
+                "__typename": "UserAccount"
+              }
+            ],
+            "files": [],
+            "taskable": {
+              "__typename": "ReportType",
+              "id": "5dde82fd4f599ad7966fc42f",
+              "label": "Dakveiligheid",
+              "resolvedAt": null,
+              "node": {
+                "id": "5dde80bc4f599af8256fc421",
+                "label": "Platdak",
+                "path": [
+                  "5cc9b72681ea6a41aea8a601",
+                  "5cd97c4863b0166c48c8818f",
+                  "5cd9837d63b0164be2c881a5"
+                ],
+                "__typename": "NodeType"
+              },
+              "reporter": {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              },
+              "reportedAt": "2019-11-27T14:06:53.676Z",
+              "resolveTime": 200
+            },
+            "reportStatus": null,
+            "__typename": "TaskType"
+          }
+        ],
+        "__typename": "ReportType"
+      },
+      {
+        "id": "5dde83014f599ae94b6fc436",
+        "label": "Dakveiligheid",
+        "resolveTime": 5,
+        "identifiedOn": "2019-11-27T00:00:00.000Z",
+        "situation": "Helm",
+        "takenAction": "",
+        "ideaToImprove": "",
+        "sequenceNumber": 2,
+        "reportNumber": "30",
+        "reportedAt": "2019-11-27T14:06:57.694Z",
+        "resolvedAt": null,
+        "node": {
+          "id": "5dde80bc4f599af8256fc421",
+          "label": "Platdak",
+          "path": [
+            "5cc9b72681ea6a41aea8a601",
+            "5cd97c4863b0166c48c8818f",
+            "5cd9837d63b0164be2c881a5"
+          ],
+          "__typename": "NodeType"
+        },
+        "reporter": {
+          "id": "5cc7fe483fc228e752882ec6",
+          "email": "jeroen@okcomply.com",
+          "name": "Jeroen",
+          "surname": "Mol",
+          "__typename": "UserAccount"
+        },
+        "owners": [
+          {
+            "id": "5cc7fe483fc228e752882ec6",
+            "email": "jeroen@okcomply.com",
+            "name": "Jeroen",
+            "surname": "Mol",
+            "__typename": "UserAccount"
+          }
+        ],
+        "files": [],
+        "tasks": [
+          {
+            "id": "5ea7fb152bfb4807659c9994",
+            "label": "Alles regelen",
+            "deadline": "2020-04-28T00:00:00.000Z",
+            "completed": null,
+            "sequenceNumber": 0,
+            "checklist": null,
+            "executor": {
+              "id": "5e1dcb0e4c4f1601642146a4",
+              "email": "dirk@okcomply.com",
+              "name": "",
+              "surname": "",
+              "__typename": "UserAccount"
+            },
+            "owners": [
+              {
+                "id": "5e1dcb0e4c4f1601642146a4",
+                "email": "dirk@okcomply.com",
+                "name": "",
+                "surname": "",
+                "__typename": "UserAccount"
+              }
+            ],
+            "files": [],
+            "taskable": {
+              "__typename": "ReportType",
+              "id": "5dde83014f599ae94b6fc436",
+              "label": "Dakveiligheid",
+              "resolvedAt": null,
+              "node": {
+                "id": "5dde80bc4f599af8256fc421",
+                "label": "Platdak",
+                "path": [
+                  "5cc9b72681ea6a41aea8a601",
+                  "5cd97c4863b0166c48c8818f",
+                  "5cd9837d63b0164be2c881a5"
+                ],
+                "__typename": "NodeType"
+              },
+              "reporter": {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              },
+              "reportedAt": "2019-11-27T14:06:57.694Z",
+              "resolveTime": 5
+            },
+            "reportStatus": null,
+            "__typename": "TaskType"
+          }
+        ],
+        "__typename": "ReportType"
+      },
+      {
+        "id": "5dde83084f599acccb6fc439",
+        "label": "Dakveiligheid",
+        "resolveTime": null,
+        "identifiedOn": "2019-11-27T00:00:00.000Z",
+        "situation": "Helm",
+        "takenAction": "",
+        "ideaToImprove": "",
+        "sequenceNumber": 0,
+        "reportNumber": "31",
+        "reportedAt": "2019-11-27T14:07:04.364Z",
+        "resolvedAt": null,
+        "node": {
+          "id": "5dde80bc4f599af8256fc421",
+          "label": "Platdak",
+          "path": [
+            "5cc9b72681ea6a41aea8a601",
+            "5cd97c4863b0166c48c8818f",
+            "5cd9837d63b0164be2c881a5"
+          ],
+          "__typename": "NodeType"
+        },
+        "reporter": {
+          "id": "5cc7fe483fc228e752882ec6",
+          "email": "jeroen@okcomply.com",
+          "name": "Jeroen",
+          "surname": "Mol",
+          "__typename": "UserAccount"
+        },
+        "owners": [
+          {
+            "id": "5cc7fe483fc228e752882ec6",
+            "email": "jeroen@okcomply.com",
+            "name": "Jeroen",
+            "surname": "Mol",
+            "__typename": "UserAccount"
+          }
+        ],
+        "files": [],
+        "tasks": [],
+        "__typename": "ReportType"
+      },
+      {
+        "id": "5dde83184f599a6b476fc43c",
+        "label": "Dakveiligheid",
+        "resolveTime": null,
+        "identifiedOn": "2019-11-27T00:00:00.000Z",
+        "situation": "Helm",
+        "takenAction": "geen",
+        "ideaToImprove": "",
+        "sequenceNumber": 0,
+        "reportNumber": "32",
+        "reportedAt": "2019-11-27T14:07:20.393Z",
+        "resolvedAt": null,
+        "node": {
+          "id": "5dde80bc4f599af8256fc421",
+          "label": "Platdak",
+          "path": [
+            "5cc9b72681ea6a41aea8a601",
+            "5cd97c4863b0166c48c8818f",
+            "5cd9837d63b0164be2c881a5"
+          ],
+          "__typename": "NodeType"
+        },
+        "reporter": {
+          "id": "5cc7fe483fc228e752882ec6",
+          "email": "jeroen@okcomply.com",
+          "name": "Jeroen",
+          "surname": "Mol",
+          "__typename": "UserAccount"
+        },
+        "owners": [
+          {
+            "id": "5cc7fe483fc228e752882ec6",
+            "email": "jeroen@okcomply.com",
+            "name": "Jeroen",
+            "surname": "Mol",
+            "__typename": "UserAccount"
+          }
+        ],
+        "files": [],
+        "tasks": [],
+        "__typename": "ReportType"
+      },
+      {
+        "id": "5dde836d4f599abf996fc43f",
+        "label": "Helm",
+        "resolveTime": null,
+        "identifiedOn": "2019-11-27T00:00:00.000Z",
+        "situation": "Tets",
+        "takenAction": "",
+        "ideaToImprove": "",
+        "sequenceNumber": 0,
+        "reportNumber": "33",
+        "reportedAt": "2019-11-27T14:08:45.375Z",
+        "resolvedAt": null,
+        "node": {
+          "id": "5dde80bc4f599af8256fc421",
+          "label": "Platdak",
+          "path": [
+            "5cc9b72681ea6a41aea8a601",
+            "5cd97c4863b0166c48c8818f",
+            "5cd9837d63b0164be2c881a5"
+          ],
+          "__typename": "NodeType"
+        },
+        "reporter": {
+          "id": "5cc7fe483fc228e752882ec6",
+          "email": "jeroen@okcomply.com",
+          "name": "Jeroen",
+          "surname": "Mol",
+          "__typename": "UserAccount"
+        },
+        "owners": [
+          {
+            "id": "5cc7fe483fc228e752882ec6",
+            "email": "jeroen@okcomply.com",
+            "name": "Jeroen",
+            "surname": "Mol",
+            "__typename": "UserAccount"
+          }
+        ],
+        "files": [],
+        "tasks": [],
+        "__typename": "ReportType"
+      },
+      {
+        "id": "5e1c41bd4c4f16fd14214691",
+        "label": "Ik mis het lesplandocument",
+        "resolveTime": 2,
+        "identifiedOn": "2020-01-13T00:00:00.000Z",
+        "situation": "Mis het document",
+        "takenAction": "",
+        "ideaToImprove": "",
+        "sequenceNumber": 1,
+        "reportNumber": "34",
+        "reportedAt": "2020-01-13T10:09:01.579Z",
+        "resolvedAt": null,
+        "node": {
+          "id": "5e1c3f6f4c4f165fe921468a",
+          "label": "Zwembad A",
+          "path": [
+            "5cc9b72681ea6a41aea8a601",
+            "5cd97c4863b0166c48c8818f",
+            "5cd9837d63b0164be2c881a5"
+          ],
+          "__typename": "NodeType"
+        },
+        "reporter": {
+          "id": "5cc7fe483fc228e752882ec6",
+          "email": "jeroen@okcomply.com",
+          "name": "Jeroen",
+          "surname": "Mol",
+          "__typename": "UserAccount"
+        },
+        "owners": [
+          {
+            "id": "5cc7116555b88f7311af332e",
+            "email": "berend@okcomply.com",
+            "name": "Berend",
+            "surname": "van de Graaf",
+            "__typename": "UserAccount"
+          }
+        ],
+        "files": [],
+        "tasks": [
+          {
+            "id": "5e1c41f54c4f164911214694",
+            "label": "Voeg document toe aan..",
+            "deadline": "2020-01-13T00:00:00.000Z",
+            "completed": null,
+            "sequenceNumber": 0,
+            "checklist": null,
+            "executor": {
+              "id": "5cc7fe483fc228e752882ec6",
+              "email": "jeroen@okcomply.com",
+              "name": "Jeroen",
+              "surname": "Mol",
+              "__typename": "UserAccount"
+            },
+            "owners": [
+              {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              }
+            ],
+            "files": [],
+            "taskable": {
+              "__typename": "ReportType",
+              "id": "5e1c41bd4c4f16fd14214691",
+              "label": "Ik mis het lesplandocument",
+              "resolvedAt": null,
+              "node": {
+                "id": "5e1c3f6f4c4f165fe921468a",
+                "label": "Zwembad A",
+                "path": [
+                  "5cc9b72681ea6a41aea8a601",
+                  "5cd97c4863b0166c48c8818f",
+                  "5cd9837d63b0164be2c881a5"
+                ],
+                "__typename": "NodeType"
+              },
+              "reporter": {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              },
+              "reportedAt": "2020-01-13T10:09:01.579Z",
+              "resolveTime": 2
+            },
+            "reportStatus": null,
+            "__typename": "TaskType"
+          }
+        ],
+        "__typename": "ReportType"
+      },
+      {
+        "id": "5e397a7927cb246d9999f5c6",
+        "label": "Tesyt 123",
+        "resolveTime": 12,
+        "identifiedOn": "2020-02-04T00:00:00.000Z",
+        "situation": "Beschrijf waar deze melding over gaat",
+        "takenAction": "Welke actie is er inmiddels ondernomen?",
+        "ideaToImprove": "Zijn er ideeën voor verbetering?",
+        "sequenceNumber": 1,
+        "reportNumber": "37",
+        "reportedAt": "2020-02-04T14:06:49.076Z",
+        "resolvedAt": null,
+        "node": {
+          "id": "5cd9854063b01684b0c881c6",
+          "label": "Brandmeldinstallatie",
+          "path": [
+            "5cc9b72681ea6a41aea8a601",
+            "5cd97c4863b0166c48c8818f",
+            "5cd9837863b0160fb7c881a4",
+            "5cd983b663b016b6b4c881aa"
+          ],
+          "__typename": "NodeType"
+        },
+        "reporter": {
+          "id": "5e1dcb0e4c4f1601642146a4",
+          "email": "dirk@okcomply.com",
+          "name": "",
+          "surname": "",
+          "__typename": "UserAccount"
+        },
+        "owners": [
+          {
+            "id": "5cc7fe483fc228e752882ec6",
+            "email": "jeroen@okcomply.com",
+            "name": "Jeroen",
+            "surname": "Mol",
+            "__typename": "UserAccount"
+          }
+        ],
+        "files": [],
+        "tasks": [
+          {
+            "id": "5e674e37937254f97b0646be",
+            "label": "test 123",
+            "deadline": "2020-03-10T00:00:00.000Z",
+            "completed": null,
+            "sequenceNumber": 0,
+            "checklist": null,
+            "executor": {
+              "id": "5cc7116555b88f7311af332e",
+              "email": "berend@okcomply.com",
+              "name": "Berend",
+              "surname": "van de Graaf",
+              "__typename": "UserAccount"
+            },
+            "owners": [
+              {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              }
+            ],
+            "files": [],
+            "taskable": {
+              "__typename": "ReportType",
+              "id": "5e397a7927cb246d9999f5c6",
+              "label": "Tesyt 123",
+              "resolvedAt": null,
+              "node": {
+                "id": "5cd9854063b01684b0c881c6",
+                "label": "Brandmeldinstallatie",
+                "path": [
+                  "5cc9b72681ea6a41aea8a601",
+                  "5cd97c4863b0166c48c8818f",
+                  "5cd9837863b0160fb7c881a4",
+                  "5cd983b663b016b6b4c881aa"
+                ],
+                "__typename": "NodeType"
+              },
+              "reporter": {
+                "id": "5e1dcb0e4c4f1601642146a4",
+                "email": "dirk@okcomply.com",
+                "name": "",
+                "surname": "",
+                "__typename": "UserAccount"
+              },
+              "reportedAt": "2020-02-04T14:06:49.076Z",
+              "resolveTime": 12
+            },
+            "reportStatus": null,
+            "__typename": "TaskType"
+          }
+        ],
+        "__typename": "ReportType"
+      },
+      {
+        "id": "5e397b0c27cb243b6599f5cc",
+        "label": "Test melding",
+        "resolveTime": null,
+        "identifiedOn": "2020-02-04T00:00:00.000Z",
+        "situation": "Beschrijf waar deze melding over gaat",
+        "takenAction": "Welke actie is er inmiddels ondernomen?",
+        "ideaToImprove": "Welke actie is er inmiddels ondernomen?",
+        "sequenceNumber": 0,
+        "reportNumber": "38",
+        "reportedAt": "2020-02-04T14:09:16.834Z",
+        "resolvedAt": null,
+        "node": {
+          "id": "5cd9837d63b0164be2c881a5",
+          "label": "Amsterdam",
+          "path": [
+            "5cc9b72681ea6a41aea8a601",
+            "5cd97c4863b0166c48c8818f"
+          ],
+          "__typename": "NodeType"
+        },
+        "reporter": {
+          "id": "5e1dcb0e4c4f1601642146a4",
+          "email": "dirk@okcomply.com",
+          "name": "",
+          "surname": "",
+          "__typename": "UserAccount"
+        },
+        "owners": [
+          {
+            "id": "5cc7fe483fc228e752882ec6",
+            "email": "jeroen@okcomply.com",
+            "name": "Jeroen",
+            "surname": "Mol",
+            "__typename": "UserAccount"
+          }
+        ],
+        "files": [],
+        "tasks": [],
+        "__typename": "ReportType"
+      },
+      {
+        "id": "5e4fdb6b27cb2472e299f774",
+        "label": "tst",
+        "resolveTime": 3,
+        "identifiedOn": "2020-02-21T00:00:00.000Z",
+        "situation": "test",
+        "takenAction": "",
+        "ideaToImprove": "",
+        "sequenceNumber": 1,
+        "reportNumber": "39",
+        "reportedAt": "2020-02-21T13:30:19.447Z",
+        "resolvedAt": null,
+        "node": {
+          "id": "5d4ab446cb585230ebc29b93",
+          "label": "AED",
+          "path": [
+            "5cc9b72681ea6a41aea8a601",
+            "5cd97c4863b0166c48c8818f",
+            "5cd9837863b0160fb7c881a4",
+            "5cd983b663b016b6b4c881aa"
+          ],
+          "__typename": "NodeType"
+        },
+        "reporter": {
+          "id": "5cc7fe483fc228e752882ec6",
+          "email": "jeroen@okcomply.com",
+          "name": "Jeroen",
+          "surname": "Mol",
+          "__typename": "UserAccount"
+        },
+        "owners": [
+          {
+            "id": "5cc7fe483fc228e752882ec6",
+            "email": "jeroen@okcomply.com",
+            "name": "Jeroen",
+            "surname": "Mol",
+            "__typename": "UserAccount"
+          }
+        ],
+        "files": [],
+        "tasks": [
+          {
+            "id": "5e4fdb8827cb24fdbc99f777",
+            "label": "test",
+            "deadline": "2020-02-21T00:00:00.000Z",
+            "completed": null,
+            "sequenceNumber": 0,
+            "checklist": null,
+            "executor": {
+              "id": "5cc7fe483fc228e752882ec6",
+              "email": "jeroen@okcomply.com",
+              "name": "Jeroen",
+              "surname": "Mol",
+              "__typename": "UserAccount"
+            },
+            "owners": [
+              {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              }
+            ],
+            "files": [],
+            "taskable": {
+              "__typename": "ReportType",
+              "id": "5e4fdb6b27cb2472e299f774",
+              "label": "tst",
+              "resolvedAt": null,
+              "node": {
+                "id": "5d4ab446cb585230ebc29b93",
+                "label": "AED",
+                "path": [
+                  "5cc9b72681ea6a41aea8a601",
+                  "5cd97c4863b0166c48c8818f",
+                  "5cd9837863b0160fb7c881a4",
+                  "5cd983b663b016b6b4c881aa"
+                ],
+                "__typename": "NodeType"
+              },
+              "reporter": {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              },
+              "reportedAt": "2020-02-21T13:30:19.447Z",
+              "resolveTime": 3
+            },
+            "reportStatus": null,
+            "__typename": "TaskType"
+          }
+        ],
+        "__typename": "ReportType"
+      },
+      {
+        "id": "5e55148227cb2405ed99f78d",
+        "label": "Stroomdraad zit los",
+        "resolveTime": 4,
+        "identifiedOn": "2020-02-25T00:00:00.000Z",
+        "situation": "asdk.jaskd nakd n",
+        "takenAction": "",
+        "ideaToImprove": "",
+        "sequenceNumber": 1,
+        "reportNumber": "40",
+        "reportedAt": "2020-02-25T12:35:14.924Z",
+        "resolvedAt": null,
+        "node": {
+          "id": "5d1235340731be0ed076b06f",
+          "label": "Amersfoort",
+          "path": [
+            "5cc9b72681ea6a41aea8a601",
+            "5cd97c6463b0168c6fc88191"
+          ],
+          "__typename": "NodeType"
+        },
+        "reporter": {
+          "id": "5cc7fe483fc228e752882ec6",
+          "email": "jeroen@okcomply.com",
+          "name": "Jeroen",
+          "surname": "Mol",
+          "__typename": "UserAccount"
+        },
+        "owners": [
+          {
+            "id": "5cc7116555b88f7311af332e",
+            "email": "berend@okcomply.com",
+            "name": "Berend",
+            "surname": "van de Graaf",
+            "__typename": "UserAccount"
+          }
+        ],
+        "files": [],
+        "tasks": [
+          {
+            "id": "5e5514f027cb246d9999f790",
+            "label": "Electricien bellen en regelen",
+            "deadline": "2020-02-25T00:00:00.000Z",
+            "completed": null,
+            "sequenceNumber": 0,
+            "checklist": null,
+            "executor": {
+              "id": "5cc7fe483fc228e752882ec6",
+              "email": "jeroen@okcomply.com",
+              "name": "Jeroen",
+              "surname": "Mol",
+              "__typename": "UserAccount"
+            },
+            "owners": [
+              {
+                "id": "5cc7116555b88f7311af332e",
+                "email": "berend@okcomply.com",
+                "name": "Berend",
+                "surname": "van de Graaf",
+                "__typename": "UserAccount"
+              }
+            ],
+            "files": [],
+            "taskable": {
+              "__typename": "ReportType",
+              "id": "5e55148227cb2405ed99f78d",
+              "label": "Stroomdraad zit los",
+              "resolvedAt": null,
+              "node": {
+                "id": "5d1235340731be0ed076b06f",
+                "label": "Amersfoort",
+                "path": [
+                  "5cc9b72681ea6a41aea8a601",
+                  "5cd97c6463b0168c6fc88191"
+                ],
+                "__typename": "NodeType"
+              },
+              "reporter": {
+                "id": "5cc7fe483fc228e752882ec6",
+                "email": "jeroen@okcomply.com",
+                "name": "Jeroen",
+                "surname": "Mol",
+                "__typename": "UserAccount"
+              },
+              "reportedAt": "2020-02-25T12:35:14.924Z",
+              "resolveTime": 4
+            },
+            "reportStatus": null,
+            "__typename": "TaskType"
+          }
+        ],
+        "__typename": "ReportType"
+      },
+      {
+        "id": "5e8c4d07e4f7e7b855f69182",
+        "label": "Heb je de volgende persoonlijke beschermingsmiddelen om de taak uit te kunnen voeren?",
+        "resolveTime": null,
+        "identifiedOn": "2020-04-07T00:00:00.000Z",
+        "situation": "Helm is zwart",
+        "takenAction": "thuis gelaten",
+        "ideaToImprove": "ik wil graag een blauwe helm",
+        "sequenceNumber": 0,
+        "reportNumber": "42",
+        "reportedAt": "2020-04-07T09:51:03.706Z",
+        "resolvedAt": null,
+        "node": {
+          "id": "5e8b7517e4f7e76259f6912a",
+          "label": "Benzinestation Het Laatste Loodje",
+          "path": [
+            "5cc9b72681ea6a41aea8a601"
+          ],
+          "__typename": "NodeType"
+        },
+        "reporter": {
+          "id": "5d1f36c5cb393241312ed11c",
+          "email": "adriaan@dongenadvies.nl",
+          "name": "Adriaan",
+          "surname": "Dongen, van",
+          "__typename": "UserAccount"
+        },
+        "owners": [
+          {
+            "id": "5d1f36c5cb393241312ed11c",
+            "email": "adriaan@dongenadvies.nl",
+            "name": "Adriaan",
+            "surname": "Dongen, van",
+            "__typename": "UserAccount"
+          }
+        ],
+        "files": [],
+        "tasks": [],
+        "__typename": "ReportType"
+      }
+    ]
+  },
+  "extensions": {
+    "lastActivity": "2020-04-28T09:45:51.049Z"
+  }
+}
