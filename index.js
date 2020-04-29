@@ -29,6 +29,7 @@ import FontAwesome5Icon from "react-native-vector-icons/FontAwesome5";
 import TaskItemModal from "./src/components/task/taskItemModal";
 
 
+
 /**
  * @author Ilias Delawar
  *
