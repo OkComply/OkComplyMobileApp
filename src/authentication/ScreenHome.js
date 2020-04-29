@@ -1,162 +1,161 @@
-
 import React, { useRef, useEffect } from 'react';
-import {  Text, View, StyleSheet, AppState,Animated } from 'react-native';
+import { Text, View, StyleSheet, AppState, Animated } from 'react-native';
 import Logo from './logo';
 import { RNSlidingButton, SlideDirection } from 'rn-sliding-button';
-import AuthService from './AuthService';
+import auth0 from '../authentication/auth0';
+// import AuthService from './AuthService';
 /**
  * @author Raeef Ibrahim
  * 
  */
-let appState= 'unset'
+let appState = 'unset';
 export default class ScreenHome extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+	constructor(props) {
+		super(props);
+		this.state = {
       loggedIn: null,
-     
-    }
-    appState= AppState.currentState;
-    AppState.addEventListener("change", this.handleAppState);
-  }
-  handleAppState = (nextAppState) => {
-    if (appState.match(/inactive|background/) && nextAppState === "active"  ) {
-      
-       if (this.props.loggedIn = true) {
-          this.props.navigation.navigate('myTab');
-       } else {
-        this.props.navigation.navigate('SignIn');
-       }
-    
-     }
-    appState= nextAppState;
-};
+      accessToken: null,
+      user: null,
 
-  //Navigate to the Task page 
-  navigatToTask = () => {
+		};
+		appState = AppState.currentState;
+		// AppState.addEventListener('change', this.handleAppState);
+	}
+	// handleAppState = (nextAppState) => {
+	// 	if (appState.match(/inactive|background/) && nextAppState === 'active') {
+	// 		if ((this.props.loggedIn = true)) {
+	// 			this.props.navigation.navigate('myTab');
+	// 		} else {
+	// 			this.props.navigation.navigate('SignIn');
+	// 		}
+	// 	}
+	// 	appState = nextAppState;
+	// };
 
-      if (this.refs.child.loggedIn = true) {
-        this.props.navigation.navigate('myTab');
-      } else {
-        this.props.navigation.navigate('SignIn');
-      }
-  
+	// Navigate to the Task page
+	navigatToTask = () => {
+		if ((this.refs.child.loggedIn = true)) {
+			this.props.navigation.navigate('myTab');
+		} else {
+			this.props.navigation.navigate('SignIn');
+		}
+	};
+	//perform Action on slide success
+	onSlideRight = () => {
+		auth0.webAuth
+      .authorize({
+        scope: "openid email"
+      })
+      .then(res => {
+        console.log(res);
+        this.setState({ accessToken: res.accessToken })
 
-  }
-  //perform Action on slide success
-  onSlideRight = () => {
-    setTimeout(() => {
-      this.refs.child.onLogin()
-    }, 100);
-    //this.navigatToTask()
-    
-  
-  };
+        auth0.auth
+          .userInfo({ token: res.accessToken })
+          .then(user => {
+            this.props.navigation.navigate("myTab");
+            this.props.navigation.reset({
+              index: 0,
+              routes: [
+                {
+                  name: 'myTab'
+                }
+              ]
+            })
+            this.setState({user:user})
+            console.log(user.email)
+          })
+          .catch(console.error);
+      })
+      .catch(error => console.log(error));
+	};
 
-
-  render() {
-
-    return (
-      <View style={styles.container}>
-        <View style={styles.logoContainer}>
-          <Logo />
-        </View >
-        <AuthService ref="child" navigation={this.props.navigation}>
-        </AuthService>
-        <View>
-        <View >
-      <FadeInView >
-      <Text style={styles.title}>
-            Welkom in OkComply Mobile App</Text>
-      </FadeInView>
-    </View>
-          
-        </View>
-        <View>
-          <RNSlidingButton
-            style={{
-              width: 700,
-              height: 500,
-              justifyContent: 'center',
-              backgroundColor: '#3A99D8',
-              bottom: 100
-            }}
-
-            height={100}
-
-            onSlidingSuccess={this.onSlideRight}
-            slideDirection={SlideDirection.RIGHT}>
-            <View>
-              <Text numberOfLines={1} style={styles.titleText}>
-                Swipe rechts om in te loggen >>>
-    </Text>
-
-            </View>
-          </RNSlidingButton>
-        </View>
-
-      </View>
-
-    );
-  }
+	render() {
+		return (
+			<View style={styles.container}>
+				<View style={styles.logoContainer}>
+					<Logo />
+				</View>
+		
+				<View>
+					<View>
+						<FadeInView>
+							<Text style={styles.title}>Welkom in OkComply Mobile App</Text>
+						</FadeInView>
+					</View>
+				</View>
+				<View>
+					<RNSlidingButton
+						style={{
+							width: 700,
+							height: 500,
+							justifyContent: 'center',
+							backgroundColor: '#3A99D8',
+							bottom: 100
+						}}
+						height={100}
+						onSlidingSuccess={this.onSlideRight}
+						slideDirection={SlideDirection.RIGHT}
+					>
+						<View>
+							<Text numberOfLines={1} style={styles.titleText}>
+								Swipe rechts om in te loggen >>>
+							</Text>
+						</View>
+					</RNSlidingButton>
+				</View>
+			</View>
+		);
+	}
 }
 const FadeInView = (props) => {
-  const fadeAnim = useRef(new Animated.Value(0)).current  // Initial value for opacity: 0
+	const fadeAnim = useRef(new Animated.Value(0)).current; // Initial value for opacity: 0
 
-  React.useEffect(() => {
-    Animated.timing(
-      fadeAnim,
-      {
-        toValue: 1,
-        duration: 1000,
-        
-      }
-      
-    ).start();
-    
-  }, 
-  
-   [])
+	React.useEffect(() => {
+		Animated.timing(fadeAnim, {
+			toValue: 1,
+			duration: 1000
+		}).start();
+	}, []);
 
-  return (
-    
-    <Animated.View                 // Special animatable View
-      style={{
-        ...props.style,
-        opacity: fadeAnim,         // Bind opacity to animated value
-      }}
-    >
-      {props.children}
-    </Animated.View>
-  );
-}
+	return (
+		<Animated.View // Special animatable View
+			style={{
+				...props.style,
+				opacity: fadeAnim // Bind opacity to animated value
+			}}
+		>
+			{props.children}
+		</Animated.View>
+	);
+};
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: 'white',
-  },
-  slideButton: {
-    width: 400,
-    height: 35,
-    bottom: 1000
-  },
-  logoContainer: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  title: {
-    bottom: 180,
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: '#006280'
-  },
-  titleText: {
-    fontSize: 17,
-    fontWeight: 'normal',
-    textAlign: 'center',
-    color: '#ffffff'
-  }
+	container: {
+		flex: 1,
+		alignItems: 'center',
+		justifyContent: 'center',
+		backgroundColor: 'white'
+	},
+	slideButton: {
+		width: 400,
+		height: 35,
+		bottom: 1000
+	},
+	logoContainer: {
+		flex: 1,
+		alignItems: 'center',
+		justifyContent: 'center'
+	},
+	title: {
+		bottom: 180,
+		fontSize: 20,
+		fontWeight: 'bold',
+		color: '#006280'
+	},
+	titleText: {
+		fontSize: 17,
+		fontWeight: 'normal',
+		textAlign: 'center',
+		color: '#ffffff'
+	}
 });

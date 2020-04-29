@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
 import {RNSlidingButton, SlideDirection} from 'rn-sliding-button';
 import {Image, Text, View, StyleSheet} from 'react-native';
-import AuthService from '../authentication/AuthService';
+// import AuthService from '../authentication/AuthService';
 import {Card} from 'react-native-elements'
+import auth0 from '../authentication/auth0';
+import { Alert } from 'react-native';
+
 
 export default class Notification extends Component {
 
@@ -18,12 +21,18 @@ export default class Notification extends Component {
 
     //perform Action on slide success
     onSlideRight = () => {
-
-        this.refs.child.onLogOut()
-        setTimeout(() => {
+        auth0.webAuth
+        .clearSession({})
+        .then(success => {
+            Alert.alert(
+                'Logged out!'
+            );
+            this.setState({ accessToken: null });
             this.navigatToHome()
-        }, 100);
-        this.navigatToHome()
+        })
+        .catch(error => {
+            console.log(error);
+        });
     };
 
     render() {
@@ -52,8 +61,6 @@ export default class Notification extends Component {
                         </Text>
                     </Card>
                 </View>
-                <AuthService ref="child">
-                </AuthService>
                 <RNSlidingButton
                     style={{
                         width: 700,
