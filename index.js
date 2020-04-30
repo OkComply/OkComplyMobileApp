@@ -3,17 +3,17 @@
  */
 import * as React from 'react';
 import 'react-native-gesture-handler';
-import { AppRegistry, StyleSheet } from 'react-native';
+import {AppRegistry, Button, StyleSheet, TouchableOpacity} from 'react-native';
 import ScreenHome from './src/authentication/ScreenHome';
-import { name as appName } from './app.json';
-import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
-import { NavigationContainer } from '@react-navigation/native';
+import {name as appName} from './app.json';
+import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
+import {NavigationContainer, NavigationNativeContainer} from '@react-navigation/native';
 import AppState from './src/state/AppState';
 import ScreenSignUp from './src/authentication/ScreenSignUp';
 import Task from './src/components/task/Tasks';
 import Notification from './src/components/Notification/Notification';
 import LogoHeader from './src/logos/LogoHeader';
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
@@ -24,6 +24,12 @@ import TaskFilter from './src/components/task/taskFilter';
 import NotificationDetail from './src/components/Notification/NotificationDetail';
 import AddNotification from './src/components/Notification/AddNotification'
 import NotificationFilter from './src/components/Notification/NotificationFilter';
+import InstructionManual from "./src/components/InstructionManual/InstructionManual";
+import FontAwesome5Icon from "react-native-vector-icons/FontAwesome5";
+import TaskItemModal from "./src/components/task/taskItemModal";
+
+
+
 /**
  * @author Ilias Delawar
  *
@@ -34,7 +40,9 @@ const Stack = createStackNavigator();
 AppState.load();
 
 const Tab = createMaterialBottomTabNavigator();
-console.disableYellowBox = true
+console.disableYellowBox = true;
+
+
 
 function MyTabs() {
 
@@ -42,9 +50,9 @@ function MyTabs() {
 		<Tab.Navigator
 			initialRouteName="Task"
 			activeColor="white"
-			labelStyle={{ fontSize: 25 }}
-			tabBarOptions = {{			}}
-			barStyle={{ backgroundColor:'#3BB9FF' , height: 70  }}
+			labelStyle={{fontSize: 25}}
+			tabBarOptions={{}}
+			barStyle={{backgroundColor: '#3BB9FF', height: 70}}
 
 
 		>
@@ -54,7 +62,7 @@ function MyTabs() {
 				component={Task}
 				options={{
 					tabBarLabel: 'Mijn Taken',
-					tabBarIcon: ({ color }) => <AntDesign name="check" size={25} color="#FFFF"/>,
+					tabBarIcon: ({color}) => <AntDesign name="check" size={25} color="#FFFF"/>,
 				}}
 			/>
 
@@ -63,7 +71,7 @@ function MyTabs() {
 				component={Notification}
 				options={{
 					tabBarLabel: 'Mijn Meldingen',
-					tabBarIcon: ({ color }) => <MaterialIcon name="notifications" size={25} color="#FFFF" />
+					tabBarIcon: ({color}) => <MaterialIcon name="notifications" size={25} color="#FFFF"/>,
 				}}
 			/>
 			<Tab.Screen
@@ -71,7 +79,7 @@ function MyTabs() {
 				component={Profile}
 				options={{
 					tabBarLabel: 'Mijn Profile',
-					tabBarIcon: ({ color }) => <MaterialIcon name="person" size={25} color="#FFFF" />
+					tabBarIcon: ({color}) => <MaterialIcon name="person" size={25} color="#FFFF"/>
 				}}
 			/>
 		</Tab.Navigator>
@@ -79,61 +87,93 @@ function MyTabs() {
 }
 
 
-export default function App() {
 
+
+
+
+
+export default function App({}) {
 
 
 	return (
 		<NavigationContainer>
 			<Stack.Navigator initialRouteName="Home">
 				<Stack.Screen name="Sign In"
-				options={{ headerShown: false }
+							  options={{headerShown: false}
 
 
-			}
-				 component={SplashScreen} />
+							  }
+							  component={SplashScreen}/>
 				<Stack.Screen
 					name="myTab"
 					component={MyTabs}
-					options={{ headerTitle: (props) => <LogoHeader {...props}  /> }}
+					options={({ navigation }) =>({
+						headerTitle: (props) => <LogoHeader {...props}
+						/>, headerRight:  () => <TouchableOpacity  style={{marginRight:20, marginBottom:10}}
+																   onPress={() => {
+																	   navigation.navigate('InstructionManual')
+
+																   }}
+						>
+							<FontAwesome5Icon name='info' size={30} style={{color:'#3BB9FF'}}/>
+						</TouchableOpacity>,
+						headerBackTitleVisible: false
+
+					})}
 				/>
-				<Stack.Screen name="SignIn" options={{ headerShown: false }} component={ScreenHome} />
+				<Stack.Screen name="SignIn" options={{headerShown: false}} component={ScreenHome}/>
 				<Stack.Screen
 					name="Task"
 					component={Task}
-					options={{ headerTitle: (props) => <LogoHeader {...props} /> }}
+					options={{headerTitle: (props) => <LogoHeader {...props} />}}
 				/>
 				<Stack.Screen
 					name="TaskDetail"
 					component={TaskDetail}
-					options={{ headerTitle: (props) => <LogoHeader {...props} /> }}
+					options={{headerTitle: (props) => <LogoHeader {...props} />}}
 				/>
-					<Stack.Screen
+				<Stack.Screen
 					name="TaskFilter"
 					component={TaskFilter}
 					options={
-						{...TransitionPresets.ModalSlideFromBottomIOS,
+						{
+							...TransitionPresets.ModalSlideFromBottomIOS,
 						}
 					}
 
 				/>
-					<Stack.Screen
+				<Stack.Screen
 					name="notifactionDetail"
 					component={NotificationDetail}
-					options={{ headerTitle: (props) => <LogoHeader {...props} /> }}
+					options={{headerTitle: (props) => <LogoHeader {...props} />}}
 				/>
-						<Stack.Screen
+				<Stack.Screen
 					name="AddNotification"
 					component={AddNotification}
-					options={{ headerTitle: (props) => <LogoHeader {...props} /> }}
+					options={{headerTitle: (props) => <LogoHeader {...props} />}}
 				/>
-							<Stack.Screen
+				<Stack.Screen
 					name="SplashScreen"
 					component={SplashScreen}
 				/>
 				<Stack.Screen
-				name="NotificationFilter"
+					name="NotificationFilter"
 					component={NotificationFilter}
+				/>
+				<Stack.Screen
+					name="InstructionManual"
+					component={InstructionManual}
+					options={{headerTitle: (props) => <LogoHeader {...props} />,
+
+					}
+
+
+					}
+				/>
+
+				<Stack.Screen
+					name="TaskItemModal"
+					component={TaskItemModal}
 				/>
 
 
@@ -143,7 +183,6 @@ export default function App() {
 
 	);
 }
-
 
 
 AppRegistry.registerComponent(appName, () => App);
