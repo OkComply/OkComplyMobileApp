@@ -3,87 +3,124 @@ import { ListItem, Card } from 'react-native-elements';
 import { Button } from 'react-native-paper';
 import { Text, View, StyleSheet, Alert, } from 'react-native';
 import { RNSlidingButton, SlideDirection } from 'rn-sliding-button';
+import { ScrollView } from 'react-native-gesture-handler';
+import { FONT_SIZE } from '../../style/Style';
 /**
- * @author Raeef Ibrahim
+ * @author Raeef Ibrahim & Jay Fairouz
  * 
  */
 export default class NotificationDetail extends Component {
-	constructor(props) {
-		super(props)
-		this.state = {
-			items: []
-		}
-	}
+    constructor(props) {
+        super(props)
+        this.state = {
+            items: []
+        }
+    }
 
 
-	onSlideRight = () => {
-		this.props.navigation.navigate('myTab')
+    onSlideRight = () => {
+        this.props.navigation.navigate('myTab')
 
-	};
-	render() {
-		return (
+    };
+    render() {
+        return (
 
-			<View style={styles.taskPage}>
+            <View style={styles.taskPage}>
+                <Text style={styles.titleStyle}>Lamp moet vervangen worden</Text>
 
-				<Card style={{ backgroundColor: 'green', color: 'red' }}
-
-					title={this.props.notName}
-					backgroundColor='white'
-
-				>
-					<Text style={styles.textStyle}>Melding voor: Licht</Text>
-					<Text style={styles.textStyle}>Meldingsnummer: 2</Text>
-					<Text style={styles.textStyle}>Geconstateerd op:  12-03-2020</Text>
-					<Text style={styles.textStyle}>Gemeld door: ilias.delawar@hva.nl</Text>
-					<Text style={styles.textStyle}>Eind verantwoordelijk: ilias.delawar@hva.nl</Text>
-					<Text style={styles.textStyle}>Tijdstip melding: 14:22:01</Text>
-					<Text style={styles.textStyle}>Moet opgelost binnen aantal dagen: 3</Text>
-					<Text style={styles.textStyle}>Bestanden toevoegen : Klik hier om een bestand te selecteren</Text>
+                <ScrollView>
 
 
+                    <Card style={{ backgroundColor: 'green', color: 'red' }}
 
-					<Button style={styles.btn}
-						onPress={this.onSlideRight}
-					>
-						<Text style={{ color: '#fff', fontSize: 20 }}>Opgelost</Text>
-					</Button>
-					<View>
-						<RNSlidingButton
-							style={styles.sluitenbtn}
+                        title={this.props.notName}
+                        backgroundColor='#3BB9FF'
 
-							height={50}
+                    >
+                        <Text style={styles.textStyle}>
+                            <Text>Geconstateerd op:  <Text style={{ color: 'white' }}>xx-xx-xxxx</Text>{"\n"}</Text>
+                            <Text>Melding voor: <Text style={{ color: 'white' }}>xxxx</Text>{"\n"}</Text>
+                            <Text>Meldingsnummer: <Text style={{ color: 'white' }}>xx</Text>{"\n"}</Text>
+                            <Text>Gemeld door: <Text style={{ color: 'white' }}>xxxx</Text>{"\n"}</Text>
+                            <Text>Op: <Text style={{ color: 'white' }}>xxxxx</Text>{"\n"}</Text>
+                            <Text>Beschrijving: <Text style={{ color: 'white' }}> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</Text>{"\n"}</Text>
 
-							onSlidingSuccess={this.onSlideRight}
-							slideDirection={SlideDirection.RIGHT}>
-							<View>
-								<Text style={{ color: '#fff', fontSize: 20, left: 125, alignItems: 'center' }}>
-									SLUITEN >>>
-    </Text>
-
-							</View>
-						</RNSlidingButton>
-					</View>
-
-				</Card>
+                        </Text>
 
 
-			</View>
 
-		);
-	}
+                    </Card>
+
+                </ScrollView>
+                <View style={styles.addButton2}>
+
+                    <View>
+                        <Button style={styles.addButton}
+                            onPress={this.onSlideRight}>
+                            <Text style={{ color: '#fff' }}>Zet in mijn taken</Text>
+                        </Button>
+                    </View>
+                    <View>
+                        <Button style={styles.addButton}
+                            onPress={this.onSlideRight}>
+                            <Text style={{ color: '#fff' }}>Geef taak door</Text>
+                        </Button>
+                    </View>
+
+                </View>
+
+
+
+
+            </View>
+
+        );
+    }
 }
 const styles = StyleSheet.create({
-	btn: {
+    taskPage: {
+        display: 'flex',
+        flex: 1
+    },
+    btn: {
 
-		backgroundColor: '#33de8e'
-	},
-	textStyle: {
+        backgroundColor: '#33de8e'
+    },
+    titleStyle: {
 
-		fontSize: 20,
-		fontFamily: 'italic'
+        fontSize: 30,
+        fontFamily: 'italic',
+        color: 'black',
+        width: '93%',
+        left: '4%',
+        marginTop: '3%'
+    },
+    textStyle: {
 
-	},
-	sluitenbtn: {
-		backgroundColor: 'red'
-	}
+        fontSize: 20,
+        fontFamily: 'italic',
+        color: 'black'
+    },
+    sluitenbtn: {
+        backgroundColor: 'red'
+    },
+    addButton: {
+        backgroundColor: '#33de8e',
+        marginTop: 10,
+        marginBottom: 10,
+        marginLeft: '5%',
+        width: '95%',
+        display: 'flex',
+        borderRadius: 100
+
+
+    },
+    addButton2: {
+
+        marginBottom: '3%',
+        flexDirection: 'row',
+        alignItems: 'center',
+        alignSelf: 'center',
+
+    }
 });

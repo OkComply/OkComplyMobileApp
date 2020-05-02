@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\components",
+    "\\src\\components\\ListItem",
+    "\\src\\components\\Notification"
+  ],
+  "SelectedNode": "\\src\\components\\Notification\\NotificationListItem.js",
+  "PreviewInSolutionExplorer": false
+}

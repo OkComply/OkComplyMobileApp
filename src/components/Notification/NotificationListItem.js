@@ -8,111 +8,132 @@ import { ListItem, Card } from 'react-native-elements';
  *
  */
 export default class NotificationListItem extends Component {
-	constructor(props) {
-		super(props)
-		this.state = {
-			items: []
-		}
-	}
+    constructor(props) {
+        super(props)
+        this.state = {
+            items: []
+        }
+    }
 
 
-	render() {
-		return (
+    render() {
+        return (
 
-			<View style={styles.taskPage}>
+            <View style={styles.taskPage}>
 
-				<View>
+                <View>
 
-					<TouchableOpacity>
+                    <TouchableOpacity>
 
-						<Card style={{ backgroundColor: 'green', color: 'red' }}
+                        <Card style={[this.props.status == "Te Laat" ? styles.listColorNew : styles.listColorPlanned]} //{ backgroundColor: 'green', color: 'red' }
 
-							title={this.props.meldingBetreft}
-							backgroundColor='white'
+                            title={this.props.meldingBetreft}
 
-						>
 
-							<Text>Melding voor {this.props.meldingBetreft}</Text>
-							<Text>Meldingsnummer:   {this.props.meldingNummer}</Text>
-							<Text>Geconstateerd op:   {this.props.geconstateerdOp}</Text>
-							<Text>Gemeld door:   {this.props.gemeldDoor}</Text>
-							<Text>Eind verantwoordelijk: {this.props.eindverantwoordelijk}</Text>
-							<Card><Text style={styles.gepland}>{this.props.status}</Text></Card>
 
-							<View>
-							</View>
 
-						</Card>
-					</TouchableOpacity>
+                        // backgroundColor='white'
 
-				</View>
+                        >
 
-			</View>
+                            <Text>Melding voor {this.props.meldingBetreft}</Text>
+                            <Text>Meldingsnummer:   {this.props.meldingNummer}</Text>
+                            <Text>Geconstateerd op:   {this.props.geconstateerdOp}</Text>
+                            <Text>Gemeld door:   {this.props.gemeldDoor}</Text>
+                            <Text>Eind verantwoordelijk: {this.props.eindverantwoordelijk}</Text>
 
-		);
-	}
+                            <Card><Text style={[this.props.status == "Nieuw" ? styles.listColorNew : styles.listColorPlanned]}>{this.props.status}</Text></Card>
+
+                            <View>
+                            </View>
+
+                        </Card>
+                    </TouchableOpacity>
+
+                </View>
+
+            </View >
+
+        );
+    }
 }
+
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		alignItems: 'center',
-		justifyContent: 'center'
-	},
-	taskPage: {
-		display: 'flex',
-		flex: 1
-	},
-	text: {
-		fontSize: 25,
-		...Platform.select({
-			android: {
-				fontFamily: 'italic'
-			}
-		}),
-		justifyContent: 'center',
-		alignContent: 'center'
-	},
-	gepland: {
-		// color:'#e9a944',
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    taskPage: {
+        display: 'flex',
+        flex: 1
+    },
+    text: {
+        fontSize: 25,
+        ...Platform.select({
+            android: {
+                fontFamily: 'italic'
+            }
+        }),
+        justifyContent: 'center',
+        alignContent: 'center'
+    },
+    gepland: {
+        // color:'#e9a944',
 
-		fontSize: 20,
+        fontSize: 20,
 
-		...Platform.select({
-			android: {
-				fontFamily: 'italic'
-			}
-		})
-	},
-	nieuw: {},
+        ...Platform.select({
+            android: {
+                fontFamily: 'italic'
+            }
+        })
+    },
+    nieuw: {},
 
 
 
-	 header: {
-		alignSelf: 'center',
-		flexDirection: 'row',
-	},
-	title: {
-		marginTop: '3%',
-		fontSize: 25,
-		marginBottom: '3%',
-		marginLeft: '25%',
+    header: {
+        alignSelf: 'center',
+        flexDirection: 'row',
+    },
+    title: {
+        marginTop: '3%',
+        fontSize: 25,
+        marginBottom: '3%',
+        marginLeft: '25%',
 
-	},
+    },
 
-	flatListTasks: {
-		flexGrow: 1,
-		width: '100%',
-	},
-	filterButton: {
-		marginTop: 10,
-		marginLeft: '10%',
-		backgroundColor: '#85C1E9',
-		height: '70%',
-		width: '22%',
-		right: 20
+    flatListTasks: {
+        flexGrow: 1,
+        width: '100%',
+    },
+    filterButton: {
+        marginTop: 10,
+        marginLeft: '10%',
+        backgroundColor: '#85C1E9',
+        height: '70%',
+        width: '22%',
+        right: 20
 
-	},
-	addButton: {
-		backgroundColor: '#33de8e',
-	}
+    },
+    addButton: {
+        backgroundColor: '#33de8e',
+    },
+
+    listColorNew: {
+        backgroundColor: 'blue',
+        fontSize: 20
+
+    },
+    listColorPlanned: {
+        backgroundColor: 'orange'
+    },
+    listColorLate: {
+        backgroundColor: 'red'
+    },
+    listColorEmpty: {
+        backgroundColor: 'red'
+    }
 });
