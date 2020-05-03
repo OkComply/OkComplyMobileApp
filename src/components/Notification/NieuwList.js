@@ -4,12 +4,11 @@ import { Button } from 'react-native-paper';
 import { FlatList, ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import data from '../../assets/reports.json'
 import { Card } from 'react-native-elements';
-import GeplandList from './GeplandList'
-import NieuwList from './NieuwList'
+
 
 import CollapsibleList from "react-native-collapsible-list";
 
-export default class Notification extends Component {
+export default class NieuwList extends Component {
 	/**
 	 * @author Raeef Ibrahim
 	 * 
@@ -36,30 +35,16 @@ export default class Notification extends Component {
 
 			<View style={styles.taskPage}>
 
-						<View style={styles.header}>
-						<Text style={{ fontSize: 25, marginLeft: 120 }}>Meldingen</Text>
-							<Button onPress={this.OnFilter} style={styles.filterButton}>
-								<Text style={{ color: '#fff' }}>Filter</Text>
-							</Button>
-						</View>
-						<View
-					style={{
-						borderTopWidth: 1,
-						borderBottomColor: 'grey',
-						borderBottomWidth: 1,
-						width: '93%',
-						alignSelf: 'center',
-						marginTop: 5
-					}}
-				/>
-				<NieuwList></NieuwList>
-	<GeplandList></GeplandList>
 		   
    <StatusBar barStyle="dark-content" />
 	<SafeAreaView style={styles.container}>
 	
+		<View >
+	
+				  </View>
+<View >
 
-
+				  </View>
 		 <CollapsibleList
 		   numberOfVisibleItems={1}
 		   wrapperStyle={styles.wrapperCollapsibleList}
@@ -73,7 +58,7 @@ export default class Notification extends Component {
 				  
 			 <View>
 				 
-		   <Text  style={{color:'red'}} >Te Laat                                                                                   {this.state.notifications.data.reports.length}</Text>
+		   <Text  style={{color:'blue'}} >Nieuw                                                                                  {this.state.notifications.data.reports.length}</Text>
 			 </View>
 		
 			 </Card>
@@ -93,7 +78,7 @@ export default class Notification extends Component {
 						keyExtractor={(item) => item.id}
 						renderItem={({ item }) => (
 							<TouchableOpacity
-								onPress={() => this.props.navigation.navigate('notifactionDetail')}
+								// onPress={() => this.props.navigation.navigate('notifactionDetail')}
 							>
 								<Card
                                     style={{}}
@@ -116,12 +101,7 @@ export default class Notification extends Component {
 		
 		 </SafeAreaView>
 		 <View>
-		 <View>
-							<Button style={styles.addButton}
-								onPress={this.onAddNotification}>
-								<Text style={{ color: '#fff' }}>+ Melding toevoegen</Text>
-							</Button>
-						</View>
+			
 		 </View>
 	
 		 
