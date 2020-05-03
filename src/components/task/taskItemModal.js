@@ -9,6 +9,8 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
  * @author Ilias Delawar
  *
  */
+const Viewport = Dimensions.get('window');
+
 
 export default class TaskItemModal extends Component {
 	constructor(props) {
@@ -28,7 +30,7 @@ export default class TaskItemModal extends Component {
 
                 </View>
                 </TouchableOpacity>
-				<View style={{ height: '20%', width: '100%', backgroundColor: '#282828', display: 'flex' }}>
+				<View style={{ height: ((Viewport.width * Viewport.scale) === 1242)  ? '23%' : '20%', width: '100%', backgroundColor: '#282828', display: 'flex' }}>
 					<Button style={styles.modalButtons} onPress={ this.props.closeModalAndAddNotification}>
 						<MaterialIcon name="add" size={15} color="#FFFF" />
 						<Text style={{ color: 'white' }}>Melding maken</Text>
@@ -49,12 +51,14 @@ export default class TaskItemModal extends Component {
 							borderBottomWidth: 1,
 							width: '93%',
 							alignSelf: 'center',
-							marginTop: 5
+							marginTop: 5,
+					
+					
 						}}
 					/>
 					<Button style={styles.modalButtons} onPress={this.props.closeModal}>
 						<MaterialIcon name="close" size={15} color="#FFFF" />
-						<Text style={{ color: 'white' }}>Annuleren</Text>
+						<Text style={{ color: 'white'}}>Annuleren</Text>
 					</Button>
 				</View>
 			</View>

@@ -5,15 +5,18 @@ import {Image, Text, View, StyleSheet} from 'react-native';
 import {Card} from 'react-native-elements'
 import auth0 from '../authentication/auth0';
 import { Alert } from 'react-native';
+import { connect } from 'react-redux'
 
 
-export default class Notification extends Component {
+class Profile extends Component {
 
     /**
      * @author Raeef Ibrahim
      *
+     * @author Ilias Delawar
      */
         // Navigate to the Home page
+        
     navigatToHome = () => {
         this.props.navigation.navigate('SplashScreen');
 
@@ -47,16 +50,9 @@ export default class Notification extends Component {
 
                         title='Mijn Profile'
                     >
-                        <Image source={pic} style={{width: '40%', height: '46%', bottom: '3%', left: '30%'}}/>
+                        <Image source={pic} style={{width: '40%', height: '50%', bottom: '3%', left: '30%'}}/>
                         <Text style={{marginBottom: 10, fontSize: 20, fontStyle: 'italic'}}>
-                            Voornaam: Raeef
-                        </Text>
-
-                        <Text style={{marginBottom: 10, fontSize: 20, fontStyle: 'italic'}}>
-                            Achternaam: Ibrahim
-                        </Text>
-                        <Text style={{marginBottom: 10, fontSize: 20, fontStyle: 'italic'}}>
-                            Email: Raeef.ibrahim@hva.nl
+                            Account: {this.props.userEmail}
 
                         </Text>
                     </Card>
@@ -123,3 +119,12 @@ const styles = StyleSheet.create({
         flexDirection: 'row'
     },
 });
+
+function mapStateToProps(state)  {
+    console.log(state.users)
+    return {
+        userEmail: state.users.user
+    }
+}
+
+export default connect(mapStateToProps)(Profile)

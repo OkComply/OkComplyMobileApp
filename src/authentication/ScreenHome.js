@@ -3,24 +3,32 @@ import { Text, View, StyleSheet, AppState, Animated } from 'react-native';
 import Logo from './logo';
 import { RNSlidingButton, SlideDirection } from 'rn-sliding-button';
 import auth0 from '../authentication/auth0';
+import { useSelector, useDispatch } from "react-redux";
+import {
+	setUser
+  } from "../redux/actions/userAction";
 // import AuthService from './AuthService';
 /**
  * @author Raeef Ibrahim
  * 
+ * @author Ilias Delawar
+ * 
  */
-let appState = 'unset';
-export default class ScreenHome extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-      loggedIn: null,
-      accessToken: null,
-      user: null,
+function ScreenHome ( props){
 
-		};
-		appState = AppState.currentState;
-		// AppState.addEventListener('change', this.handleAppState);
-	}
+	const { navigation } = props;
+	const dispatch = useDispatch();
+
+	// constructor(props) {
+	// 	super(props);
+	// 	this.state = {
+	// 		loggedIn: null,
+	// 		accessToken: null,
+	// 		user: null
+	// 	};
+	// 	appState = AppState.currentState;
+	// 	// AppState.addEventListener('change', this.handleAppState);
+	// }
 	// handleAppState = (nextAppState) => {
 	// 	if (appState.match(/inactive|background/) && nextAppState === 'active') {
 	// 		if ((this.props.loggedIn = true)) {
@@ -43,40 +51,42 @@ export default class ScreenHome extends React.Component {
 	//perform Action on slide success
 	onSlideRight = () => {
 		auth0.webAuth
-      .authorize({
-        scope: "openid email"
-      })
-      .then(res => {
-        console.log(res);
-        this.setState({ accessToken: res.accessToken })
+			.authorize({
+				scope: 'openid email'
+			})
+			.then((res) => {
+				console.log(res);
+				// this.setState({ accessToken: res.accessToken });
 
-        auth0.auth
-          .userInfo({ token: res.accessToken })
-          .then(user => {
-            this.props.navigation.navigate("myTab");
-            this.props.navigation.reset({
-              index: 0,
-              routes: [
-                {
-                  name: 'myTab'
-                }
-              ]
-            })
-            this.setState({user:user})
-            console.log(user.email)
-          })
-          .catch(console.error);
-      })
-      .catch(error => console.log(error));
+				auth0.auth
+					.userInfo({ token: res.accessToken })
+					.then((user) => {
+						navigation.navigate('myTab');
+						navigation.reset({
+							index: 0,
+							routes: [
+								{
+									name: 'myTab'
+								}
+							]
+						});
+						console.log(user)
+						dispatch(setUser(user.email))
+
+
+					})
+
+					.catch(console.error);
+			})
+			.catch((error) => console.log(error));
 	};
 
-	render() {
 		return (
 			<View style={styles.container}>
 				<View style={styles.logoContainer}>
 					<Logo />
 				</View>
-		
+
 				<View>
 					<View>
 						<FadeInView>
@@ -94,7 +104,7 @@ export default class ScreenHome extends React.Component {
 							bottom: 100
 						}}
 						height={100}
-						onSlidingSuccess={this.onSlideRight}
+						onSlidingSuccess={() => this.onSlideRight()}
 						slideDirection={SlideDirection.RIGHT}
 					>
 						<View>
@@ -107,7 +117,7 @@ export default class ScreenHome extends React.Component {
 			</View>
 		);
 	}
-}
+
 const FadeInView = (props) => {
 	const fadeAnim = useRef(new Animated.Value(0)).current; // Initial value for opacity: 0
 
@@ -129,6 +139,8 @@ const FadeInView = (props) => {
 		</Animated.View>
 	);
 };
+
+
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
@@ -159,3 +171,5 @@ const styles = StyleSheet.create({
 		color: '#ffffff'
 	}
 });
+
+export default (ScreenHome);
