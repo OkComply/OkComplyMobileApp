@@ -22,7 +22,7 @@ export default class Task extends Component {
 		this.state = {
 			title1: 'New',
 			title2: 'Gepland',
-			title3: 'Te laat'
+			title3: 'Te laat',
 		};
 	}
 
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
 		paddingLeft: 25,
 		paddingRight: 18,
 		alignItems: 'center',
-		backgroundColor: Colors.OrangeYellow
+		backgroundColor: '#e9a944'
 	},
 	row3: {
 		flexDirection: 'row',

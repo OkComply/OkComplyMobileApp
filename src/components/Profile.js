@@ -50,7 +50,7 @@ class Profile extends Component {
 
                         title='Mijn Profile'
                     >
-                        <Image source={pic} style={{width: '40%', height: '50%', bottom: '3%', left: '30%'}}/>
+                        <Image source={pic} style={{width: '32%', height: '51%',bottom: '4%', left: '35%'}}/>
                         <Text style={{marginBottom: 10, fontSize: 20, fontStyle: 'italic'}}>
                             Account: {this.props.userEmail}
 
