@@ -7,7 +7,10 @@ import TaskDetail from './taskDetail';
 import { ListItem, Card } from 'react-native-elements';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import TaskItemModal from './taskItemModal';
-import  taskData from '../../assets/tasks.json'
+import taskData from '../../assets/tasks.json';
+import Accordion from './Accordion';
+import { Colors } from '../../assets/Colors';
+
 /**
  * @author Ilias Delawar
  *
@@ -17,41 +20,22 @@ export default class Task extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			tasks:taskData,
-            modalOpen: false,
-            item: null
-        };
-        
+			title1: 'New',
+			title2: 'Gepland',
+			title3: 'Te laat'
+		};
 	}
-
-	openModal = async item=> {
-		this.setState({
-            modalOpen: true,
-            item: item
-        });
-        
-	};
-
-	closeModal = () => {
-		return this.setState({
-			modalOpen: false
-		});
-	};
-
-	closeModalAndAddNotification = () => {
-        this.props.navigation.navigate('AddNotification');
-        this.closeModal()
-	};
-
-	closeModalAndGoToTaskDetail = () => {
-        this.props.navigation.navigate('TaskDetail', {item: this.state.item});
-        this.closeModal();
-        
-        console.log("svsndosdin" + this.state.item.label)
-	};
 
 	commentPressedHandler = () => {
 		this.props.navigation.navigate('TaskFilter');
+	};
+
+	renderAccordians = () => {
+		const items = [];
+		for (item of this.state.menu) {
+			items.push(<Accordion title={item.title} />);
+		}
+		return items;
 	};
 
 	// state = {
@@ -70,15 +54,6 @@ export default class Task extends Component {
 	render() {
 		return (
 			<View style={styles.taskPage}>
-				<Modal transparent={true} visible={this.state.modalOpen} animationType={'slide'}>
-					<TaskItemModal
-						closeModal={this.closeModal}
-                        closeModalAndGoToTaskDetail={this.closeModalAndGoToTaskDetail}
-                        closeModalAndAddNotification = {this.closeModalAndAddNotification}
-                        closeByOverlayClick = {this.closeModal}
-					/>
-				</Modal>
-
 				<View style={styles.title}>
 					<Text style={{ fontSize: 25, marginLeft: 120 }}>Taken</Text>
 					<Button style={styles.filterButton} onPress={this.commentPressedHandler}>
@@ -92,32 +67,14 @@ export default class Task extends Component {
 						borderBottomWidth: 1,
 						width: '93%',
 						alignSelf: 'center',
-						marginTop: 5
+						marginTop: 5,
+						marginBottom: 10
 					}}
 				/>
 				<View>
-					<FlatList
-						style={{ marginBottom: 59 }}
-						data={this.state.tasks.data.tasks}
-						keyExtractor={(item) => item.id}
-						renderItem={({ item }) => (
-							<TouchableOpacity
-								onPress={() => this.openModal(item)}
-								// onLongPress={this.openModal}
-							>
-								<Card
-                                    style={{}}
-                                    title={item.label}
-									backgroundColor="#fff"
-									containerStyle={{ borderRadius: 15, borderColor: 'black' }}
-								>
-									<View style={styles.item}>
-										<Text >{item.deadline}</Text>
-									</View>
-								</Card>
-							</TouchableOpacity>
-						)}
-					/>
+					<Accordion navigation={this.props.navigation} style={styles.row1} title={this.state.title1} />
+					<Accordion navigation={this.props.navigation} style={styles.row2} title={this.state.title2} />
+					<Accordion navigation={this.props.navigation} style={styles.row3} title={this.state.title3} />
 				</View>
 			</View>
 		);
@@ -127,7 +84,35 @@ export default class Task extends Component {
 const styles = StyleSheet.create({
 	taskPage: {
 		display: 'flex',
-        flex: 1,
+		flex: 1
+	},
+
+	row1: {
+		flexDirection: 'row',
+		justifyContent: 'space-between',
+		height: 56,
+		paddingLeft: 25,
+		paddingRight: 18,
+		alignItems: 'center',
+		backgroundColor: Colors.BLUE
+	},
+	row2: {
+		flexDirection: 'row',
+		justifyContent: 'space-between',
+		height: 56,
+		paddingLeft: 25,
+		paddingRight: 18,
+		alignItems: 'center',
+		backgroundColor: Colors.OrangeYellow
+	},
+	row3: {
+		flexDirection: 'row',
+		justifyContent: 'space-between',
+		height: 56,
+		paddingLeft: 25,
+		paddingRight: 18,
+		alignItems: 'center',
+		backgroundColor: Colors.RED
 	},
 
 	title: {
@@ -140,8 +125,7 @@ const styles = StyleSheet.create({
 	item: {
 		flex: 1,
 		display: 'flex',
-        alignItems: 'center',
-        
+		alignItems: 'center'
 	},
 	filterButton: {
 		marginTop: 3,

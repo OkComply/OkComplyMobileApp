@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import {SET_USER} from '../types';
 
+/**
+ * @author Ilias Delawar
+ */
 
 const initialState = {
 	user: null,
