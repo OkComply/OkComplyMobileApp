@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
-import {  View, StyleSheet, Alert,SafeAreaView,Text,StatusBar, CardItem,buttonText} from 'react-native';
+import {  View, StyleSheet,Text} from 'react-native';
 import { Button } from 'react-native-paper';
-import { FlatList, ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import data from '../../assets/reports.json'
-import { Card } from 'react-native-elements';
-import GeplandList from './GeplandList'
-import NieuwList from './NieuwList'
-
-import CollapsibleList from "react-native-collapsible-list";
-
+import AccordionNotification from './AccordionNotification';
+import { Colors } from '../../assets/Colors';
 export default class Notification extends Component {
 	/**
 	 * @author Raeef Ibrahim
@@ -18,12 +13,21 @@ export default class Notification extends Component {
 		super(props);
 		this.state = {
 			notifications:data,
-         
-        };
+			title1: 'Nieuw' ,
+			title2: 'Gepland',
+			title3: 'Te laat',
+		};
+		
         
 	}
 
-
+	renderAccordians = () => {
+		const items = [];
+		for (item of this.state.menu) {
+			items.push(<AccordionNotification title={item.title} />);
+		}
+		return items;
+	};
 	onAddNotification = () => {
 		this.props.navigation.navigate('AddNotification')
 
@@ -34,87 +38,34 @@ export default class Notification extends Component {
 	render() {
 		return (
 
-			<View style={styles.taskPage}>
+			<View style={styles.notificationPage}>
 
-						<View style={styles.header}>
-						<Text style={{ fontSize: 25, marginLeft: 120 }}>Meldingen</Text>
-							<Button onPress={this.OnFilter} style={styles.filterButton}>
-								<Text style={{ color: '#fff' }}>Filter</Text>
-							</Button>
-						</View>
-						<View
+            <View style={styles.title}>
+					<Text style={{ fontSize: 25, marginLeft: 120 }}>Meldingen</Text>
+					<Button style={styles.filterButton} onPress={this.OnFilter}>
+						<Text style={{ color: '#fff' }}>Filter</Text>
+					</Button>
+				</View>
+				<View
 					style={{
 						borderTopWidth: 1,
 						borderBottomColor: 'grey',
 						borderBottomWidth: 1,
 						width: '93%',
 						alignSelf: 'center',
-						marginTop: 5
+						marginTop: 5,
+						marginBottom: 10
 					}}
 				/>
-				<NieuwList></NieuwList>
-	<GeplandList></GeplandList>
+		<View>
+				  <AccordionNotification navigation={this.props.navigation} style={styles.row1} title={this.state.title1}   />  
+				  {/* <Text style={{bottom:'18%',left:'85%',color:'#fff'}}>{this.state.notifications.data.reports.length}</Text> */}
+				  <AccordionNotification navigation={this.props.navigation} style={styles.row2} title={this.state.title2} />
+				  {/* <Text style={{bottom:'18%',left:'85%',color:'#fff'}}>{this.state.notifications.data.reports.length}</Text> */}
+				  <AccordionNotification navigation={this.props.navigation} style={styles.row3} title={this.state.title3} />
+				  {/* <Text style={{bottom:'18%',left:'85%',color:'#fff'}}>{this.state.notifications.data.reports.length}</Text> */}
+				</View>
 		   
-   <StatusBar barStyle="dark-content" />
-	<SafeAreaView style={styles.container}>
-	
-
-
-		 <CollapsibleList
-		   numberOfVisibleItems={1}
-		   wrapperStyle={styles.wrapperCollapsibleList}
-		   onToggle={collapsed =>
-			 collapsed
-			 
-		   }
-		   buttonContent={
-			
-			   <Card style={styles.teLaat}>
-				  
-			 <View>
-				 
-		   <Text  style={{color:'red'}} >Te Laat                                                                                   {this.state.notifications.data.reports.length}</Text>
-			 </View>
-		
-			 </Card>
-			 
-		   }
-		   
-		   buttonPosition ={
-            'top'
-          }
-		 >
-			  <View></View>
-		   <View >
-		
-		   <FlatList
-						style={{ marginBottom: 59 }}
-						data={this.state.notifications.data.reports}
-						keyExtractor={(item) => item.id}
-						renderItem={({ item }) => (
-							<TouchableOpacity
-								onPress={() => this.props.navigation.navigate('notifactionDetail')}
-							>
-								<Card
-                                    style={{}}
-                                    title={item.label}
-
-									containerStyle={{ borderRadius: 15, borderColor: 'black' }}
-								>
-									 <View style={styles.item}>
-										<Text >Geconstateerd Op: {item.reportedAt}</Text>
-									</View> 
-								</Card>
-							</TouchableOpacity>
-						)}
-					/>
-		   </View>
-		   
-		
-		 </CollapsibleList>
-		 
-		
-		 </SafeAreaView>
 		 <View>
 		 <View>
 							<Button style={styles.addButton}
@@ -135,7 +86,33 @@ const styles = StyleSheet.create({
 		flex: 1
 
 	},
-
+	row1: {
+		flexDirection: 'row',
+		justifyContent: 'space-between',
+		height: 56,
+		paddingLeft: 25,
+		paddingRight: 18,
+		alignItems: 'center',
+		backgroundColor: '#3172d7'
+	},
+	row2: {
+		flexDirection: 'row',
+		justifyContent: 'space-between',
+		height: 56,
+		paddingLeft: 25,
+		paddingRight: 18,
+		alignItems: 'center',
+		backgroundColor: '#e9a944'
+	},
+	row3: {
+		flexDirection: 'row',
+		justifyContent: 'space-between',
+		height: 56,
+		paddingLeft: 25,
+		paddingRight: 18,
+		alignItems: 'center',
+		backgroundColor: Colors.RED
+	},
 	header: {
 		alignSelf: 'center',
 		flexDirection: 'row',
@@ -146,11 +123,6 @@ const styles = StyleSheet.create({
 		marginBottom: '3%',
 		marginLeft: '25%',
 
-	},
-
-	flatListTasks: {
-		flexGrow: 1,
-		width: '100%',
 	},
 	filterButton: {
 		marginTop: 10,
@@ -164,9 +136,10 @@ const styles = StyleSheet.create({
 	addButton: {
 		backgroundColor: '#33de8e',
 		width: '95%',
-		left: '3%'
+		left: '3%',
+		top:250
 	},
-	taskPage: {
+	notificationPage: {
 		display: 'flex',
         flex: 1,
 	},
@@ -198,28 +171,7 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 	   
 	  },
-	  wrapperCollapsibleList: {
-		flex: 1,
-		marginTop: 20,
-		overflow: "hidden",
-		
-		borderRadius: 3,
-		width:'100%'
-	  },
-	  collapsibleItem: {
-		borderBottomWidth: StyleSheet.hairlineWidth,
-		borderColor: "red",
-		padding: 10
-	  },
-	  teLaat: {
-		backgroundColor: 'red'
-	  },
-	gepland:{
-		backgroundColor: 'yellow'
-	},
-	nieuw:{
-		backgroundColor:'blue'
-	}
+	 
 }
 
 );
