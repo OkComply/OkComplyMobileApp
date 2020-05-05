@@ -16,8 +16,10 @@ export default class AccordionNotification extends Component {
 		this.state = {
 			notification: data,
             expanded: false,
-			item: null
+			item: null,
+		
 		};
+	
     }
 
 	
@@ -27,7 +29,9 @@ export default class AccordionNotification extends Component {
 			<View>
       
 				<TouchableOpacity style={this.props.style} onPress={() => this.toggleExpand()}>
-					<Text style={[ styles.title ]}>{this.props.title}</Text>
+					<Text style={[ styles.title ]}>{this.props.title} </Text>
+					
+					
 					<Icon
 						name={this.state.expanded ? 'keyboard-arrow-up' : 'keyboard-arrow-down'}
 						size={30}
@@ -68,6 +72,8 @@ export default class AccordionNotification extends Component {
 
 	toggleExpand = () => {
 		this.setState({ expanded: !this.state.expanded });
+		
+		
     };
     
   

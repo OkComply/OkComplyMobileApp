@@ -13,10 +13,11 @@ export default class Notification extends Component {
 		super(props);
 		this.state = {
 			notifications:data,
-			title1: 'New',
+			title1: 'Nieuw' ,
 			title2: 'Gepland',
 			title3: 'Te laat',
-        };
+		};
+		
         
 	}
 
@@ -57,9 +58,12 @@ export default class Notification extends Component {
 					}}
 				/>
 		<View>
-					<AccordionNotification navigation={this.props.navigation} style={styles.row1} title={this.state.title1} />
-					<AccordionNotification navigation={this.props.navigation} style={styles.row2} title={this.state.title2} />
-					<AccordionNotification navigation={this.props.navigation} style={styles.row3} title={this.state.title3} />
+				  <AccordionNotification navigation={this.props.navigation} style={styles.row1} title={this.state.title1}   />  
+				  {/* <Text style={{bottom:'18%',left:'85%',color:'#fff'}}>{this.state.notifications.data.reports.length}</Text> */}
+				  <AccordionNotification navigation={this.props.navigation} style={styles.row2} title={this.state.title2} />
+				  {/* <Text style={{bottom:'18%',left:'85%',color:'#fff'}}>{this.state.notifications.data.reports.length}</Text> */}
+				  <AccordionNotification navigation={this.props.navigation} style={styles.row3} title={this.state.title3} />
+				  {/* <Text style={{bottom:'18%',left:'85%',color:'#fff'}}>{this.state.notifications.data.reports.length}</Text> */}
 				</View>
 		   
 		 <View>
