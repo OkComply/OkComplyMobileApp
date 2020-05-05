@@ -29,7 +29,7 @@ export default class Notification extends Component {
 		return items;
 	};
 	onAddNotification = () => {
-		this.props.navigation.navigate('AddNotification')
+		this.props.navigation.navigate('FirstPage')
 
 	};
 	OnFilter = () => {
