@@ -22,7 +22,7 @@ import AccordionTelaat from './accordionTelaat';
 	constructor(props) {
 		super(props);
 		this.state = {
-			title1: 'New',
+			title1: 'Nieuw',
 			title2: 'Gepland',
 			title3: 'Te laat',
 		};
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
 		paddingLeft: 25,
 		paddingRight: 18,
 		alignItems: 'center',
-		backgroundColor: Colors.BLUE
+		backgroundColor: '#3172d7'
 	},
 	row2: {
 		flexDirection: 'row',

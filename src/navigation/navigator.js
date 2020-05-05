@@ -21,6 +21,7 @@ import NotificationFilter from '../../src/components/Notification/NotificationFi
 import InstructionManual from '../../src/components/InstructionManual/InstructionManual';
 import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
 import TaskItemModal from '../../src/components/task/taskItemModal';
+import FirstPage from '../components/Notification/AddNotificationFlows/FirstPage';
 
 /**
  * @author Ilias Delawar
@@ -126,6 +127,13 @@ function MainStackNavigator() {
 				<Stack.Screen
 					name="InstructionManual"
 					component={InstructionManual}
+					options={{
+						headerTitle: (props) => <LogoHeader {...props} />
+					}}
+				/>
+				<Stack.Screen
+					name="FirstPage"
+					component={FirstPage}
 					options={{
 						headerTitle: (props) => <LogoHeader {...props} />
 					}}

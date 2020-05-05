@@ -19,16 +19,14 @@ export default class AddNotification extends Component {
 
 		}
 	}
-	onSave = () => {
-		this.props.navigation.navigate('myTab')
-	}
+	
 	onBack =() => {
 		this.props.navigation.navigate('myTab')
 	}
 	render() {
 		return (
 
-			<View style={styles.taskPage}>
+			<View style={styles.addNotifiaction}>
 
 
 					<View>
@@ -78,15 +76,20 @@ export default class AddNotification extends Component {
 		);
 	}
 }
+
 const styles = StyleSheet.create({
 	textStyle: {
-		fontSize: 20,
+		fontSize: 25,
 		...Platform.select({
 			android: {
-				fontFamily: 'italic'
+				fontFamily: 'bold'
 			}
 		}),
-		height: 50
+		height: 50,
+		bottom: '50%',
+		color:'#006280'
+		
+	
 	},
 	selecterStyle: {
 		width: 200,
@@ -99,12 +102,15 @@ const styles = StyleSheet.create({
 		backgroundColor:'#33de8e',
 		width: '40%',
 		left:'55%',
-		top:'1000%'
+		top:'700%'
 	},
 	back:{
 		backgroundColor:'#33de8e',
 		width: '40%',
 		left:'5%',
-		top:'900%'	
+		top:'600%'	
+	},
+	addNotifiaction:{
+		top:'20%'
 	}
 });
