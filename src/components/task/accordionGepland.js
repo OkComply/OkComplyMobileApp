@@ -21,7 +21,6 @@ class AccordionGepland extends Component {
 		super(props);
 		this.state = {
 			data: taskData,
-            // expanded: false,
             modalOpen: false,
 			item: null,
 		};
