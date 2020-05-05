@@ -5,6 +5,7 @@ import { Text, View, StyleSheet, Alert, TextInput } from 'react-native';
 import DatePicker from 'react-native-datepicker';
 import RNPickerSelect from 'react-native-picker-select';
 import { FlatList, ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
+import FirstPage from './AddNotificationFlows/FirstPage'
 
 /**
  * @author Raeef Ibrahim
@@ -25,9 +26,9 @@ export default class AddNotification extends Component {
 		return (
 
 			<View style={styles.taskPage}>
+<FirstPage></FirstPage>
 
-
-				<ScrollView>
+				{/* <ScrollView>
 					<View>
 						<Text style={styles.textStyle} >    Selecteer item binnen organisatie</Text>
 						<Card>
@@ -149,7 +150,7 @@ export default class AddNotification extends Component {
 					>
 						<Text style={{ color: '#fff', fontSize: 20 }}>Opslaan</Text>
 					</Button>
-				</ScrollView>
+				</ScrollView> */}
 
 			</View>
 
