@@ -1,14 +1,11 @@
-import React, { Component } from 'react';
 import {SET_USER} from '../types';
+import {initialState} from '../store/initialState'
 
 /**
  * @author Ilias Delawar
  */
 
-const initialState = {
-	user: null,
-	accesstoken: null
-};
+
 
 const userReducer = (state = initialState, action) => {
 	switch (action.type) {

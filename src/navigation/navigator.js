@@ -21,7 +21,6 @@ import NotificationFilter from '../../src/components/Notification/NotificationFi
 import InstructionManual from '../../src/components/InstructionManual/InstructionManual';
 import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
 import TaskItemModal from '../../src/components/task/taskItemModal';
-import  Accordion from '../components/task/Accordion';
 
 /**
  * @author Ilias Delawar

@@ -7,6 +7,8 @@ import {  Card } from 'react-native-elements';
 import taskData from '../../assets/tasks.json';
 import TaskItemModal from './taskItemModal'
 
+import { connect } from 'react-redux';
+
 /**
  * @author Ilias Delawar
  */
@@ -14,7 +16,7 @@ import TaskItemModal from './taskItemModal'
 const Viewport = Dimensions.get('window');
 
 
-export default class Accordion extends Component {
+class AccordionTelaat extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -65,7 +67,7 @@ export default class Accordion extends Component {
 						closeByOverlayClick={this.closeModal}
 					/>
 				</Modal>
-				<TouchableOpacity style={this.props.style} onPress={() => this.toggleExpand()}>
+				<TouchableOpacity style={this.props.style} onPress={() =>this.props.setActive(!this.props.expanded3)}>
 					<Text style={[ styles.title ]}>{this.props.title}</Text>
 					<Icon
 						name={this.state.expanded ? 'keyboard-arrow-up' : 'keyboard-arrow-down'}
@@ -74,7 +76,7 @@ export default class Accordion extends Component {
 					/>
 				</TouchableOpacity>
 				<View style={styles.parentHr} />
-				{this.state.expanded && (
+				{this.props.expanded3 && (
 					<View style={{height:((Viewport.width * Viewport.scale) === 1242)? 367: 503}}>
                         
 						<FlatList
@@ -104,8 +106,10 @@ export default class Accordion extends Component {
 		);
 	}
 
+
 	toggleExpand = () => {
 		this.setState({ expanded: !this.state.expanded });
+
     };
     
     onClick=(index)=>{
@@ -114,6 +118,15 @@ export default class Accordion extends Component {
         this.setState({data: temp})
       }
 }
+
+function mapDispatchToProps(dispatch){
+	return {
+		setActive: (expanded3) => dispatch({type:'IS_ACTIVE3', payload:expanded3})
+		
+	}
+
+}
+
 
 const styles = StyleSheet.create({
 	title: {
@@ -132,3 +145,7 @@ const styles = StyleSheet.create({
 		padding: 16
 	}
 });
+
+
+
+export default connect(null,mapDispatchToProps)(AccordionTelaat)

@@ -6,7 +6,7 @@ import auth0 from '../authentication/auth0';
 import { useSelector, useDispatch } from "react-redux";
 import {
 	setUser
-  } from "../redux/actions/userAction";
+  } from "../redux/actions/actions";
 // import AuthService from './AuthService';
 /**
  * @author Raeef Ibrahim
