@@ -77,7 +77,7 @@ class AccordionTelaat extends Component {
 				</TouchableOpacity>
 				<View style={styles.parentHr} />
 				{this.props.expanded3 && (
-					<View style={{height:((Viewport.width * Viewport.scale) === 1242)? 367: 503}}>
+					<View style={{height:(Platform.OS === 'ios') ? ((Viewport.width * Viewport.scale) === 1242)? 367: 503 : 300}}>
                         
 						<FlatList
 							data={this.state.data.data.tasks}
