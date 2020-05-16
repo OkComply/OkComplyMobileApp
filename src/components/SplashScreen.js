@@ -1,6 +1,9 @@
 import React, { useRef, useEffect } from 'react';
 import { View, Text,Animated } from 'react-native';
 import Logo from '../authentication/logo'
+/**
+ * @author Raeef Ibrahim
+ */
 
 class SplashScreen extends React.Component {
   performTimeConsumingTask = async() => {

@@ -31,7 +31,7 @@ export default class AccordionNotification extends Component {
 				<TouchableOpacity style={this.props.style} onPress={() => this.toggleExpand()}>
 					<Text style={[ styles.title ]}>{this.props.title} </Text>
 					
-					
+					<Text style={{left:130, color: '#fff'}}>{this.state.notification.data.reports.length}</Text>
 					<Icon
 						name={this.state.expanded ? 'keyboard-arrow-up' : 'keyboard-arrow-down'}
 						size={30}
@@ -49,7 +49,7 @@ export default class AccordionNotification extends Component {
 						keyExtractor={(item) => item.id}
 						renderItem={({ item }) => (
 							<TouchableOpacity
-								 onPress={() => this.props.navigation.navigate('notifactionDetail')}
+								 onPress={() => this.props.navigation.navigate('notifactionDetail',{ item: this.state.item })}
 							>
 								<Card
                                     style={{}}

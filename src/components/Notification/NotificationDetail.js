@@ -21,6 +21,7 @@ export default class NotificationDetail extends Component {
 
 	};
 	render() {
+		//const item = this.props.route.params.item;
 		return (
 
 			<View style={styles.taskPage}>
@@ -31,6 +32,7 @@ export default class NotificationDetail extends Component {
 					backgroundColor='white'
 
 				>
+					{/* <Text>{this.props.item.label}</Text> */}
 					<Text style={styles.textStyle}>Melding voor: Licht</Text>
 					<Text style={styles.textStyle}>Meldingsnummer: 2</Text>
 					<Text style={styles.textStyle}>Geconstateerd op:  12-03-2020</Text>

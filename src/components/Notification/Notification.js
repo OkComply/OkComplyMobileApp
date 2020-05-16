@@ -29,7 +29,7 @@ export default class Notification extends Component {
 		return items;
 	};
 	onAddNotification = () => {
-		this.props.navigation.navigate('FirstPage')
+		this.props.navigation.navigate('AddNotification')
 
 	};
 	OnFilter = () => {
@@ -59,11 +59,9 @@ export default class Notification extends Component {
 				/>
 		<View>
 				  <AccordionNotification navigation={this.props.navigation} style={styles.row1} title={this.state.title1}   />  
-				  {/* <Text style={{bottom:'18%',left:'85%',color:'#fff'}}>{this.state.notifications.data.reports.length}</Text> */}
 				  <AccordionNotification navigation={this.props.navigation} style={styles.row2} title={this.state.title2} />
-				  {/* <Text style={{bottom:'18%',left:'85%',color:'#fff'}}>{this.state.notifications.data.reports.length}</Text> */}
 				  <AccordionNotification navigation={this.props.navigation} style={styles.row3} title={this.state.title3} />
-				  {/* <Text style={{bottom:'18%',left:'85%',color:'#fff'}}>{this.state.notifications.data.reports.length}</Text> */}
+				
 				</View>
 		   
 		 <View>
@@ -137,7 +135,7 @@ const styles = StyleSheet.create({
 		backgroundColor: '#33de8e',
 		width: '95%',
 		left: '3%',
-		top:250
+		top:'690%'
 	},
 	notificationPage: {
 		display: 'flex',
