@@ -7,7 +7,7 @@ import { Colors } from '../../assets/Colors';
 export default class Notification extends Component {
 	/**
 	 * @author Raeef Ibrahim
-	 * 
+	 * a
 	 */
 	constructor(props) {
 		super(props);
