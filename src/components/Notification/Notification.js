@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
 		backgroundColor: '#33de8e',
 		width: '95%',
 		left: '3%',
-		top:250
+		top:'730%'
 	},
 	notificationPage: {
 		display: 'flex',
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
 		marginLeft: '10%',
 		backgroundColor: '#3BB9FF',
 		height: '85%',
-		width: '22%',
+		width: '30%',
 		right: 20
 	},
 	container: {

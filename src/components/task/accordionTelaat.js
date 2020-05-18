@@ -69,7 +69,6 @@ class AccordionTelaat extends Component {
 				</Modal>
 				<TouchableOpacity style={this.props.style} onPress={() =>this.props.setActive(!this.props.expanded3)}>
 					<Text style={[ styles.title ]}>{this.props.title}</Text>
-		<Text>{this.state.data.data.tasks.length}</Text>
 					<Icon
 						name={this.state.expanded ? 'keyboard-arrow-up' : 'keyboard-arrow-down'}
 						size={30}
