@@ -47,7 +47,7 @@ export default class AccordionNotification extends Component {
 						keyExtractor={(item) => item.id}
 						renderItem={({ item }) => (
 							<TouchableOpacity
-								 onPress={() => this.props.navigation.navigate('notifactionDetail')}
+								 onPress={() => this.props.navigation.navigate('notifactionDetail',{ item: this.state.item })}
 							>
 								<Card
                                     style={{}}
