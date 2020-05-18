@@ -5,24 +5,23 @@ import ScreenHome from '../../src/authentication/ScreenHome';
 import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import AppState from '../../src/state/AppState';
-import Task from '../../src/components/task/Tasks';
-import Notification from '../../src/components/Notification/Notification';
+import Task from '../../src/features/task/Tasks';
+import Notification from '../../src/features/Notification/Notification';
 import LogoHeader from '../../src/logos/LogoHeader';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import Profile from '../../src/components/Profile';
+import Profile from '../../src/features/Profile';
 import SplashScreen from '../../src/components/SplashScreen';
-import TaskDetail from '../../src/components/task/taskDetail';
-import TaskFilter from '../../src/components/task/taskFilter';
-import NotificationDetail from '../../src/components/Notification/NotificationDetail';
-import AddNotification from '../../src/components/Notification/AddNotification';
-import NotificationFilter from '../../src/components/Notification/NotificationFilter';
-import InstructionManual from '../../src/components/InstructionManual/InstructionManual';
+import TaskDetail from '../../src/features/task/taskDetail';
+import TaskFilter from '../../src/features/task/taskFilter';
+import NotificationDetail from '../../src/features/Notification/NotificationDetail';
+import AddNotification from '../../src/features/Notification/AddNotification';
+import NotificationFilter from '../../src/features/Notification/NotificationFilter';
+import InstructionManual from '../../src/features/InstructionManual/InstructionManual';
 import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
-import TaskItemModal from '../../src/components/task/taskItemModal';
-import FirstPage from '../components/Notification/AddNotificationFlows/FirstPage';
-
+import TaskItemModal from '../../src/features/task/taskItemModal';
+import FirstPage from '../../src/features/Notification/AddNotificationFlows/FirstPage'
 /**
  * @author Ilias Delawar
  *

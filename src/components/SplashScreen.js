@@ -1,9 +1,9 @@
 import React, { useRef, useEffect } from 'react';
-import { View, Text,Animated } from 'react-native';
-import Logo from '../authentication/logo'
+import { View, Text, Animated } from 'react-native';
+import Logo from './logo'
 
 class SplashScreen extends React.Component {
-  performTimeConsumingTask = async() => {
+  performTimeConsumingTask = async () => {
     return new Promise((resolve) =>
       setTimeout(
         () => { resolve('result') },
@@ -24,14 +24,14 @@ class SplashScreen extends React.Component {
   render() {
     return (
       <View style={styles.viewStyles}>
-           <View >
-      <FadeInView >
-        <Logo></Logo>
-      </FadeInView>
-    </View>
-         
+        <View >
+          <FadeInView >
+            <Logo></Logo>
+          </FadeInView>
         </View>
-      
+
+      </View>
+
     );
   }
 }
@@ -44,17 +44,17 @@ const FadeInView = (props) => {
       {
         toValue: 1,
         duration: 1000,
-        
+
       }
-      
+
     ).start();
-    
-  }, 
-  
-   [])
+
+  },
+
+    [])
 
   return (
-    
+
     <Animated.View                 // Special animatable View
       style={{
         ...props.style,

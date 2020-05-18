@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {  View, StyleSheet,Text} from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 import { Button } from 'react-native-paper';
 import data from '../../assets/reports.json'
 import AccordionNotification from './AccordionNotification';
@@ -12,13 +12,13 @@ export default class Notification extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			notifications:data,
-			title1: 'Nieuw' ,
+			notifications: data,
+			title1: 'Nieuw',
 			title2: 'Gepland',
 			title3: 'Te laat',
 		};
-		
-        
+
+
 	}
 
 	renderAccordians = () => {
@@ -40,7 +40,7 @@ export default class Notification extends Component {
 
 			<View style={styles.notificationPage}>
 
-            <View style={styles.title}>
+				<View style={styles.title}>
 					<Text style={{ fontSize: 25, marginLeft: 120 }}>Meldingen</Text>
 					<Button style={styles.filterButton} onPress={this.OnFilter}>
 						<Text style={{ color: '#fff' }}>Filter</Text>
@@ -57,26 +57,24 @@ export default class Notification extends Component {
 						marginBottom: 10
 					}}
 				/>
-		<View>
-				  <AccordionNotification navigation={this.props.navigation} style={styles.row1} title={this.state.title1}   />  
-				  {/* <Text style={{bottom:'18%',left:'85%',color:'#fff'}}>{this.state.notifications.data.reports.length}</Text> */}
-				  <AccordionNotification navigation={this.props.navigation} style={styles.row2} title={this.state.title2} />
-				  {/* <Text style={{bottom:'18%',left:'85%',color:'#fff'}}>{this.state.notifications.data.reports.length}</Text> */}
-				  <AccordionNotification navigation={this.props.navigation} style={styles.row3} title={this.state.title3} />
-				  {/* <Text style={{bottom:'18%',left:'85%',color:'#fff'}}>{this.state.notifications.data.reports.length}</Text> */}
+				<View>
+					<AccordionNotification navigation={this.props.navigation} style={styles.row1} title={this.state.title1} />
+					<AccordionNotification navigation={this.props.navigation} style={styles.row2} title={this.state.title2} />
+					<AccordionNotification navigation={this.props.navigation} style={styles.row3} title={this.state.title3} />
+
 				</View>
-		   
-		 <View>
-		 <View>
-							<Button style={styles.addButton}
-								onPress={this.onAddNotification}>
-								<Text style={{ color: '#fff' }}>+ Melding toevoegen</Text>
-							</Button>
-						</View>
-		 </View>
-	
-		 
-	   </View>
+
+				<View>
+					<View>
+						<Button style={styles.addButton}
+							onPress={this.onAddNotification}>
+							<Text style={{ color: '#fff' }}>+ Melding toevoegen</Text>
+						</Button>
+					</View>
+				</View>
+
+
+			</View>
 		);
 	}
 }
@@ -127,7 +125,7 @@ const styles = StyleSheet.create({
 	filterButton: {
 		marginTop: 10,
 		marginLeft: '10%',
-		backgroundColor:'#3BB9FF',
+		backgroundColor: '#3BB9FF',
 		height: '70%',
 		width: '22%',
 		right: 20
@@ -137,11 +135,11 @@ const styles = StyleSheet.create({
 		backgroundColor: '#33de8e',
 		width: '95%',
 		left: '3%',
-		top:'730%'
+		top: '730%'
 	},
 	notificationPage: {
 		display: 'flex',
-        flex: 1,
+		flex: 1,
 	},
 
 	title: {
@@ -154,8 +152,8 @@ const styles = StyleSheet.create({
 	item: {
 		flex: 1,
 		display: 'flex',
-        alignItems: 'center',
-        
+		alignItems: 'center',
+
 	},
 	filterButton: {
 		marginTop: 3,
@@ -169,9 +167,9 @@ const styles = StyleSheet.create({
 		flex: 1,
 		justifyContent: "center",
 		alignItems: "center",
-	   
-	  },
-	 
+
+	},
+
 }
 
 );

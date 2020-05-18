@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { Text, View, StyleSheet, AppState, Animated } from 'react-native';
-import Logo from './logo';
+import Logo from '../components/logo';
 import { RNSlidingButton, SlideDirection } from 'rn-sliding-button';
 import auth0 from '../authentication/auth0';
 import { useSelector, useDispatch } from "react-redux";
@@ -19,26 +19,6 @@ function ScreenHome ( props){
 	const { navigation } = props;
 	const dispatch = useDispatch();
 
-	// constructor(props) {
-	// 	super(props);
-	// 	this.state = {
-	// 		loggedIn: null,
-	// 		accessToken: null,
-	// 		user: null
-	// 	};
-	// 	appState = AppState.currentState;
-	// 	// AppState.addEventListener('change', this.handleAppState);
-	// }
-	// handleAppState = (nextAppState) => {
-	// 	if (appState.match(/inactive|background/) && nextAppState === 'active') {
-	// 		if ((this.props.loggedIn = true)) {
-	// 			this.props.navigation.navigate('myTab');
-	// 		} else {
-	// 			this.props.navigation.navigate('SignIn');
-	// 		}
-	// 	}
-	// 	appState = nextAppState;
-	// };
 
 	// Navigate to the Task page
 	navigatToTask = () => {
