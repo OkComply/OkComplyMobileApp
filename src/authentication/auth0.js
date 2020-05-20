@@ -1,5 +1,4 @@
 import Auth0 from 'react-native-auth0';
-import { auth } from 'firebase';
 
 const auth0 = new Auth0({
   domain: 'okapi-prod.eu.auth0.com',
