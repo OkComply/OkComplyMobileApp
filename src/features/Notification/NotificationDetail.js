@@ -24,10 +24,12 @@ export default class NotificationDetail extends Component {
 
     };
     render() {
+        const item = this.props.route.params.item;
+
         return (
 
             <View style={styles.notificationDetailPage}>
-                <Text style={styles.titleStyle}>Lamp moet vervangen worden</Text>
+                <Text style={styles.titleStyle}>{item.label}</Text>
 
                 <ScrollView>
                     <Card style={{}}
@@ -39,7 +41,7 @@ export default class NotificationDetail extends Component {
                                 <Text style={styles.textStyle}>Geconstateerd op:  <Text style={{ color: 'white' }}></Text>{"\n"}</Text>
                                 <DatePicker
                                     style={styles.inputStyle}
-                                    date={this.state.date}
+                                    date={item.reportedAt}
                                     onDateChange={(date) => this.setState({ date: date })}
                                     confirmBtnText="Bevestig"
                                     cancelBtnText="Annuleer"
@@ -47,10 +49,10 @@ export default class NotificationDetail extends Component {
                                 />
                             </View>
 
-                            <Text style={styles.textStyle}>Melding voor: <Text style={{ color: 'white' }}>xxxx</Text>{"\n"}</Text>
-                            <Text style={styles.textStyle}>Meldingsnummer: <Text style={{ color: 'white' }}>xx</Text>{"\n"}</Text>
-                            <Text style={styles.textStyle}>Gemeld door: <Text style={{ color: 'white' }}>xxxx</Text>{"\n"}</Text>
-                            <Text style={styles.textStyle}>Beschrijving: <Text style={{ color: 'white' }}> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</Text>{"\n"}</Text>
+        <Text style={styles.textStyle}>Melding voor: <Text style={{ color: 'white' }}>{item.label}</Text>{"\n"}</Text>
+        <Text style={styles.textStyle}>Meldingsnummer: <Text style={{ color: 'white' }}>{item.reportNumber}</Text>{"\n"}</Text>
+        <Text style={styles.textStyle}>Gemeld door: <Text style={{ color: 'white' }}>{item.reporter.name}</Text>{"\n"}</Text>
+        <Text style={styles.textStyle}>Beschrijving: <Text style={{ color: 'white' }}> {item.situation}</Text>{"\n"}</Text>
 
                         </View>
                     </Card>
@@ -101,7 +103,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         marginLeft: '5%',
         width: '95%',
-        height:'20%',
+        height:'25%',
         display: 'flex',
         borderRadius: 100
     },

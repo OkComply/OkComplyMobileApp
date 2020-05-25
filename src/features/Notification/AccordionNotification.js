@@ -14,7 +14,7 @@ export default class AccordionNotification extends Component {
 		super(props);
 		this.state = {
 			notification: data,
-            expanded: false,
+			expanded: false,
 			item: null,
 		
 		};
@@ -46,7 +46,7 @@ export default class AccordionNotification extends Component {
 						keyExtractor={(item) => item.id}
 						renderItem={({ item }) => (
 							<TouchableOpacity
-								 onPress={() => this.props.navigation.navigate('notifactionDetail')}
+								 onPress={() => this.navigateToDetail(item)}
 							>
 								<Card
                                     style={{}}
@@ -71,8 +71,20 @@ export default class AccordionNotification extends Component {
 		this.setState({ expanded: !this.state.expanded });
 		
 		
-    };
-    
+	};
+	navigateToDetail= (item) =>{
+		this.setState({
+			item: item
+		});
+		this.props.navigation.navigate('notifactionDetail',{ item})
+		console.log('svsndosdin' +item.label);
+	}
+       
+    openModal = async (item) => {
+		this.setState({
+			item: item
+		});
+	};
   
 }
 

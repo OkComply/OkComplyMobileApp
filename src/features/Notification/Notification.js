@@ -4,6 +4,7 @@ import { Button } from 'react-native-paper';
 import data from '../../assets/reports.json'
 import AccordionNotification from './AccordionNotification';
 import { Colors } from '../../assets/Colors';
+import { ScrollView } from 'react-native-gesture-handler';
 export default class Notification extends Component {
 	/**
 	 * @author Raeef Ibrahim
@@ -58,10 +59,11 @@ export default class Notification extends Component {
 					}}
 				/>
 				<View>
+					<ScrollView>
 					<AccordionNotification navigation={this.props.navigation} style={styles.row1} title={this.state.title1} />
 					<AccordionNotification navigation={this.props.navigation} style={styles.row2} title={this.state.title2} />
 					<AccordionNotification navigation={this.props.navigation} style={styles.row3} title={this.state.title3} />
-
+					</ScrollView>
 				</View>
 
 			
