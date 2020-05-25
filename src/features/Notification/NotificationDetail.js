@@ -38,7 +38,7 @@ export default class NotificationDetail extends Component {
                     >
                         <View>
                             <View style={styles.flexElement}>
-                                <Text style={styles.textStyle}>Geconstateerd op:  <Text style={{ color: 'white' }}></Text>{"\n"}</Text>
+        <Text style={styles.textStyle}>Geconstateerd op:  <Text style={{ color: 'white',fontSize:14 }}>{item.reportedAt}</Text>{"\n"}</Text>
                                 <DatePicker
                                     style={styles.inputStyle}
                                     date={item.reportedAt}
@@ -96,6 +96,11 @@ const styles = StyleSheet.create({
         fontSize: 20,
         
         color: 'black'
+    },
+    inputStyle:{
+top:'6%',
+right:'300%',
+
     },
     addButton: {
         backgroundColor: '#33de8e',

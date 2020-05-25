@@ -16,7 +16,7 @@ import SplashScreen from '../../src/components/SplashScreen';
 import TaskDetail from '../../src/features/task/taskDetail';
 import TaskFilter from '../../src/features/task/taskFilter';
 import NotificationDetail from '../../src/features/Notification/NotificationDetail';
-import AddNotification from '../../src/features/Notification/AddNotification';
+import AddNotification from '../features/Notification/AddNotificationFlows/AddNotification';
 import NotificationFilter from '../../src/features/Notification/NotificationFilter';
 import InstructionManual from '../../src/features/InstructionManual/InstructionManual';
 import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
