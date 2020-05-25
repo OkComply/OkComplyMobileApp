@@ -6,7 +6,6 @@ import { FlatList } from 'react-native-gesture-handler';
 import {  Card } from 'react-native-elements';
 import data from '../../assets/reports.json';
 
-
 const Viewport = Dimensions.get('window');
 
 

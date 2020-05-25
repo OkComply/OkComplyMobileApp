@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text ,TouchableOpacity,Image} from 'react-native';
 import { Button } from 'react-native-paper';
 import data from '../../assets/reports.json'
 import AccordionNotification from './AccordionNotification';
@@ -64,14 +64,18 @@ export default class Notification extends Component {
 
 				</View>
 
-				<View>
-					<View>
-						<Button style={styles.addButton}
-							onPress={this.onAddNotification}>
-							<Text style={{ color: '#fff' }}>+ Melding toevoegen</Text>
-						</Button>
-					</View>
-				</View>
+			
+				<View style={styles.MainContainer}>
+
+<TouchableOpacity activeOpacity={0.5} onPress={this.onAddNotification} style={styles.TouchableOpacityStyle} >
+
+  <Image source={{uri : 'https://cdn1.iconfinder.com/data/icons/vibrancie-action/30/action_021-add-new-plus-compose-512.png'}} 
+  
+		 style={styles.FloatingButtonStyle} />
+
+</TouchableOpacity>
+
+</View>
 
 
 			</View>
@@ -169,7 +173,31 @@ const styles = StyleSheet.create({
 		alignItems: "center",
 
 	},
-
+	MainContainer: {
+		flex: 1,
+		justifyContent: 'center',
+		alignItems: 'center',
+		backgroundColor : '#F5F5F5'
+	  },
+	 
+	  TouchableOpacityStyle:{
+	 
+		position: 'absolute',
+		width: 50,
+		height: 50,
+		alignItems: 'center',
+		justifyContent: 'center',
+		right: 30,
+		bottom: 30,
+		
+	  },
+	 
+	  FloatingButtonStyle: {
+	 
+		resizeMode: 'contain',
+		width: 50,
+		height: 50,
+	  }
 }
 
 );

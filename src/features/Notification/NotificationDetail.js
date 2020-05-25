@@ -85,7 +85,6 @@ const styles = StyleSheet.create({
     titleStyle: {
 
         fontSize: 30,
-        fontFamily: 'italic',
         color: 'black',
         width: '93%',
         left: '4%',
@@ -93,7 +92,7 @@ const styles = StyleSheet.create({
     },
     textStyle: {
         fontSize: 20,
-        fontFamily: 'italic',
+        
         color: 'black'
     },
     addButton: {
