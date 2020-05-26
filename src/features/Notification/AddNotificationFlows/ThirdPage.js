@@ -5,12 +5,14 @@ import { Text, View, StyleSheet, Alert, TextInput, Image } from 'react-native';
 import DatePicker from 'react-native-datepicker';
 import RNPickerSelect from 'react-native-picker-select';
 import { FlatList, ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
+import mapStateToProps from '../../Profile';
+
 
 /**
- * @author Raeef Ibrahim & Jay Fairouz
+ * @author Jay Fairouz
  *
  */
-export default class FirstPage extends Component {
+export default class ThirdPage extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -18,31 +20,26 @@ export default class FirstPage extends Component {
 
         }
     }
-
-    onVerder = () => {
-        this.props.navigation.navigate('SecondPage')
+    onSave = () => {
+        this.props.navigation.navigate('myTab')
     }
-
     render() {
         return (
 
             <View style={styles.taskPage}>
                 <ScrollView>
                     <View>
-                        <Image
-                            style={{
-                                marginTop: 10, width: 200, height: 200, alignSelf: 'center', borderColor: 'gray', borderWidth: 1,
-                            }}
-                            resizeMode="contain"
-                            source={{ uri: 'https://hmtklep.nl/wp-content/uploads/2017/03/photo-video-slr-camera-icon-512x512-pixel-12-300x300.png' }}
-                        />
-
-                        <Text style={styles.textStyle}>Titel:</Text>
+                        <Text style={styles.textStyle}>Welke actie is er inmiddels ondernomen?:</Text>
                         <TextInput
-                            style={styles.textInputStyle}
+                            style={styles.textInputExtendedStyle}
                         />
 
-                        <Text style={styles.textStyle}>Geconstateerd op:</Text>
+                        <Text style={styles.textStyle}>Zijn er ideeën voor verbetering?:</Text>
+                        <TextInput
+                            style={styles.textInputExtendedStyle}
+                        />
+                        
+                        <Text style={styles.textStyle}>Deze melding moet opgelost zijn voor:</Text>
                         <DatePicker
                             style={styles.textInputStyle}
                             date={this.state.date}
@@ -50,11 +47,6 @@ export default class FirstPage extends Component {
                             confirmBtnText="Bevestig"
                             cancelBtnText="Annuleer"
                             format="DD-MM-YYYY"
-                        />
-
-                        <Text style={styles.textStyle}>Documenten:</Text>
-                        <TextInput
-                            style={styles.textInputStyle}
                         />
 
                     </View>
@@ -115,6 +107,16 @@ const styles = StyleSheet.create({
     textInputStyle: {
         marginTop: 10,
         height: 40,
+        width: '90%',
+        alignSelf: 'center',
+        borderColor: 'gray',
+        borderWidth: 1,
+        backgroundColor: 'white',
+        color: 'black'
+    },
+    textInputExtendedStyle: {
+        marginTop: 10,
+        height: 200,
         width: '90%',
         alignSelf: 'center',
         borderColor: 'gray',
