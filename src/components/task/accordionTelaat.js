@@ -71,14 +71,14 @@ class AccordionTelaat extends Component {
 					<Text style={[ styles.title ]}>{this.props.title}</Text>
 		<Text>{this.state.data.data.tasks.length}</Text>
 					<Icon
-						name={this.state.expanded ? 'keyboard-arrow-up' : 'keyboard-arrow-down'}
+						name={this.props.expanded3 ? 'keyboard-arrow-up' : 'keyboard-arrow-down'}
 						size={30}
 						color={Colors.WHITE}
 					/>
 				</TouchableOpacity>
 				<View style={styles.parentHr} />
 				{this.props.expanded3 && (
-					<View style={{height:(Platform.OS === 'ios') ? ((Viewport.width * Viewport.scale) === 1242)? 367: 503 : 300}}>
+					<View style={{height:(Platform.OS === 'ios') ? ((Viewport.width * Viewport.scale) === 1242)? 367: 503 : 300, backgroundColor: Colors.RED}}>
                         
 						<FlatList
 							data={this.state.data.data.tasks}
