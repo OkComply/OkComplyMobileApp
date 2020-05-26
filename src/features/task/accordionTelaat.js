@@ -69,6 +69,7 @@ class AccordionTelaat extends Component {
 				</Modal>
 				<TouchableOpacity style={this.props.style} onPress={() =>this.props.setActive(!this.props.expanded3)}>
 					<Text style={[ styles.title ]}>{this.props.title}</Text>
+					<Text style={{left:"210%", color: '#fff'}}>{this.state.data.data.tasks.length}</Text>
 					<Icon
 						name={this.props.expanded3 ? 'keyboard-arrow-up' : 'keyboard-arrow-down'}
 						size={30}
@@ -77,7 +78,7 @@ class AccordionTelaat extends Component {
 				</TouchableOpacity>
 				<View style={styles.parentHr} />
 				{this.props.expanded3 && (
-					<View style={{height:(Platform.OS === 'ios') ? ((Viewport.width * Viewport.scale) === 1242)? 367: 503 : 300, backgroundColor: Colors.RED}}>
+					<View style={{height:(Platform.OS === 'ios') ? ((Viewport.width * Viewport.scale) === 1242)? 367: 503 : 300, backgroundColor: Colors.LIGHTRED}}>
                         
 						<FlatList
 							data={this.state.data.data.tasks}
@@ -94,7 +95,7 @@ class AccordionTelaat extends Component {
                                         containerStyle={{ borderRadius: 15, borderColor: 'black' }}
                                     >
                                         <View style={styles.item}>
-                                            <Text >{item.deadline}</Text>
+                                            <Text >{ "Geconstateerd op: " + item.deadline}</Text>
                                         </View>
                                     </Card>
                                 </TouchableOpacity>

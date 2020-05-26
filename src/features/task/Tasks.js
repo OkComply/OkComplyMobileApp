@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
 		paddingLeft: 25,
 		paddingRight: 18,
 		alignItems: 'center',
-		backgroundColor: '#e9a944'
+		backgroundColor: Colors.OrangeYellow
 	},
 	row3: {
 		flexDirection: 'row',
