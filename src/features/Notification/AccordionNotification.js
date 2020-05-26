@@ -6,7 +6,6 @@ import { FlatList } from 'react-native-gesture-handler';
 import {  Card } from 'react-native-elements';
 import data from '../../assets/reports.json';
 
-
 const Viewport = Dimensions.get('window');
 
 
@@ -15,15 +14,12 @@ export default class AccordionNotification extends Component {
 		super(props);
 		this.state = {
 			notification: data,
-            expanded: false,
+			expanded: false,
 			item: null,
 		
 		};
 	
     }
-
-	
-
 	render() {
 		return (
 			<View>
@@ -31,12 +27,13 @@ export default class AccordionNotification extends Component {
 				<TouchableOpacity style={this.props.style} onPress={() => this.toggleExpand()}>
 					<Text style={[ styles.title ]}>{this.props.title} </Text>
 					
-					
+					<Text style={{left:"210%", color: '#fff'}}>{this.state.notification.data.reports.length}</Text>
 					<Icon
 						name={this.state.expanded ? 'keyboard-arrow-up' : 'keyboard-arrow-down'}
 						size={30}
 						color={Colors.WHITE}
 					/>
+
 				</TouchableOpacity>
 				<View style={styles.parentHr} />
 				{this.state.expanded  &&  (
@@ -49,7 +46,7 @@ export default class AccordionNotification extends Component {
 						keyExtractor={(item) => item.id}
 						renderItem={({ item }) => (
 							<TouchableOpacity
-								 onPress={() => this.props.navigation.navigate('notifactionDetail')}
+								 onPress={() => this.navigateToDetail(item)}
 							>
 								<Card
                                     style={{}}
@@ -74,8 +71,20 @@ export default class AccordionNotification extends Component {
 		this.setState({ expanded: !this.state.expanded });
 		
 		
-    };
-    
+	};
+	navigateToDetail= (item) =>{
+		this.setState({
+			item: item
+		});
+		this.props.navigation.navigate('notifactionDetail',{ item})
+		console.log('svsndosdin' +item.label);
+	}
+       
+    openModal = async (item) => {
+		this.setState({
+			item: item
+		});
+	};
   
 }
 

@@ -9,6 +9,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 /**
  * @author Ilias Delawar
  *
+ * @author Mick Bogaard
  */
 
 export default class TaskDetail extends Component {
@@ -34,6 +35,17 @@ export default class TaskDetail extends Component {
 					<TextInput style={styles.inputStyle} defaultValue="Dit is de beschrijving" />
 				</View>
 				<View>
+					<Text style={styles.labelStyle}>Taak moet voor deze datum zijn uitgevoerd</Text>
+					<DatePicker
+						style={styles.inputStyle}
+						date={this.state.date}
+						onDateChange={(date) => this.setState({ date: date })}
+						confirmBtnText="Bevestig"
+						cancelBtnText="Annuleer"
+						format="DD-MM-YYYY"
+					/>
+				</View>
+				<View>
 					<Text style={styles.labelStyle}>Eindverantwoordelijke voor deze taak</Text>
 					<RNPickerSelect
 						style={{
@@ -53,17 +65,7 @@ export default class TaskDetail extends Component {
 						]}
 					/>
 				</View>
-				<View>
-					<Text style={styles.labelStyle}>Taak moet voor deze datum zijn uitgevoerd</Text>
-					<DatePicker
-						style={styles.inputStyle}
-						date={this.state.date}
-						onDateChange={(date) => this.setState({ date: date })}
-						confirmBtnText="Bevestig"
-						cancelBtnText="Annuleer"
-						format="DD-MM-YYYY"
-					/>
-				</View>
+				
 				<View>
 					<Text style={styles.labelStyle}>Uivoerende van deze taak</Text>
 					<RNPickerSelect
@@ -86,34 +88,68 @@ export default class TaskDetail extends Component {
 						]}
 					/>
 				</View>
+
 				<View style={{ display: 'flex', justifyContent: 'space-between' }}>
 					<Text style={styles.labelStyle}>Bestanden toevoegen</Text>
-					<Button style={{ backgroundColor: 'white' }} onPress={''}>
+					<Button style={{ backgroundColor: 'white' , marginLeft: 15, marginEnd: 15, marginTop: 5}} onPress={''}>
 						<Text style={{ color: '#3BB9FF' }}>Kies foto</Text>
 					</Button>
-					<View
-						style={{
-							borderTopWidth: 1,
-							borderBottomColor: 'grey',
-							borderBottomWidth: 1,
-							width: '100%',
-							alignSelf: 'center',
-							top: 6
-						}}
-					/>
+					<View/>
+				</View>
+
+				<View style={{ 
+					display: 'flex', 
+					justifyContent: 'space-between' }}>
+
+					<Button style={{ backgroundColor: '#33de8e', marginLeft: 15, marginEnd: 15}} 
+						onPress={this.onAddNotification}>
+						<Text style={{ color: 'white' }}>Melding maken</Text>
+
+					</Button>
+
+				</View>
+
+				<View style={{ flexDirection: "row", display: 'flex', justifyContent: 'space-between', marginBottom: 5 }}>
 					<Button
-						onPress={this.onAddNotification}
+						//onPress={"close"}
 						style={{
 							width: '50%',
-							height: '17%',
-							backgroundColor: '#33de8e',
-							margin: 15
+							height: '100%',
+							backgroundColor: 'red',
+							margin: 0
 						}}
 					>
-						<MaterialIcon name="add" size={15} color="#FFFF" />
-						<Text style={{ color: '#fff', fontSize: 15 }}>Melding maken</Text>
+						<MaterialIcon 
+						name="close" 
+						size={15} 
+						color="white" />
+
+						<Text style={{ 
+							color: 'white', 
+							fontSize: 15 ,}}>Sluiten</Text>
 					</Button>
+
+				
+					<Button
+						//onPress={Add onTaskComplete page}
+						style={{
+							width: '50%',
+							height: '100%',
+							backgroundColor: '#33de8e',
+							margin: 0
+						}}
+					>
+						<MaterialIcon 
+						name="check" 
+						size={15} 
+						color="#FFFF" />
+
+						<Text style={{ color: '#fff', fontSize: 15 }}>Voltooien</Text>
+					</Button>
+
 				</View>
+
+
 				{/*</ScrollView>*/}
 			</View>
 		);
@@ -128,12 +164,12 @@ const styles = StyleSheet.create({
 	},
 	labelStyle: {
 		marginLeft: 15,
-		marginTop: 10,
+		marginTop: 0,
 		fontSize: 17
 	},
 	inputStyle: {
 		height: 40,
-		borderColor: 'gray',
+		borderColor: 'grey',
 		borderWidth: 1,
 		backgroundColor: 'white',
 		color: 'black',

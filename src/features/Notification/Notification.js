@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import {  View, StyleSheet,Text} from 'react-native';
+import { View, StyleSheet, Text ,TouchableOpacity,Image} from 'react-native';
 import { Button } from 'react-native-paper';
 import data from '../../assets/reports.json'
 import AccordionNotification from './AccordionNotification';
 import { Colors } from '../../assets/Colors';
+import { ScrollView } from 'react-native-gesture-handler';
 export default class Notification extends Component {
 	/**
 	 * @author Raeef Ibrahim
@@ -12,13 +13,13 @@ export default class Notification extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			notifications:data,
-			title1: 'Nieuw' ,
+			notifications: data,
+			title1: 'Nieuw',
 			title2: 'Gepland',
 			title3: 'Te laat',
 		};
-		
-        
+
+
 	}
 
 	renderAccordians = () => {
@@ -40,7 +41,7 @@ export default class Notification extends Component {
 
 			<View style={styles.notificationPage}>
 
-            <View style={styles.title}>
+				<View style={styles.title}>
 					<Text style={{ fontSize: 25, marginLeft: 120 }}>Meldingen</Text>
 					<Button style={styles.filterButton} onPress={this.OnFilter}>
 						<Text style={{ color: '#fff' }}>Filter</Text>
@@ -57,26 +58,29 @@ export default class Notification extends Component {
 						marginBottom: 10
 					}}
 				/>
-		<View>
-				  <AccordionNotification navigation={this.props.navigation} style={styles.row1} title={this.state.title1}   />  
-				  {/* <Text style={{bottom:'18%',left:'85%',color:'#fff'}}>{this.state.notifications.data.reports.length}</Text> */}
-				  <AccordionNotification navigation={this.props.navigation} style={styles.row2} title={this.state.title2} />
-				  {/* <Text style={{bottom:'18%',left:'85%',color:'#fff'}}>{this.state.notifications.data.reports.length}</Text> */}
-				  <AccordionNotification navigation={this.props.navigation} style={styles.row3} title={this.state.title3} />
-				  {/* <Text style={{bottom:'18%',left:'85%',color:'#fff'}}>{this.state.notifications.data.reports.length}</Text> */}
+				<View>
+					<ScrollView>
+					<AccordionNotification navigation={this.props.navigation} style={styles.row1} title={this.state.title1} />
+					<AccordionNotification navigation={this.props.navigation} style={styles.row2} title={this.state.title2} />
+					<AccordionNotification navigation={this.props.navigation} style={styles.row3} title={this.state.title3} />
+					</ScrollView>
 				</View>
-		   
-		 <View>
-		 <View>
-							<Button style={styles.addButton}
-								onPress={this.onAddNotification}>
-								<Text style={{ color: '#fff' }}>+ Melding toevoegen</Text>
-							</Button>
-						</View>
-		 </View>
-	
-		 
-	   </View>
+
+			
+				<View style={styles.MainContainer}>
+
+<TouchableOpacity activeOpacity={0.5} onPress={this.onAddNotification} style={styles.TouchableOpacityStyle} >
+
+  <Image source={{uri : 'https://cdn1.iconfinder.com/data/icons/vibrancie-action/30/action_021-add-new-plus-compose-512.png'}} 
+  
+		 style={styles.FloatingButtonStyle} />
+
+</TouchableOpacity>
+
+</View>
+
+
+			</View>
 		);
 	}
 }
@@ -127,7 +131,7 @@ const styles = StyleSheet.create({
 	filterButton: {
 		marginTop: 10,
 		marginLeft: '10%',
-		backgroundColor:'#3BB9FF',
+		backgroundColor: '#3BB9FF',
 		height: '70%',
 		width: '22%',
 		right: 20
@@ -137,11 +141,11 @@ const styles = StyleSheet.create({
 		backgroundColor: '#33de8e',
 		width: '95%',
 		left: '3%',
-		top:250
+		top: '730%'
 	},
 	notificationPage: {
 		display: 'flex',
-        flex: 1,
+		flex: 1,
 	},
 
 	title: {
@@ -154,24 +158,48 @@ const styles = StyleSheet.create({
 	item: {
 		flex: 1,
 		display: 'flex',
-        alignItems: 'center',
-        
+		alignItems: 'center',
+
 	},
 	filterButton: {
 		marginTop: 3,
 		marginLeft: '10%',
 		backgroundColor: '#3BB9FF',
 		height: '85%',
-		width: '22%',
+		width: '30%',
 		right: 20
 	},
 	container: {
 		flex: 1,
 		justifyContent: "center",
 		alignItems: "center",
-	   
+
+	},
+	MainContainer: {
+		flex: 1,
+		justifyContent: 'center',
+		alignItems: 'center',
+		backgroundColor : '#F5F5F5'
 	  },
 	 
+	  TouchableOpacityStyle:{
+	 
+		position: 'absolute',
+		width: 50,
+		height: 50,
+		alignItems: 'center',
+		justifyContent: 'center',
+		right: 30,
+		bottom: 30,
+		
+	  },
+	 
+	  FloatingButtonStyle: {
+	 
+		resizeMode: 'contain',
+		width: 50,
+		height: 50,
+	  }
 }
 
 );
