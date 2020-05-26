@@ -21,7 +21,7 @@ class AccordionNew extends Component {
 		super(props);
 		this.state = {
 			data: taskData,
-            expanded: false,
+            expanded: true,
             modalOpen: false,
 			item: null,
 		};
@@ -69,15 +69,17 @@ class AccordionNew extends Component {
 				</Modal>
 				<TouchableOpacity style={this.props.style} onPress={() =>this.props.setActive(!this.props.expanded)}>
 					<Text style={[ styles.title ]}>{this.props.title}</Text>
+					<Text style={{left:"210%", color: '#fff'}}>{this.state.data.data.tasks.length}</Text>
+
 					<Icon
-						name={this.state.expanded ? 'keyboard-arrow-up' : 'keyboard-arrow-down'}
+						name={this.props.expanded ? 'keyboard-arrow-up' : 'keyboard-arrow-down'}
 						size={30}
 						color={Colors.WHITE}
 					/>
 				</TouchableOpacity>
 				<View style={styles.parentHr} />
 				{this.props.expanded && (
-					<View style={{height:(Platform.OS === 'ios') ? ((Viewport.width * Viewport.scale) === 1242)? 367: 503 : 300}}>
+					<View style={{height:(Platform.OS === 'ios') ? ((Viewport.width * Viewport.scale) === 1242)? 367: 503 : 300, backgroundColor:Colors.LIGHTBLUE}}>
                         
 						<FlatList
 							data={this.state.data.data.tasks}
@@ -94,7 +96,7 @@ class AccordionNew extends Component {
                                         containerStyle={{ borderRadius: 15, borderColor: 'black' }}
                                     >
                                         <View style={styles.item}>
-                                            <Text >{item.deadline}</Text>
+										<Text >{ "Geconstateerd op: " + item.deadline}</Text>
                                         </View>
                                     </Card>
                                 </TouchableOpacity>

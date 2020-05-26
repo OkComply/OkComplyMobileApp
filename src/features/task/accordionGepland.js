@@ -68,16 +68,18 @@ class AccordionGepland extends Component {
 				</Modal>
 				<TouchableOpacity style={this.props.style} onPress={() =>this.props.setActive(!this.props.expanded2)}>
 					<Text style={[ styles.title ]}>{this.props.title}</Text>
+					<Text style={{left:"210%", color: '#fff'}}>{this.state.data.data.tasks.length}</Text>
+
 					<Icon
-						name={this.state.expanded ? 'keyboard-arrow-up' : 'keyboard-arrow-down'}
+						name={this.props.expanded2 ? 'keyboard-arrow-up' : 'keyboard-arrow-down'}
 						size={30}
 						color={Colors.WHITE}
 					/>
 				</TouchableOpacity>
 				<View style={styles.parentHr} />
 				{this.props.expanded2 && (
-					<View style={{height:(Platform.OS === 'ios') ? ((Viewport.width * Viewport.scale) === 1242)? 367: 503 : 300}}>
-						
+					<View style={{height:(Platform.OS === 'ios') ? ((Viewport.width * Viewport.scale) === 1242)? 367: 503 : 300, backgroundColor: Colors.LIGHTYELLOW}}>
+                        
 						<FlatList
 							data={this.state.data.data.tasks}
 							numColumns={1}
@@ -93,7 +95,7 @@ class AccordionGepland extends Component {
                                         containerStyle={{ borderRadius: 15, borderColor: 'black' }}
                                     >
                                         <View style={styles.item}>
-                                            <Text >{item.deadline}</Text>
+										<Text >{ "Geconstateerd op: " + item.deadline}</Text>
                                         </View>
                                     </Card>
                                 </TouchableOpacity>
