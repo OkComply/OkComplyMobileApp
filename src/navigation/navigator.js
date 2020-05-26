@@ -22,6 +22,9 @@ import InstructionManual from '../../src/features/InstructionManual/InstructionM
 import FontAwesome5Icon from 'react-native-vector-icons/FontAwesome5';
 import TaskItemModal from '../../src/features/task/taskItemModal';
 import FirstPage from '../../src/features/Notification/AddNotificationFlows/FirstPage'
+import SecondPage from '../../src/features/Notification/AddNotificationFlows/SecondPage'
+import ThirdPage from '../../src/features/Notification/AddNotificationFlows/ThirdPage'
+
 /**
  * @author Ilias Delawar
  *
@@ -136,7 +139,21 @@ function MainStackNavigator() {
 					options={{
 						headerTitle: (props) => <LogoHeader {...props} />
 					}}
-				/>
+                />
+                <Stack.Screen
+                    name="SecondPage"
+                    component={SecondPage}
+                    options={{
+                        headerTitle: (props) => <LogoHeader {...props} />
+                    }}
+                />
+                <Stack.Screen
+                    name="ThirdPage"
+                    component={ThirdPage}
+                    options={{
+                        headerTitle: (props) => <LogoHeader {...props} />
+                    }}
+                />
 
 				<Stack.Screen name="TaskItemModal" component={TaskItemModal} />
 

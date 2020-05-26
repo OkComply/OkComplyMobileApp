@@ -5,12 +5,14 @@ import { Text, View, StyleSheet, Alert, TextInput, Image } from 'react-native';
 import DatePicker from 'react-native-datepicker';
 import RNPickerSelect from 'react-native-picker-select';
 import { FlatList, ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
+import mapStateToProps from '../../Profile';
+
 
 /**
- * @author Raeef Ibrahim & Jay Fairouz
+ * @author Jay Fairouz
  *
  */
-export default class FirstPage extends Component {
+export default class SecondPage extends Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -18,43 +20,41 @@ export default class FirstPage extends Component {
 
         }
     }
-
     onVerder = () => {
-        this.props.navigation.navigate('SecondPage')
+        this.props.navigation.navigate('ThirdPage')
     }
-
     render() {
         return (
 
             <View style={styles.taskPage}>
                 <ScrollView>
                     <View>
-                        <Image
-                            style={{
-                                marginTop: 10, width: 200, height: 200, alignSelf: 'center', borderColor: 'gray', borderWidth: 1,
-                            }}
-                            resizeMode="contain"
-                            source={{ uri: 'https://hmtklep.nl/wp-content/uploads/2017/03/photo-video-slr-camera-icon-512x512-pixel-12-300x300.png' }}
-                        />
+                        <Text style={styles.textStyle}>Gemeld door:</Text>
+                        <View style={styles.textStyle}>
+                            <RNPickerSelect
+                                style={styles.textStyle}
+                                onValueChange={(value) => console.log(value)}
+                                items={[
+                                    { label: 'Werknemer 1', value: 'football' },
+                                    { label: 'Werknemer 2', value: 'baseball' },
+                                    { label: 'Werknemer 3', value: 'hockey' }
+                                ]}
+                            />
+                        </View>
 
-                        <Text style={styles.textStyle}>Titel:</Text>
+                        <Text style={styles.textStyle}>Datum melding</Text>
                         <TextInput
                             style={styles.textInputStyle}
                         />
 
-                        <Text style={styles.textStyle}>Geconstateerd op:</Text>
-                        <DatePicker
-                            style={styles.textInputStyle}
-                            date={this.state.date}
-                            onDateChange={(date) => this.setState({ date: date })}
-                            confirmBtnText="Bevestig"
-                            cancelBtnText="Annuleer"
-                            format="DD-MM-YYYY"
-                        />
-
-                        <Text style={styles.textStyle}>Documenten:</Text>
+                        <Text style={styles.textStyle}>Eindverantwoordelijke:</Text>
                         <TextInput
                             style={styles.textInputStyle}
+                        />
+
+                        <Text style={styles.textStyle}>Beschrijf waar deze melding over gaat:</Text>
+                        <TextInput
+                            style={styles.textInputExtendedStyle}
                         />
 
                     </View>
@@ -115,6 +115,16 @@ const styles = StyleSheet.create({
     textInputStyle: {
         marginTop: 10,
         height: 40,
+        width: '90%',
+        alignSelf: 'center',
+        borderColor: 'gray',
+        borderWidth: 1,
+        backgroundColor: 'white',
+        color: 'black'
+    },
+    textInputExtendedStyle: {
+        marginTop: 10,
+        height: 200,
         width: '90%',
         alignSelf: 'center',
         borderColor: 'gray',
