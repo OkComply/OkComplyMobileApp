@@ -21,7 +21,6 @@ class AccordionNew extends Component {
 		super(props);
 		this.state = {
 			data: taskData,
-            expanded: true,
             modalOpen: false,
 			item: null,
 		};
@@ -79,7 +78,7 @@ class AccordionNew extends Component {
 				</TouchableOpacity>
 				<View style={styles.parentHr} />
 				{this.props.expanded && (
-					<View style={{height:(Platform.OS === 'ios') ? ((Viewport.width * Viewport.scale) === 1242)? 367: 503 : 300, backgroundColor:Colors.LIGHTBLUE}}>
+					<View style={{height:(Platform.OS === 'ios') ? ((Viewport.width * Viewport.scale) === 1242)? 367: 503 : 300}}>
                         
 						<FlatList
 							data={this.state.data.data.tasks}
