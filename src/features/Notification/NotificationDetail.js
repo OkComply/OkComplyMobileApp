@@ -24,10 +24,12 @@ export default class NotificationDetail extends Component {
 
     };
     render() {
+        const item = this.props.route.params.item;
+
         return (
 
             <View style={styles.notificationDetailPage}>
-                <Text style={styles.titleStyle}>Lamp moet vervangen worden</Text>
+                <Text style={styles.titleStyle}>{item.label}</Text>
 
                 <ScrollView>
                     <Card style={{}}
@@ -36,10 +38,10 @@ export default class NotificationDetail extends Component {
                     >
                         <View>
                             <View style={styles.flexElement}>
-                                <Text style={styles.textStyle}>Geconstateerd op:  <Text style={{ color: 'white' }}></Text>{"\n"}</Text>
+        <Text style={styles.textStyle}>Geconstateerd op:  <Text style={{ color: 'white',fontSize:14 }}>{item.reportedAt}</Text>{"\n"}</Text>
                                 <DatePicker
                                     style={styles.inputStyle}
-                                    date={this.state.date}
+                                    date={item.reportedAt}
                                     onDateChange={(date) => this.setState({ date: date })}
                                     confirmBtnText="Bevestig"
                                     cancelBtnText="Annuleer"
@@ -47,10 +49,10 @@ export default class NotificationDetail extends Component {
                                 />
                             </View>
 
-                            <Text style={styles.textStyle}>Melding voor: <Text style={{ color: 'white' }}>xxxx</Text>{"\n"}</Text>
-                            <Text style={styles.textStyle}>Meldingsnummer: <Text style={{ color: 'white' }}>xx</Text>{"\n"}</Text>
-                            <Text style={styles.textStyle}>Gemeld door: <Text style={{ color: 'white' }}>xxxx</Text>{"\n"}</Text>
-                            <Text style={styles.textStyle}>Beschrijving: <Text style={{ color: 'white' }}> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</Text>{"\n"}</Text>
+        <Text style={styles.textStyle}>Melding voor: <Text style={{ color: 'white' }}>{item.label}</Text>{"\n"}</Text>
+        <Text style={styles.textStyle}>Meldingsnummer: <Text style={{ color: 'white' }}>{item.reportNumber}</Text>{"\n"}</Text>
+        <Text style={styles.textStyle}>Gemeld door: <Text style={{ color: 'white' }}>{item.reporter.name}</Text>{"\n"}</Text>
+        <Text style={styles.textStyle}>Beschrijving: <Text style={{ color: 'white' }}> {item.situation}</Text>{"\n"}</Text>
 
                         </View>
                     </Card>
@@ -85,7 +87,6 @@ const styles = StyleSheet.create({
     titleStyle: {
 
         fontSize: 30,
-        fontFamily: 'italic',
         color: 'black',
         width: '93%',
         left: '4%',
@@ -93,8 +94,13 @@ const styles = StyleSheet.create({
     },
     textStyle: {
         fontSize: 20,
-        fontFamily: 'italic',
+        
         color: 'black'
+    },
+    inputStyle:{
+top:'6%',
+right:'300%',
+
     },
     addButton: {
         backgroundColor: '#33de8e',
@@ -102,6 +108,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         marginLeft: '5%',
         width: '95%',
+        height:'25%',
         display: 'flex',
         borderRadius: 100
     },
