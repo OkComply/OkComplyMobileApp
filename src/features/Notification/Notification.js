@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Text ,TouchableOpacity,Image} from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity, Image } from 'react-native';
 import { Button } from 'react-native-paper';
 import data from '../../assets/reports.json'
-import AccordionNotification from './AccordionNotification';
 import { Colors } from '../../assets/Colors';
 import { ScrollView } from 'react-native-gesture-handler';
-export default class Notification extends Component {
+import AccordionNew from '../Notification/accordionNew'
+import AccordionTelaat from '../Notification/accordionTelaat'
+import AccordionGepland from '../Notification/accordionGepland'
+import { connect } from 'react-redux';
+class Notification extends Component {
 	/**
 	 * @author Raeef Ibrahim
 	 * 
@@ -60,24 +63,24 @@ export default class Notification extends Component {
 				/>
 				<View>
 					<ScrollView>
-					<AccordionNotification navigation={this.props.navigation} style={styles.row1} title={this.state.title1} />
-					<AccordionNotification navigation={this.props.navigation} style={styles.row2} title={this.state.title2} />
-					<AccordionNotification navigation={this.props.navigation} style={styles.row3} title={this.state.title3} />
+						<AccordionNew expanded={this.props.expanded} navigation={this.props.navigation} style={styles.row1} title={this.state.title1} />
+						<AccordionGepland expanded2={this.props.expanded2} navigation={this.props.navigation} style={styles.row2} title={this.state.title2} />
+						<AccordionTelaat expanded3={this.props.expanded3} navigation={this.props.navigation} style={styles.row3} title={this.state.title3} />
 					</ScrollView>
 				</View>
 
-			
+
 				<View style={styles.MainContainer}>
 
-<TouchableOpacity activeOpacity={0.5} onPress={this.onAddNotification} style={styles.TouchableOpacityStyle} >
+					<TouchableOpacity activeOpacity={0.5} onPress={this.onAddNotification} style={styles.TouchableOpacityStyle} >
 
-  <Image source={{uri : 'https://cdn1.iconfinder.com/data/icons/vibrancie-action/30/action_021-add-new-plus-compose-512.png'}} 
-  
-		 style={styles.FloatingButtonStyle} />
+						<Image source={{ uri: 'https://cdn1.iconfinder.com/data/icons/vibrancie-action/30/action_021-add-new-plus-compose-512.png' }}
 
-</TouchableOpacity>
+							style={styles.FloatingButtonStyle} />
 
-</View>
+					</TouchableOpacity>
+
+				</View>
 
 
 			</View>
@@ -90,6 +93,7 @@ const styles = StyleSheet.create({
 		flex: 1
 
 	},
+
 	row1: {
 		flexDirection: 'row',
 		justifyContent: 'space-between',
@@ -106,7 +110,7 @@ const styles = StyleSheet.create({
 		paddingLeft: 25,
 		paddingRight: 18,
 		alignItems: 'center',
-		backgroundColor: '#e9a944'
+		backgroundColor: Colors.OrangeYellow
 	},
 	row3: {
 		flexDirection: 'row',
@@ -179,11 +183,11 @@ const styles = StyleSheet.create({
 		flex: 1,
 		justifyContent: 'center',
 		alignItems: 'center',
-		backgroundColor : '#F5F5F5'
-	  },
-	 
-	  TouchableOpacityStyle:{
-	 
+		backgroundColor: '#F5F5F5'
+	},
+
+	TouchableOpacityStyle: {
+
 		position: 'absolute',
 		width: 50,
 		height: 50,
@@ -191,15 +195,24 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 		right: 30,
 		bottom: 30,
-		
-	  },
-	 
-	  FloatingButtonStyle: {
-	 
+
+	},
+
+	FloatingButtonStyle: {
+
 		resizeMode: 'contain',
 		width: 50,
 		height: 50,
-	  }
+	}
 }
 
 );
+function mapStateToProps(state) {
+	return {
+		expanded: state.collapsible.expanded,
+		expanded2: state.collapsible.expanded2,
+		expanded3: state.collapsible.expanded3
+	}
+}
+
+export default connect(mapStateToProps)(Notification)
