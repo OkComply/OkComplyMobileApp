@@ -1,0 +1,6 @@
+fragment userAccountFragment on UserAccount {
+    id
+    email
+    name
+    surname
+}

@@ -6,14 +6,18 @@ import { FlatList } from 'react-native-gesture-handler';
 import {  Card } from 'react-native-elements';
 import taskData from '../../assets/tasks.json';
 import TaskItemModal from './taskItemModal'
-
+import client from '../../../src/ApolloClient/apolloClient'
 import { connect } from 'react-redux';
+
 
 /**
  * @author Ilias Delawar
  */
 
+
+
 const Viewport = Dimensions.get('window');
+
 
 
 class AccordionNew extends Component {
@@ -24,8 +28,11 @@ class AccordionNew extends Component {
             modalOpen: false,
 			item: null,
 		};
-    }
-    
+	
+	}
+	
+
+
     openModal = async (item) => {
 		this.setState({
 			modalOpen: true,

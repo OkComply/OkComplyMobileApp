@@ -155,7 +155,9 @@ function MainStackNavigator() {
                     }}
                 />
 
+
 				<Stack.Screen name="TaskItemModal" component={TaskItemModal} />
+				
 
 			</Stack.Navigator>
 		</NavigationContainer>

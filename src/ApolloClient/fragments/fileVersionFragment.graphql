@@ -1,0 +1,10 @@
+#import "./userAccountFragment.graphql"
+
+fragment fileVersionFragment on FileVersionType {
+    version
+    eTag
+    uploadedBy {
+        ...userAccountFragment
+    }
+    uploadedAt
+}

@@ -6,21 +6,26 @@ import 'react-native-gesture-handler';
 import {AppRegistry} from 'react-native';
 import {name as appName} from './app.json';
 import MainStackNavigator from "./src/navigation/navigator"
-import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import rootReducer from "./src/redux/store/index"
+import store from "./src/redux/store/index"
+import { ApolloProvider } from '@apollo/react-hooks';
+import client  from './src/ApolloClient/apolloClient'
+
+
 
 console.disableYellowBox = true;
 
-const store = createStore(rootReducer)
 
 
 export default function App({}) {
 
 	return (
+
+		<ApolloProvider client={client}>
 		<Provider store={store}>
 		<MainStackNavigator/>
 		</Provider>
+		</ApolloProvider>
 	);
 }
 

@@ -13,18 +13,37 @@ import { Colors } from '../../assets/Colors';
 import { connect } from 'react-redux';
 import AccordionGepland from './accordionGepland';
 import AccordionTelaat from './accordionTelaat';
+import client from '../../ApolloClient/apolloClient';
+import { loader } from 'graphql.macro';
+import { Query } from 'react-apollo';
+// import gql from 'graphql-tag';
+
+
+const query = loader('src/ApolloClient/queries/report/fetchReports.graphql');
+
+
+client
+	.query({
+		query: query
+	})
+	.then(({ data }) => {
+		const { tasks } = data;
+
+		console.log(tasks);
+	})
+	.catch((error) => {});
 
 /**
  * @author Ilias Delawar
  *
  */
- class Task extends Component {
+class Task extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			title1: 'Nieuw',
 			title2: 'Gepland',
-			title3: 'Te laat',
+			title3: 'Te laat'
 		};
 	}
 
@@ -43,6 +62,20 @@ import AccordionTelaat from './accordionTelaat';
 	render() {
 		return (
 			<View style={styles.taskPage}>
+				<Query query={query}>
+					{(response, error) => {
+						if (error) {
+							console.log('Response Error-------', error);
+							return <Text style={styles.errorText}>error</Text>;
+						}
+						//If the response is done, then will return the FlatList
+						if (response) {
+							console.log('response-data-------------', response.data);
+							//Return the FlatList if there is not an error.
+							return <Text>response</Text>;
+						}
+					}}
+				</Query>
 				<View style={styles.title}>
 					<Text style={{ fontSize: 25, marginLeft: 120 }}>Taken</Text>
 					<Button style={styles.filterButton} onPress={this.commentPressedHandler}>
@@ -61,15 +94,29 @@ import AccordionTelaat from './accordionTelaat';
 					}}
 				/>
 				<View>
-					<AccordionNew  expanded={this.props.expanded}navigation={this.props.navigation} style={styles.row1} title={this.state.title1} />
-					<AccordionGepland expanded2={this.props.expanded2}navigation={this.props.navigation} style={styles.row2} title={this.state.title2} />
-					<AccordionTelaat expanded3={this.props.expanded3} navigation={this.props.navigation} style={styles.row3} title={this.state.title3} />
+					<AccordionNew
+						expanded={this.props.expanded}
+						navigation={this.props.navigation}
+						style={styles.row1}
+						title={this.state.title1}
+					/>
+					<AccordionGepland
+						expanded2={this.props.expanded2}
+						navigation={this.props.navigation}
+						style={styles.row2}
+						title={this.state.title2}
+					/>
+					<AccordionTelaat
+						expanded3={this.props.expanded3}
+						navigation={this.props.navigation}
+						style={styles.row3}
+						title={this.state.title3}
+					/>
 				</View>
 			</View>
 		);
 	}
 }
-
 
 const styles = StyleSheet.create({
 	taskPage: {
@@ -127,12 +174,12 @@ const styles = StyleSheet.create({
 	}
 });
 
-function mapStateToProps(state)  {
-    return {
+function mapStateToProps(state) {
+	return {
 		expanded: state.collapsible.expanded,
 		expanded2: state.collapsible.expanded2,
 		expanded3: state.collapsible.expanded3
-    }
+	};
 }
 
-export default connect(mapStateToProps)(Task)
+export default connect(mapStateToProps)(Task);
