@@ -26,7 +26,8 @@ export default function App({}) {
 		<MainStackNavigator/>
 		</Provider>
 		</ApolloProvider>
-	);
+	); 
+	
 }
 
 
