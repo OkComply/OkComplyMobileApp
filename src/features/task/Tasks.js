@@ -14,24 +14,21 @@ import { connect } from 'react-redux';
 import AccordionGepland from './accordionGepland';
 import AccordionTelaat from './accordionTelaat';
 import client from '../../ApolloClient/apolloClient';
-import { loader } from 'graphql.macro';
 import { Query } from 'react-apollo';
-// import gql from 'graphql-tag';
 
 
-const query = loader('src/ApolloClient/queries/report/fetchReports.graphql');
 
 
-client
-	.query({
-		query: query
-	})
-	.then(({ data }) => {
-		const { tasks } = data;
+// client
+// 	.query({
+// 		query: query
+// 	})
+// 	.then(({ data }) => {
+// 		const { tasks } = data;
 
-		console.log(tasks);
-	})
-	.catch((error) => {});
+// 		console.log(tasks);
+// 	})
+// 	.catch((error) => {});
 
 /**
  * @author Ilias Delawar
@@ -62,20 +59,7 @@ class Task extends Component {
 	render() {
 		return (
 			<View style={styles.taskPage}>
-				<Query query={query}>
-					{(response, error) => {
-						if (error) {
-							console.log('Response Error-------', error);
-							return <Text style={styles.errorText}>error</Text>;
-						}
-						//If the response is done, then will return the FlatList
-						if (response) {
-							console.log('response-data-------------', response.data);
-							//Return the FlatList if there is not an error.
-							return <Text>response</Text>;
-						}
-					}}
-				</Query>
+			
 				<View style={styles.title}>
 					<Text style={{ fontSize: 25, marginLeft: 120 }}>Taken</Text>
 					<Button style={styles.filterButton} onPress={this.commentPressedHandler}>

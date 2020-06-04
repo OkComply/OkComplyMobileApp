@@ -30,7 +30,6 @@
     "firebase": "^7.10.0",
     "galio-framework": "^0.6.3",
     "graphql": "^15.0.0",
-    "graphql.macro": "^1.4.2",
     "native-base": "^2.13.12",
     "playlist-parser": "0.0.12",
     "react": "16.9.0",

@@ -21,11 +21,11 @@ export default function App({}) {
 
 	return (
 
-		<ApolloProvider client={client}>
+		// <ApolloProvider client={client}>
 		<Provider store={store}>
 		<MainStackNavigator/>
 		</Provider>
-		</ApolloProvider>
+		// </ApolloProvider>
 	); 
 	
 }
