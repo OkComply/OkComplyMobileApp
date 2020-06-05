@@ -17,46 +17,9 @@ import client from '../../ApolloClient/apolloClient';
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 import fetchTasksQuery from "../../ApolloClient/queries/task/fetchTasks.graphql"
-import "../../ApolloClient/fragments/taskFragment.graphql"
 
 
 
-console.log(fetchTasksQuery)
-
-const query  = gql`
-query tasks(
-    $nodeId: IdentifierScalar!,
-    $executors: [IdentifierScalar],
-    $owners: [IdentifierScalar],
-    $tags: [IdentifierScalar],
-    $searchLabel: SearchScalar,
-    $showRecentClosed: Boolean
-) {
-    tasks(
-        nodeId: $nodeId,
-        executors: $executors,
-        owners: $owners,
-        tags: $tags,
-        searchLabel: $searchLabel,
-        showRecentClosed: $showRecentClosed
-    ) {
-        ...taskFragment
-    }
-}
-`
-
-
-
-// client
-// 	.query({
-// 		query: fetchTasksQuery
-// 	})
-// 	.then(({ data }) => {
-// 		const { tasks } = data;
-
-// 		console.log(tasks);
-// 	})
-// 	.catch((error) => {console.log(error )});
 
 /**
  * @author Ilias Delawar
@@ -70,6 +33,92 @@ class Task extends Component {
 			title2: 'Gepland',
 			title3: 'Te laat'
 		};
+	}
+
+
+	async doQuery() {
+
+		const USER_QUERY = gql`
+			query userProfile {
+				userProfile {
+					id
+					email
+					name
+					surname
+				}
+			}`;
+		const ORGANISATION_QUERY = gql`
+			query organisations {
+				organisations {
+						id
+						label
+						root {
+								id
+								virtualParentId
+								label
+								path
+						}
+				}
+			}
+		`;
+		const TASKS_QUERY = gql`
+				query tasks(
+					$nodeId: IdentifierScalar!,
+					$executors: [IdentifierScalar],
+					$owners: [IdentifierScalar],
+					$tags: [IdentifierScalar],
+					$searchLabel: SearchScalar,
+					$showRecentClosed: Boolean
+			) {
+					tasks(
+							nodeId: $nodeId,
+							executors: $executors,
+							owners: $owners,
+							tags: $tags,
+							searchLabel: $searchLabel,
+							showRecentClosed: $showRecentClosed
+					) {
+						id
+						label
+						deadline
+						completed
+						sequenceNumber
+					}
+			}
+	
+		`;
+
+		try {
+			const userResult = await client.query({
+				query: USER_QUERY,
+				variables: {},
+			});
+			const { userProfile } = userResult.data;
+			console.log("userProfile", userProfile);
+
+			const organisationsResult = await client.query({
+				query: ORGANISATION_QUERY,
+				variables: {},
+			});
+			const { organisations } = organisationsResult.data;
+			console.log("organisations", organisations);
+			console.log("id", organisations[0].root.id);
+			const tasksResult = await client.query({
+				query: TASKS_QUERY,
+				variables: {
+					nodeId: organisations[0].root.id,
+					executors: [],
+					owners: [],
+					tags: [],
+					showRecentClosed: false,
+					searchLabel: "",
+				},
+			});
+			console.log(tasksResult);
+		} catch (error) {
+			console.log(error);
+		}
+
 	}
 
 	commentPressedHandler = () => {
