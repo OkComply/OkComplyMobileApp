@@ -1,34 +1,14 @@
 import React, { Component, useState } from 'react';
 
 import { Text, RecyclerViewBackedScrollView, View, StyleSheet, Modal, Dimensions } from 'react-native';
-import { FlatList, ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { Button } from 'react-native-paper';
-import TaskDetail from './taskDetail';
-import { ListItem, Card } from 'react-native-elements';
-import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
-import TaskItemModal from './taskItemModal';
-import taskData from '../../assets/tasks.json';
 import AccordionNew from './accordionNew';
 import { Colors } from '../../assets/Colors';
 import { connect } from 'react-redux';
 import AccordionGepland from './accordionGepland';
 import AccordionTelaat from './accordionTelaat';
 import client from '../../ApolloClient/apolloClient';
-import { Query } from 'react-apollo';
-
-
-
-
-// client
-// 	.query({
-// 		query: query
-// 	})
-// 	.then(({ data }) => {
-// 		const { tasks } = data;
-
-// 		console.log(tasks);
-// 	})
-// 	.catch((error) => {});
+import { gql } from 'apollo-boost';
 
 /**
  * @author Ilias Delawar
@@ -42,6 +22,91 @@ class Task extends Component {
 			title2: 'Gepland',
 			title3: 'Te laat'
 		};
+	}
+
+	async doQuery() {
+
+		const USER_QUERY = gql`
+			query userProfile {
+				userProfile {
+					id
+					email
+					name
+					surname
+				}
+			}`;
+		const ORGANISATION_QUERY = gql`
+			query organisations {
+				organisations {
+						id
+						label
+						root {
+								id
+								virtualParentId
+								label
+								path
+						}
+				}
+			}
+		`;
+		const TASKS_QUERY = gql`
+				query tasks(
+					$nodeId: IdentifierScalar!,
+					$executors: [IdentifierScalar],
+					$owners: [IdentifierScalar],
+					$tags: [IdentifierScalar],
+					$searchLabel: SearchScalar,
+					$showRecentClosed: Boolean
+			) {
+					tasks(
+							nodeId: $nodeId,
+							executors: $executors,
+							owners: $owners,
+							tags: $tags,
+							searchLabel: $searchLabel,
+							showRecentClosed: $showRecentClosed
+					) {
+						id
+						label
+						deadline
+						completed
+						sequenceNumber
+					}
+			}
+	
+		`;
+
+		try {
+			const userResult = await client.query({
+				query: USER_QUERY,
+				variables: {},
+			});
+			const { userProfile } = userResult.data;
+			console.log("userProfile", userProfile);
+
+			const organisationsResult = await client.query({
+				query: ORGANISATION_QUERY,
+				variables: {},
+			});
+			const { organisations } = organisationsResult.data;
+			console.log("organisations", organisations);
+			console.log("id", organisations[0].root.id);
+			const tasksResult = await client.query({
+				query: TASKS_QUERY,
+				variables: {
+					nodeId: organisations[0].root.id,
+					executors: [],
+					owners: [],
+					tags: [],
+					showRecentClosed: false,
+					searchLabel: "",
+				},
+			});
+			console.log(tasksResult);
+		} catch (error) {
+			console.log(error);
+		}
+
 	}
 
 	commentPressedHandler = () => {
@@ -59,10 +124,13 @@ class Task extends Component {
 	render() {
 		return (
 			<View style={styles.taskPage}>
-			
+
 				<View style={styles.title}>
 					<Text style={{ fontSize: 25, marginLeft: 120 }}>Taken</Text>
-					<Button style={styles.filterButton} onPress={this.commentPressedHandler}>
+					<Button
+						style={styles.filterButton}
+						onPress={() => this.doQuery()}
+					>
 						<Text style={{ color: '#fff' }}>Filter</Text>
 					</Button>
 				</View>

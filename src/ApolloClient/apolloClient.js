@@ -10,7 +10,7 @@ const client = new ApolloClient({
 	link: new HttpLink({
 		uri: 'https://demo.okcomply.com/graphql',
 		headers: {
-		  authorization: state.users.accesstoken, // on production you need to store token
+			authorization:  `Bearer ${state.users.accesstoken}`,
 		  //in storage or in redux persist, for demonstration purposes we do this like that
 		},
 	  }),
