@@ -71,7 +71,7 @@ function ScreenHome ( props){
 				<View>
 					<View>
 						<FadeInView>
-							<Text style={styles.title}>Welkom in OkComply Mobile App</Text>
+							<Text style={styles.title}>OkComply taken en meldingen</Text>
 						</FadeInView>
 					</View>
 				</View>
