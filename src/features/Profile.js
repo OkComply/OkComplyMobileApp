@@ -48,11 +48,11 @@ class Profile extends Component {
 
                     <Card
 
-                        title='Mijn Profile'
+                        title='Mijn Account'
                     >
                         <Image source={pic} style={{width: '32%', height: '51%',bottom: '4%', left: '35%'}}/>
                         <Text style={{marginBottom: 10, fontSize: 20, fontStyle: 'italic'}}>
-                            Account: {this.props.userEmail}
+                        E-mailadres: {this.props.userEmail}
 
                         </Text>
                     </Card>
@@ -63,7 +63,7 @@ class Profile extends Component {
                         height: 500,
                         justifyContent: 'flex-end',
                         backgroundColor: 'red',
-                        bottom: 25
+                        top: '20%'
                     }}
 
                     height={70}
@@ -86,13 +86,12 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'flex-end',
-        backgroundColor: 'white'
+        justifyContent: 'flex-start',
+        backgroundColor: 'white',
+        top: "5%"
     },
     slideButton: {
-        width: 100,
-        height: 10,
-        bottom: 1000
+      
     },
     logoContainer: {
         flex: 1,
