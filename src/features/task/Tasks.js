@@ -15,20 +15,48 @@ import AccordionGepland from './accordionGepland';
 import AccordionTelaat from './accordionTelaat';
 import client from '../../ApolloClient/apolloClient';
 import { Query } from 'react-apollo';
+import gql from 'graphql-tag';
+import fetchTasksQuery from "../../ApolloClient/queries/task/fetchTasks.graphql"
+import "../../ApolloClient/fragments/taskFragment.graphql"
 
+
+
+console.log(fetchTasksQuery)
+
+const query  = gql`
+query tasks(
+    $nodeId: IdentifierScalar!,
+    $executors: [IdentifierScalar],
+    $owners: [IdentifierScalar],
+    $tags: [IdentifierScalar],
+    $searchLabel: SearchScalar,
+    $showRecentClosed: Boolean
+) {
+    tasks(
+        nodeId: $nodeId,
+        executors: $executors,
+        owners: $owners,
+        tags: $tags,
+        searchLabel: $searchLabel,
+        showRecentClosed: $showRecentClosed
+    ) {
+        ...taskFragment
+    }
+}
+`
 
 
 
 // client
 // 	.query({
-// 		query: query
+// 		query: fetchTasksQuery
 // 	})
 // 	.then(({ data }) => {
 // 		const { tasks } = data;
 
 // 		console.log(tasks);
 // 	})
-// 	.catch((error) => {});
+// 	.catch((error) => {console.log(error )});
 
 /**
  * @author Ilias Delawar
@@ -57,6 +85,7 @@ class Task extends Component {
 	};
 
 	render() {
+
 		return (
 			<View style={styles.taskPage}>
 			

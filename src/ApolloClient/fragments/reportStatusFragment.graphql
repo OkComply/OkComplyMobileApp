@@ -1,0 +1,7 @@
+fragment reportStatusFragment on ReportStatusType {
+    id
+    label
+    resolveTime
+    reportedAt
+    resolvedAt
+}

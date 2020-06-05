@@ -1,0 +1,7 @@
+fragment userAccountWithRoleFragment on UserAccount {
+    id
+    email
+    name
+    surname
+    role
+}

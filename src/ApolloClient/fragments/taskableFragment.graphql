@@ -1,0 +1,50 @@
+fragment taskableFragment on TaskableType {
+    __typename
+    ... on DossierType {
+        id
+        label,
+        completed
+        initiationDate
+        every {
+            time
+            times
+        }
+        phaseShift {
+            inAttention {
+                time
+                times
+            }
+            inExpected {
+                time
+                times
+            }
+            inCritical {
+                time
+                times
+            }
+        }
+        node {
+            id
+            label
+            path
+        }
+    }
+    ... on ReportType {
+        id
+        label
+        resolvedAt
+        node {
+            id
+            label
+            path
+        }
+        reporter {
+            id
+            email
+            name
+            surname
+        }
+        reportedAt
+        resolveTime
+    }
+}

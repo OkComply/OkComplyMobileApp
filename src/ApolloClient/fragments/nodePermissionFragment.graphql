@@ -1,0 +1,5 @@
+fragment nodePermissionFragment on NodePermissionType {
+    grant
+    nodeId
+    depth
+}

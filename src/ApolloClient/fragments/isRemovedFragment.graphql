@@ -1,0 +1,8 @@
+#import "./userAccountFragment.graphql"
+
+fragment isRemovedFragment on IsRemovedType {
+    removedBy {
+        ...userAccountFragment
+    }
+    removedAt
+}

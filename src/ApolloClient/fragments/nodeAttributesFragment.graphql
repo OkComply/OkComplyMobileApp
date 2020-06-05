@@ -1,0 +1,24 @@
+fragment nodeAttributesFragment on AttributeType {
+
+       ... on AttributeGroupType {
+          name
+       }
+       ... on AttributeAssetType {
+          name
+          reference
+       }
+       ... on AttributePersonType {
+          firstName
+          lastName
+       }
+       ... on AttributeStructureType {
+          building
+          address
+          secondLine
+          postcode
+          city
+          region
+          country
+       }
+
+}

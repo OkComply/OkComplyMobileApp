@@ -1,0 +1,4 @@
+fragment checklistItemFragment on ChecklistItemType {
+    label
+    sequenceNumber
+}

@@ -1,0 +1,13 @@
+#import "./measureTaskFragment.graphql"
+#import "./measureAttributeFragment.graphql"
+
+fragment measureFragment on MeasureType {
+    id
+    label
+    measureTasks {
+        ...measureTaskFragment
+    }
+    attribute {
+        ...measureAttributeFragment
+    }
+}

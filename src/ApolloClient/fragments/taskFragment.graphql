@@ -1,8 +1,8 @@
 #import "./fileFragment.graphql"
 #import "./userAccountFragment.graphql"
-import "./checklistFragment.graphql"
-import "./taskableFragment.graphql"
-import "./reportStatusFragment.graphql"
+#import "./checklistFragment.graphql"
+#import "./taskableFragment.graphql"
+#import "./reportStatusFragment.graphql"
 
 fragment taskFragment on TaskType {
     id

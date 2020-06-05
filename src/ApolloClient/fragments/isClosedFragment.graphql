@@ -1,0 +1,10 @@
+#import "./userAccountFragment.graphql"
+#import "./dossierFragment.graphql"
+
+fragment isClosedFragment on IsClosedType {
+    closedBy {
+        ...userAccountFragment
+    }
+    closedAt
+    referenceId
+}
