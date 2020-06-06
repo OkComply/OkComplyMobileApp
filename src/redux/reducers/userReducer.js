@@ -11,7 +11,8 @@ const userReducer = (state = initialState, action) => {
 			return { ...state, user: action.payload };
 
 		case SET_TOKEN:
-			return{...state, accesstoken: action.payload}
+			console.log(action.payload)
+			return{...state, token: action.payload}
 
 		default:
 			return state;

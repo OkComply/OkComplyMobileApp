@@ -35,7 +35,7 @@ function ScreenHome ( props){
 				scope: 'openid email'
 			})
 			.then((res) => {
-				console.log(res);
+				// console.log(res);
 				// this.setState({ accessToken: res.accessToken });
 
 				auth0.auth
@@ -50,9 +50,9 @@ function ScreenHome ( props){
 								}
 							]
 						});
-						console.log(user)
+						// console.log(user)
 						dispatch(setUser(user.email))
-						dispatch(setUserToken(res.accessToken))
+						dispatch(setUserToken(res.idToken))
 
 
 					})
