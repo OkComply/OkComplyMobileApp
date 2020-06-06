@@ -59,8 +59,8 @@ class Profile extends Component {
                 </View>
                 <RNSlidingButton
                     style={{
-                        width: 700,
-                        height: 500,
+                        width: "100%",
+                        height: "100%",
                         justifyContent: 'flex-end',
                         backgroundColor: 'red',
                         top: '20%'
@@ -73,7 +73,7 @@ class Profile extends Component {
                     <View>
                         <Text numberOfLines={1} style={styles.titleText}>
                             Swipe rechts om uit te loggen >>>
-                        </Text>
+                        </Text>           
 
                     </View>
                 </RNSlidingButton>
