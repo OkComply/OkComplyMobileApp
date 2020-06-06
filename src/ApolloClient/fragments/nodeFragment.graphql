@@ -1,0 +1,31 @@
+#import "./dossierFragment.graphql"
+#import "./nodeAttributesFragment.graphql"
+#import "./fileFragment.graphql"
+#import "./reportFragment.graphql"
+
+fragment nodeFragment on NodeType {
+    id
+    label
+    path
+    children {
+        id
+        label
+        path
+        attributes {
+            ...nodeAttributesFragment
+        }
+        files {
+            ...fileFragment
+        }
+        children {
+            id
+            label
+        }
+    }
+    attributes {
+        ...nodeAttributesFragment
+    }
+    files {
+        ...fileFragment
+    }
+}

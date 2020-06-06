@@ -1,0 +1,9 @@
+#import "./checklistItemFragment.graphql"
+
+fragment checklistFragment on ChecklistType {
+    id
+    label
+    items {
+        ...checklistItemFragment
+    }
+}

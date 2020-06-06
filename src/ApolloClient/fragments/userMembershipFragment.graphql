@@ -1,0 +1,9 @@
+#import "./nodePermissionFragment.graphql"
+
+fragment userMembershipFragment on UserMembership {
+    organisationId
+    role
+    nodePermissions {
+        ...nodePermissionFragment
+    }
+}

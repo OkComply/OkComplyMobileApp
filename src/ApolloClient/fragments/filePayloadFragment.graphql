@@ -1,0 +1,8 @@
+fragment filePayloadFragment on FilePayloadType {
+    signedUrl
+    filename
+    originalFilename
+    message
+    cacheControl
+    serverSideEncryption
+}

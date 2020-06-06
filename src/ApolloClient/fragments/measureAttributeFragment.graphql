@@ -1,0 +1,35 @@
+fragment measureAttributeFragment on MeasureAttributeType {
+    __typename
+    ... on PeriodType {
+        every {
+            time
+            times
+        }
+        inExpected {
+            time
+            times
+        }
+        inAttention {
+            time
+            times
+        }
+        inCritical {
+            time
+            times
+        }
+    }
+    ... on PhaseShiftType {
+        inExpected {
+            time
+            times
+        }
+        inAttention {
+            time
+            times
+        }
+        inCritical {
+            time
+            times
+        }
+    }
+}
