@@ -8,7 +8,7 @@ import {name as appName} from './app.json';
 import MainStackNavigator from "./src/navigation/navigator"
 import { Provider } from 'react-redux'
 import store from "./src/redux/store/index"
-import { ApolloProvider } from '@apollo/react-hooks';
+import { ApolloProvider } from 'react-apollo';
 import client  from './src/ApolloClient/apolloClient'
 
 
@@ -17,15 +17,16 @@ console.disableYellowBox = true;
 
 
 
+
 export default function App({}) {
 
 	return (
 
-		// <ApolloProvider client={client}>
+		<ApolloProvider client={client}>
 		<Provider store={store}>
 		<MainStackNavigator/>
 		</Provider>
-		// </ApolloProvider>
+		</ApolloProvider>
 	); 
 	
 }

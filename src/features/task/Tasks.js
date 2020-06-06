@@ -122,6 +122,7 @@ class Task extends Component {
 	};
 
 	render() {
+
 		return (
 			<View style={styles.taskPage}>
 
