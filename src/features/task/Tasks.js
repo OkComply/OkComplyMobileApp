@@ -24,6 +24,7 @@ class Task extends Component {
 		};
 	}
 
+
 	async doQuery() {
 
 		const USER_QUERY = gql`
@@ -125,13 +126,10 @@ class Task extends Component {
 
 		return (
 			<View style={styles.taskPage}>
-
+			
 				<View style={styles.title}>
 					<Text style={{ fontSize: 25, marginLeft: 120 }}>Taken</Text>
-					<Button
-						style={styles.filterButton}
-						onPress={() => this.doQuery()}
-					>
+					<Button style={styles.filterButton} onPress={ this.doQuery()}>
 						<Text style={{ color: '#fff' }}>Filter</Text>
 					</Button>
 				</View>
