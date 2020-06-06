@@ -14,9 +14,7 @@ import { connect } from 'react-redux';
 import AccordionGepland from './accordionGepland';
 import AccordionTelaat from './accordionTelaat';
 import client from '../../ApolloClient/apolloClient';
-import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
-import fetchTasksQuery from "../../ApolloClient/queries/task/fetchTasks.graphql"
 
 
 
