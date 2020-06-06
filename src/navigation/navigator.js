@@ -40,16 +40,17 @@ function MyTabs() {
 		<Tab.Navigator
 			initialRouteName="Task"
 			activeColor="white"
+			inactiveColor="black"
 			labelStyle={{ fontSize: 25 }}
-			tabBarOptions={{}}
+			tabBarOptions={{activeTintColor: '#e91e63'}}
 			barStyle={{ backgroundColor: '#3BB9FF', height: 70 }}
 		>
 			<Tab.Screen
 				name="Task"
 				component={Task}
 				options={{
-					tabBarLabel: 'Mijn Taken',
-					tabBarIcon: ({ color }) => <AntDesign name="check" size={25} color="#FFFF" />
+					tabBarLabel: ' Mijn Taken',
+					tabBarIcon: ({ color }) => <AntDesign name="check"  size={25} color="#FFFF" />
 				}}
 			/>
 
@@ -65,7 +66,7 @@ function MyTabs() {
 				name="Profile"
 				component={Profile}
 				options={{
-					tabBarLabel: 'Mijn Profile',
+					tabBarLabel: 'Mijn Account',
 					tabBarIcon: ({ color }) => <MaterialIcon name="person" size={25} color="#FFFF" />
 				}}
 			/>
