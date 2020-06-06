@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
 import { ListItem, Card } from 'react-native-elements';
 import { Button } from 'react-native-paper';
-import { Text, View, StyleSheet, Alert, TextInput, Image } from 'react-native';
+import { Text, View, StyleSheet, Alert, TextInput,Image } from 'react-native';
 import DatePicker from 'react-native-datepicker';
 import RNPickerSelect from 'react-native-picker-select';
 import { FlatList, ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 
 /**
- * @author Raeef Ibrahim & Jay Fairouz
+ * @author Raeef Ibrahim
  *
  */
 export default class FirstPage extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            label: ''
+            label: '',
+            value: 'hi'
 
         }
     }
@@ -29,19 +30,21 @@ export default class FirstPage extends Component {
             <View style={styles.taskPage}>
                 <ScrollView>
                     <View>
+                        <TouchableOpacity>
                         <Image
                             style={{
-                                marginTop: 10, width: 200, height: 200, alignSelf: 'center', borderColor: 'gray', borderWidth: 1,
+                                marginTop: 10, width: "58%", height:220, alignSelf: 'center',
                             }}
-                            resizeMode="contain"
-                            source={{ uri: 'https://hmtklep.nl/wp-content/uploads/2017/03/photo-video-slr-camera-icon-512x512-pixel-12-300x300.png' }}
+                            
+                            source={{ uri: 'https://www.kindpng.com/picc/b/244/2446316.png' }}
                         />
-
-                        <Text style={styles.textStyle}>Titel:</Text>
+</TouchableOpacity>
+                        <Text style={styles.textStyle}>Melding gaat over:</Text>
                         <TextInput
                             style={styles.textInputStyle}
+                            placeholder="Schrijf waar het over gaat"
                         />
-
+                       
                         <Text style={styles.textStyle}>Geconstateerd op:</Text>
                         <DatePicker
                             style={styles.textInputStyle}
@@ -52,10 +55,23 @@ export default class FirstPage extends Component {
                             format="DD-MM-YYYY"
                         />
 
-                        <Text style={styles.textStyle}>Documenten:</Text>
-                        <TextInput
-                            style={styles.textInputStyle}
-                        />
+                        <Text style={styles.textStyle}> Eindverantwoordelijke voor deze melding:</Text>
+                        <View style={styles.textStyle}>
+                            <RNPickerSelect
+                                style={styles.textStyle}
+                                onValueChange={(value) => console.log(value)}
+                                placeholder={{
+                                    label: 'Selecteer eindverantwoordelijkheden...',
+                                    value: null,
+                                }}
+                                items={[
+                                    { label: 'Ilias Delwar', value: 'football' },
+                                    { label: 'Jay.fairouz@hva.nl', value: 'baseball' },
+                                    { label: 'Raeef.ibrahim@hva.nl', value: 'hockey' },
+                                    { label: 'mickbogaard@hva.nl', value: 'hockey' }
+                                ]}
+                            />
+                        </View>
 
                     </View>
 
@@ -70,14 +86,13 @@ export default class FirstPage extends Component {
 
 
             </View>
-
-
         );
     }
 }
 const styles = StyleSheet.create({
     textStyle: {
         marginTop: 20,
+        
         fontSize: 20,
         ...Platform.select({
             android: {
@@ -95,11 +110,10 @@ const styles = StyleSheet.create({
     },
     VerderButton: {
         backgroundColor: '#33de8e',
-        marginTop: 30,
-        marginBottom: 20,
-        width: '25%',
+        marginTop: 40,
+        marginBottom: 30,
+        width: '50%',
         display: 'flex',
-        borderRadius: 100,
         alignSelf: 'center'
 
 
@@ -111,14 +125,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         alignSelf: 'center',
 
+
     },
     textInputStyle: {
         marginTop: 10,
-        height: 40,
-        width: '90%',
+        height: 45,
+        width: '95%',
         alignSelf: 'center',
-        borderColor: 'gray',
-        borderWidth: 1,
         backgroundColor: 'white',
         color: 'black'
     }

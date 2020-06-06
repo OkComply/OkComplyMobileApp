@@ -155,11 +155,7 @@ function MainStackNavigator() {
                         headerTitle: (props) => <LogoHeader {...props} />
                     }}
                 />
-
-
 				<Stack.Screen name="TaskItemModal" component={TaskItemModal} />
-				
-
 			</Stack.Navigator>
 		</NavigationContainer>
 	);
