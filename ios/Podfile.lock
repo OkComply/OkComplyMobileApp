@@ -227,6 +227,8 @@ PODS:
   - React-jsinspector (0.61.5)
   - react-native-date-picker (2.7.7):
     - React
+  - react-native-image-picker (1.1.0):
+    - React
   - react-native-safe-area-context (0.7.3):
     - React
   - react-native-splash-screen (3.2.0):
@@ -317,6 +319,7 @@ DEPENDENCIES:
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - react-native-date-picker (from `../node_modules/react-native-date-picker`)
+  - react-native-image-picker (from `../node_modules/react-native-image-picker`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - react-native-splash-screen (from `../node_modules/react-native-splash-screen`)
   - react-native-webview (from `../node_modules/react-native-webview`)
@@ -385,6 +388,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
   react-native-date-picker:
     :path: "../node_modules/react-native-date-picker"
+  react-native-image-picker:
+    :path: "../node_modules/react-native-image-picker"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
   react-native-splash-screen:
@@ -452,6 +457,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: d5525f9ed5f782fdbacb64b9b01a43a9323d2386
   React-jsinspector: fa0ecc501688c3c4c34f28834a76302233e29dc0
   react-native-date-picker: 142a75882184791d3afa3a7a3c3085e1d70496c9
+  react-native-image-picker: 3637d63fef7e32a230141ab4660d3ceb773c824f
   react-native-safe-area-context: 8260e5157617df4b72865f44006797f895b2ada7
   react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
   react-native-webview: 055c7110f17c2f19c971f655064ee480638db668
@@ -477,6 +483,6 @@ SPEC CHECKSUMS:
   TouchIDAuth: 0cf861f58a2cacfc1c12cb02de4850729d943c81
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
 
-PODFILE CHECKSUM: 83a7cae5c49e9a6df3ddb9ea19b384bbe9fafdc7
+PODFILE CHECKSUM: c46323d4ef8f4595caf8a8a70fb0217364f01f1d
 
 COCOAPODS: 1.9.1
