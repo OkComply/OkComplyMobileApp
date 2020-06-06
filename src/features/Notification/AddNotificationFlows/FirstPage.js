@@ -15,13 +15,27 @@ export default class FirstPage extends Component {
         super(props)
         this.state = {
             label: '',
-            value: 'hi'
+            title: '',
+            value: ''
+        
 
         }
     }
-
+  
+      
     onVerder = () => {
-        this.props.navigation.navigate('SecondPage')
+       
+        if (this.state.title === ''){
+            alert(" 'Melding gaat over' kan niet leeg zijn")
+            this.props.navigation.navigate('FirstPage')
+            return
+          }
+          if(this.state.value ===''){
+              alert("'Eindveranwoordlijkheden' kan niet leeg zijn")
+          }
+          else{
+        this.props.navigation.navigate('SecondPage') }
+
     }
 
     render() {
@@ -42,9 +56,11 @@ export default class FirstPage extends Component {
                         <Text style={styles.textStyle}>Melding gaat over:</Text>
                         <TextInput
                             style={styles.textInputStyle}
+                    
+                            onChangeText={(text) => this.setState({title: text})}
                             placeholder="Schrijf waar het over gaat"
                         />
-                       
+
                         <Text style={styles.textStyle}>Geconstateerd op:</Text>
                         <DatePicker
                             style={styles.textInputStyle}
@@ -59,7 +75,7 @@ export default class FirstPage extends Component {
                         <View style={styles.textStyle}>
                             <RNPickerSelect
                                 style={styles.textStyle}
-                                onValueChange={(value) => console.log(value)}
+                                onValueChange={(value) =>  this.setState({value: value})}
                                 placeholder={{
                                     label: 'Selecteer eindverantwoordelijkheden...',
                                     value: null,
