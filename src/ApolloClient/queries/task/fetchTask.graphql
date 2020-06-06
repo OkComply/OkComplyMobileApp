@@ -1,0 +1,7 @@
+#import "../../fragments/taskFragment.graphql"
+
+query task($id: IdentifierScalar!) {
+    task(id: $id) {
+        ...taskFragment
+    }
+}

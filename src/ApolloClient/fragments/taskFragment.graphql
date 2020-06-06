@@ -1,0 +1,31 @@
+#import "./fileFragment.graphql"
+#import "./userAccountFragment.graphql"
+#import "./checklistFragment.graphql"
+#import "./taskableFragment.graphql"
+#import "./reportStatusFragment.graphql"
+
+fragment taskFragment on TaskType {
+    id
+    label
+    deadline
+    completed
+    sequenceNumber
+    checklist {
+        ...checklistFragment
+    }
+    executor {
+        ...userAccountFragment
+    }
+    owners {
+        ...userAccountFragment
+    }
+    files {
+        ...fileFragment
+    }
+    taskable {
+        ...taskableFragment
+    }
+    reportStatus {
+        ...reportStatusFragment
+    }
+}

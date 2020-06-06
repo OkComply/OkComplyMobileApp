@@ -1,0 +1,11 @@
+#import "./userAccountFragment.graphql"
+#import "./fileVersionFragment.graphql"
+
+fragment fileFragment on FileType {
+    filename
+    originalFilename
+    fileType
+    latest {
+        ...fileVersionFragment
+    }
+}

@@ -1,0 +1,9 @@
+#import "./checklistFragment.graphql"
+
+fragment measureTaskFragment on MeasureTaskType {
+    label
+    sequenceNumber
+    checklist {
+        ...checklistFragment
+    }
+}

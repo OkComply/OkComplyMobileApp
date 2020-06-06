@@ -1,0 +1,5 @@
+fragment nodeMinimalFragment on NodeType {
+    id
+    label
+    path
+}

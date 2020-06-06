@@ -5,7 +5,7 @@ import { RNSlidingButton, SlideDirection } from 'rn-sliding-button';
 import auth0 from '../authentication/auth0';
 import { useSelector, useDispatch } from "react-redux";
 import {
-	setUser
+	setUser,setUserToken
   } from "../redux/actions/actions";
 // import AuthService from './AuthService';
 /**
@@ -35,7 +35,7 @@ function ScreenHome ( props){
 				scope: 'openid email'
 			})
 			.then((res) => {
-				console.log(res);
+				// console.log(res);
 				// this.setState({ accessToken: res.accessToken });
 
 				auth0.auth
@@ -50,8 +50,9 @@ function ScreenHome ( props){
 								}
 							]
 						});
-						console.log(user)
+						// console.log(user)
 						dispatch(setUser(user.email))
+						dispatch(setUserToken(res.idToken))
 
 
 					})
@@ -70,7 +71,7 @@ function ScreenHome ( props){
 				<View>
 					<View>
 						<FadeInView>
-							<Text style={styles.title}>Welkom in OkComply Mobile App</Text>
+							<Text style={styles.title}>OkComply taken en meldingen</Text>
 						</FadeInView>
 					</View>
 				</View>

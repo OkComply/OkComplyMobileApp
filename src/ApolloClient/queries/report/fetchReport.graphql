@@ -1,0 +1,39 @@
+#import "../../fragments/fileFragment.graphql"
+#import "../../fragments/userAccountFragment.graphql"
+#import "../../fragments/taskFragment.graphql"
+#import "../../fragments/nodeMinimalFragment.graphql"
+#import "../../fragments/tagFragment.graphql"
+
+query report($id: IdentifierScalar!) {
+    report(id: $id) {
+        id
+        label
+        resolveTime
+        identifiedOn
+        situation
+        takenAction
+        ideaToImprove
+        sequenceNumber
+        reportNumber
+        reportedAt,
+        resolvedAt,
+        node {
+            ...nodeMinimalFragment
+        }
+        reporter {
+            ...userAccountFragment
+        }
+        owners {
+            ...userAccountFragment
+        }
+        files {
+            ...fileFragment
+        }
+        tasks {
+            ...taskFragment
+        },
+        tags {
+            ...tagFragment
+        }
+    }
+}

@@ -1,0 +1,34 @@
+#import "./phaseShiftFragment.graphql"
+#import "./taskFragment.graphql"
+#import "./fileFragment.graphql"
+#import "./userAccountFragment.graphql"
+
+fragment dossierFragment on DossierType {
+    id
+    dossierNumber
+    label
+    initiationDate
+    completed
+    approved
+    sequenceNumber
+    measure {
+        id
+        label
+    }
+    every {
+        time
+        times
+    }
+    phaseShift {
+        ...phaseShiftFragment
+    }
+    owners {
+        ...userAccountFragment
+    }
+    tasks {
+        ...taskFragment
+    }
+    files {
+        ...fileFragment
+    }
+}

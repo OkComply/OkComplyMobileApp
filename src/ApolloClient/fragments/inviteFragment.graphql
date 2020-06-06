@@ -1,0 +1,15 @@
+#import "./userAccountFragment.graphql"
+
+fragment inviteFragment on InviteType {
+    id
+    sequenceNumber
+    role
+    status
+    sendTo
+    acceptedBy {
+        ...userAccountFragment
+    }
+    invitedBy {
+        ...userAccountFragment
+    }
+}

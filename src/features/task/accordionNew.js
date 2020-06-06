@@ -6,14 +6,18 @@ import { FlatList } from 'react-native-gesture-handler';
 import {  Card } from 'react-native-elements';
 import taskData from '../../assets/tasks.json';
 import TaskItemModal from './taskItemModal'
-
+import client from '../../../src/ApolloClient/apolloClient'
 import { connect } from 'react-redux';
+
 
 /**
  * @author Ilias Delawar
  */
 
+
+
 const Viewport = Dimensions.get('window');
+
 
 
 class AccordionNew extends Component {
@@ -21,12 +25,14 @@ class AccordionNew extends Component {
 		super(props);
 		this.state = {
 			data: taskData,
-            expanded: true,
             modalOpen: false,
 			item: null,
 		};
-    }
-    
+	
+	}
+	
+
+
     openModal = async (item) => {
 		this.setState({
 			modalOpen: true,
@@ -79,7 +85,7 @@ class AccordionNew extends Component {
 				</TouchableOpacity>
 				<View style={styles.parentHr} />
 				{this.props.expanded && (
-					<View style={{height:(Platform.OS === 'ios') ? ((Viewport.width * Viewport.scale) === 1242)? 367: 503 : 300, backgroundColor:Colors.LIGHTBLUE}}>
+					<View style={{height:(Platform.OS === 'ios') ? ((Viewport.width * Viewport.scale) === 1242)? 367: 503 : 300}}>
                         
 						<FlatList
 							data={this.state.data.data.tasks}

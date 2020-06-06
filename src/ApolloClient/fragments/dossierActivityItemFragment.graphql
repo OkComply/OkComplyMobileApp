@@ -1,0 +1,7 @@
+fragment activityItemFragment on ActivityItemType {
+    dossierId
+    event
+    timestamp
+    executedBy
+    data
+}

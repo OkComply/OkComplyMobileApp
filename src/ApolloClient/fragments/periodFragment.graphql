@@ -1,0 +1,18 @@
+fragment periodFragment on PeriodType {
+    every {
+        time
+        times
+    }
+    inAttention {
+        time
+        times
+    }
+    inCritical {
+        time
+        times
+    }
+    inExpected {
+        time
+        times
+    }
+}

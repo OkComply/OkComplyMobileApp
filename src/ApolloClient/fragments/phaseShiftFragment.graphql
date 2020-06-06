@@ -1,0 +1,14 @@
+fragment phaseShiftFragment on PhaseShiftType {
+    inExpected {
+        time
+        times
+    }
+    inAttention {
+        time
+        times
+    }
+    inCritical {
+        time
+        times
+    }
+}

@@ -1,0 +1,23 @@
+#import "../../fragments/taskFragment.graphql"
+
+
+
+query tasks(
+    $nodeId: IdentifierScalar!,
+    $executors: [IdentifierScalar],
+    $owners: [IdentifierScalar],
+    $tags: [IdentifierScalar],
+    $searchLabel: SearchScalar,
+    $showRecentClosed: Boolean
+) {
+    tasks(
+        nodeId: $nodeId,
+        executors: $executors,
+        owners: $owners,
+        tags: $tags,
+        searchLabel: $searchLabel,
+        showRecentClosed: $showRecentClosed
+    ) {
+        ...taskFragment
+    }
+}
