@@ -63,7 +63,7 @@ class Profile extends Component {
                         height: "100%",
                         justifyContent: 'flex-end',
                         backgroundColor: 'red',
-                        top: '20%'
+                        top: '15%'
                     }}
 
                     height={70}
