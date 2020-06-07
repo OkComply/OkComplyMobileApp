@@ -69,7 +69,6 @@ class Notification extends Component {
 					</ScrollView>
 				</View>
 
-
 				<View style={styles.MainContainer}>
 
 					<TouchableOpacity activeOpacity={0.5} onPress={this.onAddNotification} style={styles.TouchableOpacityStyle} >
@@ -199,7 +198,6 @@ const styles = StyleSheet.create({
 	},
 
 	FloatingButtonStyle: {
-
 		resizeMode: 'contain',
 		width: 50,
 		height: 50,

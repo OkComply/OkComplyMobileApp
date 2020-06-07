@@ -25,6 +25,7 @@ import FirstPage from '../../src/features/Notification/AddNotificationFlows/Firs
 import SecondPage from '../../src/features/Notification/AddNotificationFlows/SecondPage'
 import ThirdPage from '../../src/features/Notification/AddNotificationFlows/ThirdPage'
 
+
 /**
  * @author Ilias Delawar
  *
@@ -155,11 +156,7 @@ function MainStackNavigator() {
                         headerTitle: (props) => <LogoHeader {...props} />
                     }}
                 />
-
-
 				<Stack.Screen name="TaskItemModal" component={TaskItemModal} />
-				
-
 			</Stack.Navigator>
 		</NavigationContainer>
 	);

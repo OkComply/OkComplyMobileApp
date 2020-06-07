@@ -1,14 +1,23 @@
 import React, { Component, useState } from 'react';
 
 import { Text, RecyclerViewBackedScrollView, View, StyleSheet, Modal, Dimensions } from 'react-native';
+import { FlatList, ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import { Button } from 'react-native-paper';
+import TaskDetail from './taskDetail';
+import { ListItem, Card } from 'react-native-elements';
+import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
+import TaskItemModal from './taskItemModal';
+import taskData from '../../assets/tasks.json';
 import AccordionNew from './accordionNew';
 import { Colors } from '../../assets/Colors';
 import { connect } from 'react-redux';
 import AccordionGepland from './accordionGepland';
 import AccordionTelaat from './accordionTelaat';
 import client from '../../ApolloClient/apolloClient';
-import { gql } from 'apollo-boost';
+import gql from 'graphql-tag';
+
+
+
 
 /**
  * @author Ilias Delawar
@@ -23,6 +32,7 @@ class Task extends Component {
 			title3: 'Te laat'
 		};
 	}
+
 
 	async doQuery() {
 
@@ -125,13 +135,10 @@ class Task extends Component {
 
 		return (
 			<View style={styles.taskPage}>
-
+			
 				<View style={styles.title}>
 					<Text style={{ fontSize: 25, marginLeft: 120 }}>Taken</Text>
-					<Button
-						style={styles.filterButton}
-						onPress={() => this.doQuery()}
-					>
+					<Button style={styles.filterButton} onPress={ this.doQuery()}>
 						<Text style={{ color: '#fff' }}>Filter</Text>
 					</Button>
 				</View>
