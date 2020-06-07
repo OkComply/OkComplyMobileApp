@@ -5,11 +5,21 @@ import { Text, View, StyleSheet, Alert, TextInput,Image } from 'react-native';
 import DatePicker from 'react-native-datepicker';
 import RNPickerSelect from 'react-native-picker-select';
 import { FlatList, ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
+import ImagePicker from 'react-native-image-picker';
 
 /**
- * @author Raeef Ibrahim
+ * @author Raeef Ibrahim & Jay Fairouz
  *
  */
+
+const options = {
+    title: 'Fotos',
+    takePhotoButtonTitle: 'Neem een foto',
+    chooseFromLibraryButtonTitle: 'Kies een foto uit je gallerij',
+}
+
+let image = { uri: 'https://www.kindpng.com/picc/b/244/2446316.png' }
+
 export default class FirstPage extends Component {
     constructor(props) {
         super(props)
@@ -21,8 +31,8 @@ export default class FirstPage extends Component {
 
         }
     }
-  
-      
+
+
     onVerder = () => {
        
         if (this.state.title === ''){
@@ -38,21 +48,41 @@ export default class FirstPage extends Component {
 
     }
 
+    onFoto = () => {
+        ImagePicker.showImagePicker(options, (response) => {
+            if (response.didCancel) {
+                console.log('User cancelled image picker');
+            } else if (response.error) {
+                console.log('ImagePicker Error: ', response.error);
+            }
+
+            else {
+                image = { uri: response.uri };
+                this.setState({
+                    avatarSource: image,
+                });
+            }
+        });
+    }
+
     render() {
         return (
 
             <View style={styles.taskPage}>
                 <ScrollView>
                     <View>
-                        <TouchableOpacity>
-                        <Image
-                            style={{
-                                marginTop: 10, width: "58%", height:220, alignSelf: 'center',
-                            }}
-                            
-                            source={{ uri: 'https://www.kindpng.com/picc/b/244/2446316.png' }}
-                        />
-</TouchableOpacity>
+                        <TouchableOpacity style={styles.FacebookStyle} activeOpacity={0.5} onPress={this.onFoto}>
+                            <Image
+                                style={{
+                                    marginTop: 10, width: 200, height: 200, alignSelf: 'center'
+                                }}
+                                resizeMode="contain"
+                                source={image}
+                            />
+
+                            <View style={styles.SeparatorLine} />
+                        </TouchableOpacity>
+
                         <Text style={styles.textStyle}>Melding gaat over:</Text>
                         <TextInput
                             style={styles.textInputStyle}
