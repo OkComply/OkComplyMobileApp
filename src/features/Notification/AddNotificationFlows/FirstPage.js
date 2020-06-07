@@ -5,11 +5,20 @@ import { Text, View, StyleSheet, Alert, TextInput, Image } from 'react-native';
 import DatePicker from 'react-native-datepicker';
 import RNPickerSelect from 'react-native-picker-select';
 import { FlatList, ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
+import ImagePicker from 'react-native-image-picker';
+
 
 /**
  * @author Raeef Ibrahim & Jay Fairouz
  *
  */
+
+const options = {
+    title: 'Fotos',
+    takePhotoButtonTitle: 'Neem een foto',
+    chooseFromLibraryButtonTitle: 'Kies een foto uit je gallerij',
+}
+
 export default class FirstPage extends Component {
     constructor(props) {
         super(props)
@@ -23,24 +32,65 @@ export default class FirstPage extends Component {
         this.props.navigation.navigate('SecondPage')
     }
 
+    alertfun = () => {
+        //alert('clicked');
+        ImagePicker.showImagePicker(options, (response) => {
+            console.log('Response = ', response);
+
+            if (response.didCancel) {
+                console.log('User cancelled image picker');
+            } else if (response.error) {
+                console.log('ImagePicker Error: ', response.error);
+            }
+
+            else {
+                const source = { uri: response.uri };
+
+                // You can also display the image using data:
+                // const source = { uri: 'data:image/jpeg;base64,' + response.data };
+
+                this.setState({
+                    avatarSource: source,
+                });
+            }
+        });
+    }
+
     render() {
         return (
 
             <View style={styles.taskPage}>
                 <ScrollView>
                     <View>
+                        {/*
                         <Image
                             style={{
                                 marginTop: 10, width: 200, height: 200, alignSelf: 'center', borderColor: 'gray', borderWidth: 1,
                             }}
                             resizeMode="contain"
                             source={{ uri: 'https://hmtklep.nl/wp-content/uploads/2017/03/photo-video-slr-camera-icon-512x512-pixel-12-300x300.png' }}
-                        />
+                        />*/}
 
-                        <Text style={styles.textStyle}>Titel:</Text>
-                        <TextInput
-                            style={styles.textInputStyle}
-                        />
+                        {/*ImagePicker stuff */}
+
+
+                        <TouchableOpacity style={styles.FacebookStyle} activeOpacity={0.5} onPress={this.alertfun}>
+
+                            <Image
+                                style={{
+                                    marginTop: 10, width: 200, height: 200, alignSelf: 'center', borderColor: 'gray', borderWidth: 1,
+                                }}
+                                resizeMode="contain"
+                                source={this.state.avatarSource}
+                            />
+
+                            <View style={styles.SeparatorLine} />
+                        </TouchableOpacity>
+
+
+
+
+
 
                         <Text style={styles.textStyle}>Geconstateerd op:</Text>
                         <DatePicker
