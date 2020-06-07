@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ListItem, Card } from 'react-native-elements';
 import { Button } from 'react-native-paper';
-import { Text, View, StyleSheet, Alert, TextInput,Image } from 'react-native';
+import { Text, View, StyleSheet, Alert, TextInput, Image } from 'react-native';
 import DatePicker from 'react-native-datepicker';
 import RNPickerSelect from 'react-native-picker-select';
 import { FlatList, ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
@@ -27,24 +27,23 @@ export default class FirstPage extends Component {
             label: '',
             title: '',
             value: ''
-        
-
         }
     }
 
 
     onVerder = () => {
-       
-        if (this.state.title === ''){
+
+        if (this.state.title === '') {
             alert(" 'Melding gaat over' kan niet leeg zijn")
             this.props.navigation.navigate('FirstPage')
             return
-          }
-          if(this.state.value ===''){
-              alert("'Eindveranwoordlijkheden' kan niet leeg zijn")
-          }
-          else{
-        this.props.navigation.navigate('SecondPage') }
+        }
+        if (this.state.value === '') {
+            alert("'Eindveranwoordlijkheden' kan niet leeg zijn")
+        }
+        else {
+            this.props.navigation.navigate('SecondPage')
+        }
 
     }
 
@@ -71,10 +70,10 @@ export default class FirstPage extends Component {
             <View style={styles.taskPage}>
                 <ScrollView>
                     <View>
-                        <TouchableOpacity style={styles.FacebookStyle} activeOpacity={0.5} onPress={this.onFoto}>
+                        <TouchableOpacity activeOpacity={0.5} onPress={this.onFoto}>
                             <Image
                                 style={{
-                                    marginTop: 10, width: 200, height: 200, alignSelf: 'center'
+                                    marginTop: 10, width: 100, height: 100, alignSelf: 'center'
                                 }}
                                 resizeMode="contain"
                                 source={image}
@@ -83,16 +82,17 @@ export default class FirstPage extends Component {
                             <View style={styles.SeparatorLine} />
                         </TouchableOpacity>
 
-                        <Text style={styles.textStyle}>Melding gaat over:</Text>
+                        <Text style={styles.textStyle}>Melding gaat over: *</Text>
                         <TextInput
                             style={styles.textInputStyle}
-                    
-                            onChangeText={(text) => this.setState({title: text})}
+
+                            onChangeText={(text) => this.setState({ title: text })}
                             placeholder="Schrijf waar het over gaat"
                         />
 
-                        <Text style={styles.textStyle}>Geconstateerd op:</Text>
+                        <Text style={styles.textStyle}>Geconstateerd op: *</Text>
                         <DatePicker
+                            customStyles={{ dateInput: { borderWidth: 0 } }} //removes the standard border that the datepicker gets
                             style={styles.textInputStyle}
                             date={this.state.date}
                             onDateChange={(date) => this.setState({ date: date })}
@@ -105,7 +105,7 @@ export default class FirstPage extends Component {
                         <View style={styles.textStyle}>
                             <RNPickerSelect
                                 style={styles.textStyle}
-                                onValueChange={(value) =>  this.setState({value: value})}
+                                onValueChange={(value) => this.setState({ value: value })}
                                 placeholder={{
                                     label: 'Selecteer eindverantwoordelijkheden...',
                                     value: null,
@@ -138,7 +138,7 @@ export default class FirstPage extends Component {
 const styles = StyleSheet.create({
     textStyle: {
         marginTop: 20,
-        
+
         fontSize: 20,
         ...Platform.select({
             android: {
@@ -156,22 +156,17 @@ const styles = StyleSheet.create({
     },
     VerderButton: {
         backgroundColor: '#33de8e',
-        marginTop: 40,
-        marginBottom: 30,
+        marginTop: '10%',
+        marginBottom: '10%',
         width: '50%',
         display: 'flex',
         alignSelf: 'center'
-
-
     },
     AllButtons: {
-
         marginBottom: '3%',
         flexDirection: 'row',
         alignItems: 'center',
-        alignSelf: 'center',
-
-
+        alignSelf: 'center'
     },
     textInputStyle: {
         marginTop: 10,
@@ -179,6 +174,8 @@ const styles = StyleSheet.create({
         width: '95%',
         alignSelf: 'center',
         backgroundColor: 'white',
-        color: 'black'
+        color: 'black',
+        borderColor: 'rgba(0, 0, 0, 0.4)',
+        borderWidth: 1
     }
 });
