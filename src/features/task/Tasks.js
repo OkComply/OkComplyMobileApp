@@ -127,12 +127,12 @@ class Task extends Component {
 			<View style={styles.taskPage}>
 
 				<View style={styles.title}>
-					<Text style={{ fontSize: 25, marginLeft: 120 }}>Taken</Text>
+					<Text style={{ fontSize: 25, alignSelf: 'center'}}>Taken</Text>
 					<Button
 						style={styles.filterButton}
 						onPress={() => this.doQuery()}
 					>
-						<Text style={{ color: '#fff' }}>Filter</Text>
+						<Text style={{ color: '#fff', fontSize: 8}}>Filter</Text>
 					</Button>
 				</View>
 				<View
@@ -208,8 +208,10 @@ const styles = StyleSheet.create({
 	title: {
 		display: 'flex',
 		marginTop: 10,
+		marginStart: '40%',
 		flexDirection: 'row',
-		justifyContent: 'center'
+		textAlign: 'center',
+		
 	},
 
 	item: {
@@ -218,12 +220,11 @@ const styles = StyleSheet.create({
 		alignItems: 'center'
 	},
 	filterButton: {
-		marginTop: 3,
-		marginLeft: '10%',
+		left: '300%',
+		marginTop: 0,
 		backgroundColor: '#3BB9FF',
-		height: '85%',
-		width: '22%',
-		right: 20
+		height: '80%',
+		width: '12%',
 	}
 });
 
