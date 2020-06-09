@@ -5,7 +5,7 @@ import { RNSlidingButton, SlideDirection } from 'rn-sliding-button';
 import auth0 from '../authentication/auth0';
 import { useSelector, useDispatch } from "react-redux";
 import {
-	setUser,setUserToken
+	setUser,setUserToken,setLoggedIn
   } from "../redux/actions/actions";
 // import AuthService from './AuthService';
 /**
@@ -53,6 +53,7 @@ function ScreenHome ( props){
 						// console.log(user)
 						dispatch(setUser(user.email))
 						dispatch(setUserToken(res.idToken))
+						dispatch(setLoggedIn(true))
 
 
 					})

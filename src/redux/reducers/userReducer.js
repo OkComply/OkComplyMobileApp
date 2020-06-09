@@ -1,4 +1,4 @@
-import { SET_USER, SET_TOKEN } from '../types';
+import { SET_USER, SET_TOKEN , SET_LOGGEDIN} from '../types';
 import { initialState } from '../store/initialState';
 
 /**
@@ -11,8 +11,10 @@ const userReducer = (state = initialState, action) => {
 			return { ...state, user: action.payload };
 
 		case SET_TOKEN:
-			console.log(action.payload)
 			return{...state, token: action.payload}
+
+		case SET_LOGGEDIN:
+			return{...state, isLoggedIn: action.payload}
 
 		default:
 			return state;

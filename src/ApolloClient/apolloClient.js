@@ -3,9 +3,12 @@ import { HttpLink } from 'apollo-link-http';
 import { ApolloClient } from 'apollo-client';
 import { InMemoryCache } from "apollo-cache-inmemory";
 import store from "../../src/redux/store/index"
+import logger from "../redux/middleware/logger"
 
 
 const state  = store.getState()
+
+
 
 
 const client = new ApolloClient({

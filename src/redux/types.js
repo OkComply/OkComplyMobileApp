@@ -8,3 +8,5 @@ export const IS_ACTIVE2= 'IS_ACTIVE2'
 export const IS_ACTIVE3= 'IS_ACTIVE3'
 
 export const SET_TOKEN = 'SET_TOKEN'
+
+export const SET_LOGGEDIN = 'SET_LOGGEDIN'

@@ -138,7 +138,7 @@ class Task extends Component {
 			
 				<View style={styles.title}>
 					<Text style={{ fontSize: 25, marginLeft: 120 }}>Taken</Text>
-					<Button style={styles.filterButton} onPress={ this.doQuery()}>
+					<Button style={styles.filterButton} onPress={ () => this.doQuery()}>
 						<Text style={{ color: '#fff' }}>Filter</Text>
 					</Button>
 				</View>
@@ -238,7 +238,7 @@ function mapStateToProps(state) {
 	return {
 		expanded: state.collapsible.expanded,
 		expanded2: state.collapsible.expanded2,
-		expanded3: state.collapsible.expanded3
+		expanded3: state.collapsible.expanded3,
 	};
 }
 
