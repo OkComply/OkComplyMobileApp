@@ -12,6 +12,8 @@ import { gql } from 'apollo-boost';
 
 /**
  * @author Ilias Delawar
+ * 
+ * @author Mick Bogaard
  *
  */
 class Task extends Component {
@@ -210,7 +212,6 @@ const styles = StyleSheet.create({
 		marginStart: '40%',
 		flexDirection: 'row',
 		textAlign: 'center',
-		
 	},
 
 	item: {
