@@ -1,7 +1,7 @@
 
 export const initialState = {
 	user: null,
-    accesstoken: null,
+    token: null,
     expanded: true,
     expanded2:false,
     expanded3:false,

@@ -87,14 +87,11 @@ const styles = StyleSheet.create({
     },
     VerderButton: {
         backgroundColor: '#33de8e',
-        marginTop: 30,
-        marginBottom: 20,
-        width: '25%',
+        marginTop: '7.5%',
+        marginBottom: '7.5%',
+        width: '50%',
         display: 'flex',
-        borderRadius: 100,
         alignSelf: 'center'
-
-
     },
     AllButtons: {
 
@@ -105,6 +102,7 @@ const styles = StyleSheet.create({
 
     },
     textInputStyle: {
+        textAlignVertical: 'top',
         marginTop: 10,
         height: 40,
         width: '90%',
@@ -115,6 +113,7 @@ const styles = StyleSheet.create({
         color: 'black'
     },
     textInputExtendedStyle: {
+        textAlignVertical: 'top',
         marginTop: 10,
         height: 200,
         width: '90%',

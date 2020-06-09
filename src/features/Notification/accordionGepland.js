@@ -50,7 +50,6 @@ class AccordionGepland extends Component {
 				<View style={styles.parentHr} />
 				{this.props.expanded2 && (
 					<View style={{ height: (Platform.OS === 'ios') ? ((Viewport.width * Viewport.scale) === 1242) ? 367 : 503 : 300, }}>
-
 						<FlatList
 							data={this.state.notification.data.reports}
 							numColumns={1}
@@ -63,10 +62,13 @@ class AccordionGepland extends Component {
 										style={{}}
 										title={item.label}
 										backgroundColor="#fff"
-										containerStyle={{ borderRadius: 15, borderColor: 'black' }}
+										containerStyle={{ borderRadius: 8 }}
 									>
 										<View style={styles.item}>
-											<Text >{"Geconstateerd op: " + item.reportedAt}</Text>
+											<Text >{"Melding voor: " + item.label}</Text>
+											<Text >{"Meldingnummer: " + item.reportNumber}</Text>
+											<Text >{"Geconstateerd op: " + item.reportedAt.substring(0, 10)}</Text>
+											<Text >{"Gemeld door: " + item.reporter.email}</Text>
 										</View>
 									</Card>
 								</TouchableOpacity>

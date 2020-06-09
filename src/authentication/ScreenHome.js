@@ -29,18 +29,17 @@ function ScreenHome ( props){
 		}
 	};
 	//perform Action on slide success
+	//On sign in 
 	onSlideRight = () => {
 		auth0.webAuth
 			.authorize({
 				scope: 'openid email'
 			})
 			.then((res) => {
-				console.log(res);
-				// this.setState({ accessToken: res.accessToken });
-
 				auth0.auth
 					.userInfo({ token: res.accessToken })
 					.then((user) => {
+	
 						navigation.navigate('myTab');
 						navigation.reset({
 							index: 0,
@@ -50,9 +49,9 @@ function ScreenHome ( props){
 								}
 							]
 						});
-						console.log(user)
+				
 						dispatch(setUser(user.email))
-						dispatch(setUserToken(res.accessToken))
+						dispatch(setUserToken(res.idToken))
 
 
 					})

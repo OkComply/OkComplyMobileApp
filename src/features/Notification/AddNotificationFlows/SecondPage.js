@@ -16,13 +16,31 @@ export default class SecondPage extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            label: ''
-
+            label: '',
+            datumMelding: '',
+            eindverantwoordelijke: ''
         }
     }
+
     onVerder = () => {
-        this.props.navigation.navigate('ThirdPage')
+        console.log('datum' + this.state.title);
+
+        if (this.state.datumMelding === '') {
+            alert(" 'Gemeld door' kan niet leeg zijn")
+            this.props.navigation.navigate('SecondPage')
+            return
+        }
+        if (this.state.eindverantwoordelijke === '') {
+            alert(" 'Eindverantwoordelijke' kan niet leeg zijn")
+            this.props.navigation.navigate('SecondPage')
+            return
+        }
+        else {
+            this.props.navigation.navigate('ThirdPage')
+        }
+
     }
+
     render() {
         return (
 
@@ -42,20 +60,19 @@ export default class SecondPage extends Component {
                             />
                         </View>
 
-                        <Text style={styles.textStyle}>Datum melding</Text>
-                        <TextInput
-                            style={styles.textInputStyle}
-                        />
+                        <Text style={styles.textStyle}>Datum melding: *</Text>
+                        <TextInput style={styles.textInputStyle}
+                            onChangeText={(text) => this.setState({ datumMelding: text })}
+                            placeholder="Wat is de datum van de melding" />
 
-                        <Text style={styles.textStyle}>Eindverantwoordelijke:</Text>
-                        <TextInput
-                            style={styles.textInputStyle}
-                        />
+                        <Text style={styles.textStyle}>Eindverantwoordelijke: *</Text>
+                        <TextInput style={styles.textInputStyle}
+                            onChangeText={(text) => this.setState({ eindverantwoordelijke: text })}
+                            placeholder="Wie is de eindverantwoordelijke?" />
+
 
                         <Text style={styles.textStyle}>Beschrijf waar deze melding over gaat:</Text>
-                        <TextInput
-                            style={styles.textInputExtendedStyle}
-                        />
+                        <TextInput style={styles.textInputExtendedStyle} />
 
                     </View>
 
@@ -95,14 +112,11 @@ const styles = StyleSheet.create({
     },
     VerderButton: {
         backgroundColor: '#33de8e',
-        marginTop: 30,
-        marginBottom: 20,
-        width: '25%',
+        marginTop: '7.5%',
+        marginBottom: '7.5%',
+        width: '50%',
         display: 'flex',
-        borderRadius: 100,
         alignSelf: 'center'
-
-
     },
     AllButtons: {
 
@@ -113,6 +127,7 @@ const styles = StyleSheet.create({
 
     },
     textInputStyle: {
+        textAlignVertical: 'top',
         marginTop: 10,
         height: 40,
         width: '90%',
@@ -123,6 +138,7 @@ const styles = StyleSheet.create({
         color: 'black'
     },
     textInputExtendedStyle: {
+        textAlignVertical: 'top',
         marginTop: 10,
         height: 200,
         width: '90%',

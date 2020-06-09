@@ -9,8 +9,8 @@ const LogoHeader = () => {
         uri: 'https://www.allfluidsystems.eu/wp-content/uploads/2019/04/logo-okcomply.png'
       };
     return (
-        <View>
-            <Image source={pic} style={{width: 170, height: 50,left:"55%"}} />
+        <View >
+            <Image source={pic} style={{width: 170, height: 50, left:(Platform.OS === 'ios') ? 12 : '55%',bottom:5}} />
         </View>
     );
 };

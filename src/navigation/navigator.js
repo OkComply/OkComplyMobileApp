@@ -44,6 +44,7 @@ function MyTabs() {
 			inactiveColor="black"
 			labelStyle={{ fontSize: 25 }}
 			tabBarOptions={{activeTintColor: '#e91e63'}}
+			tabBarIcon= {{inactiveColor:'black'}}
 			barStyle={{ backgroundColor: '#3BB9FF', height: 70 }}
 		>
 			<Tab.Screen
@@ -51,7 +52,9 @@ function MyTabs() {
 				component={Task}
 				options={{
 					tabBarLabel: ' Mijn Taken',
-					tabBarIcon: ({ color }) => <AntDesign name="check"  size={25} color="#FFFF" />
+					tabBarIcon: ({ color }) => <AntDesign  style name="check"  size={25} 
+			   color='#ffff'  />
+		
 				}}
 			/>
 
@@ -59,16 +62,16 @@ function MyTabs() {
 				name="Notification"
 				component={Notification}
 				options={{
-					tabBarLabel: 'Mijn Meldingen',
-					tabBarIcon: ({ color }) => <MaterialIcon name="notifications" size={25} color="#FFFF" />
+					tabBarLabel: '   Mijn Meldingen',
+					tabBarIcon: ({ color }) => <MaterialIcon name="notifications" size={25} color='#ffff'  />
 				}}
 			/>
 			<Tab.Screen
 				name="Profile"
 				component={Profile}
 				options={{
-					tabBarLabel: 'Mijn Account',
-					tabBarIcon: ({ color }) => <MaterialIcon name="person" size={25} color="#FFFF" />
+					tabBarLabel: '  Mijn Account',
+					tabBarIcon: ({ color }) => <MaterialIcon name="person" size={25} color='#ffff'   />
 				}}
 			/>
 		</Tab.Navigator>
@@ -84,7 +87,7 @@ function MainStackNavigator() {
 					name="myTab"
 					component={MyTabs}
 					options={({ navigation }) => ({
-						headerTitle: (props) => <LogoHeader {...props} />,
+						headerTitle: (props) => <LogoHeader  {...props} />,
 						headerRight: () => (
 							<TouchableOpacity
 								style={{ marginRight: 20, marginBottom: 10 }}

@@ -4,11 +4,12 @@
     "\\src",
     "\\src\\assets",
     "\\src\\features",
+    "\\src\\features\\InstructionManual",
     "\\src\\features\\Notification",
     "\\src\\features\\Notification\\AddNotificationFlows",
     "\\src\\features\\task",
     "\\src\\navigation"
   ],
-  "SelectedNode": "\\src\\features\\Notification\\AddNotificationFlows\\SecondPage.js",
+  "SelectedNode": "\\src\\features\\Notification\\AddNotificationFlows\\FirstPage.js",
   "PreviewInSolutionExplorer": false
 }
