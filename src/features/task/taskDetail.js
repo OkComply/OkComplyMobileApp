@@ -25,11 +25,11 @@ const options={
 export default class TaskDetail extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { date: '2016-05-15', avatarSource: null };
+		this.state = { date: '2016-05-15', avatarSource: null, value:'' };
 	}
 
 	onAddNotification = () => {
-		this.props.navigation.navigate('AddNotification');
+		this.props.navigation.navigate('FirstPage');
 	};
 
 	onConfirm = () => {
@@ -104,11 +104,12 @@ export default class TaskDetail extends Component {
 								height: 40
 							}
 						}}
-						onValueChange={(value) => console.log(value)}
+						onValueChange={(value) => this.setState({ value: value })}
 						items={[
-							{ label: 'Football', value: 'football' },
-							{ label: 'Baseball', value: 'baseball' },
-							{ label: 'Hockey', value: 'hockey' }
+						    { label: 'Ilias Delwar', value: 'football' },
+                                    { label: 'Jay.fairouz@hva.nl', value: 'baseball' },
+                                    { label: 'Raeef.ibrahim@hva.nl', value: 'hockey' },
+                                    { label: 'mickbogaard@hva.nl', value: 'hockey' }
 						]}
 					/>
 				</View>
@@ -128,9 +129,10 @@ export default class TaskDetail extends Component {
 						}}
 						onValueChange={(value) => console.log(value)}
 						items={[
-							{ label: 'Football', value: 'football' },
-							{ label: 'Baseball', value: 'baseball' },
-							{ label: 'Hockey', value: 'hockey' }
+						    { label: 'Ilias Delwar', value: 'football' },
+                                    { label: 'Jay.fairouz@hva.nl', value: 'baseball' },
+                                    { label: 'Raeef.ibrahim@hva.nl', value: 'hockey' },
+                                    { label: 'mickbogaard@hva.nl', value: 'hockey' }
 						]}
 					/>
 				</View>
