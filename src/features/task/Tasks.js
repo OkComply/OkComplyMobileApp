@@ -21,6 +21,8 @@ import gql from 'graphql-tag';
 
 /**
  * @author Ilias Delawar
+ * 
+ * @author Mick Bogaard
  *
  */
 class Task extends Component {
@@ -137,20 +139,22 @@ class Task extends Component {
 			<View style={styles.taskPage}>
 			
 				<View style={styles.title}>
-					<Text style={{ fontSize: 25, marginLeft: 120 }}>Taken</Text>
-					<Button style={styles.filterButton} onPress={ this.doQuery()}>
-						<Text style={{ color: '#fff' }}>Filter</Text>
+					<Text style={{ fontSize: 25, alignSelf: 'center'}}>Taken</Text>
+					<Button
+						style={styles.filterButton}
+						onPress={() => this.doQuery()}
+					>
+						<Text style={{ color: '#fff', fontSize: 8}}>Filter</Text>
 					</Button>
 				</View>
 				<View
 					style={{
-						borderTopWidth: 1,
+						borderTopWidth: 2,
 						borderBottomColor: 'grey',
-						borderBottomWidth: 1,
-						width: '93%',
+						borderBottomWidth: 0,
+						width: '100%',
 						alignSelf: 'center',
-						marginTop: 5,
-						marginBottom: 10
+						marginTop: 5
 					}}
 				/>
 				<View>
@@ -214,9 +218,10 @@ const styles = StyleSheet.create({
 
 	title: {
 		display: 'flex',
-		marginTop: 10,
+		marginTop: '3%',
+		marginStart: '40%',
 		flexDirection: 'row',
-		justifyContent: 'center'
+		textAlign: 'center',
 	},
 
 	item: {
@@ -225,12 +230,11 @@ const styles = StyleSheet.create({
 		alignItems: 'center'
 	},
 	filterButton: {
-		marginTop: 3,
-		marginLeft: '10%',
+		left: '300%',
+		marginTop: 0,
 		backgroundColor: '#3BB9FF',
-		height: '85%',
-		width: '22%',
-		right: 20
+		height: '80%',
+		width: '12%',
 	}
 });
 

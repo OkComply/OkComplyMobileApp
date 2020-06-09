@@ -47,18 +47,18 @@ class Notification extends Component {
 				<View style={styles.title}>
 					<Text style={{ fontSize: 25, marginLeft: 120 }}>Meldingen</Text>
 					<Button style={styles.filterButton} onPress={this.OnFilter}>
-						<Text style={{ color: '#fff' }}>Filter</Text>
+						<Text style={{ color: '#fff', fontSize: 8 }}>Filter</Text>
 					</Button>
 				</View>
 				<View
 					style={{
-						borderTopWidth: 1,
+						borderTopWidth: 2,
 						borderBottomColor: 'grey',
-						borderBottomWidth: 1,
-						width: '93%',
+						borderBottomWidth: 0,
+						width: '100%',
 						alignSelf: 'center',
 						marginTop: 5,
-						marginBottom: 10
+						marginBottom: 0
 					}}
 				/>
 				<View>
@@ -153,9 +153,10 @@ const styles = StyleSheet.create({
 
 	title: {
 		display: 'flex',
-		marginTop: 10,
+		marginTop: '3%',
+		marginStart: '5%',
 		flexDirection: 'row',
-		justifyContent: 'center'
+		textAlign: 'center',
 	},
 
 	item: {
@@ -165,12 +166,11 @@ const styles = StyleSheet.create({
 
 	},
 	filterButton: {
-		marginTop: 3,
-		marginLeft: '10%',
+		left: '200%',
+		marginTop: 0,
 		backgroundColor: '#3BB9FF',
-		height: '85%',
-		width: '30%',
-		right: 20
+		height: '80%',
+		width: '12%',
 	},
 	container: {
 		flex: 1,
