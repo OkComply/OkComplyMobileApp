@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { Text, RecyclerViewBackedScrollView, View, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import { Text, RecyclerViewBackedScrollView, View, StyleSheet, TextInput, TouchableOpacity, Alert } from 'react-native';
 import DatePicker from 'react-native-datepicker';
 import RNPickerSelect from 'react-native-picker-select';
 import { Button } from 'react-native-paper';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import { ScrollView } from 'react-native-gesture-handler';
-import ImagePicker from 'react-native-image-picker'
+import ImagePicker from 'react-native-image-picker';
+import Snackbar from 'react-native-snackbar';
 
 
 /**
@@ -33,6 +34,7 @@ export default class TaskDetail extends Component {
 
 	onConfirm = () => {
 		this.props.navigation.navigate('myTab');
+		this.alertfun();
 	};
 
 	onDeny = () => {
@@ -58,7 +60,13 @@ export default class TaskDetail extends Component {
 		  });
 	}
 
-	
+	alertfun = () => {
+		Snackbar.show({
+			text: 'task completed',
+			duration: Snackbar.LENGTH_SHORT,
+			backgroundColor: '#33de8e'
+		})
+	}
 
 	render() {
 		const item = this.props.route.params.item;
@@ -70,7 +78,8 @@ export default class TaskDetail extends Component {
 
 				<View>
 					<Text style={styles.labelStyle}>Beschrijf de taak voor deze maatregel </Text>
-					<TextInput style={styles.inputStyle} defaultValue="Dit is de beschrijving" />
+					<Text style={styles.inputStyle} >{item.label} </Text>
+					
 				</View>
 				<View>
 					<Text style={styles.labelStyle}>Taak moet voor deze datum zijn uitgevoerd</Text>
@@ -107,7 +116,6 @@ export default class TaskDetail extends Component {
 				<View>
 					<Text style={styles.labelStyle}>Uivoerende van deze taak</Text>
 					<RNPickerSelect
-						// Icon={ <MaterialIcon name="person" size={25} color="#FFFF" />}
 
 						style={{
 							inputIOS: {
@@ -216,6 +224,6 @@ const styles = StyleSheet.create({
 		backgroundColor: 'white',
 		color: 'black',
 		margin: 15,
-		marginTop: 5
+		marginTop: 5,
 	}
 });
