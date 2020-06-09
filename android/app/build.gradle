@@ -145,14 +145,14 @@ android {
             include "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
         }
     }
-    signingConfigs {
-        debug {
-            storeFile file('my-upload-key.keystore')
-            storePassword '12345678'
-            keyAlias 'my-upload-key'
-            keyPassword '12345678'
-        }
-    }
+//    signingConfigs {
+//        debug {
+//            storeFile file('my-upload-key.keystore')
+//            storePassword '12345678'
+//            keyAlias 'my-upload-key'
+//            keyPassword '12345678'
+//        }
+//    }
     buildTypes {
         debug {
             signingConfig signingConfigs.debug
