@@ -40,7 +40,7 @@ class AccordionTelaat extends Component {
     };
     
     closeModalAndAddNotification = () => {
-		this.props.navigation.navigate('AddNotification');
+		this.props.navigation.navigate('FirstPage');
 		this.closeModal();
 	};
 

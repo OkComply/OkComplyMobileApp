@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     },
     titleLine: {
         borderTopWidth: 1,
-        borderBottomColor: 'grey',
+        borderBottomColor: 'rgba(0, 0, 0, 0.4)',
         borderBottomWidth: 1,
         width: '93%',
         alignSelf: 'center',
@@ -95,13 +95,13 @@ const styles = StyleSheet.create({
     },
     textStyle: {
         fontSize: 20,
-        color: 'grey',
+        color: 'rgba(0, 0, 0, 0.4)',
         marginHorizontal: '2.5%',
         marginTop: '2.5%'
     },
     containerStyle: {
-        backgroundColor: '#FFFFFF', //3BB9FF
-        borderColor: 'grey',
+        backgroundColor: '#FFFFFF',
+        borderColor: 'rgba(0, 0, 0, 0.4)',
         borderWidth: 1.5,
         borderRadius: 10,
         width: '90%',
