@@ -6,7 +6,7 @@ import DatePicker from 'react-native-datepicker';
 import RNPickerSelect from 'react-native-picker-select';
 import { FlatList, ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import mapStateToProps from '../../Profile';
-
+import Snackbar from 'react-native-snackbar';
 
 /**
  * @author Jay Fairouz
@@ -20,8 +20,18 @@ export default class ThirdPage extends Component {
 
         }
     }
+    alertfun = () => {
+		Snackbar.show({
+			text: 'Melding is aangemaakt',
+			duration: Snackbar.LENGTH_SHORT,
+			backgroundColor: '#33de8e'
+		})
+	}
+
     onSave = () => {
+        this.alertfun()
         this.props.navigation.navigate('myTab')
+        
     }
     render() {
         return (
@@ -53,8 +63,8 @@ export default class ThirdPage extends Component {
 
                     <View style={styles.AllButtons}>
                         <Button style={styles.VerderButton}
-                            onPress={this.onVerder}>
-                            <Text style={{ color: '#fff' }}>Verder</Text>
+                            onPress={this.onSave}>
+                            <Text style={{ color: '#fff' }}>Opslaan</Text>
                         </Button>
                     </View>
                 </ScrollView>
