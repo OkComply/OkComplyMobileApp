@@ -137,13 +137,12 @@ class Task extends Component {
 				</View>
 				<View
 					style={{
-						borderTopWidth: 1,
+						borderTopWidth: 2,
 						borderBottomColor: 'grey',
-						borderBottomWidth: 1,
-						width: '93%',
+						borderBottomWidth: 0,
+						width: '100%',
 						alignSelf: 'center',
-						marginTop: 5,
-						marginBottom: 10
+						marginTop: 5
 					}}
 				/>
 				<View>
@@ -207,7 +206,7 @@ const styles = StyleSheet.create({
 
 	title: {
 		display: 'flex',
-		marginTop: 10,
+		marginTop: '3%',
 		marginStart: '40%',
 		flexDirection: 'row',
 		textAlign: 'center',
