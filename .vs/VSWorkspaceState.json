@@ -8,8 +8,9 @@
     "\\src\\features\\Notification",
     "\\src\\features\\Notification\\AddNotificationFlows",
     "\\src\\features\\task",
+    "\\src\\logos",
     "\\src\\navigation"
   ],
-  "SelectedNode": "\\src\\features\\Notification\\AddNotificationFlows\\FirstPage.js",
+  "SelectedNode": "\\src\\navigation\\navigator.js",
   "PreviewInSolutionExplorer": false
 }

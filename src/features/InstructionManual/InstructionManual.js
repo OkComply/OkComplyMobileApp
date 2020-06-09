@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
     },
     selector: {
         backgroundColor: '#F5FCFF',
-        padding: 10,
+        padding: 10
     },
     activeSelector: {
         fontWeight: 'bold',

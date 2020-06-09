@@ -1,6 +1,6 @@
 import * as React from 'react';
 import 'react-native-gesture-handler';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, Image, Text, View, StyleSheet } from 'react-native';
 import ScreenHome from '../../src/authentication/ScreenHome';
 import { createStackNavigator, TransitionPresets } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
@@ -32,6 +32,9 @@ import ThirdPage from '../../src/features/Notification/AddNotificationFlows/Thir
  * @author Raeef Ibrahim
  *
  */
+let pic = {
+    uri: '../../src/assets/info.png'
+};
 const Stack = createStackNavigator();
 AppState.load();
 
@@ -92,7 +95,9 @@ function MainStackNavigator() {
 									navigation.navigate('InstructionManual');
 								}}
 							>
-								<FontAwesome5Icon name="info" size={30} style={{ color: '#3BB9FF' }} />
+                                {/*<FontAwesome5Icon name="info" size={30} style={{ color: '#3BB9FF' }} />*/}
+                                <Image source={require('../navigation/info.png')}
+                                    style={{ height: '80%', alignSelf: 'center' }} />
 							</TouchableOpacity>
 						),
 						headerBackTitleVisible: false
