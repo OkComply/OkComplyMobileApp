@@ -62,7 +62,7 @@ export default class TaskDetail extends Component {
 		return (
 			<View style={styles.container}>
 				{/*<ScrollView>*/}
-				<Text style={{alignSelf:"center", fontSize:20, marginTop:5}}>{item.label}</Text>
+				<Text style={{alignSelf:"center", fontSize:20, marginTop:5}}>{item.owners.name}</Text>
 
 				<View>
 					<Text style={styles.labelStyle}>Beschrijf de taak voor deze maatregel </Text>
@@ -80,7 +80,7 @@ export default class TaskDetail extends Component {
 					/>
 				</View>
 				<View>
-					<Text style={styles.labelStyle}>Eindverantwoordelijke voor deze taak</Text>
+		<Text style={styles.labelStyle}>Eindverantwoordelijke voor deze taak </Text>
 					<RNPickerSelect
 						style={{
 							inputIOS: {

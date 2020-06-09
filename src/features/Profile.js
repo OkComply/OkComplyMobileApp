@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {RNSlidingButton, SlideDirection} from 'rn-sliding-button';
 import {Image, Text, View, StyleSheet} from 'react-native';
-// import AuthService from '../authentication/AuthService';
 import {Card} from 'react-native-elements'
 import auth0 from '../authentication/auth0';
 import { Alert } from 'react-native';
@@ -23,6 +22,7 @@ class Profile extends Component {
     }
 
     //perform Action on slide success
+    // On sign out funcation
     onSlideRight = () => {
         auth0.webAuth
         .clearSession({})
@@ -50,7 +50,7 @@ class Profile extends Component {
 
                         title='Mijn Account'
                     >
-                        <Image source={pic} style={{width: '32%', height: '51%',bottom: '4%', left: '35%'}}/>
+                      
                         <Text style={{marginBottom: 10, fontSize: 20, fontStyle: 'italic'}}>
                         E-mailadres: {this.props.userEmail}
 
@@ -63,7 +63,7 @@ class Profile extends Component {
                         height: "100%",
                         justifyContent: 'flex-end',
                         backgroundColor: 'red',
-                        top: '15%'
+                        top: '56%'
                     }}
 
                     height={70}

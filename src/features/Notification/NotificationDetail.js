@@ -42,7 +42,7 @@ export default class NotificationDetail extends Component {
                         <View>
                             <Text style={styles.textStyle}>Melding voor: <Text style={{ color: 'black' }}>{item.label}</Text>{"\n"}</Text>
                             <Text style={styles.textStyle}>Meldingsnummer: <Text style={{ color: 'black' }}>{item.reportNumber}</Text>{"\n"}</Text>
-                            <Text style={styles.textStyle}>Geconstateerd op:  <Text style={{ color: 'black', fontSize: 14 }}>{item.reportedAt}</Text>{"\n"}</Text>
+                            <Text style={styles.textStyle}>Geconstateerd op:  <Text style={{ color: 'black', fontSize: 14 }}>{item.reportedAt.substring(0, 10)}</Text>{"\n"}</Text>
                             <Text style={styles.textStyle}>Gemeld door: <Text style={{ color: 'black' }}>{item.reporter.name}</Text>{"\n"}</Text>
                             <Text style={styles.textStyle}>Beschrijving:  <Text style={{ color: 'black', fontSize: 14 }}>{item.situation}</Text>{"\n"}</Text>
                         </View>

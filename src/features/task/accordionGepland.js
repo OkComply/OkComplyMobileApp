@@ -85,21 +85,23 @@ class AccordionGepland extends Component {
 							numColumns={1}
 							scrollEnabled={true}
 							renderItem={({ item, index }) => (
-                                <TouchableOpacity
-                                    onPress={() => this.openModal(item)}
-                                >
-                                    <Card
-                                        style={{}}
-                                        title={item.label}
-                                        backgroundColor="#fff"
-                                        containerStyle={{ borderRadius: 15, borderColor: 'black' }}
-                                    >
-                                        <View style={styles.item}>
-										<Text >{ "Geconstateerd op: " + item.deadline}</Text>
-                                        </View>
-                                    </Card>
-                                </TouchableOpacity>
-                            )}
+								<TouchableOpacity
+								onPress={() => this.openModal(item)}
+								>
+									<Card
+										style={{}}
+										title={item.label}
+										backgroundColor="#fff"
+										containerStyle={{ borderRadius: 8}}
+									>
+										<View style={styles.item}>
+											<Text >{"Taak deadline: " + item.deadline.substring(0,10)}</Text>
+											<Text >{"Eindverantwoordlijk: " + item.executor.email}</Text>
+											<Text >{"Beschrijving van deze taak: " + item.label}</Text>
+										</View>
+									</Card>
+								</TouchableOpacity>
+							)}
 						/>
 					</View>
 				)}

@@ -3,29 +3,34 @@ import { Text, View, StyleSheet, TextInput } from 'react-native';
 import { Button } from 'react-native-paper';
 import RNPickerSelect from 'react-native-picker-select';
 import { ListItem, Card } from 'react-native-elements';
+
+/**
+ * @author Raeef Ibrahim
+ */
+
 export default class NotificationFilter extends Component {
 
-    onClick =() => {
-        this.props.navigation.navigate('myTab')
-    }
+	onClick = () => {
+		this.props.navigation.navigate('myTab')
+	}
 	render() {
 		return (
 			<View style={styles.NotificationFilter}>
-                
-                <RNPickerSelect style={styles.filterUitvoerders}
-								onValueChange={(value) => console.log(value)}
 
-								placeholder={{
-									label: 'Filter op status',
-								}}
-								items={[
-									{ label: 'Te laat', value: 'football' },
-									{ label: 'Gepland', value: 'baseball' },
-									{ label: 'Nieuw', value: 'hockey' }
-								]}
+				<RNPickerSelect style={styles.filterUitvoerders}
+					onValueChange={(value) => console.log(value)}
 
-							/>
-						<View style={styles.filterUitvoerders}>
+					placeholder={{
+						label: 'Filter op status',
+					}}
+					items={[
+						{ label: 'Te laat', value: 'football' },
+						{ label: 'Gepland', value: 'baseball' },
+						{ label: 'Nieuw', value: 'hockey' }
+					]}
+
+				/>
+				<View style={styles.filterUitvoerders}>
 					<Text style={{ marginTop: 5, marginBottom: 5, color: 'white', fontSize: 18 }}>Filter op naam</Text>
 					<TextInput
 						style={{
@@ -38,7 +43,7 @@ export default class NotificationFilter extends Component {
 					/>
 				</View>
 				<View style={styles.filterUitvoerders}>
-                    
+
 					<Text style={{ marginTop: 5, marginBottom: 5, color: 'white', fontSize: 18 }}>
 						Filter op eindverantwoordelijke
 					</Text>
@@ -52,8 +57,8 @@ export default class NotificationFilter extends Component {
 						}}
 					/>
 				</View>
-			
-			
+
+
 				<View
 					style={{
 						borderTopWidth: 1,
@@ -78,7 +83,7 @@ export default class NotificationFilter extends Component {
 						<Text style={{ fontSize: 12 }}>Filters legen</Text>
 					</Button>
 					<Button
-                    onPress= {this.onClick}
+						onPress={this.onClick}
 						style={{
 							marginTop: 3,
 							marginLeft: '10%',
@@ -88,7 +93,7 @@ export default class NotificationFilter extends Component {
 							right: 20
 						}}
 					>
-						<Text style={{fontSize:12}}>Filters toepassen</Text>
+						<Text style={{ fontSize: 12 }}>Filters toepassen</Text>
 					</Button>
 				</View>
 			</View>
