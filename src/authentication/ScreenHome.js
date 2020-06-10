@@ -53,7 +53,6 @@ function ScreenHome ( props){
 				
 						dispatch(setUser(user.email))
 						dispatch(setUserToken(res.idToken))
-						console.log(user)
 
 
 					})

@@ -11,12 +11,10 @@ import { initialState } from '../store/initialState';
 const collapsibleReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case IS_ACTIVE:
-			console.log(action.payload +"123");
 
 			return { ...state, expanded: action.payload, expanded2:false, expanded3:false };
 
 		case IS_ACTIVE2:
-            console.log(action.payload +"1234");
 
 			return { ...state, expanded2: action.payload , expanded:false, expanded3:false};
 
