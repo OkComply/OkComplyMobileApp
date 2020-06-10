@@ -22,6 +22,8 @@ export default class TaskItemModal extends Component {
         this.props.closeModal()
     }
 
+
+
 	render() {
 		return (
 			<View style={{ height: '100%', width: '100%', display: 'flex', justifyContent: 'flex-end' }}>
@@ -30,7 +32,7 @@ export default class TaskItemModal extends Component {
 
                 </View>
                 </TouchableOpacity>
-				<View style={{ height: ((Viewport.width * Viewport.scale) === 1242)  ? '23%' : '25%', width: '100%', backgroundColor: '#282828', display: 'flex' }}>
+				<View style={{ height: ((Viewport.width * Viewport.scale) === 1242)  ? '23%' : ((Platform.OS === 'android') ? '25%' : '20%'), width: '100%', backgroundColor: '#282828', display: 'flex' }}>
 					<Button style={styles.modalButtons} onPress={ this.props.closeModalAndAddNotification}>
 						<MaterialIcon name="add" size={15} color="#FFFF" />
 						<Text style={{ color: 'white' }}>Melding maken</Text>
@@ -39,7 +41,7 @@ export default class TaskItemModal extends Component {
 						<MaterialIcon name="visibility" size={15} color="#FFFF" />
 						<Text style={{ color: 'white' }}>Bekijk taak</Text>
 					</Button>
-					<Button style={styles.modalButtons} onPress={this.props.commentPressedHandler}>
+					<Button style={styles.modalButtons} onPress={this.props.onConfirm}>
 						<MaterialIcon name="done" size={15} color="#FFFF" />
 						<Text style={{ color: 'white' }}>Taak afhandelen</Text>
 					</Button>

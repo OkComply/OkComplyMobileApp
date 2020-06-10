@@ -29,7 +29,8 @@ function ScreenHome ( props){
 		}
 	};
 	//perform Action on slide success
-	//On sign in 
+	//On sign in
+
 	onSlideRight = () => {
 		auth0.webAuth
 			.authorize({
@@ -52,6 +53,7 @@ function ScreenHome ( props){
 				
 						dispatch(setUser(user.email))
 						dispatch(setUserToken(res.idToken))
+						console.log(user)
 
 
 					})

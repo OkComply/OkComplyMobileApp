@@ -35,6 +35,10 @@ class Task extends Component {
 		};
 	}
 
+	onConfirm = () => {
+		this.props.navigation.navigate('myTab');
+		this.alertfun();
+	};
 
 	async doQuery() {
 
@@ -140,12 +144,7 @@ class Task extends Component {
 			
 				<View style={styles.title}>
 					<Text style={{ fontSize: 25, alignSelf: 'center'}}>Taken</Text>
-					<Button
-						style={styles.filterButton}
-						onPress={() => this.doQuery()}
-					>
-						<Text style={{ color: '#fff', fontSize: 11}}>Filter</Text>
-					</Button>
+
 				</View>
 				<View
 					style={{
@@ -191,7 +190,7 @@ const styles = StyleSheet.create({
 	row1: {
 		flexDirection: 'row',
 		justifyContent: 'space-between',
-		height: 56,
+		height: 70,
 		paddingLeft: 25,
 		paddingRight: 18,
 		alignItems: 'center',

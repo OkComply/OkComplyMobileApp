@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
 import userReducer from '../reducers/userReducer';
 import collapsibleReducer from '../reducers/collapsibleReducer';
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
+import logger from '../middleware/logger'
 
 /**
  * @author Ilias Delawar
@@ -12,7 +13,7 @@ const rootReducer = combineReducers({
 });
 
 
-const store = createStore(rootReducer)
+const store = createStore(rootReducer, applyMiddleware(logger))
 
 
 export default store;

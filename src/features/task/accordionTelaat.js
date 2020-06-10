@@ -8,6 +8,7 @@ import taskData from '../../assets/tasks.json';
 import TaskItemModal from './taskItemModal'
 
 import { connect } from 'react-redux';
+import Snackbar from "react-native-snackbar";
 
 /**
  * @author Ilias Delawar
@@ -55,6 +56,21 @@ class AccordionTelaat extends Component {
 		this.props.navigation.navigate('TaskFilter');
 	};
 
+	onConfirm = () => {
+		this.props.navigation.navigate('myTab');
+		this.closeModal()
+		this.alertfun();
+
+	};
+
+	alertfun = () => {
+		Snackbar.show({
+			text: 'task completed',
+			duration: Snackbar.LENGTH_SHORT,
+			backgroundColor: '#33de8e'
+		})
+	}
+
 	render() {
 		return (
 			<View>
@@ -64,6 +80,8 @@ class AccordionTelaat extends Component {
 						closeModalAndGoToTaskDetail={this.closeModalAndGoToTaskDetail}
 						closeModalAndAddNotification={this.closeModalAndAddNotification}
 						closeByOverlayClick={this.closeModal}
+						onConfirm = {this.onConfirm}
+
 					/>
 				</Modal>
 				<TouchableOpacity style={this.props.style} onPress={() =>this.props.setActive(!this.props.expanded3)}>

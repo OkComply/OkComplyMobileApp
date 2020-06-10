@@ -45,10 +45,10 @@ class Notification extends Component {
 			<View style={styles.notificationPage}>
 
 				<View style={styles.title}>
-					<Text style={{ fontSize: 25, marginLeft: 120 }}>Meldingen</Text>
-					<Button style={styles.filterButton} onPress={this.OnFilter}>
-						<Text style={{ color: '#fff', fontSize: 8 }}>Filter</Text>
-					</Button>
+					<Text style={{ fontSize: 25, marginLeft: '35%' }}>Meldingen</Text>
+					{/*<Button style={styles.filterButton} onPress={this.OnFilter}>*/}
+					{/*	<Text style={{ color: '#fff', fontSize: 8 }}>Filter</Text>*/}
+					{/*</Button>*/}
 				</View>
 				<View
 					style={{
@@ -154,10 +154,12 @@ const styles = StyleSheet.create({
 
 	title: {
 		display: 'flex',
-		marginTop: '3%',
+		marginTop: (Platform.OS ==='ios') ? '2%' : '1%',
 		marginStart: '5%',
 		flexDirection: 'row',
 		textAlign: 'center',
+		height:(Platform.OS === 'ios') ? '5%' : '6%',
+		width:'100%'
 	},
 
 	item: {
