@@ -144,7 +144,7 @@ class Task extends Component {
 						style={styles.filterButton}
 						onPress={() => this.doQuery()}
 					>
-						<Text style={{ color: '#fff', fontSize: 8}}>Filter</Text>
+						<Text style={{ color: '#fff', fontSize: 11}}>Filter</Text>
 					</Button>
 				</View>
 				<View
@@ -157,7 +157,7 @@ class Task extends Component {
 						marginTop: 5
 					}}
 				/>
-				<View>
+				<View style={{ height:'100%'}}>
 					<AccordionNew
 						expanded={this.props.expanded}
 						navigation={this.props.navigation}
@@ -219,10 +219,13 @@ const styles = StyleSheet.create({
 	title: {
 		display: 'flex',
 		marginTop: '3%',
-		marginStart: '40%',
+		marginStart: '43%',
 		flexDirection: 'row',
 		textAlign: 'center',
+		height:(Platform.OS === 'ios') ? '5%' : '6%'
 	},
+
+// ((Viewport.width * Viewport.scale) === 1242)  ? '23%' : '25%'
 
 	item: {
 		flex: 1,
@@ -230,11 +233,11 @@ const styles = StyleSheet.create({
 		alignItems: 'center'
 	},
 	filterButton: {
-		left: '300%',
+		left: '270%',
 		marginTop: 0,
 		backgroundColor: '#3BB9FF',
-		height: '80%',
-		width: '12%',
+		height: '100%',
+		width: '35%',
 	}
 });
 

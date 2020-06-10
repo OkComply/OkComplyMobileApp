@@ -17,8 +17,6 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - boost-for-react-native (1.63.0)
-  - BVLinearGradient (2.5.6):
-    - React
   - DoubleConversion (1.1.6)
   - FBLazyVector (0.61.5)
   - FBReactNativeSpec (0.61.5):
@@ -227,7 +225,7 @@ PODS:
   - React-jsinspector (0.61.5)
   - react-native-date-picker (2.7.7):
     - React
-  - react-native-image-picker (1.1.0):
+  - react-native-image-picker (2.3.1):
     - React
   - react-native-safe-area-context (0.7.3):
     - React
@@ -280,7 +278,7 @@ PODS:
     - React
   - RNScreens (2.0.0-beta.10):
     - React
-  - RNSnackbar (2.2.0):
+  - RNSnackbar (2.2.2):
     - React
   - RNSound (0.11.0):
     - React
@@ -296,7 +294,6 @@ PODS:
 
 DEPENDENCIES:
   - A0Auth0 (from `../node_modules/react-native-auth0/ios`)
-  - BVLinearGradient (from `../node_modules/react-native-linear-gradient`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/Libraries/FBReactNativeSpec`)
@@ -356,8 +353,6 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   A0Auth0:
     :path: "../node_modules/react-native-auth0/ios"
-  BVLinearGradient:
-    :path: "../node_modules/react-native-linear-gradient"
   DoubleConversion:
     :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
   FBLazyVector:
@@ -439,7 +434,6 @@ SPEC CHECKSUMS:
   A0Auth0: 802f5f5add8ac5265cfeea125caa2720dafccfa6
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
-  BVLinearGradient: e3aad03778a456d77928f594a649e96995f1c872
   DoubleConversion: 5805e889d232975c086db112ece9ed034df7a0b2
   FBLazyVector: aaeaf388755e4f29cd74acbc9e3b8da6d807c37f
   FBReactNativeSpec: 118d0d177724c2d67f08a59136eb29ef5943ec75
@@ -457,7 +451,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: d5525f9ed5f782fdbacb64b9b01a43a9323d2386
   React-jsinspector: fa0ecc501688c3c4c34f28834a76302233e29dc0
   react-native-date-picker: 142a75882184791d3afa3a7a3c3085e1d70496c9
-  react-native-image-picker: 3637d63fef7e32a230141ab4660d3ceb773c824f
+  react-native-image-picker: 668e72d0277dc8c12ae90e835507c1eddd2e4f85
   react-native-safe-area-context: 8260e5157617df4b72865f44006797f895b2ada7
   react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
   react-native-webview: 055c7110f17c2f19c971f655064ee480638db668
@@ -476,7 +470,7 @@ SPEC CHECKSUMS:
   RNGestureHandler: dde546180bf24af0b5f737c8ad04b6f3fa51609a
   RNReanimated: 031fe8d9ea93c2bd689a40f05320ef9d96f74d7f
   RNScreens: c596b54c3ab63b0390aa3cb081edd438147d40ae
-  RNSnackbar: 2924764545b779c3dd130f875cd481d4162a6f3b
+  RNSnackbar: fb5ff4b809050c6af979e3d9c8bb1112a1eb740c
   RNSound: c980916b596cc15c8dcd2f6ecd3b13c4881dbe20
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   SimpleKeychain: 0c657949c7afff92337d2ff64052d5eb5c53823e
