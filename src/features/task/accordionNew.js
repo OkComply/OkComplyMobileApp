@@ -108,8 +108,10 @@ class AccordionNew extends Component {
 										</View>
 									</Card>
 								</TouchableOpacity>
+								
 							)}
 						/>
+						
 					</View>
 				)}
 			</View>

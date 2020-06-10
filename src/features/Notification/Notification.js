@@ -61,12 +61,13 @@ class Notification extends Component {
 						marginBottom: 0
 					}}
 				/>
-				<View>
+				<View >
 					<ScrollView>
 						<AccordionNew expanded={this.props.expanded} navigation={this.props.navigation} style={styles.row1} title={this.state.title1} />
 						<AccordionGepland expanded2={this.props.expanded2} navigation={this.props.navigation} style={styles.row2} title={this.state.title2} />
 						<AccordionTelaat expanded3={this.props.expanded3} navigation={this.props.navigation} style={styles.row3} title={this.state.title3} />
 					</ScrollView>
+					
 				</View>
 
 				<View style={styles.MainContainer}>

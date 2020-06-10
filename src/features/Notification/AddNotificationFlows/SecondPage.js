@@ -18,20 +18,17 @@ export default class SecondPage extends Component {
         this.state = {
             label: '',
             datumMelding: '',
-            eindverantwoordelijke: ''
+            Beschrijfing: ''
+           
         }
     }
 
     onVerder = () => {
         console.log('datum' + this.state.title);
 
-        if (this.state.datumMelding === '') {
-            alert(" 'Gemeld door' kan niet leeg zijn")
-            this.props.navigation.navigate('SecondPage')
-            return
-        }
-        if (this.state.eindverantwoordelijke === '') {
-            alert(" 'Eindverantwoordelijke' kan niet leeg zijn")
+       
+        if (this.state.Beschrijfing === '') {
+            alert(" 'Beschrijving' kan niet leeg zijn")
             this.props.navigation.navigate('SecondPage')
             return
         }
@@ -53,26 +50,20 @@ export default class SecondPage extends Component {
                                 style={styles.textStyle}
                                 onValueChange={(value) => console.log(value)}
                                 items={[
-                                    { label: 'Werknemer 1', value: 'football' },
-                                    { label: 'Werknemer 2', value: 'baseball' },
-                                    { label: 'Werknemer 3', value: 'hockey' }
+                                    { label: 'Ilias Delwar', value: 'football' },
+                                    { label: 'Jay.fairouz@hva.nl', value: 'baseball' },
+                                    { label: 'Raeef.ibrahim@hva.nl', value: 'hockey' },
+                                    { label: 'mickbogaard@hva.nl', value: 'hockey' }
                                 ]}
                             />
                         </View>
 
-                        <Text style={styles.textStyle}>Datum melding: *</Text>
-                        <TextInput style={styles.textInputStyle}
-                            onChangeText={(text) => this.setState({ datumMelding: text })}
-                            placeholder="Wat is de datum van de melding" />
-
-                        <Text style={styles.textStyle}>Eindverantwoordelijke: *</Text>
-                        <TextInput style={styles.textInputStyle}
-                            onChangeText={(text) => this.setState({ eindverantwoordelijke: text })}
-                            placeholder="Wie is de eindverantwoordelijke?" />
+                
+                
 
 
                         <Text style={styles.textStyle}>Beschrijf waar deze melding over gaat:</Text>
-                        <TextInput style={styles.textInputExtendedStyle} />
+                        <TextInput style={styles.textInputExtendedStyle} onChangeText={(value) => this.setState({ Beschrijfing: value })} />
 
                     </View>
 
